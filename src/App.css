@@ -1,0 +1,7 @@
+.app{
+  justify-content: space-around;
+  align-content: center;
+  display: flex;
+  height: 100vh;
+  background: #0b6887;
+}

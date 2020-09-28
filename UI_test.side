@@ -4,24 +4,24 @@
   "name": "UI_test",
   "url": "http://127.0.0.1:5000",
   "tests": [{
-    "id": "3594c305-75cf-4b48-a637-d6f4907de73e",
+    "id": "456db18a-999d-4f7a-9898-8f00c015baee",
     "name": "test1",
     "commands": [{
-      "id": "d760c167-da8b-4144-9458-94fdbfc67f4b",
+      "id": "a6a6bc3e-f491-44da-893c-da59a8ddfc4d",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "0e184478-489a-4272-86d3-4943fbc4cb76",
+      "id": "b863a946-358e-4e5f-b904-eea17143203b",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1939x1165",
+      "target": "1933x1164",
       "targets": [],
       "value": ""
     }, {
-      "id": "f1d8682d-8d31-4495-bc0a-5951d273357d",
+      "id": "b11bb05d-2960-4229-9f50-e1d5f1031ce4",
       "comment": "",
       "command": "click",
       "target": "id=league_of_legends_riot_games_l",
@@ -34,7 +34,7 @@
       ],
       "value": ""
     }, {
-      "id": "7038fbbe-c726-47ee-9e33-a1194aea2824",
+      "id": "9fe6c918-b994-4cdb-aab3-a817df6aaad2",
       "comment": "",
       "command": "click",
       "target": "xpath=(//div[@id='psn_bo'])[2]",
@@ -45,7 +45,19 @@
       ],
       "value": ""
     }, {
-      "id": "62415dfa-5e41-467d-a2de-9ad325769336",
+      "id": "e19c43d0-a7b8-4c43-bdd2-6c93ee5e1b09",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'riot')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5019c333-6384-4ada-9650-bc9fdd19dc91",
       "comment": "",
       "command": "click",
       "target": "id=psn",
@@ -58,20 +70,7 @@
       ],
       "value": ""
     }, {
-      "id": "9082f508-0ea2-4525-8531-aefaefb420d9",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "19edf3f6-9b59-4e5e-a687-16f814639071",
+      "id": "29ba0c2f-2e72-420c-a10f-3ac4772beac1",
       "comment": "",
       "command": "click",
       "target": "css=#Game_Platform > span",
@@ -83,7 +82,56 @@
       ],
       "value": ""
     }, {
-      "id": "57f1b901-7bb0-4df7-b26d-276fbb982284",
+      "id": "3b3c0959-cdb4-4324-b803-d31863fb4bd6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Home > span",
+      "targets": [
+        ["css=#Home > span", "css:finder"],
+        ["xpath=//div[@id='Home']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "955b1a1d-5265-47c4-a679-82e05c233aeb",
+      "comment": "",
+      "command": "click",
+      "target": "id=league_of_legends_riot_games_l",
+      "targets": [
+        ["id=league_of_legends_riot_games_l", "id"],
+        ["css=#league_of_legends_riot_games_l", "css:finder"],
+        ["xpath=//img[@id='league_of_legends_riot_games_l']", "xpath:attributes"],
+        ["xpath=//div[@id='index']/img[3]", "xpath:idRelative"],
+        ["xpath=//img[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc9e6d4d-8da4-49a1-91b0-9cd27e2b3ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#VOLT_GG > span",
+      "targets": [
+        ["css=#VOLT_GG > span", "css:finder"],
+        ["xpath=//div[@id='VOLT_GG']/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'VOLT.GG')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a97fceba-d53b-48dc-a357-f29ff97f5058",
+      "comment": "",
+      "command": "click",
+      "target": "css=#League_of_Legends_ > span",
+      "targets": [
+        ["css=#League_of_Legends_ > span", "css:finder"],
+        ["xpath=//div[@id='League_of_Legends_']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'League of Legends')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6de75781-4a8a-4fdd-9fc0-5ad4c6967c2c",
       "comment": "",
       "command": "click",
       "target": "id=output_onlinepngtools__2_",
@@ -96,233 +144,42 @@
       ],
       "value": ""
     }, {
-      "id": "ee8dacc9-c496-43aa-a919-05e62cf3792d",
+      "id": "16fd2925-bc4f-461d-b644-407555563f01",
       "comment": "",
       "command": "click",
-      "target": "id=xbl_",
+      "target": "css=#League_of_Legends__d > span",
       "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
+        ["css=#League_of_Legends__d > span", "css:finder"],
+        ["xpath=//div[@id='League_of_Legends__d']/span", "xpath:idRelative"],
+        ["xpath=//div[9]/div/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "ce29c92f-a5e2-45ec-8ca5-c5d7f918449f",
+      "id": "fbf60144-492b-44a2-ab08-e750a98b0f69",
       "comment": "",
       "command": "click",
-      "target": "id=psn",
+      "target": "id=output_onlinepngtools__2_",
       "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/div", "xpath:position"]
+        ["id=output_onlinepngtools__2_", "id"],
+        ["css=#output_onlinepngtools__2_", "css:finder"],
+        ["xpath=//img[@id='output_onlinepngtools__2_']", "xpath:attributes"],
+        ["xpath=//div[@id='league1']/img[2]", "xpath:idRelative"],
+        ["xpath=//img[2]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "72366b9c-e48e-437e-9a72-f0cc4766b0db",
+      "id": "f71fb5a7-b62e-4b1b-98de-41d2644199dc",
       "comment": "",
       "command": "click",
-      "target": "id=psn",
+      "target": "css=#Home_du > span",
       "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[3]/div", "xpath:position"]
+        ["css=#Home_du > span", "css:finder"],
+        ["xpath=//div[@id='Home_du']/span", "xpath:idRelative"],
+        ["xpath=//div[8]/div/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "55f3b4c5-f05c-4ac6-8895-3fe826fa39de",
-      "comment": "",
-      "command": "click",
-      "target": "css=#steam > span",
-      "targets": [
-        ["css=#steam > span", "css:finder"],
-        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "80cae062-117b-413a-81ab-8c43cda4a72c",
-      "comment": "",
-      "command": "click",
-      "target": "css=#steam > span",
-      "targets": [
-        ["css=#steam > span", "css:finder"],
-        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "de7e5c36-2db6-435f-9ed5-e4f1706165a4",
-      "comment": "",
-      "command": "click",
-      "target": "id=xbl_",
-      "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "afd5d4af-bb43-445a-8186-fce2570a1b9a",
-      "comment": "",
-      "command": "click",
-      "target": "id=xbl_",
-      "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "205517ff-e299-45e4-91ac-8009230c7dca",
-      "comment": "",
-      "command": "click",
-      "target": "css=#Game_Platform > span",
-      "targets": [
-        ["css=#Game_Platform > span", "css:finder"],
-        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "324ee318-2a51-46c9-bf90-8175ea4c62dd",
-      "comment": "",
-      "command": "click",
-      "target": "id=xbl_",
-      "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "697ec8dd-0e60-4387-9795-a05b4910e774",
-      "comment": "",
-      "command": "click",
-      "target": "css=#steam > span",
-      "targets": [
-        ["css=#steam > span", "css:finder"],
-        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0020d88b-ae1f-45d6-840b-7403ee07babf",
-      "comment": "",
-      "command": "click",
-      "target": "id=steam",
-      "targets": [
-        ["id=steam", "id"],
-        ["css=#steam", "css:finder"],
-        ["xpath=//div[@id='steam']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_2']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "8a50881b-c658-467c-ac54-741c50c51cea",
-      "comment": "",
-      "command": "click",
-      "target": "css=#Game_Platform > span",
-      "targets": [
-        ["css=#Game_Platform > span", "css:finder"],
-        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f305e636-00d0-4bfb-9227-1c83d8ac06f1",
-      "comment": "",
-      "command": "click",
-      "target": "id=xbl_",
-      "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1e5bb584-55dd-4532-85bc-1e0d9d1454d1",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a822f6af-0906-4596-821f-a3c6533a0ca6",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[3]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4594d031-ff0a-4486-8784-409100803f4d",
-      "comment": "",
-      "command": "click",
-      "target": "css=#Game_Platform > span",
-      "targets": [
-        ["css=#Game_Platform > span", "css:finder"],
-        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ee29c17b-2677-461a-af8b-5c3751ad2ee5",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=(//img[@id='output_onlinepngtools__2__ds'])[2]",
-      "targets": [
-        ["xpath=(//img[@id='output_onlinepngtools__2__ds'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='cod1']/img[4]", "xpath:idRelative"],
-        ["xpath=//img[4]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d2bf0208-414c-4438-9155-6a2e564157f2",
-      "comment": "",
-      "command": "click",
-      "target": "id=Component_7___3",
-      "targets": [
-        ["id=Component_7___3", "id"],
-        ["css=#Component_7___3", "css:finder"],
-        ["xpath=//div[@id='Component_7___3']", "xpath:attributes"],
-        ["xpath=//div[@id='cod1']/div[8]", "xpath:idRelative"],
-        ["xpath=//div[8]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "7dfa961b-377f-4ea9-b425-078e64961832",
+      "id": "1319fdfc-45b6-4850-9c99-baf0b3df1ad4",
       "comment": "",
       "command": "click",
       "target": "id=unnamed",
@@ -335,167 +192,19 @@
       ],
       "value": ""
     }, {
-      "id": "7dbff9e2-1666-47ee-b7a7-7c69982245c3",
-      "comment": "",
-      "command": "click",
-      "target": "id=xbl_",
-      "targets": [
-        ["id=xbl_", "id"],
-        ["css=#xbl_", "css:finder"],
-        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6bb2dae-bcd3-4235-bd2a-89b8247f3790",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1b231bba-f49c-4215-becb-ec7e75765e16",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[3]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "56f53bed-c5f0-46da-b352-f0dc98ebeb5e",
-      "comment": "",
-      "command": "click",
-      "target": "css=#Game_Platform > span",
-      "targets": [
-        ["css=#Game_Platform > span", "css:finder"],
-        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "084dbc67-9008-4e3c-9ee1-0eda13af4209",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=(//img[@id='output_onlinepngtools__2__ds'])[2]",
-      "targets": [
-        ["xpath=(//img[@id='output_onlinepngtools__2__ds'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='cod1']/img[4]", "xpath:idRelative"],
-        ["xpath=//img[4]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4904442d-aea2-49b2-bc9a-ca2375a5a284",
-      "comment": "",
-      "command": "click",
-      "target": "css=#League_of_Legends__d > span",
-      "targets": [
-        ["css=#League_of_Legends__d > span", "css:finder"],
-        ["xpath=//div[@id='League_of_Legends__d']/span", "xpath:idRelative"],
-        ["xpath=//div[9]/div/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "09c3a91a-dae3-429b-8163-60dd7ddf8f0f",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=(//div[@id='psn_bo'])[2]",
-      "targets": [
-        ["xpath=(//div[@id='psn_bo'])[2]", "xpath:attributes"],
-        ["xpath=(//div[@id='GamePlatformMenu_1_bm']/div)[2]", "xpath:idRelative"],
-        ["xpath=//div[7]/div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "39bfedf5-93c3-44b0-baa7-8a90c943eb31",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "8c917123-d001-477b-8af5-a149565bbe23",
-      "comment": "",
-      "command": "click",
-      "target": "id=psn",
-      "targets": [
-        ["id=psn", "id"],
-        ["css=#psn", "css:finder"],
-        ["xpath=//div[@id='psn']", "xpath:attributes"],
-        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "aca7734e-7713-48b2-9399-7bf9a7014d2e",
-      "comment": "",
-      "command": "click",
-      "target": "css=#Game_Platform > span",
-      "targets": [
-        ["css=#Game_Platform > span", "css:finder"],
-        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5f8ce03d-db6b-4761-8d3d-90f46e81093d",
+      "id": "81ff0420-d137-4ea9-b297-04d9b6d43e0f",
       "comment": "",
       "command": "click",
       "target": "css=#VOLT_GG > span",
       "targets": [
         ["css=#VOLT_GG > span", "css:finder"],
         ["xpath=//div[@id='VOLT_GG']/span", "xpath:idRelative"],
-        ["xpath=//span", "xpath:position"],
+        ["xpath=//div[4]/span", "xpath:position"],
         ["xpath=//span[contains(.,'VOLT.GG')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "a5502172-b241-48cd-a327-be22978d794a",
-      "comment": "",
-      "command": "click",
-      "target": "id=league_of_legends_riot_games_l",
-      "targets": [
-        ["id=league_of_legends_riot_games_l", "id"],
-        ["css=#league_of_legends_riot_games_l", "css:finder"],
-        ["xpath=//img[@id='league_of_legends_riot_games_l']", "xpath:attributes"],
-        ["xpath=//div[@id='index']/img[3]", "xpath:idRelative"],
-        ["xpath=//img[3]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "00c7577a-4bea-4ba5-9f2d-8162cc5aa6c5",
-      "comment": "",
-      "command": "click",
-      "target": "id=Component_7___2",
-      "targets": [
-        ["id=Component_7___2", "id"],
-        ["css=#Component_7___2", "css:finder"],
-        ["xpath=//div[@id='Component_7___2']", "xpath:attributes"],
-        ["xpath=//div[@id='league1']/div[4]", "xpath:idRelative"],
-        ["xpath=//div[4]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "53ed19a8-3dff-44fd-8919-8fc1ab5b9197",
+      "id": "ad91f22e-8e5f-4108-94b1-ab2bbc4a6269",
       "comment": "",
       "command": "click",
       "target": "id=output_onlinepngtools__2_",
@@ -508,7 +217,379 @@
       ],
       "value": ""
     }, {
-      "id": "35bf9c7f-7f7c-4c2d-b825-fed11d8f9f8c",
+      "id": "5bc2f0d4-0717-452b-a872-2b0c6f455d32",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2858f349-5716-4772-ae71-e362fa83e1df",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79fb3050-2220-43ee-b215-d055def1c9a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=psn",
+      "targets": [
+        ["id=psn", "id"],
+        ["css=#psn", "css:finder"],
+        ["xpath=//div[@id='psn']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68f4be8e-311b-4f45-baef-ac16be5614c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Game_Platform > span",
+      "targets": [
+        ["css=#Game_Platform > span", "css:finder"],
+        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48729e4c-d60e-47c2-8805-60541f860c1c",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a5b336f-64ad-483d-93c7-f26d2bcb4204",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bb79b2d-e667-4783-984b-bf1f647ffe21",
+      "comment": "",
+      "command": "click",
+      "target": "id=steam",
+      "targets": [
+        ["id=steam", "id"],
+        ["css=#steam", "css:finder"],
+        ["xpath=//div[@id='steam']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_2']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68533805-f127-441b-a952-0b3cd97a91f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Game_Platform > span",
+      "targets": [
+        ["css=#Game_Platform > span", "css:finder"],
+        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f432a356-7a49-4d1e-bd20-43ca5567482a",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6adb3e0b-abca-49cb-bcc8-ce46ef53fe1a",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "038e05cb-f340-4607-8628-ac21ca117da6",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ec8ad23-c67f-45a6-914c-ab4460556f8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Game_Platform > span",
+      "targets": [
+        ["css=#Game_Platform > span", "css:finder"],
+        ["xpath=//div[@id='Game_Platform']/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Game Platform')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f06457c-7258-412d-95fc-9132f4f90164",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe4b2403-50d7-4bd1-883f-cdf9ef5bd92b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fb97f64-fb2c-42bd-8b9a-33996588ab9f",
+      "comment": "",
+      "command": "click",
+      "target": "id=psn",
+      "targets": [
+        ["id=psn", "id"],
+        ["css=#psn", "css:finder"],
+        ["xpath=//div[@id='psn']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_1']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da5ba05c-c720-431e-8ac5-3317bfb337e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85cf8799-bf6c-4c86-ad68-fcdca49c7ef9",
+      "comment": "",
+      "command": "click",
+      "target": "id=steam",
+      "targets": [
+        ["id=steam", "id"],
+        ["css=#steam", "css:finder"],
+        ["xpath=//div[@id='steam']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_2']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21c8a0c8-610f-4c22-9628-936d7cdad0cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=#xbl_ > span",
+      "targets": [
+        ["css=#xbl_ > span", "css:finder"],
+        ["xpath=//div[@id='xbl_']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'xbl')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6722c7e8-acef-4009-aabe-31aeab858691",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7069b21c-3e04-4bc5-a66b-07b7c875dd7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c694ec5d-19bc-4390-8dc6-a86b861a3603",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4468c70b-9c12-4683-a8f5-f12e6528026b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65ac563a-a382-4879-957d-c598c4ebbe08",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc734ad5-1116-44ef-8297-7b936f84b9bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#xbl_ > span",
+      "targets": [
+        ["css=#xbl_ > span", "css:finder"],
+        ["xpath=//div[@id='xbl_']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'xbl')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ebff0e3-8fae-406a-bd88-8cd932ff4f0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=xbl_",
+      "targets": [
+        ["id=xbl_", "id"],
+        ["css=#xbl_", "css:finder"],
+        ["xpath=//div[@id='xbl_']", "xpath:attributes"],
+        ["xpath=//div[@id='GamePlatformMenu_3']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cee0477-d521-41b9-9257-ed34c68561a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b06fa894-f58c-4227-a290-da01308fdf00",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c789f1d2-eaa7-424f-993f-4106e8b1e058",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7cb41c6-f448-4b18-9a42-a5d6f6591105",
+      "comment": "",
+      "command": "click",
+      "target": "css=#psn > span",
+      "targets": [
+        ["css=#psn > span", "css:finder"],
+        ["xpath=//div[@id='psn']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'psn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c8bd43e-eb3d-44fb-b560-e06d7f7da784",
+      "comment": "",
+      "command": "click",
+      "target": "css=#steam > span",
+      "targets": [
+        ["css=#steam > span", "css:finder"],
+        ["xpath=//div[@id='steam']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'steam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a12bf4a6-e36b-4d34-9984-c3d993463af7",
       "comment": "",
       "command": "click",
       "target": "css=.Path_32",
@@ -517,26 +598,7 @@
       ],
       "value": ""
     }, {
-      "id": "45f6c5a0-9833-45cb-be16-bb6753c7d8d4",
-      "comment": "",
-      "command": "click",
-      "target": "id=Rectangle_32",
-      "targets": [
-        ["id=Rectangle_32", "id"],
-        ["css=#Rectangle_32", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "495f9fb4-49b9-41ed-84ea-445535f74cc6",
-      "comment": "",
-      "command": "click",
-      "target": "css=.Path_32",
-      "targets": [
-        ["css=.Path_32", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "1936ce23-d18b-4b3d-b5be-4df54c3e8a57",
+      "id": "7876d450-fda8-4bfb-9ed9-b2ea34c95c7f",
       "comment": "",
       "command": "close",
       "target": "",
@@ -550,7 +612,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["3594c305-75cf-4b48-a637-d6f4907de73e"]
+    "tests": []
   }],
   "urls": ["http://127.0.0.1:5000/"],
   "plugins": []

@@ -1,0 +1,513 @@
+.mediaViewInfo {
+	--web-view-name: cod2 – 3;
+	--web-view-id: cod2___3;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: cod2___3;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#cod2___3 {
+	position: absolute;
+	background: #E5E5E5;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(28,33,62,1);
+	overflow: hidden;
+	--web-view-name: cod2 – 3;
+	--web-view-id: cod2___3;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#wp4517150 {
+	position: absolute;
+	width: 1705px;
+	height: 1080px;
+	left: 215px;
+	top: 0px;
+	overflow: visible;
+}
+#League_of_Legends_ {
+	position: absolute;
+	left: 66px;
+	top: 275px;
+	overflow: visible;
+	width: 121px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(234,236,247,1);
+}
+#Home {
+	position: absolute;
+	left: 73px;
+	top: 170px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(234,236,247,1);
+}
+#ID001_home {
+	position: absolute;
+	width: 34px;
+	height: 30.308px;
+	left: 18px;
+	top: 164px;
+	overflow: visible;
+}
+#Group_9_k {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_8_k {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_20_k {
+	overflow: visible;
+	position: absolute;
+	width: 34.565px;
+	height: 14.157px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Group_11_k {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 3.749px;
+	top: 13.596px;
+	overflow: visible;
+}
+#Group_10_la {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_21_lb {
+	overflow: visible;
+	position: absolute;
+	width: 27.002px;
+	height: 17.212px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#VOLT_GG {
+	position: absolute;
+	left: 24px;
+	top: 53px;
+	overflow: visible;
+	width: 145px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+	text-align: center;
+	font-family: Thunder Titan;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+	color: rgba(255,255,255,1);
+	letter-spacing: 0.1px;
+}
+#output_onlinepngtools {
+	position: absolute;
+	width: 37px;
+	height: 40px;
+	left: 18px;
+	top: 269px;
+	overflow: visible;
+}
+#output_onlinepngtools__2__k {
+	position: absolute;
+	width: 119px;
+	height: 38px;
+	left: 37px;
+	top: 378px;
+	overflow: visible;
+}
+#Rectangle_32 {
+	opacity: 0.86;
+}
+.Rectangle_32 {
+	position: absolute;
+	overflow: visible;
+	width: 800px;
+	height: 48px;
+	left: 648px;
+	top: 492px;
+}
+#Search_your_Name {
+	opacity: 0.86;
+	position: absolute;
+	left: 715px;
+	top: 506px;
+	overflow: visible;
+	width: 115px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+}
+#magnifying_glass {
+	opacity: 0.86;
+	position: absolute;
+	width: 20.043px;
+	height: 20.048px;
+	left: 664.593px;
+	top: 504.288px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: error.html;
+	cursor: pointer;
+}
+.Path_32 {
+	overflow: visible;
+	position: absolute;
+	width: 20.043px;
+	height: 20.048px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#DropdownMenu_gamePlatform {
+	position: absolute;
+	width: 223px;
+	height: 178px;
+	left: 404px;
+	top: 362px;
+	overflow: visible;
+}
+#GamePlatformDropDown {
+	position: absolute;
+	width: 223px;
+	height: 178px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Rectangle_510 {
+	opacity: 0;
+}
+.Rectangle_510 {
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	height: 178px;
+	left: 0px;
+	top: 0px;
+}
+#GamePlatformMenu_3 {
+	position: absolute;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 130px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: cod2.html;
+	cursor: pointer;
+}
+#Rectangle_507 {
+	opacity: 0.86;
+}
+.Rectangle_507 {
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+}
+#xbl_ {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	width: 224px;
+	height: 48px;
+	line-height: 28px;
+	margin-top: -1.5px;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#GamePlatformMenu_2 {
+	opacity: 0;
+	position: absolute;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 65px;
+	overflow: visible;
+}
+#Rectangle_507_kx {
+	opacity: 0.86;
+}
+.Rectangle_507_kx {
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+}
+#steam {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	width: 224px;
+	height: 48px;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#GamePlatformMenu_1 {
+	opacity: 0;
+	position: absolute;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Rectangle_507_k {
+	opacity: 0.86;
+}
+.Rectangle_507_k {
+	position: absolute;
+	overflow: visible;
+	width: 223px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+}
+#psn {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	width: 224px;
+	height: 48px;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#output_onlinepngtools__2__k {
+	position: absolute;
+	width: 119px;
+	height: 38px;
+	left: 37px;
+	top: 378px;
+	overflow: visible;
+}
+#Component_7___5 {
+	position: absolute;
+	width: 93px;
+	height: 30.308px;
+	left: 18px;
+	top: 164px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+#Home_k {
+	position: absolute;
+	left: 55px;
+	top: 6px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(234,236,247,1);
+}
+#ID001_home_k {
+	position: absolute;
+	width: 34px;
+	height: 30.308px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_9_k {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_8_k {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_20_k {
+	overflow: visible;
+	position: absolute;
+	width: 34.565px;
+	height: 14.157px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Group_11_k {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 3.749px;
+	top: 13.596px;
+	overflow: visible;
+}
+#Group_10_la {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_21_lb {
+	overflow: visible;
+	position: absolute;
+	width: 27.002px;
+	height: 17.212px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Component_8___5 {
+	position: absolute;
+	width: 168px;
+	height: 40px;
+	left: 18px;
+	top: 269px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league1.html;
+	cursor: pointer;
+}
+#League_of_Legends__ld {
+	position: absolute;
+	left: 48px;
+	top: 6px;
+	overflow: visible;
+	width: 121px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(234,236,247,1);
+}
+#output_onlinepngtools_le {
+	position: absolute;
+	width: 37px;
+	height: 40px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Component_9___5 {
+	position: absolute;
+	width: 108px;
+	height: 60px;
+	left: 1469px;
+	top: 492px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: error.html;
+	cursor: pointer;
+}
+#Rectangle_512 {
+	opacity: 0.86;
+}
+.Rectangle_512 {
+	position: absolute;
+	overflow: visible;
+	width: 108px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+}
+#Search_ {
+	position: absolute;
+	left: 25px;
+	top: 6px;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}

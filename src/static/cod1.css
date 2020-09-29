@@ -1,7 +1,6 @@
 .mediaViewInfo {
 	--web-view-name: cod1;
 	--web-view-id: cod1;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -23,7 +22,6 @@
 	overflow: hidden;
 	--web-view-name: cod1;
 	--web-view-id: cod1;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -81,7 +79,7 @@
 	top: 164px;
 	overflow: visible;
 }
-#Group_9_d {
+#Group_9_dw {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -89,7 +87,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_d {
+#Group_8_dx {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -97,7 +95,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_d {
+.Path_20_dy {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -106,7 +104,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_d {
+#Group_11_dz {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -158,7 +156,7 @@
 	top: 269px;
 	overflow: visible;
 }
-#output_onlinepngtools__2__dy {
+#output_onlinepngtools__2__ds {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -301,10 +299,10 @@
 	--web-action-target: cod2.html;
 	cursor: pointer;
 }
-#Rectangle_507_dq {
+#Rectangle_507_dk {
 	opacity: 0.86;
 }
-.Rectangle_507_dq {
+.Rectangle_507_dk {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -340,10 +338,10 @@
 	--web-action-target: league2.html;
 	cursor: pointer;
 }
-#Rectangle_507_dt {
+#Rectangle_507_dn {
 	opacity: 0.86;
 }
-.Rectangle_507_dt {
+.Rectangle_507_dn {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -377,10 +375,10 @@
 	--web-action-target: league2.html;
 	cursor: pointer;
 }
-#Rectangle_507_dw {
+#Rectangle_507_dq {
 	opacity: 0.86;
 }
-.Rectangle_507_dw {
+.Rectangle_507_dq {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -402,7 +400,7 @@
 	font-size: 25px;
 	color: rgba(255,255,255,1);
 }
-#output_onlinepngtools__2__dy {
+#output_onlinepngtools__2__ds {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -422,7 +420,7 @@
 	--web-action-target: index.html;
 	cursor: pointer;
 }
-#Home_d {
+#Home_du {
 	position: absolute;
 	left: 55px;
 	top: 6px;
@@ -436,7 +434,7 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#ID001_home_d {
+#ID001_home_dv {
 	position: absolute;
 	width: 34px;
 	height: 30.308px;
@@ -444,7 +442,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_9_d {
+#Group_9_dw {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -452,7 +450,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_d {
+#Group_8_dx {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -460,7 +458,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_d {
+.Path_20_dy {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -469,7 +467,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_d {
+#Group_11_dz {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -520,48 +518,11 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#output_onlinepngtools_ea {
+#output_onlinepngtools_d {
 	position: absolute;
 	width: 37px;
 	height: 40px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
-}
-#Component_9___2 {
-	position: absolute;
-	width: 108px;
-	height: 60px;
-	left: 1469px;
-	top: 492px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: error.html;
-	cursor: pointer;
-}
-#Rectangle_512 {
-	opacity: 0.86;
-}
-.Rectangle_512 {
-	position: absolute;
-	overflow: visible;
-	width: 108px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#Search_ {
-	position: absolute;
-	left: 25px;
-	top: 6px;
-	overflow: visible;
-	width: 59px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
 }

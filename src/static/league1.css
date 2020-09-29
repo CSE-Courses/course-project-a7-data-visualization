@@ -1,7 +1,6 @@
 .mediaViewInfo {
 	--web-view-name: league1;
 	--web-view-id: league1;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -23,7 +22,6 @@
 	overflow: hidden;
 	--web-view-name: league1;
 	--web-view-id: league1;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -436,42 +434,5 @@
 	font-style: normal;
 	font-weight: normal;
 	font-size: 25px;
-	color: rgba(255,255,255,1);
-}
-#Component_9___1 {
-	position: absolute;
-	width: 108px;
-	height: 60px;
-	left: 1469px;
-	top: 492px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: error.html;
-	cursor: pointer;
-}
-#Rectangle_512 {
-	opacity: 0.86;
-}
-.Rectangle_512 {
-	position: absolute;
-	overflow: visible;
-	width: 108px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#Search_ {
-	position: absolute;
-	left: 25px;
-	top: 6px;
-	overflow: visible;
-	width: 59px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
 	color: rgba(255,255,255,1);
 }

@@ -1,7 +1,6 @@
 .mediaViewInfo {
 	--web-view-name: cod2;
 	--web-view-id: cod2;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -23,7 +22,6 @@
 	overflow: hidden;
 	--web-view-name: cod2;
 	--web-view-id: cod2;
-	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -85,7 +83,7 @@
 	top: 164px;
 	overflow: visible;
 }
-#Group_9_fg {
+#Group_9_e {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -93,7 +91,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_fh {
+#Group_8_e {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -101,7 +99,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_fi {
+.Path_20_e {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -110,7 +108,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_fj {
+#Group_11_fa {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -118,7 +116,7 @@
 	top: 13.597px;
 	overflow: visible;
 }
-#Group_10_fk {
+#Group_10_fb {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -126,7 +124,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_21_fl {
+.Path_21_fc {
 	overflow: visible;
 	position: absolute;
 	width: 27.002px;
@@ -162,7 +160,7 @@
 	top: 269px;
 	overflow: visible;
 }
-#output_onlinepngtools__2__fc {
+#output_onlinepngtools__2__e {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -290,10 +288,10 @@
 	top: 130px;
 	overflow: visible;
 }
-#Rectangle_507_e {
+#Rectangle_507_ev {
 	opacity: 0.86;
 }
-.Rectangle_507_e {
+.Rectangle_507_ev {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -329,10 +327,10 @@
 	top: 65px;
 	overflow: visible;
 }
-#Rectangle_507_fa {
+#Rectangle_507_ey {
 	opacity: 0.86;
 }
-.Rectangle_507_fa {
+.Rectangle_507_ey {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -370,10 +368,10 @@
 	--web-action-target: cod2___1.html;
 	cursor: pointer;
 }
-#Rectangle_507_fb {
+#Rectangle_507_e {
 	opacity: 0.86;
 }
-.Rectangle_507_fb {
+.Rectangle_507_e {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -395,7 +393,7 @@
 	font-size: 25px;
 	color: rgba(255,255,255,1);
 }
-#output_onlinepngtools__2__fc {
+#output_onlinepngtools__2__e {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -415,7 +413,7 @@
 	--web-action-target: index.html;
 	cursor: pointer;
 }
-#Home_fe {
+#Home_e {
 	position: absolute;
 	left: 55px;
 	top: 6px;
@@ -429,7 +427,7 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#ID001_home_ff {
+#ID001_home_e {
 	position: absolute;
 	width: 34px;
 	height: 30.308px;
@@ -437,7 +435,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_9_fg {
+#Group_9_e {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -445,7 +443,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_fh {
+#Group_8_e {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -453,7 +451,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_fi {
+.Path_20_e {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -462,7 +460,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_fj {
+#Group_11_fa {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -470,7 +468,7 @@
 	top: 13.597px;
 	overflow: visible;
 }
-#Group_10_fk {
+#Group_10_fb {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -478,7 +476,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_21_fl {
+.Path_21_fc {
 	overflow: visible;
 	position: absolute;
 	width: 27.002px;
@@ -499,7 +497,7 @@
 	--web-action-target: league1.html;
 	cursor: pointer;
 }
-#League_of_Legends__fn {
+#League_of_Legends__fe {
 	position: absolute;
 	left: 48px;
 	top: 6px;
@@ -513,48 +511,11 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#output_onlinepngtools_fo {
+#output_onlinepngtools_ff {
 	position: absolute;
 	width: 37px;
 	height: 40px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
-}
-#Component_9___3 {
-	position: absolute;
-	width: 108px;
-	height: 60px;
-	left: 1469px;
-	top: 492px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: error.html;
-	cursor: pointer;
-}
-#Rectangle_512 {
-	opacity: 0.86;
-}
-.Rectangle_512 {
-	position: absolute;
-	overflow: visible;
-	width: 108px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#Search_ {
-	position: absolute;
-	left: 25px;
-	top: 6px;
-	overflow: visible;
-	width: 59px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
 }

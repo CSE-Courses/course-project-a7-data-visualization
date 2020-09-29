@@ -3,7 +3,7 @@ import pandas as pd
 from riotwatcher import LolWatcher
 
 def getLolData(username,my_region):
-    api_key = 'RGAPI-63c0021c-71c9-4939-846b-ffd61fff94a0'
+    api_key = 'RGAPI-5ae30671-3da1-48fc-a846-498114db9c9a'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])

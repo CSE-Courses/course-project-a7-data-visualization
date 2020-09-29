@@ -1,8 +1,12 @@
 .mediaViewInfo {
 	--web-view-name: error;
 	--web-view-id: error;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
+	--web-scale-on-double-click: true;
+	--web-actual-size-on-double-click: true;
 	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
 	--web-enable-deep-linking: true;
 }
 :root {
@@ -23,8 +27,12 @@
 	overflow: hidden;
 	--web-view-name: error;
 	--web-view-id: error;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
+	--web-scale-on-double-click: true;
+	--web-actual-size-on-double-click: true;
 	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
 	--web-enable-deep-linking: true;
 }
 @keyframes fadein {
@@ -54,6 +62,86 @@
 	font-weight: normal;
 	font-size: 14px;
 	color: rgba(234,236,247,1);
+}
+#Home {
+	position: absolute;
+	left: 73px;
+	top: 170px;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(234,236,247,1);
+}
+#ID001_home {
+	position: absolute;
+	width: 34px;
+	height: 30.308px;
+	left: 25px;
+	top: 170px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+#Group_9 {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Group_8 {
+	position: absolute;
+	width: 34px;
+	height: 13.567px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_20 {
+	overflow: visible;
+	position: absolute;
+	width: 34.565px;
+	height: 14.157px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Group_11 {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 3.749px;
+	top: 13.597px;
+	overflow: visible;
+}
+#Group_10 {
+	position: absolute;
+	width: 26.503px;
+	height: 16.712px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.Path_21 {
+	overflow: visible;
+	position: absolute;
+	width: 27.002px;
+	height: 17.212px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
 }
 #VOLT_GG {
 	position: absolute;
@@ -163,96 +251,4 @@
 	height: 382px;
 	left: 736px;
 	top: 354px;
-}
-#Component_7___6 {
-	position: absolute;
-	width: 93px;
-	height: 30.308px;
-	left: 37px;
-	top: 163px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: index.html;
-	cursor: pointer;
-}
-#Home {
-	position: absolute;
-	left: 55px;
-	top: 6px;
-	overflow: visible;
-	width: 39px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Merrant;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	color: rgba(234,236,247,1);
-}
-#ID001_home {
-	position: absolute;
-	width: 34px;
-	height: 30.308px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_9 {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_8 {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_20 {
-	overflow: visible;
-	position: absolute;
-	width: 34.565px;
-	height: 14.157px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#Group_11 {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 3.749px;
-	top: 13.597px;
-	overflow: visible;
-}
-#Group_10 {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_21 {
-	overflow: visible;
-	position: absolute;
-	width: 27.002px;
-	height: 17.212px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-.Rectangle_512 {
-	position: absolute;
-	overflow: visible;
-	width: 562px;
-	height: 355px;
-	left: 736px;
-	top: 416px;
 }

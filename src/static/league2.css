@@ -1,6 +1,7 @@
 .mediaViewInfo {
 	--web-view-name: league2;
 	--web-view-id: league2;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -22,6 +23,7 @@
 	overflow: hidden;
 	--web-view-name: league2;
 	--web-view-id: league2;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -83,7 +85,7 @@
 	top: 164px;
 	overflow: visible;
 }
-#Group_9_ck {
+#Group_9_cn {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -91,7 +93,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_cl {
+#Group_8_co {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -99,7 +101,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_cm {
+.Path_20_cp {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -108,7 +110,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_cn {
+#Group_11_cq {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -116,7 +118,7 @@
 	top: 13.597px;
 	overflow: visible;
 }
-#Group_10_co {
+#Group_10_cr {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -124,7 +126,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_21_cp {
+.Path_21_cs {
 	overflow: visible;
 	position: absolute;
 	width: 27.002px;
@@ -160,7 +162,7 @@
 	top: 269px;
 	overflow: visible;
 }
-#output_onlinepngtools__2__cg {
+#output_onlinepngtools__2__cj {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -285,10 +287,10 @@
 	top: 0px;
 	overflow: visible;
 }
-#Rectangle_507_ce {
+#Rectangle_507_ch {
 	opacity: 0.86;
 }
-.Rectangle_507_ce {
+.Rectangle_507_ch {
 	position: absolute;
 	overflow: visible;
 	width: 223px;
@@ -310,7 +312,7 @@
 	font-size: 25px;
 	color: rgba(255,255,255,1);
 }
-#output_onlinepngtools__2__cg {
+#output_onlinepngtools__2__cj {
 	position: absolute;
 	width: 119px;
 	height: 38px;
@@ -334,7 +336,7 @@
 	--web-action-target: index.html;
 	cursor: pointer;
 }
-#Home_ci {
+#Home_cl {
 	position: absolute;
 	left: 55px;
 	top: 6px;
@@ -348,7 +350,7 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#ID001_home_cj {
+#ID001_home_cm {
 	position: absolute;
 	width: 34px;
 	height: 30.308px;
@@ -356,7 +358,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_9_ck {
+#Group_9_cn {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -364,7 +366,7 @@
 	top: 0px;
 	overflow: visible;
 }
-#Group_8_cl {
+#Group_8_co {
 	position: absolute;
 	width: 34px;
 	height: 13.567px;
@@ -372,7 +374,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_20_cm {
+.Path_20_cp {
 	overflow: visible;
 	position: absolute;
 	width: 34.565px;
@@ -381,7 +383,7 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#Group_11_cn {
+#Group_11_cq {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -389,7 +391,7 @@
 	top: 13.597px;
 	overflow: visible;
 }
-#Group_10_co {
+#Group_10_cr {
 	position: absolute;
 	width: 26.503px;
 	height: 16.712px;
@@ -397,7 +399,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_21_cp {
+.Path_21_cs {
 	overflow: visible;
 	position: absolute;
 	width: 27.002px;
@@ -414,7 +416,7 @@
 	top: 269px;
 	overflow: visible;
 }
-#League_of_Legends__cr {
+#League_of_Legends__cu {
 	position: absolute;
 	left: 48px;
 	top: 6px;
@@ -428,11 +430,48 @@
 	font-size: 14px;
 	color: rgba(234,236,247,1);
 }
-#output_onlinepngtools_cs {
+#output_onlinepngtools_cv {
 	position: absolute;
 	width: 37px;
 	height: 40px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
+}
+#Component_9___7 {
+	position: absolute;
+	width: 108px;
+	height: 60px;
+	left: 1469px;
+	top: 492px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: error.html;
+	cursor: pointer;
+}
+#Rectangle_512 {
+	opacity: 0.86;
+}
+.Rectangle_512 {
+	position: absolute;
+	overflow: visible;
+	width: 108px;
+	height: 48px;
+	left: 0px;
+	top: 0px;
+}
+#Search_ {
+	position: absolute;
+	left: 25px;
+	top: 6px;
+	overflow: visible;
+	width: 59px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
 }

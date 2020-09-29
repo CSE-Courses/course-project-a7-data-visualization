@@ -1,6 +1,7 @@
 .mediaViewInfo {
 	--web-view-name: index;
 	--web-view-id: index;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -22,6 +23,7 @@
 	overflow: hidden;
 	--web-view-name: index;
 	--web-view-id: index;
+	--web-enable-scale-up: true;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
@@ -38,7 +40,7 @@
 .Rectangle_511 {
 	position: absolute;
 	overflow: visible;
-	width: 1706px;
+	width: 1443px;
 	height: 1080px;
 	left: 214px;
 	top: 0px;

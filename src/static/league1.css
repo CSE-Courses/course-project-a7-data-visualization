@@ -85,7 +85,7 @@
 	left: 648px;
 	top: 492px;
 }
-#Search_your_Name {
+#Search {
 	opacity: 0.86;
 	position: absolute;
 	left: 715px;
@@ -100,6 +100,14 @@
 	font-size: 14px;
 	color: rgba(255,255,255,1);
 }
+
+.Search input[type=text] {
+    padding: 600px;
+    margin-top: 800px;
+    font-size: 17px;
+    border: none;
+}
+
 #magnifying_glass {
 	opacity: 0.86;
 	position: absolute;

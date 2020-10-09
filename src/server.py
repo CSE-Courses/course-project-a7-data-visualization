@@ -3,7 +3,7 @@ import pandas as pd
 from src.gamedata import loldata
 
 app = Flask(__name__)
-
+server = app.server
 """
 UI Code
 """

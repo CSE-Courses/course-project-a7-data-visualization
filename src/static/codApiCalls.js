@@ -20,7 +20,8 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             //console.log(this.responseText);
-            codBr(this.responseText);
+            if(mode === "br"){GetCodBrStats(this.responseText);}
+            else{GetCodMultiplayerStats(this.responseText)}
         }
     });
 
@@ -32,7 +33,7 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 }
 //makeApiCallCod(); // uncomment when running locally
 
-function codBr(jsonStr){
+function GetCodBrStats(jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
     let mode = "mode: ";
@@ -57,6 +58,11 @@ function codBr(jsonStr){
     document.getElementById("topfive#").innerHTML = topFives;
 }
 
+function GetCodMultiplayerStats(jsonStr){
+    const codInfoDictionary = JSON.parse(jsonStr)
+    //parse jason file and go through dictionary to get values
+    //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+}
 
 
 
@@ -78,7 +84,7 @@ function makeApiCallCodTEST(userName, gamemode, platform){//THIS IS A TESTING ME
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
             //console.log(this.responseText);
-            codBr(this.responseText);
+            GetCodBrStats(this.responseText);
         }
     });
 

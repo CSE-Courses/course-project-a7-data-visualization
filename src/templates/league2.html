@@ -46,7 +46,12 @@
 	</svg>
     <div class="Search">
         <form action="../gamedata/Gamertag.php" method = "post">
-            <input type="text" placeholder="Search Gamertag.." id="Gamertage" name="Search">
+            <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
+            <script>
+                if(sessionStorage.getItem('gamertag')){
+                    document.getElementById("Gamertag").value = sessionStorage.getItem('gamertag');
+                }
+            </script>
         </form>
     </div>
 	<div onclick="application.goToTargetView(event)" id="magnifying_glass">

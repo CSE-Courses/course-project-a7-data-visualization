@@ -1727,6 +1727,7 @@ var Application = function() {
 	 * Go to the view in the event targets CSS variable
 	 */
 	self.goToTargetView = function(event) {
+		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
 		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
@@ -1735,8 +1736,7 @@ var Application = function() {
 		var targetView = self.application ? null : self.getElement(actionTargetValue);
 		var actionTargetStyles = targetView ? targetView.style : null;
 		var state = self.viewsDictionary[actionTargetValue];
-		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
-		
+
 		// navigate to page
 		if (self.application==false || targetType=="page") {
 			document.location.href = "./" + actionTargetValue;
@@ -1764,7 +1764,6 @@ var Application = function() {
 			self.stateName = name;
 			window.dispatchEvent(stateEvent);
 		}
-		
 	}
 
 	/**

@@ -1506,13 +1506,6 @@ var Application = function() {
 			}
 			self.currentOverlay = overlay;
 		}
-
-		if(sessionStorage.getItem("gamertag")){
-			console.log("Ran get");
-			document.getElementById("Gamertag").value = sessionStorage.getItem("Gamertag");
-		}else{
-			console.log("Didn't run get");
-		}
 	}
 
 	self.getViewPreferenceBoolean = function(view, property, altValue) {
@@ -1734,6 +1727,7 @@ var Application = function() {
 	 * Go to the view in the event targets CSS variable
 	 */
 	self.goToTargetView = function(event) {
+		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
 		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();

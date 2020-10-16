@@ -172,20 +172,9 @@
 	--web-action-target: cod1.html;
 	cursor: pointer;
 }
-#Rectangle_32 {
-	opacity: 0.86;
-}
-.Rectangle_32 {
-	position: absolute;
-	overflow: visible;
-	width: 800px;
-	height: 48px;
-	left: 648px;
-	top: 492px;
-}
 .Search {
 	height: 48px;
-	width: 800px;
+	width: 929px;
 	opacity: 0.86;
 	position: absolute;
 	left: 648px;
@@ -203,15 +192,27 @@
 .Search input[type=text] {
 	padding: 5px;
 	padding-left: 50px;
-	font-size: 17px;
+	font-size: 20px;
 	height: 48px;
 	width: 800px;
 	border: none;
 	outline: none;
 	background-color: rgba(43,51,91,1);
 	color: rgba(255,255,255,1);
+	border-radius: 4px;
 }
 
+.Search button {
+	float: right;
+	font-size: 20px;
+	height: 48px;
+	width: 108px;
+	border: none;
+	outline: none;
+	background-color: rgba(43,51,91,1);
+	color: rgba(255,255,255,1);
+	border-radius: 4px;
+}
 #magnifying_glass {
 	opacity: 0.86;
 	position: absolute;

@@ -1735,6 +1735,7 @@ var Application = function() {
 		var targetView = self.application ? null : self.getElement(actionTargetValue);
 		var actionTargetStyles = targetView ? targetView.style : null;
 		var state = self.viewsDictionary[actionTargetValue];
+		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
 		
 		// navigate to page
 		if (self.application==false || targetType=="page") {

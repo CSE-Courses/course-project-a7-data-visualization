@@ -1506,6 +1506,13 @@ var Application = function() {
 			}
 			self.currentOverlay = overlay;
 		}
+
+		if(sessionStorage.getItem("gamertag")){
+			console.log("Ran get");
+			document.getElementById("Gamertag").value = sessionStorage.getItem("Gamertag");
+		}else{
+			console.log("Didn't run get");
+		}
 	}
 
 	self.getViewPreferenceBoolean = function(view, property, altValue) {

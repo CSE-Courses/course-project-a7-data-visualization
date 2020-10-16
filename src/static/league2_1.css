@@ -175,21 +175,35 @@
 	left: 648px;
 	top: 492px;
 }
-#Search_your_Name {
+.Search {
+	height: 48px;
+	width: 800px;
 	opacity: 0.86;
 	position: absolute;
-	left: 715px;
-	top: 506px;
+	left: 648px;
+	top: 492px;
 	overflow: visible;
-	width: 115px;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Merrant;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
+	color: rgba(43,51,91,1);
+}
+
+.Search input[type=text] {
+	padding: 5px;
+	padding-left: 50px;
+	font-size: 17px;
+	height: 48px;
+	width: 800px;
+	border: none;
+	outline: none;
+	background-color: rgba(43,51,91,1);
 	color: rgba(255,255,255,1);
 }
+
 #magnifying_glass {
 	opacity: 0.86;
 	position: absolute;

@@ -5,7 +5,7 @@ from flask import session
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-5ae30671-3da1-48fc-a846-498114db9c9a'
+    api_key = 'RGAPI-c7549bb9-72d3-4f5c-afe0-f76df700fbbf'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -33,7 +33,8 @@ def getLolData(username, my_region):
 
 
 def main():
-    return getLolData(session.get('gamertag'), session.get('region')).to_json()
+    print(getLolData('Doublelift', 'na1').to_json)
+    return getLolData('Doublelift','na1').to_json
 
 
 if __name__ == '__main__':

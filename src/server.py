@@ -29,6 +29,14 @@ def leagueTwo():
 def leagueTwo_1():
     return render_template("league2_1.html")
 
+@app.route("/league2_1.html", methods=['POST'])
+def league():
+    username = request.form["Search"]
+    region = 'na1'
+    df = pd.DataFrame()
+    df = loldata.getLolData(username, region)
+    return render_template("leagueOfLegendView.html", name='League Of legends Player Data', data=df.to_html())
+
 @app.route("/cod1.html")
 def codOne():
     return render_template("cod1.html")
@@ -62,20 +70,6 @@ Game data code
 @app.route("/codapi")
 def cod_landing_page():
     return render_template("test_html_api.html")
-
-
-@app.route("/leaguedata")
-def leagueHome():
-    return render_template("leagueOflegendInput.html")
-
-
-@app.route("/leaguedata", methods=['POST'])
-def league():
-    username = request.form["username"]
-    region = request.form["region"]
-    df = pd.DataFrame()
-    df = loldata.getLolData(username, region)
-    return render_template("leagueOfLegendView.html", name='League Of legends Player Data', data=df.to_html())
 
 
 """

@@ -43,20 +43,15 @@
 	<img id="output_onlinepngtools" src="../static/output_onlinepngtools.png" srcset="../src/templates/output_online../src/templates/output_onlinepngtools@2x.pngnepngtools@2x.png 2x">
 	<img onclick="application.goToTargetView(event)" id="output_onlinepngtools__2__gq" src="../static/output_onlinepngtools__2__gq.png" srcset="../src/templates/output_onlinepngtool../src/templates/output_onlinepngtools__2__gq@2x.pngols__2__gq@2x.png 2x">
     <div class="Search">
-        <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
-        <script>
-            if(sessionStorage.getItem('gamertag')){
+        <form method="POST">
+            <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
+            <script>
+                if(sessionStorage.getItem('gamertag')){
                 document.getElementById("Gamertag").value = sessionStorage.getItem('gamertag');
             }
-        </script>
-        <button onclick="function searchFunction() {
-            console.log('initiating searchFunction()..\n');
-            sessionStorage.setItem('region', 'NA1');
-            sessionStorage.setItem('gamertag', document.getElementById('Gamertag').value);
-            console.log('Calling api with..','\nregion: ',sessionStorage.getItem('region'),'\ngamertag: ',sessionStorage.getItem('gamertag').toLowerCase())
-            makeApiCallLoL();
-        }
-        searchFunction()">Search</button>
+            </script>
+        <button type="submit">Search</button>
+        </form>
     </div>
 	<div onclick="application.goToTargetView(event)" id="magnifying_glass">
 		<svg class="Path_32" viewBox="0.05 0 20.043 20.048">

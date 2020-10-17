@@ -49,6 +49,12 @@ function GetCodBrStats(jsonStr){
     kd += codInfoDictionary["br"]["kdRatio"];
     downs += codInfoDictionary["br"]["downs"];
     topFives += codInfoDictionary["br"]["topFive"]
+    sessionStorage.setItem('mode',mode)
+    sessionStorage.setItem('deaths',deaths)
+    sessionStorage.setItem('kills',kills)
+    sessionStorage.setItem('kd',kd)
+    sessionStorage.setItem('downs',downs)
+    sessionStorage.setItem('topFives',topFives)
     console.log(mode, '\n',deaths, '\n', kills, '\n', kd, '\n', downs, '\n', topFives)
 
     // document.getElementById("gameName").innerHTML = mode;

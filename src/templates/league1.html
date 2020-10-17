@@ -7,6 +7,8 @@
 <title>league1</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/league1.css"/>
 <script id="applicationScript" type="text/javascript" src="../static/league1.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="../static/lolApiCalls.js"></script>
 </head>
 <body>
 <div id="league1">
@@ -16,15 +18,13 @@
 	</div>
 	<img onclick="application.goToTargetView(event)" id="output_onlinepngtools__2_" src="../static/output_onlinepngtools__2_.png" srcset="../src/templates/output_onlinepngt../src/templates/output_onlinepngtools__2_@2x.pnggtools__2_@2x.png 2x">
     <div class="Search">
-        <form action="../gamedata/Gamertag.php" method = "post">
-            <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
-            <script>
-                if(sessionStorage.getItem('gamertag')){
-                    document.getElementById("Gamertag").value = sessionStorage.getItem('gamertag');
-                }
-            </script>
-            <button type="submit">Search</button>
-        </form>
+        <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
+        <script>
+            if(sessionStorage.getItem('gamertag')){
+                document.getElementById("Gamertag").value = sessionStorage.getItem('gamertag');
+            }
+        </script>
+        <button type="submit">Search</button>
     </div>
 	<div onclick="application.goToTargetView(event)" id="magnifying_glass">
 		<svg class="Path_32" viewBox="0.05 0 20.043 20.048">
@@ -69,7 +69,7 @@
 					</rect>
 				</svg>
 				<div id="psn_bo">
-					<span>riot</span><br>
+					<span>NA</span><br>
 				</div>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 				</rect>
 			</svg>
 			<div id="Game_Platform_bj">
-				<span>Game Platform</span>
+				<span>Server</span>
 			</div>
 		</div>
 	</div>
@@ -90,7 +90,7 @@
 				</rect>
 			</svg>
 			<div id="Game_Platform_bj">
-				<span>Game Platform</span>
+				<span>Server</span>
 			</div>
 			<svg class="Polygon_4" viewBox="0 0 14 13">
 				<path fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4" d="M 6.999999523162842 0 L 14 13 L 0 13 Z">

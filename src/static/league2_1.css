@@ -213,10 +213,6 @@
 	left: 664.593px;
 	top: 504.288px;
 	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: error.html;
-	cursor: pointer;
 }
 .Path_32 {
 	overflow: visible;

@@ -1,7 +1,6 @@
 # global variables
 import pandas as pd
 from riotwatcher import LolWatcher
-from flask import session
 
 
 def getLolData(username, my_region):
@@ -30,12 +29,3 @@ def getLolData(username, my_region):
         participants.append(participants_row)
     df = pd.DataFrame(participants)
     return df
-
-
-def main():
-    print(getLolData('Doublelift', 'na1').to_json)
-    return getLolData('Doublelift','na1').to_json
-
-
-if __name__ == '__main__':
-    main()

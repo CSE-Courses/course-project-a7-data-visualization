@@ -7,6 +7,7 @@
 <title>cod1</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/cod1.css"/>
 <script id="applicationScript" type="text/javascript" src="../static/cod1.js"></script>
+<script type="text/javascript" src="../static/codApiCalls.js"></script>
 </head>
 <body>
 <div id="cod1">
@@ -40,6 +41,26 @@
 	</div>
 	<img id="output_onlinepngtools" src="../static/output_onlinepngtools.png" srcset="../src/templates/output_online../src/templates/output_onlinepngtools@2x.pngnepngtools@2x.png 2x">
 	<img id="output_onlinepngtools__2__ds" src="../static/output_onlinepngtools__2__ds.png" srcset="../src/templates/output_onlinepngtool../src/templates/output_onlinepngtools__2__ds@2x.pngols__2__ds@2x.png 2x">
+    <div class="Dropdown">
+        <button id="Platform" class="dropbtn">Choose Platform</button>
+        <div class="Dropdown-Content">
+            <button onclick="changePlatformPSN()">Playstation 4</button>
+            <script>function changePlatformPSN(){
+                document.getElementById("Platform").innerHTML = "Playstation 4"
+                sessionStorage.setItem('platform','psn')
+            }</script>
+            <button onclick="changePlatformXBL()">XBox One</button>
+            <script>function changePlatformXBL(){
+                document.getElementById("Platform").innerHTML = "XBox One"
+                sessionStorage.setItem('platform','xbl')
+            }</script>
+            <button onclick="changePlatformSteam()">Steam</button>
+            <script>function changePlatformSteam(){
+                document.getElementById("Platform").innerHTML = "Steam"
+                sessionStorage.setItem('platform','steam')
+            }</script>
+        </div>
+    </div>
     <div id="magnifying_glass">
         <svg class="Path_32" viewBox="0.05 0 20.043 20.048">
             <path fill="rgba(255,255,255,1)" id="Path_32" d="M 19.9199390411377 19.02535438537598 L 15.04802417755127 14.15344142913818 C 16.35490798950195 12.65097236633301 17.14614868164063 10.69065093994141 17.14614868164063 8.548073768615723 C 17.14614868164063 3.831741809844971 13.30996131896973 0 8.598074913024902 0 C 3.881741762161255 0 0.04999999701976776 3.836187362670898 0.04999999701976776 8.548074722290039 C 0.04999999701976776 13.25996112823486 3.886187314987183 17.09614944458008 8.598074913024902 17.09614944458008 C 10.74064922332764 17.09614944458008 12.70097160339355 16.30490875244141 14.20344066619873 14.99802589416504 L 19.07535552978516 19.86993789672852 C 19.1909294128418 19.98551368713379 19.34651184082031 20.0477466583252 19.49764633178711 20.0477466583252 C 19.64878273010254 20.0477466583252 19.80436515808105 19.98995780944824 19.9199390411377 19.86993789672852 C 20.15108871459961 19.6387882232666 20.15108871459961 19.25650405883789 19.9199390411377 19.02535438537598 Z M 1.245752453804016 8.548074722290039 C 1.245752453804016 4.494073867797852 4.544073104858398 1.200197696685791 8.593628883361816 1.200197696685791 C 12.647629737854 1.200197696685791 15.94150543212891 4.498518466949463 15.94150543212891 8.548074722290039 C 15.94150543212891 12.59763145446777 12.64762878417969 15.90039730072021 8.5936279296875 15.90039730072021 C 4.544073581695557 15.90039730072021 1.245752453804016 12.60207462310791 1.245752453804016 8.548074722290039 Z">
@@ -47,64 +68,16 @@
         </svg>
     </div>
     <div class="Search">
-        <form action="../gamedata/Gamertag.php" method = "post">
-            <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
-            <script>
-                if(sessionStorage.getItem('gamertag')){
-                    document.getElementById("Gamertag").value = sessionStorage.getItem('gamertag');
-                }
-            </script>
-            <button type="submit">Search</button>
-        </form>
+        <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Search">
+        <button onclick="searchFunction()">Search</button>
+        <script>
+            function searchFunction() {
+            console.log('initiating searchFunction()..\n');
+            sessionStorage.setItem('gamertag', document.getElementById('Gamertag').value);
+            console.log('Calling api with..','\nplatform: ',sessionStorage.getItem('platform'),'\ngamertag: ',sessionStorage.getItem('gamertag').toLowerCase())
+            makeApiCallCod();
+        }</script>
     </div>
-	<div id="DropdownMenu_gamePlatform" class="DropdownMenu_gamePlatform">
-		<div onclick="application.goToTargetView(event)" id="GamePlatformMenu_prompt" class="GamePlatformMenu_prompt">
-			<svg class="Rectangle_507">
-				<rect fill="rgba(43,51,91,1)" id="Rectangle_507" rx="0" ry="0" x="0" y="0" width="223" height="48">
-				</rect>
-			</svg>
-			<div id="Game_Platform">
-				<span>Game Platform</span>
-			</div>
-			<svg class="Polygon_4" viewBox="0 0 14 13">
-				<path fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Polygon_4" d="M 6.999999523162842 0 L 14 13 L 0 13 Z">
-				</path>
-			</svg>
-		</div>
-		<div id="GamePlatformDropDown" class="GamePlatformDropDown">
-			<svg class="Rectangle_510">
-				<rect fill="rgba(43,51,91,1)" id="Rectangle_510" rx="0" ry="0" x="0" y="0" width="223" height="178">
-				</rect>
-			</svg>
-			<div onclick="application.goToTargetView(event)" id="GamePlatformMenu_3" class="GamePlatformMenu_3">
-				<svg class="Rectangle_507_dk">
-					<rect fill="rgba(43,51,91,1)" stroke="rgba(255,255,255,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_507_dk" rx="0" ry="0" x="0" y="0" width="223" height="48">
-					</rect>
-				</svg>
-				<div id="xbl_">
-					<span>xbl</span><br>
-				</div>
-			</div>
-			<div onclick="application.goToTargetView(event)" id="GamePlatformMenu_2" class="GamePlatformMenu_2">
-				<svg class="Rectangle_507_dn">
-					<rect fill="rgba(43,51,91,1)" stroke="rgba(255,255,255,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_507_dn" rx="0" ry="0" x="0" y="0" width="223" height="48">
-					</rect>
-				</svg>
-				<div id="steam">
-					<span>steam</span>
-				</div>
-			</div>
-			<div onclick="application.goToTargetView(event)" id="GamePlatformMenu_1" class="GamePlatformMenu_1">
-				<svg class="Rectangle_507_dq">
-					<rect fill="rgba(43,51,91,1)" stroke="rgba(255,255,255,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_507_dq" rx="0" ry="0" x="0" y="0" width="223" height="48">
-					</rect>
-				</svg>
-				<div id="psn">
-					<span>psn</span>
-				</div>
-			</div>
-		</div>
-	</div>
 	<img id="output_onlinepngtools__2__ds" src="../static/output_onlinepngtools__2__ds.png" srcset="../src/templates/output_onlinepngtool../src/templates/output_onlinepngtools__2__ds@2x.pngols__2__ds@2x.png 2x">
 	<div onclick="application.goToTargetView(event)" id="Component_7___3" class="Component_7___3">
 		<div id="Home_du">

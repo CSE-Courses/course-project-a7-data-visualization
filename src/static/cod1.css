@@ -204,6 +204,9 @@
 	background-color: rgba(43,51,91,1);
 	color: rgba(255,255,255,1);
 	border-radius: 4px;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: codStats.html;
 }
 .Search button:hover {background-color: rgba(44,54,129,1);}
 
@@ -270,51 +273,6 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#DropdownMenu_gamePlatform {
-	position: absolute;
-	width: 227px;
-	height: 181px;
-	left: 400px;
-	top: 359px;
-	overflow: visible;
-}
-#GamePlatformMenu_prompt {
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 4px;
-	top: 133px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league2.html;
-	cursor: pointer;
-}
-#Rectangle_507 {
-	opacity: 0.86;
-}
-.Rectangle_507 {
-	position: absolute;
-	overflow: visible;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#Game_Platform {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	overflow: hidden;
-	width: 224px;
-	height: 48px;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 25px;
-	color: rgba(255,255,255,1);
-}
 .Polygon_4 {
 	overflow: visible;
 	position: absolute;
@@ -324,139 +282,6 @@
 	transform-origin: center;
 	left: 0px;
 	top: 0px;
-}
-#GamePlatformDropDown {
-	opacity: 0;
-	position: absolute;
-	width: 223px;
-	height: 178px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Rectangle_510 {
-	opacity: 0.67;
-}
-.Rectangle_510 {
-	position: absolute;
-	overflow: visible;
-	width: 223px;
-	height: 178px;
-	left: 0px;
-	top: 0px;
-}
-#GamePlatformMenu_3 {
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 130px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: cod2.html;
-	cursor: pointer;
-}
-#Rectangle_507_dk {
-	opacity: 0.86;
-}
-.Rectangle_507_dk {
-	position: absolute;
-	overflow: visible;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#xbl_ {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	overflow: hidden;
-	width: 224px;
-	height: 48px;
-	line-height: 28px;
-	margin-top: -1.5px;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 25px;
-	color: rgba(255,255,255,1);
-}
-#GamePlatformMenu_2 {
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 65px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league2.html;
-	cursor: pointer;
-}
-#Rectangle_507_dn {
-	opacity: 0.86;
-}
-.Rectangle_507_dn {
-	position: absolute;
-	overflow: visible;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#steam {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	overflow: hidden;
-	width: 224px;
-	height: 48px;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 25px;
-	color: rgba(255,255,255,1);
-}
-#GamePlatformMenu_1 {
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league2.html;
-	cursor: pointer;
-}
-#Rectangle_507_dq {
-	opacity: 0.86;
-}
-.Rectangle_507_dq {
-	position: absolute;
-	overflow: visible;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-}
-#psn {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	overflow: hidden;
-	width: 224px;
-	height: 48px;
-	text-align: center;
-	font-family: Segoe UI;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 25px;
-	color: rgba(255,255,255,1);
 }
 #output_onlinepngtools__2__ds {
 	position: absolute;

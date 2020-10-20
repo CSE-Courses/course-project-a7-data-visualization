@@ -388,18 +388,6 @@
 	font-size: 25px;
 	color: rgba(255,255,255,1);
 }
-#DropdownMenu_gamePlatform_bg {
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 404px;
-	top: 492px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league2.html;
-	cursor: pointer;
-}
 #GamePlatformMenu_prompt_bh {
 	position: absolute;
 	width: 223px;
@@ -446,15 +434,6 @@
 	transform-origin: center;
 	left: 0px;
 	top: 0px;
-}
-#GamePlatformDropDown_bl {
-	opacity: 0;
-	position: absolute;
-	width: 223px;
-	height: 48px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
 }
 #GamePlatformMenu_1_bm {
 	position: absolute;

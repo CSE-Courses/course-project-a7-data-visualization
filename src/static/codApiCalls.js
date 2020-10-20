@@ -2,6 +2,7 @@
 //this method needs to be modified to handle submit button spam. Request will overload and time out.
 
 function makeApiCallCod(){//this method will be the only method needed to be called in order to get cod api for any mode
+    console.log("Calling...")
     const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
     const platform = sessionStorage.getItem('platform');
     const mode = "br";
@@ -36,17 +37,18 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 function GetCodBrStats(jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
-    let mode = "mode: ";
-    let kills = "kills: ";
-    let deaths = "deaths: ";
-    let kd = "kill death ratio: ";
-    let downs = "downs: ";
-    let topFives = "top five: ";
+    let mode = "";
+    let kills = "";
+    let deaths = "";
+    let kd = "";
+    let downs = "";
+    let topFives = "";
+    let kdRatioFloat = (parseFloat(codInfoDictionary["br"]["kdRatio"]))
 
-    mode += "battle royal";
+    mode += "Battle Royal";
     kills += codInfoDictionary["br"]["kills"];
     deaths += codInfoDictionary["br"]["deaths"];
-    kd += codInfoDictionary["br"]["kdRatio"];
+    kd += kdRatioFloat.toFixed(3);
     downs += codInfoDictionary["br"]["downs"];
     topFives += codInfoDictionary["br"]["topFive"]
     sessionStorage.setItem('mode',mode)
@@ -56,13 +58,15 @@ function GetCodBrStats(jsonStr){
     sessionStorage.setItem('downs',downs)
     sessionStorage.setItem('topFives',topFives)
     console.log(mode, '\n',deaths, '\n', kills, '\n', kd, '\n', downs, '\n', topFives)
-
-    // document.getElementById("gameName").innerHTML = mode;
-    // document.getElementById("kill#").innerHTML = kills;
-    // document.getElementById("death#").innerHTML = deaths;
-    // document.getElementById("kd#").innerHTML = kd;
-    // document.getElementById("down#").innerHTML = downs;
-    // document.getElementById("topfive#").innerHTML = topFives;
+    if(document.getElementById('mode') != null){
+        console.log("Setting")
+        document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
+        document.getElementById("top5").innerHTML = (sessionStorage.getItem('topFives'))
+        document.getElementById("kd").innerHTML = (sessionStorage.getItem('kd'))
+        document.getElementById("kills").innerHTML = (sessionStorage.getItem('kills'))
+        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('deaths'))
+        document.getElementById("downs").innerHTML = (sessionStorage.getItem('downs'))
+    }
 }
 
 function GetCodMultiplayerStats(jsonStr){

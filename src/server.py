@@ -25,32 +25,25 @@ def leagueOne():
 def league():
     gamertag = request.form["Gamertag"]
     region = request.form["Region"]
-    df = pd.DataFrame()
-    df = loldata.getLolData(gamertag, region)
-    return render_template("leagueOfLegendView.html", name='League Of legends Player Data', data=df.to_html())
+    try:
+        df = loldata.getLolData(gamertag, region)
+        return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+    except Exception as e:
+        return render_template("error.html")
 
 @app.route("/cod1.html")
 def codOne():
     return render_template("cod1.html")
 
+@app.route("/codStats.html")
+def codStats():
+    return render_template("codStats.html")
 
-"""
-UI Code
-"""
-
-"""
-Game data code
-"""
-
-
-@app.route("/codapi")
-def cod_landing_page():
-    return render_template("test_html_api.html")
+@app.route("/error.html")
+def error():
+    return render_template("error.html")
 
 
-"""
-Game data code
-"""
 
 if __name__ == "__main__":
     app.run(debug=True)

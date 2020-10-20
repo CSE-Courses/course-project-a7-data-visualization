@@ -38,13 +38,16 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 function GetCodBrStats(jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    if (codInfoDictionary.hasOwnProperty('error')){
+        document.location.href = "./error.html"
+    }
     let mode = "";
     let kills = "";
     let deaths = "";
     let kd = "";
     let downs = "";
     let topFives = "";
-    let kdRatioFloat = (parseFloat(codInfoDictionary["br"]["kdRatio"]))
+    let kdRatioFloat = parseFloat(codInfoDictionary["br"]["kdRatio"]);
 
     mode += "Battle Royal";
     kills += codInfoDictionary["br"]["kills"];

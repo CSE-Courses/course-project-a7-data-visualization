@@ -4,7 +4,7 @@ from riotwatcher import LolWatcher
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-cd429ae2-ad0e-47f7-949a-31d99611fa1d'
+    api_key = 'RGAPI-01b2711e-c89e-4473-971d-194af2794ca9'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])

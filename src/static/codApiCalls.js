@@ -20,16 +20,17 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
-            //console.log(this.responseText);
             if(mode === "br"){GetCodBrStats(this.responseText);}
             else{GetCodMultiplayerStats(this.responseText)}
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
         }
     });
 
     xhr.open("GET", routeStrInput);
     xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
     xhr.setRequestHeader("x-rapidapi-key", "b9574dda6dmsh15fd109cf94156ap13974cjsnc7495f8f3eab");
-
     xhr.send(data);
 }
 //makeApiCallCod(); // uncomment when running locally

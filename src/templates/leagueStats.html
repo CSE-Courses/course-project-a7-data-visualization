@@ -17,7 +17,7 @@
     <img id="Background" src="../static/c_o_champion_thresh_spirit_blo.png" srcset="../src/static/c_o_champion_thresh_spiri../src/static/c_o_champion_thresh_spirit_blo@2x.pngrit_blo@2x.png 2x">
     <div class="Game1" id = "game1">
         Game 1
-        <div class="Champion" id="champion1"></div>
+        <div class="Champion" id="champion1"> <img id='image1' src=""/> </div>
         <div class="Spell1" id="spell1-1"></div>
         <div class="Spell2" id="spell1-2"></div>
         <div class="KDA" id="kda1"></div>
@@ -26,7 +26,7 @@
     </div>
     <div class="Game2" id = "game2">
         Game 2
-        <div class="Champion" id="champion2"></div>
+        <div class="Champion" id="champion2"><img id='image2' src=""/></div>
         <div class="Spell1" id="spell2-1"></div>
         <div class="Spell2" id="spell2-2"></div>
         <div class="KDA" id="kda2"></div>
@@ -35,7 +35,7 @@
     </div>
     <div class="Game3" id = "game3">
         Game 3
-        <div class="Champion" id="champion3"></div>
+        <div class="Champion" id="champion3"> <img id='image3' src=""/></div>
         <div class="Spell1" id="spell3-1"></div>
         <div class="Spell2" id="spell3-2"></div>
         <div class="KDA" id="kda3"></div>
@@ -44,7 +44,7 @@
     </div>
     <div class="Game4" id = "game4">
         Game 4
-        <div class="Champion" id="champion4"></div>
+        <div class="Champion" id="champion4"><img id='image4' src=""/></div>
         <div class="Spell1" id="spell4-1"></div>
         <div class="Spell2" id="spell4-2"></div>
         <div class="KDA" id="kda4"></div>
@@ -53,7 +53,7 @@
     </div>
     <div class="Game5" id = "game5">
         Game 5
-        <div class="Champion" id="champion5"></div>
+        <div class="Champion" id="champion5"><img id='image5' src=""/></div>
         <div class="Spell1" id="spell5-1"></div>
         <div class="Spell2" id="spell5-2"></div>
         <div class="KDA" id="kda5"></div>
@@ -77,40 +77,40 @@
             document.getElementById("game5").style.backgroundColor = "FireBrick";
         }
 
-        document.getElementById("champion1").innerHTML = leagueData.championName[0][0]
+        document.getElementById("image1").src = leagueData.championName[0][1]
         document.getElementById("spell1-1").innerHTML = "Spell 1: #" + leagueData.spell1[0]
         document.getElementById("spell1-2").innerHTML = "Spell 2: #" + leagueData.spell2[0]
         document.getElementById("kda1").innerHTML = leagueData.kills[0] + "/" + leagueData.deaths[0] + "/" + leagueData.assists[0]
-        document.getElementById("item1-1").innerHTML = "Item 1: #" + leagueData.item0[0]
-        document.getElementById("item1-2").innerHTML = "Item 2: #" + leagueData.item1[0]
+        document.getElementById("item1-1").innerHTML = "Item 1: #" + String(leagueData.item0[0])
+        document.getElementById("item1-2").innerHTML = "Item 2: #" + String(leagueData.item1[0])
 
-        document.getElementById("champion2").innerHTML = leagueData.championName[1][0]
+        document.getElementById("image2").src = leagueData.championName[1][1]
         document.getElementById("spell2-1").innerHTML = "Spell 1: #" + leagueData.spell1[1]
         document.getElementById("spell2-2").innerHTML = "Spell 2: #" + leagueData.spell2[1]
         document.getElementById("kda2").innerHTML = leagueData.kills[1] + "/" + leagueData.deaths[1] + "/" + leagueData.assists[1]
-        document.getElementById("item2-1").innerHTML = "Item 1: #" + leagueData.item0[1]
-        document.getElementById("item2-2").innerHTML = "Item 2: #" + leagueData.item1[1]
+        document.getElementById("item2-1").innerHTML = "Item 1: #" + String(leagueData.item0[1])
+        document.getElementById("item2-2").innerHTML = "Item 2: #" + String(leagueData.item1[1])
 
-        document.getElementById("champion3").innerHTML = leagueData.championName[2][0]
+        document.getElementById("image3").src = leagueData.championName[2][1]
         document.getElementById("spell3-1").innerHTML = "Spell 1: #" + leagueData.spell1[2]
         document.getElementById("spell3-2").innerHTML = "Spell 2: #" + leagueData.spell2[2]
         document.getElementById("kda3").innerHTML = leagueData.kills[2] + "/" + leagueData.deaths[2] + "/" + leagueData.assists[2]
-        document.getElementById("item3-1").innerHTML = "Item 1: #" + leagueData.item0[2]
-        document.getElementById("item3-2").innerHTML = "Item 2: #" + leagueData.item1[2]
+        document.getElementById("item3-1").innerHTML = "Item 1: #" + String(leagueData.item0[2])
+        document.getElementById("item3-2").innerHTML = "Item 2: #" + String(leagueData.item1[2])
 
-        document.getElementById("champion4").innerHTML = leagueData.championName[3][0]
+        document.getElementById("image4").src = leagueData.championName[3][1]
         document.getElementById("spell4-1").innerHTML = "Spell 1: #" + leagueData.spell1[3]
         document.getElementById("spell4-2").innerHTML = "Spell 2: #" + leagueData.spell2[3]
         document.getElementById("kda4").innerHTML = leagueData.kills[3] + "/" + leagueData.deaths[3] + "/" + leagueData.assists[3]
-        document.getElementById("item4-1").innerHTML = "Item 1: #" + leagueData.item0[3]
-        document.getElementById("item4-2").innerHTML = "Item 2: #" + leagueData.item1[3]
+        document.getElementById("item4-1").innerHTML = "Item 1: #" + String(leagueData.item0[3])
+        document.getElementById("item4-2").innerHTML = "Item 2: #" + String(leagueData.item1[3])
 
-        document.getElementById("champion5").innerHTML = leagueData.championName[4][0]
+        document.getElementById("image5").src = leagueData.championName[4][1]
         document.getElementById("spell5-1").innerHTML = "Spell 1: #" + leagueData.spell1[4]
         document.getElementById("spell5-2").innerHTML = "Spell 2: #" + leagueData.spell2[4]
         document.getElementById("kda5").innerHTML = leagueData.kills[4] + "/" + leagueData.deaths[4] + "/" + leagueData.assists[4]
-        document.getElementById("item5-1").innerHTML = "Item 1: #" + leagueData.item0[4]
-        document.getElementById("item5-2").innerHTML = "Item 2: #" + leagueData.item1[4]
+        document.getElementById("item5-1").innerHTML = "Item 1: #" + String(leagueData.item0[4])
+        document.getElementById("item5-2").innerHTML = "Item 2: #" + String(leagueData.item1[4])
     </script>
     <div id="Home">
         <span>Home</span>

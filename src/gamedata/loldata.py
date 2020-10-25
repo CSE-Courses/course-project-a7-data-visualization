@@ -4,7 +4,7 @@ from riotwatcher import LolWatcher
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-bc79e89e-b443-442a-9620-846d5802f996'
+    api_key = 'RGAPI-ada1db8b-f39a-4f46-96e4-4abbfeab67f2'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -62,11 +62,11 @@ def getLolData(username, my_region):
                 participants_row['goldEarned'] = row['stats']['goldEarned']
                 participants_row['champLevel'] = row['stats']['champLevel']
                 participants_row['totalMinionsKilled'] = row['stats']['totalMinionsKilled']
-                participants_row['item0'] = item_dict[str(row['stats']['item0'])]
-                participants_row['item1'] = item_dict[str(row['stats']['item1'])]
-                participants_row['item2'] = item_dict[str(row['stats']['item2'])]
-                participants_row['item3'] = item_dict[str(row['stats']['item3'])]
-                participants_row['item4'] = item_dict[str(row['stats']['item4'])]
+                participants_row['item0'] = row['stats']['item0']
+                participants_row['item1'] = row['stats']['item0']
+                participants_row['item2'] = row['stats']['item0']
+                participants_row['item3'] = row['stats']['item0']
+                participants_row['item4'] = row['stats']['item0']
                 players.append(participants_row)
     print(players)
     df = pd.DataFrame(players)

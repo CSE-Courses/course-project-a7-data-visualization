@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my chart.js chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        let massPopChart = new Chart(myChart,{
+            type: 'bar', //bar, horozontalbar, pie, line, doughnut
+            data:{
+                labels:["game01","game02","game03","game04"],
+                datasets:[{
+                    barPercentage:0.5,
+                    categoryPercentage:0.7,
+                    data:[24,12,8,9],
+                    //backgroundColor:'green'
+                    backgroundColor:[
+                        'rgb(95,4,127)',
+                        'rgb(4,14,128)',
+                        'rgba(239,172,10,0.2)',
+                        'rgb(187,9,9)'
+                    ],
+                    borderWidth:2,
+                    borderColor:"#020202",
+                    barThickness: 30,
+                    hoverBorderColor: "#ffd500"
+                }],
+            },
+            options:{
+                title: { // floating title to be specific
+                    display: true,
+                    text: 'Kills per games',
+                    titleFontSize: 8
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 50,
+                        top: 50,
+                        bottom: 50
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

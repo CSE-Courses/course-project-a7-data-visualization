@@ -43,6 +43,9 @@ def codStats():
 def error():
     return render_template("error.html")
 
+@app.route("/chart")
+def render_chart():
+    return render_template("test_make_chart.html")
 
 
 if __name__ == "__main__":

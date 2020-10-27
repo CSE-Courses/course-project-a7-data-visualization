@@ -31,6 +31,16 @@ def league():
     except Exception as e:
         return render_template("error.html")
 
+@app.route("/league_mult.html", methods=['POST'])
+def league2():
+    gamertag = request.form["Gamertag"]
+    region = request.form["Region"]
+    try:
+        df = loldata.getLolData(gamertag, region)
+        return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+    except Exception as e:
+        return render_template("error.html")
+
 @app.route("/cod1.html")
 def codOne():
     return render_template("cod1.html")
@@ -43,7 +53,21 @@ def codStats():
 def error():
     return render_template("error.html")
 
+@app.route("/cod_home.html")
+def cod_home():
+    return render_template("cod_home.html")
 
+@app.route("/cod_mult.html")
+def cod_mult():
+    return render_template("cod_mult.html")
+
+@app.route("/league_home.html")
+def league_home():
+    return render_template("league_home.html")
+
+@app.route("/league_mult.html")
+def league_mult():
+    return render_template("league_mult.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

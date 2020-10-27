@@ -1727,7 +1727,7 @@ var Application = function() {
 	 * Go to the view in the event targets CSS variable
 	 */
 	self.goToTargetView = function(event) {
-		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
+
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
 		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();

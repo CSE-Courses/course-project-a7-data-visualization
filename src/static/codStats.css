@@ -151,7 +151,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: cod1.html;
+	--web-action-target: cod_home.html;
 	cursor: pointer;
 }
 #Component_7___3 {
@@ -175,7 +175,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: league1.html;
+	--web-action-target: league_home.html;
 	cursor: pointer;
 }
 #League_of_Legends__d {

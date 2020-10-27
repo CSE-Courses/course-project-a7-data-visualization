@@ -20,15 +20,26 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:#40_fornt_end_visual" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:#5_Double_Api" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="Added : the image url for the champion, item 2-4, item names, spell names.">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/leagueStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/leagueStats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/cod1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/codStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/codStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/error.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/error.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/league1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/league1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/leagueStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/leagueStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/cod1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/league1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +48,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -57,40 +75,26 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/server.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33448276" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Python.server">
-    <configuration name="course-project-a7-data-visualization" type="PythonConfigurationType" factoryName="Python">
-      <module name="course-project-a7-data-visualization" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="loldata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course-project-a7-data-visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +117,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python">
+      <module name="course-project-a7-data-visualization" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Anthony DeMartino\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="course-project-a7-data-visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,14 +161,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.server" />
-        <item itemvalue="Python.loldata" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -161,6 +181,7 @@
       <workItem from="1602104567023" duration="609000" />
       <workItem from="1602106391148" duration="298000" />
       <workItem from="1603662247694" duration="3582000" />
+      <workItem from="1603748047525" duration="5303000" />
     </task>
     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
       <created>1601395106091</created>
@@ -193,7 +214,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="#40_fornt_end_visual" />
+                        <option value="#5_Double_Api" />
                       </list>
                     </value>
                   </entry>
@@ -220,6 +241,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="312" y="245" key="#Template_Data_Languages/0.0.1536.824@0.0.1536.824" timestamp="1603517805885" />
+    <state x="1374" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603753429660">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1374" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603753429660" />
     <state x="669" y="105" key="#server" timestamp="1601406541450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,30 +253,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601395105587" />
-    <state x="875" y="274" key="FileChooserDialogImpl" timestamp="1601416808515">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1603753408742">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1603665774298">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603753408742" />
+    <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603814574510">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1603665774298">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603814574510" />
+    <state width="1827" height="241" key="GridCell.Tab.0.center" timestamp="1603814574510">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1603665774298">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603814574510" />
+    <state width="1827" height="241" key="GridCell.Tab.0.left" timestamp="1603814574510">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1603665774298">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603814574510" />
+    <state width="1827" height="241" key="GridCell.Tab.0.right" timestamp="1603814574510">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+    <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603814574510" />
     <state x="848" y="387" width="934" height="265" key="MultipleFileMergeDialog" timestamp="1601416377810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -290,10 +320,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="670" y="366" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601417711527" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1603665774288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1603521462245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
-    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage" NAME="course-project-a7-data-visualization Coverage Results" MODIFIED="1603518419672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

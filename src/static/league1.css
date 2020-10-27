@@ -71,7 +71,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: cod1.html;
+	--web-action-target: cod_home.html;
 	cursor: pointer;
 }
 .Search {
@@ -112,6 +112,7 @@
 	background-color: rgba(43,51,91,1);
 	color: rgba(255,255,255,1);
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 .Search button:hover {background-color: rgba(44,54,129,1);}
@@ -140,6 +141,7 @@
 	background-color: rgba(43,51,91,1);
 	color: rgba(255,255,255,1);
 	border-radius: 4px;
+	cursor: pointer;
 }
 
 .Dropdown-Content {
@@ -155,6 +157,7 @@
 .Dropdown-Content button{
 	display: block;
 	padding: 14px;
+	cursor: pointer;
 }
 .Dropdown-Content button:hover {background-color: rgba(44,54,129,1);}
 .Dropdown:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
@@ -270,6 +273,10 @@
 	left: 18px;
 	top: 269px;
 	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_home.html;
+	cursor: pointer;
 }
 #League_of_Legends_ {
 	position: absolute;
@@ -471,4 +478,75 @@
 	font-weight: normal;
 	font-size: 25px;
 	color: rgba(255,255,255,1);
+}
+
+.multiplayer{
+	height: 48px;
+	width: 223px;
+	opacity: 0.86;
+	position: absolute;
+	left: 60%;
+	top: 492px;
+	overflow: visible;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(43,51,91,1);
+}
+.multiplayer button {
+    float: right;
+	font-size: 20px;
+	height: 48px;
+	width: 223px;
+	border: none;
+	outline: none;
+	background-color: rgba(43,51,91,1);
+	color: rgba(255,255,255,1);
+	border-radius: 4px;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_mult.html;
+	cursor: pointer;
+}
+
+.multiplayer button:hover {
+	background-color: rgba(44,54,129,1);
+}
+
+.singleplayer {
+	height: 48px;
+	width: 223px;
+	opacity: 0.86;
+	position: absolute;
+	left: 40%;
+	top: 492px;
+	overflow: visible;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(43,51,91,1);
+}
+.singleplayer button {
+    float: right;
+	font-size: 20px;
+	height: 48px;
+	width: 223px;
+	border: none;
+	outline: none;
+	background-color: rgba(43,51,91,1);
+	color: rgba(255,255,255,1);
+	border-radius: 4px;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league1.html;
+	cursor: pointer;
+}
+.singleplayer button:hover {
+	background-color: rgba(44,54,129,1);
 }

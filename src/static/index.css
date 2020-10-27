@@ -147,7 +147,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: league1.html;
+	--web-action-target: league_home.html;
 	cursor: pointer;
 }
 #League_of_Legends_ {
@@ -181,7 +181,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: cod1.html;
+	--web-action-target: cod_home.html;
 	cursor: pointer;
 }
 #unnamed {
@@ -193,7 +193,7 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: cod1.html;
+	--web-action-target: cod_home.html;
 	cursor: pointer;
 }
 #league_of_legends_riot_games_l {
@@ -205,6 +205,6 @@
 	overflow: visible;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: league1.html;
+	--web-action-target: league_home.html;
 	cursor: pointer;
 }

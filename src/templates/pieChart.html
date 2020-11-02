@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my chart.js chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+    //global options
+    Chart.defaults.global.defaultFontFamily = "lato";
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = "#020202";
+
+    let massPopChart = new Chart(myChart,{
+        type: 'pie', //bar, horozontalbar, pie, line, doughnut
+        data:{
+            labels:["Top Player 1","Top Player 2","Top Player 3","Top Player 4","curruption123456"],
+            datasets:[{
+                barPercentage:0.5,
+                categoryPercentage:0.7,
+                data:[40000,33908,28909,26078,4740],
+                //backgroundColor:'green'
+                backgroundColor:[
+                    'rgb(84,224,8)',
+                    'rgb(12,29,219)',
+                    'rgb(219,0,28)',
+                    'rgb(245,221,0)',
+                    'rgb(0,245,208)'
+                ],
+                borderWidth:2,
+                borderColor:"#020202",
+                barThickness: 60,
+                hoverBorderColor: "#ffd500",
+                hoverBorderWidth:3
+            }],
+        },
+        options:{
+            title: { // floating title to be specific
+                display: true,
+                text: 'Total career kills',
+                titleFontSize: 8
+            },
+            legend:{
+                position: 'left'
+            },
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 50,
+                    top: 50,
+                    bottom: 50
+                }
+            },
+            scales: {
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

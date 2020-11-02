@@ -41,6 +41,10 @@ def league2():
     except Exception as e:
         return render_template("error.html")
 
+@app.route("/leagueMultiplayerStats.html")
+def leagueMultiplayerStats():
+    return render_template("leagueMultiplayerStats.html")
+
 @app.route("/cod1.html")
 def codOne():
     return render_template("cod1.html")

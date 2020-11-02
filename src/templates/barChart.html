@@ -12,6 +12,10 @@
     </div>
     <script>
         let myChart = document.getElementById('myChart').getContext('2d');
+        //global options
+        Chart.defaults.global.defaultFontFamily = "lato";
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = "#020202";
 
         let massPopChart = new Chart(myChart,{
             type: 'bar', //bar, horozontalbar, pie, line, doughnut
@@ -20,25 +24,30 @@
                 datasets:[{
                     barPercentage:0.5,
                     categoryPercentage:0.7,
-                    data:[24,12,8,9],
+                    data:[14,7,4,9],
                     //backgroundColor:'green'
                     backgroundColor:[
-                        'rgb(95,4,127)',
-                        'rgb(4,14,128)',
-                        'rgba(239,172,10,0.2)',
-                        'rgb(187,9,9)'
+                        'rgb(18,90,2)',
+                        'rgb(255,244,3)',
+                        'rgb(187,9,9)',
+                        'rgb(18,90,2)'
                     ],
                     borderWidth:2,
                     borderColor:"#020202",
-                    barThickness: 30,
-                    hoverBorderColor: "#ffd500"
+                    barThickness: 60,
+                    hoverBorderColor: "#ffd500",
+                    hoverBorderWidth:3
                 }],
             },
             options:{
                 title: { // floating title to be specific
                     display: true,
-                    text: 'Kills per games',
+                    text: 'Longest Killstreak',
                     titleFontSize: 8
+                },
+                legend:{
+                    position: "right",
+                    display: false
                 },
                 layout: {
                     padding: {
@@ -48,11 +57,28 @@
                         bottom: 50
                     }
                 },
+                tooltips:{
+                    titleFontSize: 14
+
+                },
                 scales: {
                     yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "kills"
+                        },
                         ticks: {
                             beginAtZero: true
                         }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "games"
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        },
                     }]
                 }
             }

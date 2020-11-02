@@ -203,11 +203,11 @@
 }
 
 .SearchMult1 {
-    top: 0px;
+
 }
 
 .SearchMult2 {
-    top:52px;
+
 }
 
 .Search input[type=text] {
@@ -450,7 +450,7 @@
 .DropdownMult2:hover .DropdownMult2-Content {display: block;}
 
 #magnifying_glass {
-	opacity: 0.86;
+	opacity: 0.50;
 	position: absolute;
 	width: 20.043px;
 	height: 20.048px;
@@ -460,7 +460,7 @@
 }
 
 #magnifying_glass_Mult1 {
-    opacity: 0.86;
+    opacity: 0.50;
 	position: absolute;
 	width: 20px;
 	height: 20px;
@@ -470,7 +470,7 @@
 }
 
 #magnifying_glass_Mult2 {
-	opacity: 0.86;
+	opacity: 0.50;
 	position: absolute;
 	width: 20px;
 	height: 20px;

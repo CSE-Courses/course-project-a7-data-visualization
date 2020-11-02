@@ -1,11 +1,11 @@
 .mediaViewInfo {
-    --web-view-name: leagueMultiplayerStats;
-    --web-view-id: leagueMultiplayerStats;
+    --web-view-name: codMultiplayerStats;
+    --web-view-id: codMultiplayerStats;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
 :root {
-    --web-view-ids: leagueMultiplayerStats;
+    --web-view-ids: codMultiplayerStats;
 }
 * {
     margin: 0;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border: none;
 }
-#leagueMultiplayerStats {
+#codMultiplayerStats {
     position: absolute;
     background: #E5E5E5;
     width: 100%;
@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: leagueMultiplayerStats;
-    --web-view-id: leagueMultiplayerStats;
+    --web-view-name: codMultiplayerStats;
+    --web-view-id: codMultiplayerStats;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -39,7 +39,7 @@
 
 }
 
-#League_background {
+#CoD_background {
     position: absolute;
     width: 88.80208333%;
     height: auto;

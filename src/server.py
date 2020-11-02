@@ -41,10 +41,6 @@ def league2():
     except Exception as e:
         return render_template("error.html")
 
-@app.route("/leagueMultiplayerStats.html")
-def leagueMultiplayerStats():
-    return render_template("leagueMultiplayerStats.html")
-
 @app.route("/cod1.html")
 def codOne():
     return render_template("cod1.html")
@@ -65,6 +61,10 @@ def cod_home():
 def cod_mult():
     return render_template("cod_mult.html")
 
+@app.route("/codMultiplayerStats.html")
+def codMultiplayerStats():
+    return render_template("codMultiplayerStats.html")
+
 @app.route("/league_home.html")
 def league_home():
     return render_template("league_home.html")
@@ -72,6 +72,10 @@ def league_home():
 @app.route("/league_mult.html")
 def league_mult():
     return render_template("league_mult.html")
+
+@app.route("/leagueMultiplayerStats.html")
+def leagueMultiplayerStats():
+    return render_template("leagueMultiplayerStats.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

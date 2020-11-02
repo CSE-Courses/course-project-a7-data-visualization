@@ -27,6 +27,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/cod_mult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod_mult.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/server.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -260,11 +262,11 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="602" y="346" width="1665" height="724" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603815094043" />
-    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1603753408742">
+    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1604185326419">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
-    <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603753408742" />
+    <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
     <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603815384406">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

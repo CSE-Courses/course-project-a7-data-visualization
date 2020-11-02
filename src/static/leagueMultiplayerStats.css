@@ -1,0 +1,255 @@
+.mediaViewInfo {
+    --web-view-name: leagueMultiplayerStats;
+    --web-view-id: leagueMultiplayerStats;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: leagueMultiplayerStats;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#leagueMultiplayerStats {
+    position: absolute;
+    background: #E5E5E5;
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+    min-height: 720px;
+    background-color: rgba(28,33,62,1);
+    font-size: 2px;
+    overflow: hidden;
+    --web-view-name: leagueMultiplayerStats;
+    --web-view-id: leagueMultiplayerStats;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+#League_background {
+    position: absolute;
+    width: 88.80208333%;
+    height: auto;
+    left: 11.19791667%;
+    top: 0;
+}
+
+.Search {
+    height: 4.44444444%;
+    width: 48.38541667%;
+    opacity: 0.86;
+    position: absolute;
+    left: 33.75%;
+    top: 45.55555%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Search input[type=text] {
+    padding: 5px;
+    padding-left: 50px;
+    font-size: 10em;
+    height: 100%;
+    width: 86.11410118%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search button {
+    float: right;
+    font-size: 10em;
+    height: 100%;
+    width: 11.62540366%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search button:hover {background-color: rgba(44,54,129,1);}
+
+.Dropdown {
+    height: 4.44444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 20.88541667%;
+    top: 45.55555%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Dropdown button{
+    font-size: 10em;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+
+.Dropdown_Content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(43,51,91,1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.Dropdown_Content button{
+    display: block;
+    padding: 14px;
+}
+.Dropdown_Content button:hover {background-color: rgba(44,54,129,1);}
+
+.Dropdown:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown:hover .Dropdown_Content {display: block;}
+
+.Icon_Magnifying_Glass {
+    position: absolute;
+    width: 1.04390625%;
+    height: 1.856296296%;
+    left: 34.61421875%;
+    top: 46.69333%;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Menu {
+    position: absolute;
+    width: 11.197916667%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+#Menu_Option_Volt {
+    position: absolute;
+    left: 13.99739584%;
+    top: 4.907407407%;
+    overflow: visible;
+    white-space: nowrap;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: index.html;
+    cursor: pointer;
+    font-family: Thunder Titan;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14em;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.1px;
+}
+
+#Menu_Option_Home {
+    position: absolute;
+    width: 78.13953488%;
+    height: 3.703703704%;
+    left: 10.93023256%;
+    top: 15.18518519%;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: index.html;
+    cursor: pointer;
+}
+#Menu_Option_Home_Text {
+    position: absolute;
+    top: 29.82708934%;
+    left: 27.2171083804%;
+    white-space: nowrap;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7em;
+    color: rgba(234,236,247,1);
+}
+#Menu_Option_Home_Icon {
+    position: absolute;
+    width: 21.84627953%;
+    height: 87.204611095%;
+    left: 0;
+    top: 6.397694524%;
+}
+.Menu_Option_Home_Icon_Top {
+    position: absolute;
+    width: 100%;
+    height: 44.81163252%;
+    left: 0;
+    top: 0;
+    transform: matrix(1,0,0,1,0,0);
+}
+.Menu_Option_Home_Icon_Bottom {
+    position: absolute;
+    height: 55.18836748%;
+    width: 77.94117647%;
+    left: 11.02941176%;
+    bottom: 0;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+#Menu_Option_League {
+    position: absolute;
+    width: 78.13953488%;
+    height: 3.703703704%;
+    left: 10.93023256%;
+    top: 24.90740741%;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: league1.html;
+    cursor: pointer;
+}
+#Menu_Option_League_Text {
+    position: absolute;
+    top: 29.82708934%;
+    left: 27.2171083804%;
+    white-space: nowrap;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7em;
+    color: rgba(234,236,247,1);
+}
+#Menu_Option_League_Icon {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 0;
+    top: 0;
+}
+
+#Menu_Option_CoD_Icon {
+    position: absolute;
+    top: 35%;
+    left: 10.93023256%;
+    width: 69.40375436%;
+    height: auto;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: cod1.html;
+    cursor: pointer;
+}

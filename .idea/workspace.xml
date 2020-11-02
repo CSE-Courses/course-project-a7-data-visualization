@@ -25,8 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search">
+    <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#48 added second dropdown menu and search bar to the cod ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/league1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/league1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/cod1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/league1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/league_mult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league_mult.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/server.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -198,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603815051797</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#48 added second dropdown menu and search bar to the cod ui">
+      <created>1604348046850</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604348046850</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +245,8 @@
     <MESSAGE value="Added : the image url for the champion, item 2-4, item names, spell names." />
     <MESSAGE value="#47 -created menu options for searching for single player and 2 player&#10;    -updated buttons" />
     <MESSAGE value="#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search" />
-    <option name="LAST_COMMIT_MESSAGE" value="#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search" />
+    <MESSAGE value="#48 added second dropdown menu and search bar to the cod ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="#48 added second dropdown menu and search bar to the cod ui" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" width="1310" height="852" key="#Project_Structure" timestamp="1601416968707">
@@ -260,11 +273,11 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="602" y="346" width="1665" height="724" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603815094043" />
-    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1603753408742">
+    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1604185326419">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
-    <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603753408742" />
+    <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
     <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603815384406">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -302,11 +315,12 @@
     </state>
     <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603515272841" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601407433807" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1603521600238">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="737" y="340" key="Vcs.Push.Dialog.v2" timestamp="1604348111934">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603521600238" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601416329322" />
+    <state x="737" y="340" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1604348111934" />
     <state x="1025" y="583" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603814656315">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my chart.js chart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+    //global options
+    Chart.defaults.global.defaultFontFamily = "lato";
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = "#020202";
+
+    let massPopChart = new Chart(myChart,{
+        type: 'radar', //bar, horozontalbar, pie, line, doughnut
+        data:{
+            labels:["Kills","Deaths","Score Per Game"],
+            datasets:[{
+                data:[4740,4549,1271.04],
+                label: 'curruption123456',
+                fill: true,
+                borderColor:['rgb(231,3,30,0.70)'],
+                pointBackgroundColor: "#030303",
+                pointBorderColor: "#000000",
+                //pointHoverBackgroundColor: "#55bae7",
+                //pointHoverBorderColor: "#55bae7",
+                backgroundColor:[
+                    'rgba(229,7,7,0.2)'
+                ],
+            },
+                {
+                    data:[7000,2500,4680],
+                    label: 'Xx_noLiFeTryHard_xX',
+                    fill: true,
+                    borderColor:['rgb(253,228,2,0.70)'],
+                    pointBackgroundColor: "#030303",
+                    pointBorderColor: "#000000",
+                    //pointHoverBackgroundColor: "#55bae7",
+                    //pointHoverBorderColor: "#55bae7",
+                    backgroundColor:[
+                        'rgb(66,229,7,0.2)'
+                    ],
+                }
+            ],
+        },
+        options:{
+            title: { // floating title to be specific
+                display: true,
+                text: 'Skill Radar',
+                titleFontSize: 18
+            },
+            legend:{
+                position: 'left'
+            },
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 50,
+                    top: 50,
+                    bottom: 50
+                }
+            },
+            scale: {
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 8000
+                },
+                gridLines: {
+                    color: 'grey'
+                },
+                angleLines: {
+                    color: 'blue'
+                },
+                pointLabels: {
+                    fontSize: 18,
+                },
+            },
+        }
+    })
+</script>
+
+</body>
+</html>

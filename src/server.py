@@ -9,10 +9,6 @@ UI Code
 """
 
 
-@app.route("/")
-def home():
-    return render_template("index.html")
-
 @app.route("/index.html")
 def returnhome():
     return render_template("index.html")
@@ -43,9 +39,26 @@ def codStats():
 def error():
     return render_template("error.html")
 
-@app.route("/chart")
+
+@app.route("/")
 def render_chart():
-    return render_template("test_make_chart.html")
+    return render_template("barChart.html")
+
+@app.route("/bar")
+def render_bar():
+    return render_template("barChart.html")
+
+@app.route("/line")
+def render_line():
+    return render_template("lineChart.html")
+
+@app.route("/radar")
+def render_radar():
+    return render_template("radarChart.html")
+
+@app.route("/pie")
+def render_pie():
+    return render_template("pieChart.html")
 
 
 if __name__ == "__main__":

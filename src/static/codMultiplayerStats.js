@@ -1798,7 +1798,7 @@ var Application = function() {
             }
                 // if target view is on bottom
                 // then show target view instantly
-            // and fade out current view
+            // and fade out current view
             else if (fromIndex>toIndex) {
                 self.setElementAnimation(to, null);
                 self.setElementAnimation(from, null);

@@ -1727,7 +1727,6 @@ var Application = function() {
      * Go to the view in the event targets CSS variable
      */
     self.goToTargetView = function(event) {
-        sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
         var button = event.currentTarget;
         var buttonComputedStyles = getComputedStyle(button);
         var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
@@ -1798,7 +1797,7 @@ var Application = function() {
             }
                 // if target view is on bottom
                 // then show target view instantly
-            // and fade out current view
+            // and fade out current view
             else if (fromIndex>toIndex) {
                 self.setElementAnimation(to, null);
                 self.setElementAnimation(from, null);
@@ -2045,7 +2044,6 @@ var Application = function() {
             if (newArray && newArray[0]=="") {
                 newArray.shift();
             }
-
 
             return newArray;
         }

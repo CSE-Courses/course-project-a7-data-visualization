@@ -16,9 +16,12 @@
 #index {
 	position: absolute;
 	background: #E5E5E5;
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+	min-width: 1280px;
+	height: 100%;
+	min-height: 720px;
 	background-color: rgba(28,33,62,1);
+	font-size: 2px;
 	overflow: hidden;
 	--web-view-name: index;
 	--web-view-id: index;
@@ -35,176 +38,138 @@
 	}
 
 }
-.Rectangle_511 {
+
+#Call_of_Duty_Icon {
 	position: absolute;
+	width: 32.29166667%;
+	height: 25.55555555%;
+	left: 58.17708333%;
+	top: 37.22222222%;
 	overflow: visible;
-	width: 1706px;
-	height: 1080px;
-	left: 214px;
-	top: 0px;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: cod_home.html;
+	cursor: pointer;
 }
-#Component_7___1 {
+#League_of_Legends_Icon {
 	position: absolute;
-	width: 93px;
-	height: 30.308px;
-	left: 18px;
-	top: 164px;
+	width: 32.29166667%;
+	height: 25.55555555%;
+	left: 20.67708333%;
+	top: 37.22222222%;
 	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_home.html;
+	cursor: pointer;
 }
-#Home {
+
+
+#Menu {
 	position: absolute;
-	left: 55px;
-	top: 6px;
+	width: 11.197916667%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+#Menu_Option_Volt {
+	position: absolute;
+	left: 13.99739584%;
+	top: 4.907407407%;
 	overflow: visible;
-	width: 39px;
 	white-space: nowrap;
-	text-align: left;
-	font-family: Merrant;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	color: rgba(234,236,247,1);
-}
-#ID001_home {
-	position: absolute;
-	width: 34px;
-	height: 30.308px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_9 {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_8 {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_20 {
-	overflow: visible;
-	position: absolute;
-	width: 34.565px;
-	height: 14.157px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#Group_11 {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 3.749px;
-	top: 13.597px;
-	overflow: visible;
-}
-#Group_10 {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_21 {
-	overflow: visible;
-	position: absolute;
-	width: 27.003px;
-	height: 17.212px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#VOLT_GG {
-	position: absolute;
-	left: 24px;
-	top: 53px;
-	overflow: visible;
-	width: 145px;
-	white-space: nowrap;
-	text-align: center;
+	cursor: pointer;
 	font-family: Thunder Titan;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 28px;
+	font-size: 14em;
 	color: rgba(255,255,255,1);
 	letter-spacing: 0.1px;
 }
-#Component_8___1 {
+
+#Menu_Option_Home {
 	position: absolute;
-	width: 168px;
-	height: 40px;
-	left: 18px;
-	top: 269px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league_home.html;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 15.18518519%;
 	cursor: pointer;
 }
-#League_of_Legends_ {
+#Menu_Option_Home_Text {
 	position: absolute;
-	left: 48px;
-	top: 6px;
-	overflow: visible;
-	width: 121px;
+	top: 29.82708934%;
+	left: 27.2171083804%;
 	white-space: nowrap;
-	text-align: left;
 	font-family: Merrant;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 7em;
 	color: rgba(234,236,247,1);
 }
-#output_onlinepngtools {
+#Menu_Option_Home_Icon {
 	position: absolute;
-	width: 37px;
-	height: 40px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
+	width: 21.84627953%;
+	height: 87.204611095%;
+	left: 0;
+	top: 6.397694524%;
 }
-#output_onlinepngtools__2_ {
+.Menu_Option_Home_Icon_Top {
 	position: absolute;
-	width: 119px;
-	height: 38px;
-	left: 37px;
-	top: 378px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: cod_home.html;
-	cursor: pointer;
+	width: 100%;
+	height: 44.81163252%;
+	left: 0;
+	top: 0;
+	transform: matrix(1,0,0,1,0,0);
 }
-#unnamed {
+.Menu_Option_Home_Icon_Bottom {
 	position: absolute;
-	width: 620px;
-	height: 276px;
-	left: 1117px;
-	top: 402px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: cod_home.html;
-	cursor: pointer;
+	height: 55.18836748%;
+	width: 77.94117647%;
+	left: 11.02941176%;
+	bottom: 0;
+	transform: matrix(1,0,0,1,0,0);
 }
-#league_of_legends_riot_games_l {
+
+#Menu_Option_League {
 	position: absolute;
-	width: 620px;
-	height: 276px;
-	left: 397px;
-	top: 402px;
-	overflow: visible;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 24.90740741%;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
 	--web-action-target: league_home.html;
+	cursor: pointer;
+}
+#Menu_Option_League_Text {
+	position: absolute;
+	top: 29.82708934%;
+	left: 27.2171083804%;
+	white-space: nowrap;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7em;
+	color: rgba(234,236,247,1);
+}
+#Menu_Option_League_Icon {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	top: 0;
+}
+
+#Menu_Option_CoD_Icon {
+	position: absolute;
+	top: 35%;
+	left: 10.93023256%;
+	width: 69.40375436%;
+	height: auto;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: cod1.html;
 	cursor: pointer;
 }

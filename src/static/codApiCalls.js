@@ -2,7 +2,7 @@
 //this method needs to be modified to handle submit button spam. Request will overload and time out.
 
 function makeApiCallCod(){//this method will be the only method needed to be called in order to get cod api for any mode
-    console.log("Calling...")
+    console.log("Calling player 1...")
     const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
     const platform = sessionStorage.getItem('platform');
     const mode = "br";
@@ -20,8 +20,8 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
-            if(mode === "br"){1, GetCodBrStats(this.responseText);}
-            else{1, GetCodMultiplayerStats(this.responseText)}
+            if(mode === "br"){GetCodBrStats(1, this.responseText);}
+            else{GetCodMultiplayerStats(1, this.responseText)}
         } else if (this.status === 404) {
             console.log("404 caught")
             document.location.href = "./error.html"
@@ -36,9 +36,9 @@ function makeApiCallCod(){//this method will be the only method needed to be cal
 //makeApiCallCod(); // uncomment when running locally
 
 function makeMultiplayerApiCallCod(){
-    console.log("Calling...")
-    const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
-    const platform = sessionStorage.getItem('platform');
+    console.log("Calling player 2...")
+    const userName = sessionStorage.getItem('gamertag_2'); // getElementById allows access to html variables
+    const platform = sessionStorage.getItem('platform_2');
     const mode = "br";
     let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
     routeStrInput += "warzone/";

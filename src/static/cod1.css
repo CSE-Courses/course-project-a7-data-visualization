@@ -296,7 +296,7 @@
 	border-radius: 4px;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: codStats.html;
+	--web-action-target: codMultiplayerStats.html;
 	cursor: pointer;
 }
 .SearchMult button:hover {background-color: rgba(44,54,129,1);}

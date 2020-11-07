@@ -64,7 +64,7 @@ function makeMultiplayerApiCallCod(){
 
     xhr.open("GET", routeStrInput);
     xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
-    xhr.setRequestHeader("x-rapidapi-key", "b9574dda6dmsh15fd109cf94156ap13974cjsnc7495f8f3eab");
+    xhr.setRequestHeader("x-rapidapi-key", "2d25fd40cdmsh437da74b4bee201p180745jsnd3e9a3336699");
     xhr.send(data);
 }
 

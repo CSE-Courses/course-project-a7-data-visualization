@@ -13,12 +13,17 @@
 	box-sizing: border-box;
 	border: none;
 }
+body{
+	background-image: url("../static/wp4517150.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
 #codStats {
 	position: absolute;
-	background: #E5E5E5;
 	width: 1920px;
 	height: 1080px;
-	background-color: rgba(28,33,62,1);
 	overflow: hidden;
 	--web-view-name: codStats;
 	--web-view-id: codStats;
@@ -361,4 +366,40 @@
 	font-weight: normal;
 	font-size: 36px;
 	color: rgba(234,236,247,1);
+}
+body {
+	font: normal medium/1.4 sans-serif;
+	background-color: rgba(28,33,62,1);
+}
+#table_container {
+	margin-left: auto;
+	width: 75%;
+	margin-right: auto;
+	position: relative;
+	top: 682px;
+	left: 360px;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	text-align: center;
+	padding: 0.25rem;
+	color: white;
+}
+tbody tr:nth-child(even) {
+	background: #191937;
+}
+tbody tr:nth-child(odd) {
+	background: #111229;
+}
+tbody tr:hover {
+	background: #A4a4bf;
+}
+tr{
+	height: 90px;
+}
+thead{
+	background-color: rgba(43,51,91,1);
 }

@@ -27,11 +27,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#48 added second dropdown menu and search bar to the cod ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/league1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/league1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/cod1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/league1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/league_mult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league_mult.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/codStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/codStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/codStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/codStats.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +54,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="JupyterTrust" id="7d95cda2-1b41-4c1d-93ab-76cd29dbd92c" />
+  <component name="JupyterTrust" id="715bb88c-9c95-40b4-840a-88f730d79ccd" />
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -87,6 +84,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Python.server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="loldata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course-project-a7-data-visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,7 +124,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Anthony DeMartino\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="SDK_HOME" value="$USER_HOME$/.conda/envs/442_Project/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -153,8 +161,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.loldata" />
+    </list>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -257,10 +269,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="312" y="245" key="#Template_Data_Languages/0.0.1536.824@0.0.1536.824" timestamp="1603517805885" />
-    <state x="1374" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603753429660">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="369" y="200" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604774348289">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="1374" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603753429660" />
+    <state x="369" y="200" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1604774348289" />
     <state x="669" y="105" key="#server" timestamp="1601406541450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -278,30 +291,34 @@
     </state>
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
     <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
-    <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1398" height="288" key="GridCell.Tab.0.bottom" timestamp="1604786399358">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.center" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1398" height="288" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604786399358" />
+    <state width="1398" height="288" key="GridCell.Tab.0.center" timestamp="1604786399356">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.left" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1398" height="288" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604786399356" />
+    <state width="1398" height="288" key="GridCell.Tab.0.left" timestamp="1604786399354">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.right" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1398" height="288" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604786399354" />
+    <state width="1398" height="288" key="GridCell.Tab.0.right" timestamp="1604786399357">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+    <state width="1398" height="288" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604786399357" />
     <state x="848" y="387" width="934" height="265" key="MultipleFileMergeDialog" timestamp="1601416377810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,5 +359,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="670" y="366" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601417711527" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1603521462245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+    <SUITE FILE_PATH="coverage/442_Project$server.coverage" NAME="server Coverage Results" MODIFIED="1604786399264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/442_Project$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1603748087071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1603665774288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage" NAME="course-project-a7-data-visualization Coverage Results" MODIFIED="1603518419672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

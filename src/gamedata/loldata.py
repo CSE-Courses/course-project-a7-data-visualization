@@ -1,46 +1,56 @@
 # global variables
+import ast
+
 import pandas as pd
 from riotwatcher import LolWatcher
+from pathlib import Path
 
+def getdic():
+    fileName ='champ.txt'
+    data_folder = Path("gamedata/infofiles/")
+
+    file_to_open = data_folder / fileName
+
+    with open(file_to_open) as f:
+        data = f.read()
+    champ_dict = ast.literal_eval(data)
+
+    fileName ='item.txt'
+    file_to_open = data_folder / fileName
+
+    with open(file_to_open) as f:
+        data = f.read()
+    item_dict = ast.literal_eval(data)
+
+    fileName ='spell.txt'
+    file_to_open = data_folder / fileName
+    with open(file_to_open) as f:
+        data = f.read()
+    spell_dict = ast.literal_eval(data)
+
+    return champ_dict,item_dict,spell_dict
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-cfa8f4a6-36ae-4491-acc9-a36e8e611c8a'
+    champ_dict,item_dict,spell_dict = getdic()
+    lastN = 5
+    df = lolDataGrabber(username,my_region,champ_dict,item_dict,spell_dict,lastN)
+    return df.to_json()
+
+def getDataTwo(usernameOne,usernameTwo,regionOne,regionTwo):
+    lastN = 3
+    champ_dict,item_dict,spell_dict = getdic()
+    dfOne = lolDataGrabber(usernameOne,regionOne,champ_dict,item_dict,spell_dict,lastN)
+    dfTwo = lolDataGrabber(usernameTwo,regionTwo,champ_dict,item_dict,spell_dict,lastN)
+    return dfOne,dfTwo
+
+def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
+    api_key = 'RGAPI-a93edbc8-4da7-4446-8818-3e56286dd65b'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
-    # check league's latest version
-    latest = watcher.data_dragon.versions_for_region(my_region)['n']['champion']
-    # Lets get some champions static information
-    static_champ_list = watcher.data_dragon.champions(latest, False, 'en_US')
-    # champ static list data to dict for looking up
-    static_item_list = watcher.data_dragon.items(latest)
-    static_spell_list = watcher.data_dragon.summoner_spells(latest)
-    champ_dict = {}
-    item_dict = {}
-    spell_dict = {}
-
-    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/'
-
-
-    for valueOne in static_champ_list['data']:
-        row = static_champ_list['data'][valueOne]
-        key = row["key"]
-        name = row["name"]
-        image = str(url + "champion/" + str(row["image"]["full"]))
-        value = [name,image]
-        champ_dict[key] = value
-
-    for key in static_item_list['data']:
-        image = str(url + "item/" + str(key) + ".png")
-        item_dict[key] = image
-
-    for id in static_spell_list['data']:
-        row = static_spell_list['data'][id]
-        image = str("../static/spells/" + "Summoner"+ str(row["name"]) + ".png")
-        spell_dict[row["key"]] = image
 
     last_five_match = {}
-    for row in my_matches['matches'][:5]:
+    for row in my_matches['matches'][:lastN]:
         key = (row["gameId"])
         value = row["champion"]
         last_five_match[key] = value
@@ -52,8 +62,6 @@ def getLolData(username, my_region):
         for row in participant:
             if(row["championId"] == last_five_match[key]):
                 participants_row = {}
-                print(row)
-                participants_row['champion'] = row['championId']
                 participants_row['championName'] = champ_dict[str(row['championId'])]
                 participants_row['spell1'] = spell_dict[str(row['spell1Id'])]
                 participants_row['spell2'] = spell_dict[str(row['spell2Id'])]
@@ -97,12 +105,12 @@ def getLolData(username, my_region):
                 players.append(participants_row)
 
     df = pd.DataFrame(players)
-    return df.to_json()
+    return df
 
 
 
 def main():
-   print(getLolData("doublelift", "na1"))
+   print(getLolData("Doublelift", "na1"))
 
 
 if __name__ == "__main__":

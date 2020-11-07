@@ -23,12 +23,16 @@ def getLolData(username, my_region):
     spell_dict = {}
 
 
+    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/'
+
+
     for valueOne in static_champ_list['data']:
         row = static_champ_list['data'][valueOne]
         key = row["key"]
         name = row["name"]
-        image =  str( "../static/" + "Champions/" + name + ".jpg")
-        value = image
+        image = str("../static/" +  "champion/" + str(row["image"]["full"]))
+        print(image)
+        value = [name,image]
         champ_dict[key] = value
 
 

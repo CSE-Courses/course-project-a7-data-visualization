@@ -19,18 +19,175 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:#5_Double_Api" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#48 added second dropdown menu and search bar to the cod ui">
+    <list default="true" id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="Merge branch '#60_Multiplayer_landingpage_connected_with_frontend' into #5_Double_Api&#10;Merging with 60&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/league1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/league1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/cod1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/league1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataCSVCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataCSVCreator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataImageDownloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataImageDownloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamedata/infofiles/champ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/infofiles/champ.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Aatrox.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ahri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Akali.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Alistar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Amumu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Anivia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Annie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Aphelios.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ashe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Aurelion Sol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Azir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Bard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Blitzcrank.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Brand.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Braum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Caitlyn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Camille.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Cassiopeia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Cho'Gath.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Corki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Darius.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Diana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Dr. Mundo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Draven.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ekko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Elise.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Evelynn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ezreal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Fiddlesticks.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Fiora.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Fizz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Galio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Gangplank.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Garen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Gnar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Gragas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Graves.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Hecarim.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Heimerdinger.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Illaoi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Irelia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ivern.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Janna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Jarvan IV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Jax.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Jayce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Jhin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Jinx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kai'Sa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kalista.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Karma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Karthus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kassadin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Katarina.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kayle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kayn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kennen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kha'Zix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kindred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kled.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Kog'Maw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/LeBlanc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lee Sin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Leona.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lillia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lissandra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lucian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lulu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Lux.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Malphite.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Malzahar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Maokai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Master Yi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Miss Fortune.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Mordekaiser.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Morgana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nami.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nasus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nautilus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Neeko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nidalee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nocturne.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Nunu &amp; Willump.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Olaf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Orianna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ornn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Pantheon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Poppy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Pyke.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Qiyana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Quinn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Rakan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Rammus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Rek'Sai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Renekton.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Rengar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Riven.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Rumble.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ryze.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Samira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sejuani.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Senna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sett.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Shaco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Shen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Shyvana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Singed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sivir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Skarner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sona.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Soraka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Swain.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Sylas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Syndra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Tahm Kench.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Taliyah.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Talon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Taric.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Teemo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Thresh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Tristana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Trundle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Tryndamere.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Twisted Fate.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Twitch.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Udyr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Urgot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Varus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Vayne.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Veigar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Vel'Koz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Vi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Viktor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Vladimir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Volibear.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Warwick.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Wukong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Xayah.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Xerath.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Xin Zhao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Yasuo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Yone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Yorick.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Yuumi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Zac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Zed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Ziggs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Zilean.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Zoe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/Champions/Zyra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/landingMultiplayerLeague.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/landingMultiplayerLeague.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/leagueMultiplayerStats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/leagueStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/leagueStats.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/league_mult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league_mult.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,20 +230,46 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/gamedata/infofiles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.33448276" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\gamedata\infofiles" />
+      <recent name="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\static\Champions" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="landingMultiplayerLeague.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/landingMultiplayerLeague.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="leagueMultiplayerStats.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/leagueMultiplayerStats.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="league_mult.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/league_mult.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="loldata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="course-project-a7-data-visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,6 +292,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="loldataCSVCreator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="course-project-a7-data-visualization" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/gamedata/infoDownloader" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataCSVCreator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server" type="PythonConfigurationType" factoryName="Python">
       <module name="course-project-a7-data-visualization" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,9 +321,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Anthony DeMartino\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -153,14 +358,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.league_mult.html" />
+        <item itemvalue="JavaScript Debug.landingMultiplayerLeague.html" />
+        <item itemvalue="JavaScript Debug.leagueMultiplayerStats.html" />
+        <item itemvalue="Python.loldata" />
+        <item itemvalue="Python.loldataCSVCreator" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="" />
+      <changelist id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="Merge branch '#60_Multiplayer_landingpage_connected_with_frontend' into #5_Double_Api&#10;Merging with 60&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
       <created>1601392900718</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -174,6 +388,7 @@
       <workItem from="1602106391148" duration="298000" />
       <workItem from="1603662247694" duration="3582000" />
       <workItem from="1603748047525" duration="5303000" />
+      <workItem from="1604780851106" duration="6055000" />
     </task>
     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
       <created>1601395106091</created>
@@ -221,19 +436,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="#5_Double_Api" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -249,9 +452,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="#48 added second dropdown menu and search bar to the cod ui" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" width="1310" height="852" key="#Project_Structure" timestamp="1601416968707">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="352" y="0" width="1310" height="852" key="#Project_Structure" timestamp="1604774513106">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="352" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1604774513106" />
     <state x="440" y="94" width="1310" height="852" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1601416968707" />
     <state x="312" y="245" key="#Template_Data_Languages" timestamp="1603517805885">
       <screen x="0" y="0" width="1536" height="824" />
@@ -273,35 +477,52 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="602" y="346" width="1665" height="724" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603815094043" />
-    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1604185326419">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="700" y="217" key="FileChooserDialogImpl" timestamp="1604780128462">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="700" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604780128462" />
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
     <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
-    <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="312" key="GridCell.Tab.0.bottom" timestamp="1604786343875">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
+    <state width="1493" height="312" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604786343875" />
     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.center" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="312" key="GridCell.Tab.0.center" timestamp="1604786343875">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
+    <state width="1493" height="312" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604786343875" />
     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.left" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="312" key="GridCell.Tab.0.left" timestamp="1604786343875">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
+    <state width="1493" height="312" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604786343875" />
     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1827" height="241" key="GridCell.Tab.0.right" timestamp="1603815384406">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1493" height="312" key="GridCell.Tab.0.right" timestamp="1604786343875">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
+    <state width="1493" height="312" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604786343875" />
     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1604781274804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604781274804" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1604781274804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604781274804" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1604781274804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604781274804" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1604781274804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604781274804" />
     <state x="848" y="387" width="934" height="265" key="MultipleFileMergeDialog" timestamp="1601416377810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,5 +563,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="670" y="366" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601417711527" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataCSVCreator.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604780085099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604786343875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata_workbench.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604714727079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1604781231143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataImageDownloader.coverage" NAME="loldataImageDownloader Coverage Results" MODIFIED="1604779430375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage" NAME="course-project-a7-data-visualization Coverage Results" MODIFIED="1603518419672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

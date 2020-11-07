@@ -4,7 +4,7 @@ from riotwatcher import LolWatcher
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-ada1db8b-f39a-4f46-96e4-4abbfeab67f2'
+    api_key = 'RGAPI-cfa8f4a6-36ae-4491-acc9-a36e8e611c8a'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -19,23 +19,25 @@ def getLolData(username, my_region):
     item_dict = {}
     spell_dict = {}
 
-    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/'
+    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/'
+
 
     for valueOne in static_champ_list['data']:
         row = static_champ_list['data'][valueOne]
         key = row["key"]
         name = row["name"]
-        image = str(url + str(row["image"]["full"]))
+        image = str(url + "champion/" + str(row["image"]["full"]))
         value = [name,image]
         champ_dict[key] = value
 
     for key in static_item_list['data']:
-        row = static_item_list['data'][key]
-        item_dict[key] = row["name"]
+        image = str(url + "item/" + str(key) + ".png")
+        item_dict[key] = image
 
     for id in static_spell_list['data']:
         row = static_spell_list['data'][id]
-        spell_dict[row["key"]] = row["name"]
+        image = str("../static/spells/" + "Summoner"+ str(row["name"]) + ".png")
+        spell_dict[row["key"]] = image
 
     last_five_match = {}
     for row in my_matches['matches'][:5]:
@@ -50,6 +52,7 @@ def getLolData(username, my_region):
         for row in participant:
             if(row["championId"] == last_five_match[key]):
                 participants_row = {}
+                print(row)
                 participants_row['champion'] = row['championId']
                 participants_row['championName'] = champ_dict[str(row['championId'])]
                 participants_row['spell1'] = spell_dict[str(row['spell1Id'])]
@@ -62,19 +65,44 @@ def getLolData(username, my_region):
                 participants_row['goldEarned'] = row['stats']['goldEarned']
                 participants_row['champLevel'] = row['stats']['champLevel']
                 participants_row['totalMinionsKilled'] = row['stats']['totalMinionsKilled']
-                participants_row['item0'] = row['stats']['item0']
-                participants_row['item1'] = row['stats']['item0']
-                participants_row['item2'] = row['stats']['item0']
-                participants_row['item3'] = row['stats']['item0']
-                participants_row['item4'] = row['stats']['item0']
+                try:
+                    participants_row['item0'] = item_dict[str(row['stats']['item1'])]
+                except Exception:
+                    participants_row['item0'] = str("Null")
+                try:
+                    participants_row['item1'] = item_dict[str(row['stats']['item1'])]
+                except Exception:
+                    participants_row['item1'] = str("Null")
+                try:
+                    participants_row['item2'] = item_dict[str(row['stats']['item2'])]
+                except Exception:
+                    participants_row['item2'] = str("Null")
+                try:
+                    participants_row['item3'] = item_dict[str(row['stats']['item3'])]
+                except Exception:
+                    participants_row['item3'] = str("Null")
+                try:
+                    participants_row['item4'] = item_dict[str(row['stats']['item4'])]
+                except Exception:
+                    participants_row['item4'] = str("Null")
+                try:
+                    participants_row['item5'] = item_dict[str(row['stats']['item5'])]
+                except Exception:
+                    participants_row['item5'] = str("Null")
+                try:
+                    participants_row['item6'] = item_dict[str(row['stats']['item6'])]
+                except Exception:
+                    participants_row['item6'] = str("Null")
+
                 players.append(participants_row)
-    print(players)
+
     df = pd.DataFrame(players)
-    return df
+    return df.to_json()
+
 
 
 def main():
-    print(getLolData("doublelift", "na1"))
+   print(getLolData("doublelift", "na1"))
 
 
 if __name__ == "__main__":

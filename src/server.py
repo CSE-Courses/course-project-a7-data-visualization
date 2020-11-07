@@ -27,7 +27,7 @@ def league():
     region = request.form["Region"]
     try:
         df = loldata.getLolData(gamertag, region)
-        return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+        return render_template("league1.html.html", name='League Of legends Player Data', data=df)
     except Exception as e:
         return render_template("error.html")
 

@@ -151,7 +151,7 @@
     overflow: visible;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: cod_home.html;
+    --web-action-target: cod1.html;
     cursor: pointer;
 }
 #Component_7___3 {
@@ -175,7 +175,7 @@
     overflow: visible;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league_home.html;
+    --web-action-target: league1.html;
     cursor: pointer;
 }
 #League_of_Legends__d {
@@ -192,15 +192,17 @@
     font-size: 14px;
     color: rgba(234,236,247,1);
 }
-.Game1{
+
+.Player1{
     position: absolute;
-    width: 1360px;
-    height: 192px;
-    top: 20px;
-    left: 360px;
+    width: 427px;
+    height: 1360px;
+    top: 2px;
+    right: 1278px;
     background-color: rgba(43,51,91,1);
     border-radius: 4px;
-    opacity: 0.95;
+    border-right :10px solid #000;
+    opacity: 0.50;
     overflow: visible;
     color: white;
     font-size: 20px;
@@ -208,15 +210,16 @@
     vertical-align: top;
     padding-top: 10px;
 }
-.Game2{
+.Player2{
     position: absolute;
-    width: 1360px;
-    height: 192px;
-    top: 232px;
-    left: 360px;
+    width: 426px;
+    height: 1360px;
+    top: 2px;
+    right: 852px;
     background-color: rgba(43,51,91,1);
     border-radius: 4px;
-    opacity: 0.95;
+    border-right :10px solid #000;
+    opacity: 0.50;
     overflow: visible;
     color: white;
     font-size: 20px;
@@ -224,15 +227,16 @@
     vertical-align: top;
     padding-top: 10px;
 }
-.Game3{
+.Player3{
     position: absolute;
-    width: 1360px;
-    height: 192px;
-    top: 444px;
-    left: 360px;
+    width: 426px;
+    height: 1360px;
+    top: 2px;
+    right: 426px;
     background-color: rgba(43,51,91,1);
     border-radius: 4px;
-    opacity: 0.95;
+    border-right :10px solid #000;
+    opacity: 0.50;
     overflow: visible;
     color: white;
     font-size: 20px;
@@ -240,31 +244,16 @@
     vertical-align: top;
     padding-top: 10px;
 }
-.Game4{
+.Player4{
     position: absolute;
-    width: 1360px;
-    height: 192px;
-    top: 656px;
-    left: 360px;
+    width: 426px;
+    height: 1360px;
+    top: 2px;
+    right: 0px;
     background-color: rgba(43,51,91,1);
     border-radius: 4px;
-    opacity: 0.95;
-    overflow: visible;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    vertical-align: top;
-    padding-top: 10px;
-}
-.Game5{
-    position: absolute;
-    width: 1360px;
-    height: 192px;
-    top: 868px;
-    left: 360px;
-    background-color: rgba(43,51,91,1);
-    border-radius: 4px;
-    opacity: 0.95;
+    border-right :10px solid #000;
+    opacity: 0.50;
     overflow: visible;
     color: white;
     font-size: 20px;
@@ -274,68 +263,95 @@
 }
 .Champion{
     position: absolute;
-    width: 340px;
-    height: 192px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
+    top: 0px;
+    opacity: 1;
+}
+.ChampionGame1{
+    left: 5px;
+}
+.ChampionGame2{
+    left: 147px;
+}
+.ChampionGame3{
+    left: 289px;
+
+}
+
+.Game1Spell{
+    top: 500px;
+}
+.Game2Spell{
+    top: 600px;
+}
+.Game3Spell{
+    top: 700px;
 }
 .Spell1{
     position: absolute;
-    left: 340px;
-    top: 0;
-    width: 340px;
-    height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
+    left: 0px;
 }
 .Spell2{
     position: absolute;
-    left: 340px;
-    top: 92px;
-    width: 340px;
-    height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
+    left: 200px;
 }
 .KDA{
     position: absolute;
-    left: 680px;
+    left: 200px;
+    top: 100px;
     width: 340px;
     height: 192px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
-}
-.Item1{
-    position: absolute;
-    left: 1020px;
-    top: 0;
-    width: 340px;
-    height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
-}
-.Item2{
-    position: absolute;
-    left: 1020px;
-    top: 92px;
-    width: 340px;
-    height: 96px;
     color: white;
     font-size: 50px;
     text-align: center;
     padding-top: 26px;
 }
 
+
+.Game1Item{
+    top: 800px;
+}
+.Game2Item{
+    top: 885px;
+}
+.Game3Item{
+    top: 970px;
+}
+.Item0{
+    position: absolute;
+    left: 0;
+    width : 59px;
+}
+.Item1{
+    position: absolute;
+    left: 59px;
+    width : 59px;
+}
+.Item2{
+    position: absolute;
+    left: 118px;
+    width : 59px;
+
+}
+.Item3{
+    position: absolute;
+    left: 177px;
+    width : 59px;
+}
+.Item4{
+    position: absolute;
+    left: 236px;
+    width : 59px;
+}
+.Item5{
+    position: absolute;
+    left: 295px;
+    width : 59px;
+}
+.Item6{
+    position: absolute;
+    left: 354px;
+    width : 59px;
+}
 
 
 #Graph_Rect {

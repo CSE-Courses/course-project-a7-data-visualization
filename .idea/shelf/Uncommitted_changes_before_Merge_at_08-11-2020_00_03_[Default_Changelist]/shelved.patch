@@ -1,0 +1,520 @@
+Index: src/gamedata/loldata.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># global variables\r\nimport pandas as pd\r\nfrom riotwatcher import LolWatcher\r\n\r\n\r\ndef getLolData(username, my_region):\r\n    api_key = 'RGAPI-ada1db8b-f39a-4f46-96e4-4abbfeab67f2'\r\n    watcher = LolWatcher(api_key)\r\n    me = watcher.summoner.by_name(my_region, username)\r\n    my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])\r\n    # check league's latest version\r\n    latest = watcher.data_dragon.versions_for_region(my_region)['n']['champion']\r\n    # Lets get some champions static information\r\n    static_champ_list = watcher.data_dragon.champions(latest, False, 'en_US')\r\n    # champ static list data to dict for looking up\r\n    static_item_list = watcher.data_dragon.items(latest)\r\n    static_spell_list = watcher.data_dragon.summoner_spells(latest)\r\n    champ_dict = {}\r\n    item_dict = {}\r\n    spell_dict = {}\r\n\r\n    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/'\r\n\r\n    for valueOne in static_champ_list['data']:\r\n        row = static_champ_list['data'][valueOne]\r\n        key = row[\"key\"]\r\n        name = row[\"name\"]\r\n        image = str(url + str(row[\"image\"][\"full\"]))\r\n        value = [name,image]\r\n        champ_dict[key] = value\r\n\r\n    for key in static_item_list['data']:\r\n        row = static_item_list['data'][key]\r\n        item_dict[key] = row[\"name\"]\r\n\r\n    for id in static_spell_list['data']:\r\n        row = static_spell_list['data'][id]\r\n        spell_dict[row[\"key\"]] = row[\"name\"]\r\n\r\n    last_five_match = {}\r\n    for row in my_matches['matches'][:5]:\r\n        key = (row[\"gameId\"])\r\n        value = row[\"champion\"]\r\n        last_five_match[key] = value\r\n\r\n    players = []\r\n    for key in last_five_match:\r\n        match_detail = (watcher.match.by_id(my_region, key))\r\n        participant = match_detail[\"participants\"]\r\n        for row in participant:\r\n            if(row[\"championId\"] == last_five_match[key]):\r\n                participants_row = {}\r\n                participants_row['champion'] = row['championId']\r\n                participants_row['championName'] = champ_dict[str(row['championId'])]\r\n                participants_row['spell1'] = spell_dict[str(row['spell1Id'])]\r\n                participants_row['spell2'] = spell_dict[str(row['spell2Id'])]\r\n                participants_row['win'] = row['stats']['win']\r\n                participants_row['kills'] = row['stats']['kills']\r\n                participants_row['deaths'] = row['stats']['deaths']\r\n                participants_row['assists'] = row['stats']['assists']\r\n                participants_row['totalDamageDealt'] = row['stats']['totalDamageDealt']\r\n                participants_row['goldEarned'] = row['stats']['goldEarned']\r\n                participants_row['champLevel'] = row['stats']['champLevel']\r\n                participants_row['totalMinionsKilled'] = row['stats']['totalMinionsKilled']\r\n                participants_row['item0'] = row['stats']['item0']\r\n                participants_row['item1'] = row['stats']['item0']\r\n                participants_row['item2'] = row['stats']['item0']\r\n                participants_row['item3'] = row['stats']['item0']\r\n                participants_row['item4'] = row['stats']['item0']\r\n                players.append(participants_row)\r\n    print(players)\r\n    df = pd.DataFrame(players)\r\n    return df\r\n\r\n\r\ndef main():\r\n    print(getLolData(\"doublelift\", \"na1\"))\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/gamedata/loldata.py	(revision 93a10dbcea98202c6230e1a2e4401cf7d334f268)
++++ src/gamedata/loldata.py	(date 1604771099389)
+@@ -1,41 +1,33 @@
+ # global variables
++import ast
++
+ import pandas as pd
+ from riotwatcher import LolWatcher
+ 
+ 
+ def getLolData(username, my_region):
+-    api_key = 'RGAPI-ada1db8b-f39a-4f46-96e4-4abbfeab67f2'
++    api_key = 'RGAPI-8261c5e5-fed2-4963-ad12-70dd82347e40'
+     watcher = LolWatcher(api_key)
+     me = watcher.summoner.by_name(my_region, username)
+     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
+     # check league's latest version
+     latest = watcher.data_dragon.versions_for_region(my_region)['n']['champion']
+-    # Lets get some champions static information
+-    static_champ_list = watcher.data_dragon.champions(latest, False, 'en_US')
+-    # champ static list data to dict for looking up
+-    static_item_list = watcher.data_dragon.items(latest)
+-    static_spell_list = watcher.data_dragon.summoner_spells(latest)
+-    champ_dict = {}
+-    item_dict = {}
+-    spell_dict = {}
+ 
+-    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/'
+ 
+-    for valueOne in static_champ_list['data']:
+-        row = static_champ_list['data'][valueOne]
+-        key = row["key"]
+-        name = row["name"]
+-        image = str(url + str(row["image"]["full"]))
+-        value = [name,image]
+-        champ_dict[key] = value
++    fileChamp = '../infofiles/champ.txt'
++    with open(fileChamp) as f:
++        data = f.read()
++    champ_dict = ast.literal_eval(data)
+ 
+-    for key in static_item_list['data']:
+-        row = static_item_list['data'][key]
+-        item_dict[key] = row["name"]
++    fileItem = '../infofiles/item.txt'
++    with open(fileItem) as f:
++        data = f.read()
++    item_dict = ast.literal_eval(data)
+ 
+-    for id in static_spell_list['data']:
+-        row = static_spell_list['data'][id]
+-        spell_dict[row["key"]] = row["name"]
++    fileSpell = '../infofiles/spell.txt'
++    with open(fileSpell) as f:
++        data = f.read()
++    spell_dict = ast.literal_eval(data)
+ 
+     last_five_match = {}
+     for row in my_matches['matches'][:5]:
+@@ -50,6 +42,7 @@
+         for row in participant:
+             if(row["championId"] == last_five_match[key]):
+                 participants_row = {}
++                print(row)
+                 participants_row['champion'] = row['championId']
+                 participants_row['championName'] = champ_dict[str(row['championId'])]
+                 participants_row['spell1'] = spell_dict[str(row['spell1Id'])]
+@@ -62,15 +55,40 @@
+                 participants_row['goldEarned'] = row['stats']['goldEarned']
+                 participants_row['champLevel'] = row['stats']['champLevel']
+                 participants_row['totalMinionsKilled'] = row['stats']['totalMinionsKilled']
+-                participants_row['item0'] = row['stats']['item0']
+-                participants_row['item1'] = row['stats']['item0']
+-                participants_row['item2'] = row['stats']['item0']
+-                participants_row['item3'] = row['stats']['item0']
+-                participants_row['item4'] = row['stats']['item0']
++                try:
++                    participants_row['item0'] = item_dict[str(row['stats']['item1'])]
++                except Exception:
++                    participants_row['item0'] = str("Null")
++                try:
++                    participants_row['item1'] = item_dict[str(row['stats']['item1'])]
++                except Exception:
++                    participants_row['item1'] = str("Null")
++                try:
++                    participants_row['item2'] = item_dict[str(row['stats']['item2'])]
++                except Exception:
++                    participants_row['item2'] = str("Null")
++                try:
++                    participants_row['item3'] = item_dict[str(row['stats']['item3'])]
++                except Exception:
++                    participants_row['item3'] = str("Null")
++                try:
++                    participants_row['item4'] = item_dict[str(row['stats']['item4'])]
++                except Exception:
++                    participants_row['item4'] = str("Null")
++                try:
++                    participants_row['item5'] = item_dict[str(row['stats']['item5'])]
++                except Exception:
++                    participants_row['item5'] = str("Null")
++                try:
++                    participants_row['item6'] = item_dict[str(row['stats']['item6'])]
++                except Exception:
++                    participants_row['item6'] = str("Null")
++
+                 players.append(participants_row)
+-    print(players)
++
+     df = pd.DataFrame(players)
+-    return df
++    return df.to_json()
++
+ 
+ 
+ def main():
+Index: src/server.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template, request\r\nimport pandas as pd\r\nfrom src.gamedata import loldata\r\n\r\napp = Flask(__name__)\r\n\r\n\"\"\"\r\nUI Code\r\n\"\"\"\r\n\r\n\r\n@app.route(\"/\")\r\ndef home():\r\n    return render_template(\"index.html\")\r\n\r\n@app.route(\"/index.html\")\r\ndef returnhome():\r\n    return render_template(\"index.html\")\r\n\r\n@app.route(\"/league1.html\")\r\ndef leagueOne():\r\n    return render_template(\"league1.html\")\r\n\r\n@app.route(\"/league1.html\", methods=['POST'])\r\ndef league():\r\n    gamertag = request.form[\"Gamertag\"]\r\n    region = request.form[\"Region\"]\r\n    try:\r\n        df = loldata.getLolData(gamertag, region)\r\n        return render_template(\"leagueStats.html\", name='League Of legends Player Data', data=df.to_json())\r\n    except Exception as e:\r\n        return render_template(\"error.html\")\r\n\r\n@app.route(\"/league_mult.html\", methods=['POST'])\r\ndef league2():\r\n    gamertag = request.form[\"Gamertag\"]\r\n    region = request.form[\"Region\"]\r\n    try:\r\n        df = loldata.getLolData(gamertag, region)\r\n        return render_template(\"leagueStats.html\", name='League Of legends Player Data', data=df.to_json())\r\n    except Exception as e:\r\n        return render_template(\"error.html\")\r\n\r\n@app.route(\"/cod1.html\")\r\ndef codOne():\r\n    return render_template(\"cod1.html\")\r\n\r\n@app.route(\"/codStats.html\")\r\ndef codStats():\r\n    return render_template(\"codStats.html\")\r\n\r\n@app.route(\"/error.html\")\r\ndef error():\r\n    return render_template(\"error.html\")\r\n\r\n@app.route(\"/cod_home.html\")\r\ndef cod_home():\r\n    return render_template(\"cod_home.html\")\r\n\r\n@app.route(\"/cod_mult.html\")\r\ndef cod_mult():\r\n    return render_template(\"cod_mult.html\")\r\n\r\n@app.route(\"/codMultiplayerStats.html\")\r\ndef codMultiplayerStats():\r\n    return render_template(\"codMultiplayerStats.html\")\r\n\r\n@app.route(\"/league_home.html\")\r\ndef league_home():\r\n    return render_template(\"league_home.html\")\r\n\r\n@app.route(\"/league_mult.html\")\r\ndef league_mult():\r\n    return render_template(\"league_mult.html\")\r\n\r\n@app.route(\"/leagueMultiplayerStats.html\")\r\ndef leagueMultiplayerStats():\r\n    return render_template(\"leagueMultiplayerStats.html\")\r\n\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/server.py	(revision 93a10dbcea98202c6230e1a2e4401cf7d334f268)
++++ src/server.py	(date 1604440528222)
+@@ -33,8 +33,8 @@
+ 
+ @app.route("/league_mult.html", methods=['POST'])
+ def league2():
+-    gamertag = request.form["Gamertag"]
+-    region = request.form["Region"]
++    gamertag = request.form["Gamertag1"]
++    region = request.form["Region1"]
+     try:
+         df = loldata.getLolData(gamertag, region)
+         return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:#5_Double_Api\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f\" name=\"Default Changelist\" comment=\"#48 added second dropdown menu and search bar to the cod ui\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/static/cod1.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/static/cod1.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/static/league1.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/static/league1.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/templates/cod1.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/templates/cod1.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/templates/league1.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/templates/league1.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/templates/league_mult.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/templates/league_mult.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"develop\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"JupyterTrust\" id=\"7d95cda2-1b41-4c1d-93ab-76cd29dbd92c\" />\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1iBtdaGfn87ylvr4ey4Dmf9rsK3\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.33448276\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.server\">\r\n    <configuration name=\"loldata\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/gamedata\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/gamedata/loldata.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"server\" type=\"PythonConfigurationType\" factoryName=\"Python\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"C:\\Users\\Anthony DeMartino\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"server\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" BundledDictionaries=\"0\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" Dictionaries=\"0\" CorrectionsLimit=\"5\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1601392900718</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1601392900718</updated>\r\n      <workItem from=\"1601392905132\" duration=\"8646000\" />\r\n      <workItem from=\"1601416654281\" duration=\"70000\" />\r\n      <workItem from=\"1601416785626\" duration=\"88000\" />\r\n      <workItem from=\"1601416954090\" duration=\"2986000\" />\r\n      <workItem from=\"1601922370013\" duration=\"711000\" />\r\n      <workItem from=\"1602104567023\" duration=\"609000\" />\r\n      <workItem from=\"1602106391148\" duration=\"298000\" />\r\n      <workItem from=\"1603662247694\" duration=\"3582000\" />\r\n      <workItem from=\"1603748047525\" duration=\"5303000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added specific Selenium tests for different branches of the site\">\r\n      <created>1601395106091</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1601395106091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added : the image url for the champion, item 2-4, item names, spell names.\">\r\n      <created>1603521578619</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603521578619</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"#47 -created menu options for searching for single player and 2 player&#10;    -updated buttons\">\r\n      <created>1603814964951</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603814964951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search\">\r\n      <created>1603815051797</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603815051797</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"#48 added second dropdown menu and search bar to the cod ui\">\r\n      <created>1604348046850</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1604348046850</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"#5_Double_Api\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added specific Selenium tests for different branches of the site\" />\r\n    <MESSAGE value=\"Added : the image url for the champion, item 2-4, item names, spell names.\" />\r\n    <MESSAGE value=\"#47 -created menu options for searching for single player and 2 player&#10;    -updated buttons\" />\r\n    <MESSAGE value=\"#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search\" />\r\n    <MESSAGE value=\"#48 added second dropdown menu and search bar to the cod ui\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"#48 added second dropdown menu and search bar to the cod ui\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"440\" y=\"94\" width=\"1310\" height=\"852\" key=\"#Project_Structure\" timestamp=\"1601416968707\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"440\" y=\"94\" width=\"1310\" height=\"852\" key=\"#Project_Structure/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416968707\" />\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages\" timestamp=\"1603517805885\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages/0.0.1536.824@0.0.1536.824\" timestamp=\"1603517805885\" />\r\n    <state x=\"1374\" y=\"355\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1603753429660\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"1374\" y=\"355\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603753429660\" />\r\n    <state x=\"669\" y=\"105\" key=\"#server\" timestamp=\"1601406541450\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"669\" y=\"105\" key=\"#server/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601406541450\" />\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2\" timestamp=\"1601395105587\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601395105587\" />\r\n    <state x=\"602\" y=\"346\" width=\"1665\" height=\"724\" key=\"DiffContextDialog\" timestamp=\"1603815094043\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"602\" y=\"346\" width=\"1665\" height=\"724\" key=\"DiffContextDialog/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815094043\" />\r\n    <state x=\"1167\" y=\"369\" key=\"FileChooserDialogImpl\" timestamp=\"1604185326419\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"875\" y=\"274\" key=\"FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416808515\" />\r\n    <state x=\"1167\" y=\"369\" key=\"FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1604185326419\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1603815384406\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824\" timestamp=\"1603665774298\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.center\" timestamp=\"1603815384406\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824\" timestamp=\"1603665774298\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.left\" timestamp=\"1603815384406\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824\" timestamp=\"1603665774298\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.right\" timestamp=\"1603815384406\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824\" timestamp=\"1603665774298\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog\" timestamp=\"1601416377810\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416377810\" />\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog\" timestamp=\"1601418061567\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601418061567\" />\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor\" timestamp=\"1603515272841\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor/0.0.1536.824@0.0.1536.824\" timestamp=\"1603515272841\" />\r\n    <state x=\"461\" y=\"164\" key=\"SettingsEditor/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601407433807\" />\r\n    <state x=\"737\" y=\"340\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1604348111934\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1603521600238\" />\r\n    <state x=\"552\" y=\"252\" key=\"Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416329322\" />\r\n    <state x=\"737\" y=\"340\" key=\"Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1604348111934\" />\r\n    <state x=\"1025\" y=\"583\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1603814656315\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"769\" y=\"433\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417940110\" />\r\n    <state x=\"1025\" y=\"583\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603814656315\" />\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog\" timestamp=\"1601416713960\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416713960\" />\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog\" timestamp=\"1601922417669\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601922417669\" />\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog\" timestamp=\"1601417335262\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417335262\" />\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog\" timestamp=\"1601417711527\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417711527\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 93a10dbcea98202c6230e1a2e4401cf7d334f268)
++++ .idea/workspace.xml	(date 1604773805220)
+@@ -19,19 +19,19 @@
+     <select>
+       <path>
+         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="BRANCH:#5_Double_Api" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="BRANCH:origin/#18_Search_Button" type="e8cecc67:BranchNodeDescriptor" />
+       </path>
+     </select>
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="#48 added second dropdown menu and search bar to the cod ui">
++      <change beforePath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-a7-data-visualization.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/static/cod1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/cod1.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/static/league1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/league1.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/templates/cod1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/cod1.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/templates/league1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league1.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/templates/league_mult.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/league_mult.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/gamedata/Gamertag.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,13 +45,26 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="HTML File" />
++        <option value="Jupyter Notebook" />
++        <option value="Python Script" />
+       </list>
++    </option>
++  </component>
++  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
++    <envs>
++      <env key="FLASK_APP" value="app" />
++    </envs>
++    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
++    <option name="myEnvs">
++      <map>
++        <entry key="FLASK_APP" value="app" />
++      </map>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="develop" />
++        <entry key="$PROJECT_DIR$" value="#5_Double_Api" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -73,21 +86,53 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/gamedata/infofiles" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.path.for.package.eslint" value="project" />
+     <property name="node.js.path.for.package.tslint" value="project" />
+     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="project.structure.last.edited" value="SDKs" />
++    <property name="project.structure.last.edited" value="Modules" />
+     <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.33448276" />
+-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
++    <property name="project.structure.side.proportion" value="0.41379312" />
++    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+-  <component name="RunManager" selected="Python.server">
+-    <configuration name="loldata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++  <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\gamedata\infofiles" />
++      <recent name="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\static" />
++      <recent name="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\gamedata\infoDownloader" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Python.loldataCSVCreator">
++    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
++      <option name="arquillianRunConfiguration">
++        <value>
++          <option name="containerStateName" value="" />
++        </value>
++      </option>
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="league1.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/league1.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <configuration name="leagueMultiplayerStats.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/leagueMultiplayerStats.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <configuration name="leagueStats.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/leagueStats.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <configuration name="league_home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/course-project-a7-data-visualization/templates/league_home.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <configuration name="loldataCSVCreator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="course-project-a7-data-visualization" />
+       <option name="INTERPRETER_OPTIONS" value="" />
+       <option name="PARENT_ENVS" value="true" />
+@@ -100,7 +145,29 @@
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gamedata/loldata.py" />
++      <option name="SCRIPT_NAME" value="C:\Users\rishi\IdeaProjects\course-project-a7-data-visualization\src\gamedata\infoDownloader\loldataCSVCreator.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <configuration name="loldataImageDownloader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="course-project-a7-data-visualization" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/gamedata/infoDownloader" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataImageDownloader.py" />
+       <option name="PARAMETERS" value="" />
+       <option name="SHOW_COMMAND_LINE" value="false" />
+       <option name="EMULATE_TERMINAL" value="false" />
+@@ -116,9 +183,9 @@
+       <envs>
+         <env name="PYTHONUNBUFFERED" value="1" />
+       </envs>
+-      <option name="SDK_HOME" value="C:\Users\Anthony DeMartino\AppData\Local\Programs\Python\Python38-32\python.exe" />
++      <option name="SDK_HOME" value="" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+-      <option name="IS_MODULE_SDK" value="false" />
++      <option name="IS_MODULE_SDK" value="true" />
+       <option name="ADD_CONTENT_ROOTS" value="true" />
+       <option name="ADD_SOURCE_ROOTS" value="true" />
+       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+@@ -153,8 +220,17 @@
+       <option name="INPUT_FILE" value="" />
+       <method v="2" />
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Python.loldataCSVCreator" />
++        <item itemvalue="Python.loldataImageDownloader" />
++        <item itemvalue="JavaScript Debug.league_home.html" />
++        <item itemvalue="JavaScript Debug.leagueStats.html" />
++        <item itemvalue="JavaScript Debug.leagueMultiplayerStats.html" />
++      </list>
++    </recent_temporary>
+   </component>
+-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+@@ -174,6 +250,15 @@
+       <workItem from="1602106391148" duration="298000" />
+       <workItem from="1603662247694" duration="3582000" />
+       <workItem from="1603748047525" duration="5303000" />
++      <workItem from="1604439658350" duration="2764000" />
++      <workItem from="1604447829186" duration="58000" />
++      <workItem from="1604451303822" duration="25000" />
++      <workItem from="1604620649072" duration="681000" />
++      <workItem from="1604670310386" duration="18000" />
++      <workItem from="1604708025779" duration="6931000" />
++      <workItem from="1604715029067" duration="81000" />
++      <workItem from="1604715115916" duration="2792000" />
++      <workItem from="1604768953458" duration="1857000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
+       <created>1601395106091</created>
+@@ -227,7 +312,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="#5_Double_Api" />
++                        <option value="origin/#18_Search_Button" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -249,9 +334,10 @@
+     <option name="LAST_COMMIT_MESSAGE" value="#48 added second dropdown menu and search bar to the cod ui" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="440" y="94" width="1310" height="852" key="#Project_Structure" timestamp="1601416968707">
+-      <screen x="0" y="0" width="1920" height="1040" />
++    <state x="352" y="0" width="1310" height="852" key="#Project_Structure" timestamp="1604715102331">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
++    <state x="352" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1604715102331" />
+     <state x="440" y="94" width="1310" height="852" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1601416968707" />
+     <state x="312" y="245" key="#Template_Data_Languages" timestamp="1603517805885">
+       <screen x="0" y="0" width="1536" height="824" />
+@@ -261,6 +347,10 @@
+       <screen x="0" y="0" width="2560" height="1400" />
+     </state>
+     <state x="1374" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603753429660" />
++    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604709625401">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604709625401" />
+     <state x="669" y="105" key="#server" timestamp="1601406541450">
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+@@ -273,35 +363,68 @@
+       <screen x="0" y="0" width="2560" height="1400" />
+     </state>
+     <state x="602" y="346" width="1665" height="724" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603815094043" />
+-    <state x="1167" y="369" key="FileChooserDialogImpl" timestamp="1604185326419">
+-      <screen x="0" y="0" width="2560" height="1400" />
++    <state x="700" y="217" key="FileChooserDialogImpl" timestamp="1604770809357">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
++    <state x="700" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604770809357" />
+     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
+     <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
+-    <state width="1827" height="241" key="GridCell.Tab.0.bottom" timestamp="1603815384406">
+-      <screen x="0" y="0" width="2560" height="1400" />
++    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604770780578">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
++    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604770780578" />
+     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1827" height="241" key="GridCell.Tab.0.center" timestamp="1603815384406">
+-      <screen x="0" y="0" width="2560" height="1400" />
++    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604770780578">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
++    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604770780578" />
+     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1827" height="241" key="GridCell.Tab.0.left" timestamp="1603815384406">
+-      <screen x="0" y="0" width="2560" height="1400" />
++    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604770780578">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
++    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604770780578" />
+     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1827" height="241" key="GridCell.Tab.0.right" timestamp="1603815384406">
+-      <screen x="0" y="0" width="2560" height="1400" />
++    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604770780578">
++      <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603665774298" />
++    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604770780578" />
+     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
++    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1604446322719">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604446322719" />
++    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1604446322718">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1604446322718" />
++    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1604446322719">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1604446322719" />
+     <state x="848" y="387" width="934" height="265" key="MultipleFileMergeDialog" timestamp="1601416377810">
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+@@ -310,10 +433,10 @@
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+     <state x="575" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601418061567" />
+-    <state x="369" y="0" key="SettingsEditor" timestamp="1603515272841">
++    <state x="369" y="0" key="SettingsEditor" timestamp="1604708636449">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603515272841" />
++    <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604708636449" />
+     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601407433807" />
+     <state x="737" y="340" key="Vcs.Push.Dialog.v2" timestamp="1604348111934">
+       <screen x="0" y="0" width="2560" height="1400" />
+@@ -342,5 +465,25 @@
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+     <state x="670" y="366" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601417711527" />
++    <state x="360" y="9" key="new project wizard" timestamp="1604451325949">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="360" y="9" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1604451325949" />
++    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604709404367">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604709404367" />
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataCSVCreator.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604770780562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604708908893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata_workbench.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604714727079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1604341728710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataImageDownloader.coverage" NAME="loldataImageDownloader Coverage Results" MODIFIED="1604717285132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage" NAME="course-project-a7-data-visualization Coverage Results" MODIFIED="1603518419672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/course-project-a7-data-visualization.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"Flask\">\r\n    <option name=\"enabled\" value=\"true\" />\r\n  </component>\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"Python 3.8\" jdkType=\"Python SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n  <component name=\"TemplatesService\">\r\n    <option name=\"TEMPLATE_CONFIGURATION\" value=\"Jinja2\" />\r\n    <option name=\"TEMPLATE_FOLDERS\">\r\n      <list>\r\n        <option value=\"$MODULE_DIR$/src/templates\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/course-project-a7-data-visualization.iml	(revision 93a10dbcea98202c6230e1a2e4401cf7d334f268)
++++ .idea/course-project-a7-data-visualization.iml	(date 1604411527501)
+@@ -7,7 +7,7 @@
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.8 (1)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+   <component name="TemplatesService">
+diff --git src/gamedata/Gamertag.txt src/gamedata/Gamertag.txt
+deleted file mode 100644

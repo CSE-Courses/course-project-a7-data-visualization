@@ -284,7 +284,7 @@
 .Spell1{
     position: absolute;
     left: 340px;
-    top: 0px;
+    top: 0;
     width: 340px;
     height: 96px;
     color: white;
@@ -316,7 +316,7 @@
 .Item1{
     position: absolute;
     left: 1020px;
-    top: 0px;
+    top: 0;
     width: 340px;
     height: 96px;
     color: white;

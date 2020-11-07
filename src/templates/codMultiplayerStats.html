@@ -7,11 +7,19 @@
     <title>codMultiplayerStats</title>
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/codMultiplayerStats.css"/>
     <script id="applicationScript" type="text/javascript" src="../static/codMultiplayerStats.js"></script>
+    <script type="text/javascript" src="../static/codApiCalls.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
+<script>
+    console.log(sessionStorage.getItem("gamertag"))
+    console.log(sessionStorage.getItem('platform'))
+    console.log(sessionStorage.getItem("gamertag_2"))
+    console.log(sessionStorage.getItem('platform_2'))
+    makeMultiplayerApiCallCod();
+</script>
 <div id="codMultiplayerStats">
-    <img id="League_background" src="../static/wp4517150.png" srcset="../src/templates/w../src/templates/wp4517150@2x.png wp4517150@2x.png 2x">
+    <img id="CoD_background" src="../static/wp4517150.png">
     <div id="Menu">
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">
@@ -28,10 +36,10 @@
             </div>
         </div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_League" class="Menu_Option_League">
-            <img id="Menu_Option_League_Icon" src="../static/output_onlinepngtools.png" srcset="../src/templates/output_online../src/templates/output_onlinepngtools@2x.pngnepngtools@2x.png 2x">
+            <img id="Menu_Option_League_Icon" src="../static/output_onlinepngtools.png">
             <div id="Menu_Option_League_Text">League of Legends</div>
         </div>
-        <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png" srcset="../src/templates/output_onlinepngt../src/templates/output_onlinepngtools__2_@2x.pnggtools__2_@2x.png 2x">
+        <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png">
     </div>
 </div>
 </body>

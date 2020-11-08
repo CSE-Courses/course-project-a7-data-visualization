@@ -1,7 +1,7 @@
 
 //this method needs to be modified to handle submit button spam. Request will overload and time out.
 
-function makeApiCallCod(){//this method will be the only method needed to be called in order to get cod api for any mode
+function makeApiCallCod(){ //this method will be the only method needed to be called in order to get cod api for any mode
     console.log("Calling player 1...")
     const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
     const platform = sessionStorage.getItem('platform');
@@ -105,6 +105,7 @@ function GetCodBrStats(player, jsonStr) {
     if (codInfoDictionary.hasOwnProperty('error')) {
         document.location.href = "./error.html"
     }
+    sessionStorage.setItem('brStats',codInfoDictionary);
     let mode = "";
     let kills = "";
     let deaths = "";

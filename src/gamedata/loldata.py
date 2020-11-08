@@ -44,7 +44,7 @@ def getDataTwo(usernameOne,usernameTwo,regionOne,regionTwo):
     return dfOne,dfTwo
 
 def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
-    api_key = 'RGAPI-a93edbc8-4da7-4446-8818-3e56286dd65b'
+    api_key = 'RGAPI-66d7b0dc-b9ae-4e00-be29-0341241c30db'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])

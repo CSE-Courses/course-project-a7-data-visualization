@@ -25,7 +25,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="Added local images and api data for faster calls&#10;Made a function to have multiple api calls" />
+    <list default="true" id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="changed xml file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/leagueStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/leagueStats.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/leagueStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/leagueStats.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,13 +91,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +108,9 @@
       <method v="2" />
     </configuration>
     <configuration name="leagueMultiplayerStats.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/leagueMultiplayerStats.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="leagueStats.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/leagueStats.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="league_mult.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/league_mult.html" useBuiltInWebServerPort="true">
@@ -120,28 +130,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gamedata/loldata.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="loldataCSVCreator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="course-project-a7-data-visualization" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/gamedata/infoDownloader" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gamedata/infoDownloader/loldataCSVCreator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.leagueStats.html" />
         <item itemvalue="JavaScript Debug.league_mult.html" />
         <item itemvalue="JavaScript Debug.landingMultiplayerLeague.html" />
         <item itemvalue="JavaScript Debug.leagueMultiplayerStats.html" />
         <item itemvalue="Python.loldata" />
-        <item itemvalue="Python.loldataCSVCreator" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +212,8 @@
       <workItem from="1602106391148" duration="298000" />
       <workItem from="1603662247694" duration="3582000" />
       <workItem from="1603748047525" duration="5303000" />
-      <workItem from="1604780851106" duration="6385000" />
+      <workItem from="1604780851106" duration="10087000" />
+      <workItem from="1604860948324" duration="3772000" />
     </task>
     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
       <created>1601395106091</created>
@@ -268,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604787229949</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added champions images">
+      <created>1604787395997</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604787395997</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changed xml file">
+      <created>1604787414938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604787414938</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +308,9 @@
     <MESSAGE value="#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search" />
     <MESSAGE value="#48 added second dropdown menu and search bar to the cod ui" />
     <MESSAGE value="Added local images and api data for faster calls&#10;Made a function to have multiple api calls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added local images and api data for faster calls&#10;Made a function to have multiple api calls" />
+    <MESSAGE value="Added champions images" />
+    <MESSAGE value="changed xml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed xml file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="352" y="0" width="1310" height="852" key="#Project_Structure" timestamp="1604774513106">
@@ -339,28 +344,28 @@
     <state x="700" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604780128462" />
     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
     <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
-    <state width="1493" height="312" key="GridCell.Tab.0.bottom" timestamp="1604787145577">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604865009615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="312" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604787145577" />
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604865009615" />
     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1493" height="312" key="GridCell.Tab.0.center" timestamp="1604787145577">
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604865009614">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="312" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604787145577" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604865009614" />
     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1493" height="312" key="GridCell.Tab.0.left" timestamp="1604787145577">
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604865009614">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="312" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604787145577" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604865009614" />
     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
-    <state width="1493" height="312" key="GridCell.Tab.0.right" timestamp="1604787145577">
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604865009615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="312" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604787145577" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604865009615" />
     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
     <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1604781274804">
@@ -392,10 +397,10 @@
     </state>
     <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603515272841" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601407433807" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604787235122">
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604787433794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604787235122" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604787433794" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601416329322" />
     <state x="737" y="340" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1604348111934" />
     <state x="1025" y="583" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603814656315">
@@ -426,7 +431,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataCSVCreator.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604780085099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
-    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604786343875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604865009605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata_workbench.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604714727079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1604781231143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataImageDownloader.coverage" NAME="loldataImageDownloader Coverage Results" MODIFIED="1604779430375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />

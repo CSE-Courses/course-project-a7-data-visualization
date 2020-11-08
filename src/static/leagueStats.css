@@ -274,6 +274,7 @@
 }
 .Champion{
     position: absolute;
+    top: 10px;
     width: 340px;
     height: 192px;
     color: white;
@@ -283,25 +284,18 @@
 }
 .Spell1{
     position: absolute;
+    top: 20px;
     left: 340px;
-    top: 0;
     width: 340px;
-    height: 96px;
+    height: 192px;
     color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
 }
 .Spell2{
     position: absolute;
+    top: 112px;
     left: 340px;
-    top: 92px;
     width: 340px;
     height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
 }
 .KDA{
     position: absolute;
@@ -316,24 +310,16 @@
 .Item1{
     position: absolute;
     left: 1020px;
-    top: 0;
+    top: 20px;
     width: 340px;
     height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
 }
 .Item2{
     position: absolute;
     left: 1020px;
-    top: 92px;
+    top: 112px;
     width: 340px;
-    height: 96px;
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    padding-top: 26px;
+    height: 96px;s
 }
 
 

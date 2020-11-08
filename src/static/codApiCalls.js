@@ -157,105 +157,143 @@ function GetCodBrStats(player, jsonStr) {
 }
 
 function GetCodBrMatchStats(jsonStr) {
+    console.log(jsonStr)
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
     if (codInfoDictionary.hasOwnProperty('error')) {
         document.location.href = "./error.html"
     }
     let match1_kills = "";
-    let match1_assists = "";
+    let match1_teamPlacement = "";
     let match1_kdratio = "";
     let match1_damage = "";
 
     let match2_kills = "";
-    let match2_assists = "";
+    let match2_teamPlacement = "";
     let match2_kdratio = "";
     let match2_damage = "";
 
     let match3_kills = "";
-    let match3_assists = "";
+    let match3_teamPlacement = "";
     let match3_kdratio = "";
     let match3_damage = "";
 
     let match4_kills = "";
-    let match4_assists = "";
+    let match4_teamPlacement = "";
     let match4_kdratio = "";
     let match4_damage = "";
 
     let match5_kills = "";
-    let match5_assists = "";
+    let match5_teamPlacement = "";
     let match5_kdratio  = "";
     let match5_damage = "";
 
     let match6_kills = "";
-    let match6_assists = "";
+    let match6_teamPlacement = "";
     let match6_kdratio = "";
     let match6_damage = "";
 
     match1_kills += codInfoDictionary["matches"][0]["playerStats"]["kills"];
-    match1_assists += codInfoDictionary["matches"][0]["playerStats"]["assists"];
-    match1_kdratio += codInfoDictionary["matches"][0]["playerStats"]["kdratio"];
-    match1_damage += codInfoDictionary["matches"][0]["playerStats"]["damage"];
+    match1_kdratio += codInfoDictionary["matches"][0]["playerStats"]["kdRatio"];
+    match1_damage += codInfoDictionary["matches"][0]["playerStats"]["damageDone"];
+    match1_teamPlacement += codInfoDictionary["matches"][0]["playerStats"]["teamPlacement"];
 
     match2_kills += codInfoDictionary["matches"][1]["playerStats"]["kills"];
-    match2_assists += codInfoDictionary["matches"][1]["playerStats"]["assists"];
-    match2_kdratio += codInfoDictionary["matches"][1]["playerStats"]["kdratio"];
-    match2_damage += codInfoDictionary["matches"][1]["playerStats"]["damage"];
+    match2_teamPlacement += codInfoDictionary["matches"][1]["playerStats"]["teamPlacement"];
+    match2_kdratio += codInfoDictionary["matches"][1]["playerStats"]["kdRatio"];
+    match2_damage += codInfoDictionary["matches"][1]["playerStats"]["damageDone"];
 
     match3_kills += codInfoDictionary["matches"][2]["playerStats"]["kills"];
-    match3_assists += codInfoDictionary["matches"][2]["playerStats"]["assists"];
-    match3_kdratio += codInfoDictionary["matches"][2]["playerStats"]["kdratio"];
-    match3_damage += codInfoDictionary["matches"][2]["playerStats"]["damage"];
+    match3_teamPlacement += codInfoDictionary["matches"][2]["playerStats"]["teamPlacement"];
+    match3_kdratio += codInfoDictionary["matches"][2]["playerStats"]["kdRatio"];
+    match3_damage += codInfoDictionary["matches"][2]["playerStats"]["damageDone"];
 
     match4_kills += codInfoDictionary["matches"][3]["playerStats"]["kills"];
-    match4_assists += codInfoDictionary["matches"][3]["playerStats"]["assists"];
-    match4_kdratio += codInfoDictionary["matches"][3]["playerStats"]["kdratio"];
-    match4_damage += codInfoDictionary["matches"][3]["playerStats"]["damage"];
+    match4_teamPlacement += codInfoDictionary["matches"][3]["playerStats"]["teamPlacement"];
+    match4_kdratio += codInfoDictionary["matches"][3]["playerStats"]["kdRatio"];
+    match4_damage += codInfoDictionary["matches"][3]["playerStats"]["damageDone"];
 
     match5_kills += codInfoDictionary["matches"][4]["playerStats"]["kills"];
-    match5_assists += codInfoDictionary["matches"][4]["playerStats"]["assists"];
-    match5_kdratio += codInfoDictionary["matches"][4]["playerStats"]["kdratio"];
-    match5_damage += codInfoDictionary["matches"][4]["playerStats"]["damage"];
+    match5_teamPlacement += codInfoDictionary["matches"][4]["playerStats"]["teamPlacement"];
+    match5_kdratio += codInfoDictionary["matches"][4]["playerStats"]["kdRatio"];
+    match5_damage += codInfoDictionary["matches"][4]["playerStats"]["damageDone"];
 
     match6_kills += codInfoDictionary["matches"][5]["playerStats"]["kills"];
-    match6_assists += codInfoDictionary["matches"][5]["playerStats"]["assists"];
-    match6_kdratio += codInfoDictionary["matches"][5]["playerStats"]["kdratio"];
-    match6_damage += codInfoDictionary["matches"][5]["playerStats"]["damage"];
+    match6_teamPlacement += codInfoDictionary["matches"][5]["playerStats"]["teamPlacement"];
+    match6_kdratio += codInfoDictionary["matches"][5]["playerStats"]["kdRatio"];
+    match6_damage += codInfoDictionary["matches"][5]["playerStats"]["damageDone"];
 
-    sessionStorage.setItem('match1_kills', match1_kills)
-    sessionStorage.setItem('match1_assists', match1_assists)
-    sessionStorage.setItem('match1_kdratio', match1_kdratio)
-    sessionStorage.setItem('match1_damage', match1_damage)
+    sessionStorage.setItem('match1_kills', match1_kills);
+    sessionStorage.setItem('match1_teamPlacement', match1_teamPlacement);
+    sessionStorage.setItem('match1_kdratio', match1_kdratio);
+    sessionStorage.setItem('match1_damage', match1_damage);
 
-    sessionStorage.setItem('match2_kills', match2_kills)
-    sessionStorage.setItem('match2_assists', match2_assists)
-    sessionStorage.setItem('match2_kdratio', match2_kdratio)
-    sessionStorage.setItem('match2_damage', match2_damage)
+    sessionStorage.setItem('match2_kills', match2_kills);
+    sessionStorage.setItem('match2_teamPlacement', match2_teamPlacement);
+    sessionStorage.setItem('match2_kdratio', match2_kdratio);
+    sessionStorage.setItem('match2_damage', match2_damage);
 
-    sessionStorage.setItem('match3_kills', match3_kills)
-    sessionStorage.setItem('match3_assists', match3_assists)
-    sessionStorage.setItem('match3_kdratio', match3_kdratio)
-    sessionStorage.setItem('match3_damage', match3_damage)
+    sessionStorage.setItem('match3_kills', match3_kills);
+    sessionStorage.setItem('match3_teamPlacement', match3_teamPlacement);
+    sessionStorage.setItem('match3_kdratio', match3_kdratio);
+    sessionStorage.setItem('match3_damage', match3_damage);
 
-    sessionStorage.setItem('match4_kills', match4_kills)
-    sessionStorage.setItem('match4_assists', match4_assists)
-    sessionStorage.setItem('match4_kdratio', match4_kdratio)
-    sessionStorage.setItem('match4_damage', match4_damage)
+    sessionStorage.setItem('match4_kills', match4_kills);
+    sessionStorage.setItem('match4_teamPlacement', match4_teamPlacement);
+    sessionStorage.setItem('match4_kdratio', match4_kdratio);
+    sessionStorage.setItem('match4_damage', match4_damage);
 
-    sessionStorage.setItem('match5_kills', match5_kills)
-    sessionStorage.setItem('match5_assists', match5_assists)
-    sessionStorage.setItem('match5_kdratio', match5_kdratio)
-    sessionStorage.setItem('match5_damage', match5_damage)
+    sessionStorage.setItem('match5_kills', match5_kills);
+    sessionStorage.setItem('match5_teamPlacement', match5_teamPlacement);
+    sessionStorage.setItem('match5_kdratio', match5_kdratio);
+    sessionStorage.setItem('match5_damage', match5_damage);
 
-    sessionStorage.setItem('match6_kills', match6_kills)
-    sessionStorage.setItem('match6_assists', match6_assists)
-    sessionStorage.setItem('match6_kdratio', match6_kdratio)
-    sessionStorage.setItem('match6_damage', match6_damage)
+    sessionStorage.setItem('match6_kills', match6_kills);
+    sessionStorage.setItem('match6_teamPlacement', match6_teamPlacement);
+    sessionStorage.setItem('match6_kdratio', match6_kdratio);
+    sessionStorage.setItem('match6_damage', match6_damage);
 
-    if (document.getElementById('mode') != null) {
+    if (document.getElementById('table_container') != null) {
+        console.log("Youve made it this far, dont give up");
+
+        var cells = document.getElementById("table").rows[1].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match1_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match1_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match1_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match1_teamPlacement'));
+
+        cells = document.getElementById("table").rows[2].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match2_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match2_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match2_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match2_teamPlacement'));
+
+        cells = document.getElementById("table").rows[3].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match3_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match3_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match3_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match3_teamPlacement'));
+
+        cells = document.getElementById("table").rows[4].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match4_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match4_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match4_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match4_teamPlacement'));
+
+        cells = document.getElementById("table").rows[5].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match5_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match5_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match5_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match5_teamPlacement'));
+
+        cells = document.getElementById("table").rows[6].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match6_kills'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match6_kdratio'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match6_damage'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match6_teamPlacement'));
+
     }
 
-    console.log("match5_kills: " + match5_kills)
 }
 
 function GetCodMultiplayerStats(jsonStr){

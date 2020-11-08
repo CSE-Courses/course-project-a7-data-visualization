@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: league_home;
-    --web-view-id: league_home;
+    --web-view-name: league_mult;
+    --web-view-id: league_mult;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -333,6 +333,6 @@
     height: auto;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: cod1.html;
+    --web-action-target: cod_home.html;
     cursor: pointer;
 }

@@ -1,11 +1,11 @@
 .mediaViewInfo {
-    --web-view-name: codMultiplayerStats;
-    --web-view-id: codMultiplayerStats;
+    --web-view-name: cod_home;
+    --web-view-id: cod_home;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
 :root {
-    --web-view-ids: codMultiplayerStats;
+    --web-view-ids: cod_home;
 }
 * {
     margin: 0;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border: none;
 }
-#codMultiplayerStats {
+#cod_home {
     position: absolute;
     background: #E5E5E5;
     width: 100%;
@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: codMultiplayerStats;
-    --web-view-id: codMultiplayerStats;
+    --web-view-name: cod_home;
+    --web-view-id: cod_home;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -38,14 +38,80 @@
     }
 
 }
-
-#CoD_background {
+#cod_background {
     position: absolute;
     width: 88.80208333%;
     height: auto;
     left: 11.19791667%;
     top: 0;
 }
+
+.multiplayer{
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 60%;
+    top: 45.55555556%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(43,51,91,1);
+}
+.multiplayer button {
+    height: 100%;
+    width: 100%;
+    font-size: 10em;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: cod_mult.html;
+    cursor: pointer;
+}
+.multiplayer button:hover {
+    background-color: rgba(44,54,129,1);
+}
+
+.singleplayer {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 40%;
+    top: 45.55555556%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(43,51,91,1);
+}
+.singleplayer button {
+    height: 100%;
+    width: 100%;
+    font-size: 10em;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: cod1.html;
+    cursor: pointer;
+}
+.singleplayer button:hover {
+    background-color: rgba(44,54,129,1);
+}
+
 
 #Menu {
     position: absolute;
@@ -128,7 +194,7 @@
     top: 24.90740741%;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league1.html;
+    --web-action-target: league_home.html;
     cursor: pointer;
 }
 #Menu_Option_League_Text {
@@ -158,6 +224,6 @@
     height: auto;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: cod_home.html;
+    --web-action-target: cod1.html;
     cursor: pointer;
 }

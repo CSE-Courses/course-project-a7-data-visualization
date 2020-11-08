@@ -1,25 +1,28 @@
+let stats = sessionStorage.getItem('brStats')
 function renderCharts(){
     renderBar();
     renderLine();
-    renderPie();
+    //renderPie();
     renderRadar();
 }
 
 function renderBar(){
     let myChart = document.getElementById('barChart').getContext('2d');
-    //global options
-    Chart.defaults.global.defaultFontFamily = "lato";
-    Chart.defaults.global.defaultFontSize = 18;
-    Chart.defaults.global.defaultFontColor = "#020202";
+    let game1kills = stats["matches"][0]["playerStats"]["kills"];
+    let game2kills = stats["matches"][1]["playerStats"]["kills"];
+    let game3kills = stats["matches"][2]["playerStats"]["kills"];
+    let game4kills = stats["matches"][3]["playerStats"]["kills"];
+    let game5kills = stats["matches"][4]["playerStats"]["kills"];
 
+    //global options
     let massPopChart = new Chart(myChart,{
         type: 'bar', //bar, horozontalbar, pie, line, doughnut
         data:{
-            labels:["game01","game02","game03","game04"],
+            labels:["game 1","game 2","game 3","game 4","game 5"],
             datasets:[{
                 barPercentage:0.5,
                 categoryPercentage:0.7,
-                data:[14,7,4,9],
+                data:[game1kills,game2kills,game3kills,game4kills,game5kills],
                 //backgroundColor:'green'
                 backgroundColor:[
                     'rgb(18,90,2)',
@@ -138,13 +141,17 @@ function renderRadar(){
     Chart.defaults.global.defaultFontFamily = "lato";
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
+    let kills = stats["br"]["kills"];
+    let deaths = stats["br"]["deaths"];
+    let downs = stats["br"]["downs"];
+    //let topFives = stats["br"]["topFive"];
 
     let massPopChart = new Chart(myChart,{
         type: 'radar', //bar, horozontalbar, pie, line, doughnut
         data:{
-            labels:["Kills","Deaths","Score Per Game"],
+            labels:["Kills","Deaths","Downs"],
             datasets:[{
-                data:[4740,4549,1271.04],
+                data:[kills,deaths,downs],
                 label: 'curruption123456',
                 fill: true,
                 borderColor:['rgb(231,3,30,0.70)'],
@@ -156,19 +163,6 @@ function renderRadar(){
                     'rgba(229,7,7,0.2)'
                 ],
             },
-                {
-                    data:[7000,2500,4680],
-                    label: 'Xx_noLiFeTryHard_xX',
-                    fill: true,
-                    borderColor:['rgb(253,228,2,0.70)'],
-                    pointBackgroundColor: "#030303",
-                    pointBorderColor: "#000000",
-                    //pointHoverBackgroundColor: "#55bae7",
-                    //pointHoverBorderColor: "#55bae7",
-                    backgroundColor:[
-                        'rgb(66,229,7,0.2)'
-                    ],
-                }
             ],
         },
         options:{
@@ -213,12 +207,24 @@ function renderLine(){
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
 
+    let damage1 = stats["matches"][0]["playerStats"]["damageDone"];
+    let damage2 = stats["matches"][1]["playerStats"]["damageDone"];
+    let damage3 = stats["matches"][2]["playerStats"]["damageDone"];
+    let damage4 = stats["matches"][3]["playerStats"]["damageDone"];
+    let damage5 = stats["matches"][4]["playerStats"]["damageDone"];
+
+    let kills1 = stats["matches"][0]["playerStats"]["kills"];
+    let kills2 = stats["matches"][1]["playerStats"]["kills"];
+    let kills3 = stats["matches"][2]["playerStats"]["kills"];
+    let kills4 = stats["matches"][3]["playerStats"]["kills"];
+    let kills5 = stats["matches"][4]["playerStats"]["kills"];
+
     let massPopChart = new Chart(myChart,{
         type: 'line', //bar, horozontalbar, pie, line, doughnut
         data:{
             labels:["game 1", "game 2", "game 3", "game 4", "game 5"],
             datasets:[{
-                label: 'curruption123456',
+                label: 'damage done',
                 fill: false,
                 borderColor: "#ff5401",
                 //backgroundColor: "#e755ba",
@@ -226,10 +232,10 @@ function renderLine(){
                 pointBorderColor: "#000000",
                 //pointHoverBackgroundColor: "#55bae7",
                 //pointHoverBorderColor: "#55bae7",
-                data:[24,12,22,16,13],
+                data:[damage1,damage2,damage3,damage4,damage5],
             },
                 {
-                    label: 'noob42',
+                    label: 'kills',
                     fill: false,
                     borderColor: "#ffc001",
                     //backgroundColor: "#e755ba",
@@ -237,7 +243,7 @@ function renderLine(){
                     pointBorderColor: "#020700",
                     //pointHoverBackgroundColor: "#55bae7",
                     //pointHoverBorderColor: "#55bae7",
-                    data:[12,7,15,3,11]
+                    data:[kills1,kills2,kills3,kills4,kills5]
                 }
             ],
         },

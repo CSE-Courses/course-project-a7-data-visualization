@@ -1,11 +1,11 @@
 .mediaViewInfo {
-    --web-view-name: league_home;
-    --web-view-id: league_home;
+    --web-view-name: cod_mult;
+    --web-view-id: cod_mult;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
 :root {
-    --web-view-ids: league_home;
+    --web-view-ids: cod_mult;
 }
 * {
     margin: 0;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border: none;
 }
-#league_home {
+#cod_mult {
     position: absolute;
     background: #E5E5E5;
     width: 100%;
@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: league_home;
-    --web-view-id: league_home;
+    --web-view-name: cod_mult;
+    --web-view-id: cod_mult;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -38,7 +38,7 @@
     }
 
 }
-#League_background {
+#cod_background {
     position: absolute;
     width: 88.80208333%;
     height: auto;
@@ -46,70 +46,183 @@
     top: 0;
 }
 
-.multiplayer{
-    height: 4.44444444%;
-    width: 11.61458333%;
+.Search {
+    height: 10.18518519%;
+    width: 48.38541667%;
     opacity: 0.86;
     position: absolute;
-    left: 60%;
-    top: 45.55555556%;
+    left: 39.0625%;
+    top: 45.55555%;
     overflow: visible;
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
     font-family: Merrant;
     font-style: normal;
     font-weight: normal;
-    color: rgba(43,51,91,1);
 }
-.multiplayer button {
+.Search_player1 {
+    position: relative;
+    height: 43.63636364%;
+    width: 86.11410118%;
+}
+.Search_player2 {
+    position: relative;
+    height: 43.63636364%;
+    width: 86.11410118%;
+    top: 12.72727273%;
+}
+.Search_player1 input[type=text] {
     height: 100%;
     width: 100%;
+    padding: 5px;
+    padding-left: 50px;
+    margin-bottom: 6px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search_player2 input[type=text] {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    padding-left: 50px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search button {
+    position: absolute;
     font-size: 10em;
+    height: 43.63636363%;
+    width: 11.62540366%;
+    top: 28.18181818%;
+    right: 0;
     border: none;
     outline: none;
     background-color: rgba(43,51,91,1);
     color: rgba(255,255,255,1);
     border-radius: 4px;
     --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: league_mult.html;
+	--web-action-type: page;
+	--web-action-target: codMultiplayerStats.html;
+	cursor: pointer;
+}
+.Search button:hover {background-color: rgba(44,54,129,1);}
+
+
+.Dropdown_player1 {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 13.02083333%;
+    top: 48.4%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Dropdown_player2 {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 26.04166667%;
+    top: 48.4%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Dropdown_player1 button{
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
     cursor: pointer;
 }
-.multiplayer button:hover {
-    background-color: rgba(44,54,129,1);
+.Dropdown_player2 button{
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Dropdown_player1-Content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(43,51,91,1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.Dropdown_player2-Content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(43,51,91,1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.Dropdown_player1-Content button{
+    display: block;
+    padding: 14px;
+    cursor: pointer;
+}
+.Dropdown_player2-Content button{
+    display: block;
+    padding: 14px;
+    cursor: pointer;
 }
 
-.singleplayer {
-    height: 4.44444444%;
-    width: 11.61458333%;
-    opacity: 0.86;
+.Dropdown_player1-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_player1:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown_player1:hover .Dropdown_player1-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player1:hover .Dropdown_player1-Content {display: block;}
+
+.Dropdown_player2-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_player2:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown_player2:hover .Dropdown_player2-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player2:hover .Dropdown_player2-Content {display: block;}
+
+.magnifying_glass_Mult1 {
     position: absolute;
-    left: 40%;
-    top: 45.55555556%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
+    width: 1.04390625%;
+    height: 1.856296296%;
+    left: 39.92671875%;
+    top: 46.69333%;
+    transform: matrix(1,0,0,1,0,0);
 }
-.singleplayer button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: league1.html;
-    cursor: pointer;
-}
-.singleplayer button:hover {
-    background-color: rgba(44,54,129,1);
+
+.magnifying_glass_Mult2 {
+    position: absolute;
+    width: 1.04390625%;
+    height: 1.856296296%;
+    left: 39.92671875%;
+    top: 52.43407074%;
+    transform: matrix(1,0,0,1,0,0);
 }
 
 

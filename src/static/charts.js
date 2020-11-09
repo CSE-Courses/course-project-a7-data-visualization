@@ -1,5 +1,15 @@
-let stats = sessionStorage.getItem('brStats')
+let matchStats;
+let brStats;
+let player1name;
+let player2name;
+
 function renderCharts(){
+    matchStats = JSON.parse(sessionStorage.getItem('matchStats'));
+    brStats = JSON.parse(sessionStorage.getItem('brStats'));
+    player1name = sessionStorage.getItem('gamertag');
+    //player1name = sessionStorage.getItem('gamertag_2');
+
+    console.log(matchStats);
     renderBar();
     renderLine();
     //renderPie();
@@ -8,12 +18,25 @@ function renderCharts(){
 
 function renderBar(){
     let myChart = document.getElementById('barChart').getContext('2d');
-    let game1kills = stats["matches"][0]["playerStats"]["kills"];
-    let game2kills = stats["matches"][1]["playerStats"]["kills"];
-    let game3kills = stats["matches"][2]["playerStats"]["kills"];
-    let game4kills = stats["matches"][3]["playerStats"]["kills"];
-    let game5kills = stats["matches"][4]["playerStats"]["kills"];
+    let game1kills = matchStats["matches"][0]["playerStats"]["kills"];
+    let game2kills = matchStats["matches"][1]["playerStats"]["kills"];
+    let game3kills = matchStats["matches"][2]["playerStats"]["kills"];
+    let game4kills = matchStats["matches"][3]["playerStats"]["kills"];
+    let game5kills = matchStats["matches"][4]["playerStats"]["kills"];
 
+    let maxValue = game1kills;
+    if(maxValue < game2kills){
+        maxValue = game2kills;
+    }
+    if(maxValue < game3kills){
+        maxValue = game3kills;
+    }
+    if(maxValue < game4kills){
+        maxValue = game4kills;
+    }
+    if(maxValue < game5kills){
+        maxValue = game5kills;
+    }
     //global options
     let massPopChart = new Chart(myChart,{
         type: 'bar', //bar, horozontalbar, pie, line, doughnut
@@ -25,10 +48,11 @@ function renderBar(){
                 data:[game1kills,game2kills,game3kills,game4kills,game5kills],
                 //backgroundColor:'green'
                 backgroundColor:[
-                    'rgb(18,90,2)',
-                    'rgb(255,244,3)',
-                    'rgb(187,9,9)',
-                    'rgb(18,90,2)'
+                    'rgb(17,78,3)',
+                    'rgb(17,78,3)',
+                    'rgb(17,78,3)',
+                    'rgb(17,78,3)',
+                    'rgb(17,78,3)'
                 ],
                 borderWidth:2,
                 borderColor:"#020202",
@@ -40,7 +64,7 @@ function renderBar(){
         options:{
             title: { // floating title to be specific
                 display: true,
-                text: 'Longest Killstreak',
+                text: 'Kills per game',
                 titleFontSize: 8
             },
             legend:{
@@ -66,16 +90,18 @@ function renderBar(){
                         labelString: "kills"
                     },
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        suggestedMax: maxValue + 2,
+                        stepSize: 1
                     }
                 }],
                 xAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: "games"
+                        //labelString: "games"
                     },
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
                     },
                 }]
             }
@@ -93,7 +119,7 @@ function renderPie(){
     let massPopChart = new Chart(myChart,{
         type: 'pie', //bar, horozontalbar, pie, line, doughnut
         data:{
-            labels:["Top Player 1","Top Player 2","Top Player 3","Top Player 4","curruption123456"],
+            labels:["Top Player 1","Top Player 2","Top Player 3","Top Player 4",player1name],
             datasets:[{
                 barPercentage:0.5,
                 categoryPercentage:0.7,
@@ -141,18 +167,24 @@ function renderRadar(){
     Chart.defaults.global.defaultFontFamily = "lato";
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
-    let kills = stats["br"]["kills"];
-    let deaths = stats["br"]["deaths"];
-    let downs = stats["br"]["downs"];
+    let kills = brStats["br"]["kills"];
+    let deaths = brStats["br"]["deaths"];
+    let downs = brStats["br"]["downs"];
     //let topFives = stats["br"]["topFive"];
-
+    let suggestedMax = kills;
+    if(suggestedMax < deaths){
+        suggestedMax = deaths;
+    }
+    if(suggestedMax < downs){
+        suggestedMax = downs
+    }
     let massPopChart = new Chart(myChart,{
         type: 'radar', //bar, horozontalbar, pie, line, doughnut
         data:{
             labels:["Kills","Deaths","Downs"],
             datasets:[{
                 data:[kills,deaths,downs],
-                label: 'curruption123456',
+                label: player1name,
                 fill: true,
                 borderColor:['rgb(231,3,30,0.70)'],
                 pointBackgroundColor: "#030303",
@@ -168,7 +200,7 @@ function renderRadar(){
         options:{
             title: { // floating title to be specific
                 display: true,
-                text: 'Skill Radar',
+                text: 'BR KDD',
                 titleFontSize: 18
             },
             legend:{
@@ -185,7 +217,7 @@ function renderRadar(){
             scale: {
                 ticks: {
                     suggestedMin: 0,
-                    suggestedMax: 8000
+                    suggestedMax: suggestedMax + 100
                 },
                 gridLines: {
                     color: 'grey'
@@ -207,17 +239,17 @@ function renderLine(){
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
 
-    let damage1 = stats["matches"][0]["playerStats"]["damageDone"];
-    let damage2 = stats["matches"][1]["playerStats"]["damageDone"];
-    let damage3 = stats["matches"][2]["playerStats"]["damageDone"];
-    let damage4 = stats["matches"][3]["playerStats"]["damageDone"];
-    let damage5 = stats["matches"][4]["playerStats"]["damageDone"];
+    let damage1 = matchStats["matches"][0]["playerStats"]["damageDone"];
+    let damage2 = matchStats["matches"][1]["playerStats"]["damageDone"];
+    let damage3 = matchStats["matches"][2]["playerStats"]["damageDone"];
+    let damage4 = matchStats["matches"][3]["playerStats"]["damageDone"];
+    let damage5 = matchStats["matches"][4]["playerStats"]["damageDone"];
 
-    let kills1 = stats["matches"][0]["playerStats"]["kills"];
-    let kills2 = stats["matches"][1]["playerStats"]["kills"];
-    let kills3 = stats["matches"][2]["playerStats"]["kills"];
-    let kills4 = stats["matches"][3]["playerStats"]["kills"];
-    let kills5 = stats["matches"][4]["playerStats"]["kills"];
+    let kills1 = matchStats["matches"][0]["playerStats"]["damageTaken"];
+    let kills2 = matchStats["matches"][1]["playerStats"]["damageTaken"];
+    let kills3 = matchStats["matches"][2]["playerStats"]["damageTaken"];
+    let kills4 = matchStats["matches"][3]["playerStats"]["damageTaken"];
+    let kills5 = matchStats["matches"][4]["playerStats"]["damageTaken"];
 
     let massPopChart = new Chart(myChart,{
         type: 'line', //bar, horozontalbar, pie, line, doughnut
@@ -235,7 +267,7 @@ function renderLine(){
                 data:[damage1,damage2,damage3,damage4,damage5],
             },
                 {
-                    label: 'kills',
+                    label: 'damage taken',
                     fill: false,
                     borderColor: "#ffc001",
                     //backgroundColor: "#e755ba",
@@ -255,7 +287,7 @@ function renderLine(){
             },
             title: { // floating title to be specific
                 display: true,
-                text: 'Kills Per Game',
+                text: 'Damage Ratio',
                 titleFontSize: 8
             },
             legend:{
@@ -265,7 +297,7 @@ function renderLine(){
                 yAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: "kills"
+                        labelString: "Damage"
                     },
                     ticks: {
                         beginAtZero: true
@@ -274,7 +306,7 @@ function renderLine(){
                 xAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: "games"
+                        //labelString: "games"
                     },
                     ticks: {
                         beginAtZero: true

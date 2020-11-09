@@ -20,6 +20,49 @@
 </script>
 <div id="codMultiplayerStats">
     <img id="CoD_background" src="../static/wp4517150.png">
+    <div class="Mode">
+        <div class="Header">Mode</div>
+        <div class="Data" id="mode"></div>
+    </div>
+    <div class="Player_1">
+        <div class="Header">Player 1</div>
+        <div class="Data" id="player_1"><script>document.getElementById("player_1").innerHTML = sessionStorage.getItem("gamertag")</script></div>
+    </div>
+    <div class="Player_2">
+        <div class="Header">Player 2</div>
+        <div class="Data" id="player_2"><script>document.getElementById("player_2").innerHTML = sessionStorage.getItem("gamertag_2")</script></div>
+    </div>
+    <div class="GamesPlayed">
+        <div class="Header">Games Played</div>
+        <div class="Data_split_1" id="gamesPlayed">
+        </div>
+        <div class="Data_split_2" id="gamesPlayed_2"></div>
+    </div>
+    <div class="Top5">
+        <div class="Header">Top Fives</div>
+        <div class="Data_split_1" id="top5"></div>
+        <div class="Data_split_2" id="top5_2"></div>
+    </div>
+    <div class="KD">
+        <div class="Header">K/D</div>
+        <div class="Data_split_1" id="kd"></div>
+        <div class="Data_split_2" id="kd_2"></div>
+    </div>
+    <div class="Kills">
+        <div class="Header">Kills</div>
+        <div class="Data_split_1" id="kills"></div>
+        <div class="Data_split_2" id="kills_2"></div>
+    </div>
+    <div class="Deaths">
+        <div class="Header">Deaths</div>
+        <div class="Data_split_1" id="deaths"></div>
+        <div class="Data_split_2" id="deaths_2"></div>
+    </div>
+    <div class="Downs">
+        <div class="Header">Downs</div>
+        <div class="Data_split_1" id="downs"></div>
+        <div class="Data_split_2" id="downs_2"></div>
+    </div>
     <div id="Menu">
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">

@@ -77,5 +77,9 @@ def league_mult():
 def leagueMultiplayerStats():
     return render_template("leagueMultiplayerStats.html")
 
+@app.route("/charts")
+def displayVisuals():
+    return render_template("charts.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -227,6 +227,7 @@ body {
 	left: 18.1%;
 	position: absolute;
 	top: 55%;
+	overflow-y: scroll;
 
 }
 table {
@@ -236,7 +237,7 @@ table {
 }
 th, td {
 	text-align: center;
-	padding: 0.25rem;
+	height: 5em;
 	color: white;
 }
 tbody tr:nth-child(even) {
@@ -248,9 +249,7 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
 	background: #A4a4bf;
 }
-tr{
-	height: 5em;
-}
+
 thead{
 	background-color: rgba(43,51,91,1);
 }

@@ -14,7 +14,7 @@
 	border: none;
 }
 #cod_background {
-	position: absolute;
+	position: fixed;
 	width: 88.80208333%;
 	height: auto;
 	left: 11.19791667%;
@@ -224,12 +224,12 @@ body {
 }
 #table_container {
 	width: 75%;
-	left: 18.1%;
+	left: 18.5%;
 	position: absolute;
-	top: 55%;
-	overflow-y: scroll;
-
+	top: 75%;
+	padding-bottom: 5%;
 }
+
 table {
 	border-collapse: collapse;
 	width: 100%;

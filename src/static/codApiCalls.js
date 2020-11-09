@@ -134,7 +134,6 @@ function GetCodBrStats(player, jsonStr) {
         if (document.getElementById('mode') != null) {
             console.log("Setting")
             document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
-            document.getElementById("gamesPlayed").innerHTML = (sessionStorage.getItem('gamesPlayed'))
             document.getElementById("top5").innerHTML = (sessionStorage.getItem('topFives'))
             document.getElementById("kd").innerHTML = (sessionStorage.getItem('kd'))
             document.getElementById("kills").innerHTML = (sessionStorage.getItem('kills'))
@@ -152,7 +151,7 @@ function GetCodBrStats(player, jsonStr) {
         console.log(mode, '\n', deaths, '\n', kills, '\n', kd, '\n', downs, '\n', topFives)
         if (document.getElementById('mode') != null) {
             console.log("Setting_2")
-            document.getElementById("gamesPlayed_2").innerHTML = (sessionStorage.getItem('gamesPlayed_2'))
+            document.getElementById("gamesPlayed_1").innerHTML = (sessionStorage.getItem('gamesPlayed_1'))
             document.getElementById("gamesPlayed_2").innerHTML = (sessionStorage.getItem('gamesPlayed_2'))
             document.getElementById("top5_2").innerHTML = (sessionStorage.getItem('topFives_2'))
             document.getElementById("kd_2").innerHTML = (sessionStorage.getItem('kd_2'))

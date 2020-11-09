@@ -50,10 +50,10 @@
 
 .Mode{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 495px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 25.78125%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -62,14 +62,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Top5{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 935px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 48.69791637%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -78,14 +77,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .KD{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 1375px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 71.6145833%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -94,14 +92,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Kills{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 495px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 25.78125%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -110,14 +107,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Deaths{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 935px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 48.69791637%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -126,14 +122,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Downs{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 1375px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 71.6145833%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -142,16 +137,29 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
+}
+.Header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 20%;
+	color: white;
+	font-size: 20px;
+	text-align: center;
 }
 .Data{
 	position: relative;
-	width: 320px;
-	height: 177px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 80%;
 	color: white;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
-	padding-top: 26px;
+	align-items: center;
 }
 
 
@@ -255,7 +263,7 @@ thead{
 }
 
 #Menu {
-	position: absolute;
+	position: fixed;
 	width: 11.197916667%;
 	height: 100%;
 	left: 0;

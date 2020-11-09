@@ -99,13 +99,13 @@ function makeMatchesApiCallCod(){
     xhr.send(data);
 }
 
-function GetCodBrStats(player, jsonStr) {
+function GetCodBrStats(player, jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
     if (codInfoDictionary.hasOwnProperty('error')) {
         document.location.href = "./error.html"
     }
-    sessionStorage.setItem('brStats',codInfoDictionary);
+    sessionStorage.setItem('brStats',jsonStr);                  /** hhhhhhh**/
     let mode = "";
     let kills = "";
     let deaths = "";
@@ -166,6 +166,7 @@ function GetCodBrStats(player, jsonStr) {
 
 function GetCodBrMatchStats(jsonStr) {
     console.log(jsonStr)
+    sessionStorage.setItem("matchStats",jsonStr);
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
     if (codInfoDictionary.hasOwnProperty('error')) {

@@ -187,33 +187,37 @@ body{
 }
 .Items{
     position: absolute;
-    width: 25%;
+    width: 30%;
     top: 0;
     height: 100%;
-    left: 70%;
+    left: 65%;
 }
 #Item1{
     position: absolute;
-    top: 10%;
+    top: 0;
+    left: 0;
+
 }
 #Item2{
     position: absolute;
-    top: 10%;
-    left: 25%;
+    top: 55%;
+    left: 0;
+
 }
 #Item3{
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 0%;
+    left: 25%;
 }
 #Item4{
     position: absolute;
     top: 55%;
+    left: 25%;
 }
 #Item5{
     position: absolute;
-    top: 55%;
-    left: 25%;
+    top: 0%;
+    left: 50%;
 }
 #Item6{
     position: absolute;
@@ -222,7 +226,7 @@ body{
 }
 #Item7{
     position: absolute;
-    top: 30%;
+    top: 27%;
     left: 95%;
 }
 

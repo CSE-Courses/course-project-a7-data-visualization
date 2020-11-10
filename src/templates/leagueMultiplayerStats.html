@@ -8,61 +8,14 @@
     <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/leagueMultiplayerStats.css"/>
     <script id="applicationScript" type="text/javascript" src="../static/leagueMultiplayerStats.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script>
+    let leagueData = JSON.parse('{{ data | safe}}')
+    console.log(leagueData)
+</script>
 </head>
 <body>
 <div id="leagueMultiplayerStats">
     <img id="League_background" src="../static/c_o_champion_thresh_spirit_blo.png">
-    <form method="POST">
-        <div class="Dropdown">
-            <button class="dropbtn" type="Button" id="Server" name="Server">Choose Region</button>
-            <div class="Dropdown_Content">
-                <button type="Button" onclick="changeServerNA()">North America</button>
-                <script>function changeServerNA(){
-                    document.getElementById("Server").innerHTML = "North America"
-                    document.getElementById("Region").value = "na1"
-                }</script>
-                <button type="Button" onclick="changeServerBR()">Brazil</button>
-                <script>function changeServerBR(){
-                    document.getElementById("Server").innerHTML = "Brazil"
-                    document.getElementById("Region").value = "br1"
-                }</script>
-                <button type="Button" onclick="changeServerRU()">Russia</button>
-                <script>function changeServerRU(){
-                    document.getElementById("Server").innerHTML = "Russia"
-                    document.getElementById("Region").value = "ru1"
-                }</script>
-                <button type="Button" onclick="changeServerEE()">Europe East</button>
-                <script>function changeServerEE(){
-                    document.getElementById("Server").innerHTML = "Europe East"
-                    document.getElementById("Region").value = "eun1"
-                }</script>
-                <button type="Button" onclick="changeServerEW()">Europe West</button>
-                <script>function changeServerEW(){
-                    document.getElementById("Server").innerHTML = "Europe West"
-                    document.getElementById("Region").value = "euw1"
-                }</script>
-                <button type="Button" onclick="changeServerJP()">Japan</button>
-                <script>function changeServerJP(){
-                    document.getElementById("Server").innerHTML = "Japan"
-                    document.getElementById("Region").value = "jp1"
-                }</script>
-                <button type="Button" onclick="changeServerKR()">Korea</button>
-                <script>function changeServerKR(){
-                    document.getElementById("Server").innerHTML = "Korea"
-                    document.getElementById("Region").value = "kr"
-                }</script>
-            </div>
-        </div>
-        <svg class="Icon_Magnifying_Glass" viewBox="0.05 0 20.043 20.048">
-            <path fill="rgba(255,255,255,1)" id="Path_32" d="M 19.9199390411377 19.02535438537598 L 15.04802417755127 14.15344142913818 C 16.35490798950195 12.65097236633301 17.14614868164063 10.69065093994141 17.14614868164063 8.548073768615723 C 17.14614868164063 3.831741809844971 13.30996131896973 0 8.598074913024902 0 C 3.881741762161255 0 0.04999999701976776 3.836187362670898 0.04999999701976776 8.548074722290039 C 0.04999999701976776 13.25996112823486 3.886187314987183 17.09614944458008 8.598074913024902 17.09614944458008 C 10.74064922332764 17.09614944458008 12.70097160339355 16.30490875244141 14.20344066619873 14.99802589416504 L 19.07535552978516 19.86993789672852 C 19.1909294128418 19.98551368713379 19.34651184082031 20.0477466583252 19.49764633178711 20.0477466583252 C 19.64878273010254 20.0477466583252 19.80436515808105 19.98995780944824 19.9199390411377 19.86993789672852 C 20.15108871459961 19.6387882232666 20.15108871459961 19.25650405883789 19.9199390411377 19.02535438537598 Z M 1.245752453804016 8.548074722290039 C 1.245752453804016 4.494073867797852 4.544073104858398 1.200197696685791 8.593628883361816 1.200197696685791 C 12.647629737854 1.200197696685791 15.94150543212891 4.498518466949463 15.94150543212891 8.548074722290039 C 15.94150543212891 12.59763145446777 12.64762878417969 15.90039730072021 8.5936279296875 15.90039730072021 C 4.544073581695557 15.90039730072021 1.245752453804016 12.60207462310791 1.245752453804016 8.548074722290039 Z">
-            </path>
-        </svg>
-        <div class="Search">
-            <input type="text" placeholder="Search Gamertag.." id="Gamertag" name="Gamertag">
-            <input type="hidden" id="Region" name="Region">
-            <button type="submit">Search</button>
-        </div>
-    </form>
     <div id="Menu">
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">
@@ -85,5 +38,323 @@
         <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png">
     </div>
 </div>
+<div class="Player1" id = "player1">
+    <div class="Header" id="player_1"></div>
+    <div class ="Game1">
+        <div class="Champion">
+            <img id="chapP1_image0" src=""/>
+         </div>
+        <div class="Spell">
+            <div id ="Spell0"> <img id='imgspellP1-0-1' src=""/> </div>
+            <div id = "Spell1"> <img id='imgspellP1-0-2' src=""/></div>
+         </div>
+        <div class="KDA" id="kda1P1"></div>
+        <div class="Item">
+            <div id="Item0"> <img id='imgP1-item0-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP1-item0-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP1-item0-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP1-item0-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP1-item0-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP1-item0-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP1-item0-6' src=""/> </div>
+        </div>
+    </div>
+    <div class="Game2">
+         <div class="Champion">
+         <img id='chapP1_image1' src=""/>
+    </div>
+        <div class="Spell">
+            <div id ="Spell0"> <img id='imgspellP1-1-1' src=""/></div>
+            <div id = "Spell1"> <img id='imgspellP1-1-2' src=""/></div>
+        </div>
+        <div class="KDA" id="kda2P1"></div>
+        <div class="Item">
+            <div id="Item0"> <img id='imgP1-item1-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP1-item1-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP1-item1-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP1-item1-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP1-item1-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP1-item1-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP1-item1-6' src=""/> </div>
+        </div>
+    </div>
+    <div class="Game3">
+         <div class="Champion">
+            <img id='chapP1_image2' src=""/>
+        </div>
+        <div class="Spell">
+            <div id ="Spell0"><img id='imgspellP1-2-1' src=""/></div>
+            <div id ="Spell1"><img id='imgspellP1-2-2' src=""/></div>
+        </div>
+        <div class="KDA" id="kda3P1"></div>
+        <div class="Item">
+            <div id="Item0"> <img id='imgP1-item2-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP1-item2-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP1-item2-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP1-item2-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP1-item2-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP1-item2-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP1-item2-6' src=""/> </div>
+        </div>
+    </div>
+</div>
+
+<div class="Player2" id = "player2">
+    <div class="Header" id="player_2"></div>
+
+    <div class="Game1">
+        <div class="Champion">
+            <img id="chapP2_image0" src=""/>
+        </div>
+        <div class="Spell">
+            <div id ="Spell0"> <img id='imgspellP2-0-1' src=""/> </div>
+            <div id ="Spell1"> <img id='imgspellP2-0-2' src=""/> </div>
+        </div>
+        <div class="KDA" id="kda1P2"></div>
+
+        <div class="Item">
+            <div id="Item0"> <img id='imgP2-item0-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP2-item0-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP2-item0-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP2-item0-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP2-item0-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP2-item0-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP2-item0-6' src=""/> </div>
+        </div>
+    </div>
+
+    <div class="Game2">
+        <div class="Champion">
+            <img id='chapP2_image1' src=""/>
+        </div>
+        <div class="Spell">
+            <div id ="Spell0">  <img id='imgspellP2-1-1' src=""/> </div>
+            <div id ="Spell1">  <img id='imgspellP2-1-2' src=""/> </div>
+        </div>
+        <div class="KDA" id="kda2P2"></div>
+
+        <div class="Item">
+            <div id="Item0"> <img id='imgP2-item1-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP2-item1-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP2-item1-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP2-item1-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP2-item1-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP2-item1-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP2-item1-6' src=""/> </div>
+        </div>
+    </div>
+
+    <div class="Game3">
+
+        <div class="Champion">
+            <img id='chapP2_image2' src=""/>
+        </div>
+       <div class="Spell">
+           <div id ="Spell0">  <img id='imgspellP2-2-1' src=""/> </div>
+           <div id ="Spell1"> <img id='imgspellP2-2-2' src=""/> </div>
+        </div>
+        <div class="KDA" id="kda3P2"></div>
+        <div class="Item">
+            <div id="Item0"> <img id='imgP2-item2-0' src=""/> </div>
+            <div id="Item1"> <img id='imgP2-item2-1' src=""/> </div>
+            <div id="Item2"> <img id='imgP2-item2-2' src=""/> </div>
+            <div id="Item3"> <img id='imgP2-item2-3' src=""/> </div>
+            <div id="Item4"> <img id='imgP2-item2-4' src=""/> </div>
+            <div id="Item5"> <img id='imgP2-item2-5' src=""/> </div>
+            <div id="Item6"> <img id='imgP2-item2-6' src=""/> </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    document.getElementById("chapP1_image0").src = leagueData.championName[0][1]
+    document.getElementById("chapP1_image1").src = leagueData.championName[1][1]
+    document.getElementById("chapP1_image2").src = leagueData.championName[2][1]
+
+    console.log(leagueData.spell1[0])
+    document.getElementById("imgspellP1-0-1").src = leagueData.spell1[0]
+    document.getElementById("imgspellP1-0-2").src = leagueData.spell2[0]
+
+    document.getElementById("imgspellP1-1-1").src = leagueData.spell1[1]
+    document.getElementById("imgspellP1-1-2").src = leagueData.spell2[1]
+
+    document.getElementById("imgspellP1-2-1").src = leagueData.spell1[2]
+    document.getElementById("imgspellP1-2-2").src = leagueData.spell2[2]
+
+    document.getElementById("kda1P1").innerHTML = leagueData.kills[0] + "/" + leagueData.deaths[0] + "/" + leagueData.assists[0]
+    document.getElementById("kda2P1").innerHTML = leagueData.kills[1] + "/" + leagueData.deaths[1] + "/" + leagueData.assists[1]
+    document.getElementById("kda3P1").innerHTML = leagueData.kills[2] + "/" + leagueData.deaths[2] + "/" + leagueData.assists[2]
+
+    var item0_0 = leagueData.item0[0]
+    var item0_1 = leagueData.item1[0]
+    var item0_2 = leagueData.item2[0]
+    var item0_3 = leagueData.item3[0]
+    var item0_4 = leagueData.item4[0]
+    var item0_5 = leagueData.item5[0]
+    var item0_6 = leagueData.item6[0]
+
+    if(item0_0 !== "Null") {
+        document.getElementById("imgP1-item0-0").src = item0_0
+    } if(item0_1 !== "Null") {
+        document.getElementById("imgP1-item0-1").src = item0_1
+    } if(item0_2 !== "Null") {
+        document.getElementById("imgP1-item0-2").src = item0_2
+    } if(item0_3 !== "Null") {
+        document.getElementById("imgP1-item0-3").src = item0_3
+    } if(item0_4 !== "Null") {
+        document.getElementById("imgP1-item0-4").src = item0_4
+    } if(item0_5 !== "Null") {
+        document.getElementById("imgP1-item0-5").src = item0_5
+    } if(item0_6 !== "Null") {
+        document.getElementById("imgP1-item0-6").src = item0_6
+    }
+
+    var item1_0 = leagueData.item0[1]
+    var item1_1 = leagueData.item1[1]
+    var item1_2 = leagueData.item2[1]
+    var item1_3 = leagueData.item3[1]
+    var item1_4 = leagueData.item4[1]
+    var item1_5 = leagueData.item5[1]
+    var item1_6 = leagueData.item6[1]
+
+    if(item1_0 !== "Null") {
+        document.getElementById("imgP1-item1-0").src = item1_0
+    } if(item1_1 !== "Null") {
+        document.getElementById("imgP1-item1-1").src = item1_1
+    } if(item1_2 !== "Null") {
+        document.getElementById("imgP1-item1-2").src = item1_2
+    } if(item1_3 !== "Null") {
+        document.getElementById("imgP1-item1-3").src = item1_3
+    } if(item1_4 !== "Null") {
+        document.getElementById("imgP1-item1-4").src = item1_4
+    } if(item1_5 !== "Null") {
+        document.getElementById("imgP1-item1-5").src = item1_5
+    } if(item1_6 !== "Null") {
+        document.getElementById("imgP1-item1-6").src = item1_6
+    }
+
+    var item2_0 = leagueData.item0[2]
+    var item2_1 = leagueData.item1[2]
+    var item2_2 = leagueData.item2[2]
+    var item2_3 = leagueData.item3[2]
+    var item2_4 = leagueData.item4[2]
+    var item2_5 = leagueData.item5[2]
+    var item2_6 = leagueData.item6[2]
+
+    if(item2_0 !== "Null") {
+        document.getElementById("imgP1-item2-0").src = item2_0
+    } if(item2_1 !== "Null") {
+        document.getElementById("imgP1-item2-1").src = item2_1
+    } if(item2_2 !== "Null") {
+        document.getElementById("imgP1-item2-2").src = item2_2
+    } if(item2_3 !== "Null") {
+        document.getElementById("imgP1-item2-3").src = item2_3
+    } if(item2_4 !== "Null") {
+        document.getElementById("imgP1-item2-4").src = item2_4
+    } if(item2_5 !== "Null") {
+        document.getElementById("imgP1-item2-5").src = item2_5
+    } if(item2_6 !== "Null") {
+        document.getElementById("imgP1-item2-6").src = item2_6
+    }
+
+    //Player two//
+    document.getElementById("chapP2_image0").src = leagueData.championName[3][1]
+    document.getElementById("chapP2_image1").src = leagueData.championName[4][1]
+    document.getElementById("chapP2_image2").src = leagueData.championName[5][1]
+
+    document.getElementById("imgspellP2-0-1").src = leagueData.spell1[3]
+    document.getElementById("imgspellP2-0-2").src = leagueData.spell2[3]
+
+    document.getElementById("imgspellP2-1-1").src = leagueData.spell1[4]
+    document.getElementById("imgspellP2-1-2").src = leagueData.spell2[4]
+
+    document.getElementById("imgspellP2-2-1").src = leagueData.spell1[5]
+    document.getElementById("imgspellP2-2-2").src = leagueData.spell2[5]
+
+    document.getElementById("kda1P2").innerHTML = leagueData.kills[3] + "/" + leagueData.deaths[3] + "/" + leagueData.assists[3]
+    document.getElementById("kda2P2").innerHTML = leagueData.kills[4] + "/" + leagueData.deaths[4] + "/" + leagueData.assists[4]
+    document.getElementById("kda3P2").innerHTML = leagueData.kills[5] + "/" + leagueData.deaths[5] + "/" + leagueData.assists[5]
+
+
+    item0_0 = leagueData.item0[3]
+    item0_1 = leagueData.item1[3]
+    item0_2 = leagueData.item2[3]
+    item0_3 = leagueData.item3[3]
+    item0_4 = leagueData.item4[3]
+    item0_5 = leagueData.item5[3]
+    item0_6 = leagueData.item6[3]
+
+    if(item0_0 !== "Null") {
+        document.getElementById("imgP2-item0-0").src = item0_0
+    } if(item0_1 !== "Null") {
+        document.getElementById("imgP2-item0-1").src = item0_1
+    } if(item0_2 !== "Null") {
+        document.getElementById("imgP2-item0-2").src = item0_2
+    } if(item0_3 !== "Null") {
+        document.getElementById("imgP2-item0-3").src = item0_3
+    } if(item0_4 !== "Null") {
+        document.getElementById("imgP2-item0-4").src = item0_4
+    } if(item0_5 !== "Null") {
+        document.getElementById("imgP2-item0-5").src = item0_5
+    } if(item0_6 !== "Null") {
+        document.getElementById("imgP2-item0-6").src = item0_6
+    }
+
+    item1_1 = leagueData.item1[4]
+    item1_0 = leagueData.item0[4]
+    item1_2 = leagueData.item2[4]
+    item1_3 = leagueData.item3[4]
+    item1_4 = leagueData.item4[4]
+    item1_5 = leagueData.item5[4]
+    item1_6 = leagueData.item6[4]
+
+    if(item1_0 !== "Null") {
+        document.getElementById("imgP2-item1-0").src = item1_0
+    } if(item1_1 !== "Null") {
+        document.getElementById("imgP2-item1-1").src = item1_1
+    } if(item1_2 !== "Null") {
+        document.getElementById("imgP2-item1-2").src = item1_2
+    } if(item1_3 !== "Null") {
+        document.getElementById("imgP2-item1-3").src = item1_3
+    } if(item1_4 !== "Null") {
+        document.getElementById("imgP2-item1-4").src = item1_4
+    } if(item1_5 !== "Null") {
+        document.getElementById("imgP2-item1-5").src = item1_5
+    } if(item1_6 !== "Null") {
+        document.getElementById("imgP2-item1-6").src = item1_6
+    }
+
+    item2_0 = leagueData.item0[5]
+    item2_1 = leagueData.item1[5]
+    item2_2 = leagueData.item2[5]
+    item2_3 = leagueData.item3[5]
+    item2_4 = leagueData.item4[5]
+    item2_5 = leagueData.item5[5]
+    item2_6 = leagueData.item6[5]
+
+    if(item2_0 !== "Null") {
+        document.getElementById("imgP2-item2-0").src = item2_0
+    } if(item2_1 !== "Null") {
+        document.getElementById("imgP2-item2-1").src = item2_1
+    } if(item2_2 !== "Null") {
+        document.getElementById("imgP2-item2-2").src = item2_2
+    } if(item2_3 !== "Null") {
+        document.getElementById("imgP2-item2-3").src = item2_3
+    } if(item2_4 !== "Null") {
+        document.getElementById("imgP2-item2-4").src = item2_4
+    } if(item2_5 !== "Null") {
+        document.getElementById("imgP2-item2-5").src = item2_5
+    } if(item2_6 !== "Null") {
+        document.getElementById("imgP2-item2-6").src = item2_6
+    }
+
+
+    document.getElementById("player_1").innerHTML = leagueData.player[0];
+    document.getElementById("player_2").innerHTML = leagueData.player[3];
+
+</script>
+
 </body>
 </html>

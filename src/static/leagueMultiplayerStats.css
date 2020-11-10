@@ -13,6 +13,9 @@
     box-sizing: border-box;
     border: none;
 }
+body{
+    background-color: rgba(28,33,62,1);
+}
 #leagueMultiplayerStats {
     position: absolute;
     background: #E5E5E5;
@@ -39,108 +42,162 @@
 
 }
 #League_background {
-    position: absolute;
+    position: fixed;
     width: 88.80208333%;
     height: auto;
     left: 11.19791667%;
     top: 0;
 }
 
-.Search {
-    height: 4.44444444%;
-    width: 48.38541667%;
-    opacity: 0.86;
+.Player1{
     position: absolute;
-    left: 33.75%;
-    top: 45.55555%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-}
-.Search input[type=text] {
-    padding: 5px;
-    padding-left: 50px;
-    font-size: 10em;
-    height: 100%;
-    width: 86.11410118%;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
+    width: 30%;
+    height: 96%;
+    top: 2%;
+    left: 27%;
+    background-color: rgb(43, 51, 91);
     border-radius: 4px;
+    opacity: 0.95;
+    overflow: hidden;
 }
-.Search button {
-    float: right;
-    font-size: 10em;
-    height: 100%;
-    width: 11.62540366%;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
+.Player2{
+    position: absolute;
+    width: 30%;
+    height: 96%;
+    top: 2%;
+    left: 59%;
+    opacity: 0.95;
+    background-color: rgb(43, 51, 91);
     border-radius: 4px;
+    overflow: hidden;
 }
-.Search button:hover {background-color: rgba(44,54,129,1);}
 
-.Dropdown {
-    height: 4.44444%;
-    width: 11.61458333%;
-    opacity: 0.86;
-    position: absolute;
-    left: 20.88541667%;
-    top: 45.55555%;
-    overflow: visible;
-    white-space: nowrap;
+.Header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 5%;
+    color: white;
+    font-size: 20px;
     text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
+    align-items: center;
 }
-.Dropdown button{
-    font-size: 10em;
+
+.Game1{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 32.5%;
     height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
+    border-right:2px solid white;
+}
+.Game2{
+    position: absolute;
+    top: 5%;
+    left: 33.3%;
+    width: 33%;
+    height: 100%;
+    border-right:2px solid white;
 }
 
-.Dropdown_Content {
-    display: none;
+.Game3{
+    position: absolute;
+    top: 5%;
+    left: 66.9%;
+    width: 32.5%;
+    height: 100%;
+}
+
+.Champion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+.Champion img{
+    width: 100%;
+    height: 100%;
+}
+
+.Spell{
+    position: absolute;
+    top: 23%;
+    left:0;
+    width: 100%;
+    color: white;
+}
+#Spell0{
+    position: absolute;
+    top: 0;
+    left: 3%;
+}
+#Spell1{
+    position: absolute;
+    top: 0;
+    left: 55%;
+}
+
+.KDA{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 35%;
+    width: 100%;
+    height: 5%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.Item{
     position: absolute;
     width: 100%;
-    background-color: rgba(43,51,91,1);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    top: 45%;
+    height: 100%;
 }
-.Dropdown_Content button{
-    display: block;
-    padding: 14px;
-}
-.Dropdown_Content button:hover {background-color: rgba(44,54,129,1);}
 
-.Dropdown:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
-.Dropdown:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
-.Dropdown:hover .Dropdown_Content {display: block;}
-
-.Icon_Magnifying_Glass {
+#Item0{
     position: absolute;
-    width: 1.04390625%;
-    height: 1.856296296%;
-    left: 34.61421875%;
-    top: 46.69333%;
-    transform: matrix(1,0,0,1,0,0);
+    top: 0;
+    left: 0;
+}
+#Item1{
+    position: absolute;
+    top: 0;
+    left: 55%;
+}
+#Item2{
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+#Item3{
+    position: absolute;
+    top: 10%;
+    left: 55%;
+}
+#Item4{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+#Item5{
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+#Item6{
+    position: absolute;
+    top: 30%;
+    left: 25%;
 }
 
 #Menu {
-    position: absolute;
+    position: fixed;
     width: 11.197916667%;
     height: 100%;
     left: 0;
@@ -220,7 +277,7 @@
     top: 24.90740741%;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league1.html;
+    --web-action-target: league_home.html;
     cursor: pointer;
 }
 #Menu_Option_League_Text {

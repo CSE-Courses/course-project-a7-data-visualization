@@ -2,7 +2,7 @@
 import ast
 import os
 import urllib
-
+from PIL import Image
 import pandas as pd
 from riotwatcher import LolWatcher
 import cv2
@@ -22,7 +22,7 @@ def url_to_image(url):
 def getLolData(username, my_region):
 
        # reading the data from the file
-    with open('../infofiles/item.txt') as f:
+    with open('../../static/champion/champ.txt') as f:
         data = f.read()
 
     print("Data type before reconstruction : ", type(data))
@@ -31,11 +31,10 @@ def getLolData(username, my_region):
     d = ast.literal_eval(data)
     print("Data type after reconstruction : ", type(d))
     for key in d:
-       print(d[key])
+       print(d[key][1])
        try:
-           image = url_to_image(d[key])
-           name = str(key) + ".png"
-           print(name)
+           image = url_to_image(d[key][1])
+           name = str(d[key][0]) + ".png"
            cv2.imwrite(os.path.join(name), image)
        except:
            print("sad")

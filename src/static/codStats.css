@@ -1,0 +1,378 @@
+.mediaViewInfo {
+	--web-view-name: codStats;
+	--web-view-id: codStats;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: codStats;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#cod_background {
+	position: fixed;
+	width: 88.80208333%;
+	height: auto;
+	left: 11.19791667%;
+	top: 0;
+}
+
+#codStats {
+	position: absolute;
+	background: #E5E5E5;
+	width: 100%;
+	min-width: 1280px;
+	height: 100%;
+	min-height: 720px;
+	background-color: rgba(28,33,62,1);
+	font-size: 2px;
+	overflow: hidden;
+	--web-view-name: codStats;
+	--web-view-id: codStats;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+
+
+.Mode{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 25.78125%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.Top5{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 48.69791637%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.KD{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 71.6145833%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.Kills{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 25.78125%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.Deaths{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 48.69791637%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.Downs{
+	position: absolute;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 71.6145833%;
+	background-color: rgba(43,51,91,1);
+	border-radius: 4px;
+	opacity: 0.95;
+	overflow: visible;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+.Header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 20%;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+.Data{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 80%;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	align-items: center;
+}
+
+
+
+#Graph_Rect {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Graph_Rect {
+	position: absolute;
+	overflow: visible;
+	width: 563px;
+	height: 324px;
+	left: 299px;
+	top: 707px;
+}
+#Insert_Graph_ {
+	left: 476px;
+	top: 725px;
+	position: absolute;
+	overflow: visible;
+	width: 211px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: rgba(234,236,247,1);
+}
+#BigGraph_Rect {
+	fill: transparent;
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BigGraph_Rect {
+	position: absolute;
+	overflow: visible;
+	width: 681px;
+	height: 336px;
+	left: 1020px;
+	top: 707px;
+}
+#Big_Graph_ {
+	left: 1274px;
+	top: 725px;
+	position: absolute;
+	overflow: visible;
+	width: 174px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: rgba(234,236,247,1);
+}
+body {
+	font: normal medium/1.4 sans-serif;
+	background-color: rgba(28,33,62,1);
+}
+#table_container {
+	width: 75%;
+	left: 18.5%;
+	position: absolute;
+	top: 75%;
+	padding-bottom: 5%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+}
+th, td {
+	text-align: center;
+	height: 5em;
+	color: white;
+}
+tbody tr:nth-child(even) {
+	background: #191937;
+}
+tbody tr:nth-child(odd) {
+	background: #111229;
+}
+tbody tr:hover {
+	background: #A4a4bf;
+}
+
+thead{
+	background-color: rgba(43,51,91,1);
+}
+
+#Menu {
+	position: fixed;
+	width: 11.197916667%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+#Menu_Option_Volt {
+	position: absolute;
+	left: 13.99739584%;
+	top: 4.907407407%;
+	overflow: visible;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+	font-family: Thunder Titan;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14em;
+	color: rgba(255,255,255,1);
+	letter-spacing: 0.1px;
+}
+
+#Menu_Option_Home {
+	position: absolute;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 15.18518519%;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+#Menu_Option_Home_Text {
+	position: absolute;
+	top: 29.82708934%;
+	left: 27.2171083804%;
+	white-space: nowrap;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7em;
+	color: rgba(234,236,247,1);
+}
+#Menu_Option_Home_Icon {
+	position: absolute;
+	width: 21.84627953%;
+	height: 87.204611095%;
+	left: 0;
+	top: 6.397694524%;
+}
+.Menu_Option_Home_Icon_Top {
+	position: absolute;
+	width: 100%;
+	height: 44.81163252%;
+	left: 0;
+	top: 0;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Menu_Option_Home_Icon_Bottom {
+	position: absolute;
+	height: 55.18836748%;
+	width: 77.94117647%;
+	left: 11.02941176%;
+	bottom: 0;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+#Menu_Option_League {
+	position: absolute;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 24.90740741%;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_home.html;
+	cursor: pointer;
+}
+#Menu_Option_League_Text {
+	position: absolute;
+	top: 29.82708934%;
+	left: 27.2171083804%;
+	white-space: nowrap;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7em;
+	color: rgba(234,236,247,1);
+}
+#Menu_Option_League_Icon {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	top: 0;
+}
+
+#Menu_Option_CoD_Icon {
+	position: absolute;
+	top: 35%;
+	left: 10.93023256%;
+	width: 69.40375436%;
+	height: auto;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: cod_home.html;
+	cursor: pointer;
+}

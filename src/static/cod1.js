@@ -1727,6 +1727,7 @@ var Application = function() {
 	 * Go to the view in the event targets CSS variable
 	 */
 	self.goToTargetView = function(event) {
+
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
 		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix+"action-target").trim();
@@ -1760,10 +1761,52 @@ var Application = function() {
 		}
 		else {
 			var stateEvent = new Event(self.STATE_NOT_FOUND);
+			console.log("STATE NOT FOUND")
 			self.stateName = name;
 			window.dispatchEvent(stateEvent);
 		}
 		
+	}
+
+	self.goToErrorView = function(event) {
+		var button = event.currentTarget;
+		var buttonComputedStyles = getComputedStyle(button);
+		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "error.html").trim();
+		var animation = buttonComputedStyles.getPropertyValue(self.prefix+"animation").trim();
+		var targetType = buttonComputedStyles.getPropertyValue(self.prefix+"action-type").trim();
+		var targetView = self.application ? null : self.getElement(actionTargetValue);
+		var actionTargetStyles = targetView ? targetView.style : null;
+		var state = self.viewsDictionary[actionTargetValue];
+
+		// navigate to page
+		if (self.application==false || targetType=="page") {
+			document.location.href = "./" + actionTargetValue;
+			return;
+		}
+
+		// if view is found
+		if (targetView) {
+
+			// add animation set in event target style declaration
+			if (animation && self.supportAnimations) {
+				self.crossFade(self.currentView, targetView, false, animation);
+			}
+			else {
+				self.setViewVariables(self.currentView);
+				self.hideViews();
+				self.enableMediaQuery(state.rule);
+				self.scaleViewIfNeeded(targetView);
+				self.updateViewLabel();
+				self.updateURL();
+			}
+		}
+		else {
+			var stateEvent = new Event(self.STATE_NOT_FOUND);
+			console.log("STATE NOT FOUND")
+			self.stateName = name;
+			window.dispatchEvent(stateEvent);
+		}
+
 	}
 
 	/**

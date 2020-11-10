@@ -40,13 +40,199 @@
 }
 
 #CoD_background {
-    position: absolute;
+    position: fixed;
     width: 88.80208333%;
     height: auto;
     left: 11.19791667%;
     top: 0;
 }
 
+.Mode{
+    position: absolute;
+    width: 20.8333331%;
+    height: 15%;
+    top: 5%;
+    left: 46.6145831%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Player_1{
+    position: absolute;
+    width: 28.4259255%;
+    height: 10%;
+    left: 25.78125%;
+    top: 21.125%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Player_2{
+    position: absolute;
+    width: 28.4259255%;
+    height: 10%;
+    left: 59.8553237%;
+    top: 21.125%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.GamesPlayed{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 35%;
+    left: 25.78125%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Top5{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 35%;
+    left: 48.69791637%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.KD{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 35%;
+    left: 71.6145833%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Kills{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 55%;
+    left: 25.78125%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Deaths{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 55%;
+    left: 48.69791637%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Downs{
+    position: absolute;
+    width: 16.66666667%;
+    height: 15%;
+    top: 55%;
+    left: 71.6145833%;
+    background-color: rgba(43,51,91,1);
+    border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+.Header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.Data{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+}
+.Data_split_1{
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%;
+    height: 80%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    border-right: 1px solid white;
+    border-style: ;
+}
+.Data_split_2{
+    position: relative;
+    float: right;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%;
+    height: 80%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
 #Menu {
     position: absolute;
     width: 11.197916667%;
@@ -128,7 +314,7 @@
     top: 24.90740741%;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league1.html;
+    --web-action-target: league_home.html;
     cursor: pointer;
 }
 #Menu_Option_League_Text {
@@ -158,6 +344,6 @@
     height: auto;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: cod1.html;
+    --web-action-target: cod_home.html;
     cursor: pointer;
 }

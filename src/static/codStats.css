@@ -13,12 +13,23 @@
 	box-sizing: border-box;
 	border: none;
 }
+#cod_background {
+	position: fixed;
+	width: 88.80208333%;
+	height: auto;
+	left: 11.19791667%;
+	top: 0;
+}
+
 #codStats {
 	position: absolute;
 	background: #E5E5E5;
-	width: 1920px;
-	height: 1080px;
+	width: 100%;
+	min-width: 1280px;
+	height: 100%;
+	min-height: 720px;
 	background-color: rgba(28,33,62,1);
+	font-size: 2px;
 	overflow: hidden;
 	--web-view-name: codStats;
 	--web-view-id: codStats;
@@ -35,169 +46,14 @@
 	}
 
 }
-#Background {
-	position: absolute;
-	overflow: visible;
-	width: 1706px;
-	height: 1080px;
-	left: 215px;
-	top: 0px;
-}
-#Home {
-	position: absolute;
-	left: 73px;
-	top: 170px;
-	overflow: visible;
-	width: 39px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Merrant;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	color: rgba(234,236,247,1);
-}
-#ID001_home {
-	position: absolute;
-	width: 34px;
-	height: 30.308px;
-	left: 18px;
-	top: 164px;
-	overflow: visible;
-}
-#Group_9_dw {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-#Group_8_dx {
-	position: absolute;
-	width: 34px;
-	height: 13.567px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_20_dy {
-	overflow: visible;
-	position: absolute;
-	width: 34.565px;
-	height: 14.157px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#Group_11_dz {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 3.749px;
-	top: 13.597px;
-	overflow: visible;
-}
-#Group_10_d {
-	position: absolute;
-	width: 26.503px;
-	height: 16.712px;
-	left: 0px;
-	top: 0px;
-	overflow: visible;
-}
-.Path_21_d {
-	overflow: visible;
-	position: absolute;
-	width: 27.003px;
-	height: 17.212px;
-	left: 0px;
-	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
-}
-#VOLT_GG {
-	position: absolute;
-	left: 24px;
-	top: 53px;
-	overflow: visible;
-	width: 145px;
-	white-space: nowrap;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: index.html;
-	cursor: pointer;
-	text-align: center;
-	font-family: Thunder Titan;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 28px;
-	color: rgba(255,255,255,1);
-	letter-spacing: 0.1px;
-}
-#output_onlinepngtools {
-	position: absolute;
-	width: 37px;
-	height: 40px;
-	left: 18px;
-	top: 269px;
-	overflow: visible;
-}
-#output_onlinepngtools__2__ds {
-	position: absolute;
-	width: 119px;
-	height: 38px;
-	left: 37px;
-	top: 378px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: cod_home.html;
-	cursor: pointer;
-}
-#Component_7___3 {
-	position: absolute;
-	width: 93px;
-	height: 30.308px;
-	left: 18px;
-	top: 164px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: index.html;
-	cursor: pointer;
-}
-#Component_8___3 {
-	position: absolute;
-	width: 168px;
-	height: 40px;
-	left: 18px;
-	top: 269px;
-	overflow: visible;
-	--web-animation: fadein 0.3s ease-out;
-	--web-action-type: page;
-	--web-action-target: league_home.html;
-	cursor: pointer;
-}
-#League_of_Legends__d {
-	position: absolute;
-	left: 48px;
-	top: 6px;
-	overflow: visible;
-	width: 121px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Merrant;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px;
-	color: rgba(234,236,247,1);
-}
+
+
 .Mode{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 495px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 25.78125%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -206,14 +62,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Top5{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 935px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 48.69791637%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -222,14 +77,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .KD{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 244px;
-	left: 1375px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 22.5925926%;
+	left: 71.6145833%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -238,14 +92,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Kills{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 495px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 25.78125%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -254,14 +107,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Deaths{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 935px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 48.69791637%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -270,14 +122,13 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
 }
 .Downs{
 	position: absolute;
-	width: 320px;
-	height: 177px;
-	top: 482px;
-	left: 1375px;
+	width: 16.66666667%;
+	height: 16.38888889%;
+	top: 44.6296296%;
+	left: 71.6145833%;
 	background-color: rgba(43,51,91,1);
 	border-radius: 4px;
 	opacity: 0.95;
@@ -286,16 +137,29 @@
 	font-size: 20px;
 	text-align: center;
 	vertical-align: top;
-	padding-top: 10px;
+}
+.Header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 20%;
+	color: white;
+	font-size: 20px;
+	text-align: center;
 }
 .Data{
 	position: relative;
-	width: 320px;
-	height: 177px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 80%;
 	color: white;
-	font-size: 50px;
+	font-size: 20px;
 	text-align: center;
-	padding-top: 26px;
+	align-items: center;
 }
 
 
@@ -361,4 +225,154 @@
 	font-weight: normal;
 	font-size: 36px;
 	color: rgba(234,236,247,1);
+}
+body {
+	font: normal medium/1.4 sans-serif;
+	background-color: rgba(28,33,62,1);
+}
+#table_container {
+	width: 75%;
+	left: 18.5%;
+	position: absolute;
+	top: 75%;
+	padding-bottom: 5%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+}
+th, td {
+	text-align: center;
+	height: 5em;
+	color: white;
+}
+tbody tr:nth-child(even) {
+	background: #191937;
+}
+tbody tr:nth-child(odd) {
+	background: #111229;
+}
+tbody tr:hover {
+	background: #A4a4bf;
+}
+
+thead{
+	background-color: rgba(43,51,91,1);
+}
+
+#Menu {
+	position: fixed;
+	width: 11.197916667%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+#Menu_Option_Volt {
+	position: absolute;
+	left: 13.99739584%;
+	top: 4.907407407%;
+	overflow: visible;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+	font-family: Thunder Titan;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14em;
+	color: rgba(255,255,255,1);
+	letter-spacing: 0.1px;
+}
+
+#Menu_Option_Home {
+	position: absolute;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 15.18518519%;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: index.html;
+	cursor: pointer;
+}
+#Menu_Option_Home_Text {
+	position: absolute;
+	top: 29.82708934%;
+	left: 27.2171083804%;
+	white-space: nowrap;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7em;
+	color: rgba(234,236,247,1);
+}
+#Menu_Option_Home_Icon {
+	position: absolute;
+	width: 21.84627953%;
+	height: 87.204611095%;
+	left: 0;
+	top: 6.397694524%;
+}
+.Menu_Option_Home_Icon_Top {
+	position: absolute;
+	width: 100%;
+	height: 44.81163252%;
+	left: 0;
+	top: 0;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Menu_Option_Home_Icon_Bottom {
+	position: absolute;
+	height: 55.18836748%;
+	width: 77.94117647%;
+	left: 11.02941176%;
+	bottom: 0;
+	transform: matrix(1,0,0,1,0,0);
+}
+
+#Menu_Option_League {
+	position: absolute;
+	width: 78.13953488%;
+	height: 3.703703704%;
+	left: 10.93023256%;
+	top: 24.90740741%;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_home.html;
+	cursor: pointer;
+}
+#Menu_Option_League_Text {
+	position: absolute;
+	top: 29.82708934%;
+	left: 27.2171083804%;
+	white-space: nowrap;
+	font-family: Merrant;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 7em;
+	color: rgba(234,236,247,1);
+}
+#Menu_Option_League_Icon {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	top: 0;
+}
+
+#Menu_Option_CoD_Icon {
+	position: absolute;
+	top: 35%;
+	left: 10.93023256%;
+	width: 69.40375436%;
+	height: auto;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: cod_home.html;
+	cursor: pointer;
 }

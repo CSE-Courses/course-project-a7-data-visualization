@@ -218,6 +218,9 @@
 	height: 3.703703704%;
 	left: 10.93023256%;
 	top: 24.90740741%;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: league_home.html;
 	cursor: pointer;
 }
 #Menu_Option_League_Text {
@@ -247,6 +250,6 @@
 	height: auto;
 	--web-animation: fadein 0.3s ease-out;
 	--web-action-type: page;
-	--web-action-target: cod1.html;
+	--web-action-target: cod_home.html;
 	cursor: pointer;
 }

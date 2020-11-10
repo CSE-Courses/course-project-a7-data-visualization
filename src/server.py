@@ -27,17 +27,25 @@ def league():
     region = request.form["Region"]
     try:
         df = loldata.getLolData(gamertag, region)
-        return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+        return render_template("leagueStats.html", name='League Of legends Player Data', data=df)
     except Exception as e:
         return render_template("error.html")
 
+
 @app.route("/league_mult.html", methods=['POST'])
 def league2():
-    gamertag = request.form["Gamertag"]
-    region = request.form["Region"]
+    gamertagOne = request.form["Gamertag"]
+    regionOne = request.form["Region"]
+    gamertagTwo = request.form["Gamertag2"]
+    regionTwo = request.form["Region2"]
     try:
-        df = loldata.getLolData(gamertag, region)
-        return render_template("leagueStats.html", name='League Of legends Player Data', data=df.to_json())
+        dfOne,dfTwo = loldata.getDataTwo(gamertagOne,gamertagTwo, regionOne,regionTwo)
+        frames = [dfOne, dfTwo]
+        dfcom = pd.concat(frames)
+        dfcom.reset_index(drop=True, inplace=True)
+        finalJs = dfcom.to_json()
+        print(finalJs)
+        return render_template("leagueMultiplayerStats.html", name='League Of legends Player Data', data = finalJs)
     except Exception as e:
         return render_template("error.html")
 
@@ -76,6 +84,10 @@ def league_mult():
 @app.route("/leagueMultiplayerStats.html")
 def leagueMultiplayerStats():
     return render_template("leagueMultiplayerStats.html")
+
+@app.route("/charts")
+def displayVisuals():
+    return render_template("charts.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

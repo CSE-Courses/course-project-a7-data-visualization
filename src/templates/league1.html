@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>league1</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/league1.css"/>
-<script id="applicationScript" type="text/javascript" src="../static/league1.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>league1</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/league1.css"/>
+    <script id="applicationScript" type="text/javascript" src="../static/league1.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="league1">
-	<img id="League_background" src="../static/c_o_champion_thresh_spirit_blo.png" srcset="../src/static/c_o_champion_thresh_spiri../src/static/c_o_champion_thresh_spirit_blo@2x.pngrit_blo@2x.png 2x">
+	<img id="League_background" src="../static/c_o_champion_thresh_spirit_blo.png">
     <form method="POST">
     <div class="Dropdown">
         <button class="dropbtn" type="Button" id="Server" name="Server">Choose Region</button>
@@ -78,11 +78,11 @@
                 </svg>
             </div>
         </div>
-        <div id="Menu_Option_League" class="Menu_Option_League">
-            <img id="Menu_Option_League_Icon" src="../static/output_onlinepngtools.png" srcset="../src/templates/output_online../src/templates/output_onlinepngtools@2x.pngnepngtools@2x.png 2x">
+        <div onclick="application.goToTargetView(event)" id="Menu_Option_League" class="Menu_Option_League">
+            <img id="Menu_Option_League_Icon" src="../static/output_onlinepngtools.png">
             <div id="Menu_Option_League_Text">League of Legends</div>
         </div>
-        <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png" srcset="../src/templates/output_onlinepngt../src/templates/output_onlinepngtools__2_@2x.pnggtools__2_@2x.png 2x">
+        <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png">
     </div>
 </div>
 </body>

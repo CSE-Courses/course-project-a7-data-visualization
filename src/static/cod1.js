@@ -1769,7 +1769,6 @@ var Application = function() {
 	}
 
 	self.goToErrorView = function(event) {
-		sessionStorage.setItem('gamertag', document.getElementById("Gamertag").value);
 		var button = event.currentTarget;
 		var buttonComputedStyles = getComputedStyle(button);
 		var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "error.html").trim();

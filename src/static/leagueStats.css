@@ -183,25 +183,45 @@ body{
     display: flex;
     justify-content: center;
 }
-.Item1{
+.Items{
     position: absolute;
+    width: 25%;
     top: 0;
+    height: 100%;
     left: 75%;
-    width: 25%;
-    height: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
 }
-.Item2{
+#Item1{
     position: absolute;
+    top: 10%;
+}
+#Item2{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+#Item3{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+#Item4{
+    position: absolute;
+    top: 55%;
+}
+#Item5{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+#Item6{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+#Item7{
+    position: absolute;
+    top: 30%;
     left: 75%;
-    top: 50%;
-    width: 25%;
-    height: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
 }
 
 #Menu {

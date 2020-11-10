@@ -51,33 +51,23 @@ body{
 
 .Player1{
     position: absolute;
-    width: 25%;
+    width: 30%;
     height: 96%;
     top: 2%;
-    left: 28%;
-    background-color: rgba(43,51,91,1);
-    border-radius: 4px;
+    left: 27%;
+    background-color: rgb(43, 51, 91);
     opacity: 0.95;
-    overflow: visible;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    vertical-align: top;
+    overflow: hidden;
 }
 .Player2{
     position: absolute;
-    width: 25%;
+    width: 30%;
     height: 96%;
     top: 2%;
-    left: 58%;
-    background-color: rgba(43,51,91,1);
-    border-radius: 4px;
+    left: 59%;
     opacity: 0.95;
-    overflow: visible;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    vertical-align: top;
+    background-color: rgb(43, 51, 91);
+    overflow: hidden;
 }
 
 .Header{
@@ -93,100 +83,67 @@ body{
     align-items: center;
 }
 
-.Champion_1{
+.Game1{
     position: absolute;
     top: 5%;
-    left: 2.5%;
-    width: 30%;
-    height: 11%;
+    left: 0;
+    width: 32.5%;
+    height: 100%;
+    border-right:2px solid white;
 }
-.Champion_1 img{
-    width: 100%;
-}
-.Champion_2{
+.Game2{
     position: absolute;
     top: 5%;
-    left: 35%;
-    width: 30%;
-    height: 11%;
-}
-.Champion_2 img{
-    width: 100%;
-}
-.Champion_3{
-    position: absolute;
-    top: 5%;
-    left: 67.5%;
-    width: 30%;
-    height: 11%;
-}
-.Champion_3 img{
-    width: 100%;
+    left: 33.3%;
+    width: 33%;
+    height: 100%;
+    border-right:2px solid white;
 }
 
-.Game1Spell{
+.Game3{
     position: absolute;
-    top: 22.5%;
-    left: 10%;
-    height: 11%;
-    width: 15%;
+    top: 5%;
+    left: 66.9%;
+    width: 32.5%;
+    height: 100%;
 }
-.Game1Spell img{
-    width: 100%;
-}
-.Game2Spell{
+
+.Champion{
     position: absolute;
-    top: 22.5%;
-    left: 42.5%;
-    height: 11%;
-    width: 15%;
-}
-.Game2Spell img{
+    top: 0;
+    left: 0;
     width: 100%;
+
 }
-.Game3Spell{
+.Champion img{
+    width: 100%;
+    height: 100%;
+}
+
+.Spell{
     position: absolute;
-    top: 22.5%;
-    left: 75%;
-    height: 11%;
-    width: 15%;
-}
-.Game3Spell img{
+    top: 23%;
+    left:0;
     width: 100%;
+    color: white;
+}
+#Spell0{
+    position: absolute;
+    top: 0;
+    left: 3%;
+}
+#Spell1{
+    position: absolute;
+    top: 0;
+    left: 55%;
 }
 
 .KDA{
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 40%;
-    width: 33.333333%;
-    height: 5%;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    align-items: center;
-}
-.KDA2{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 40%;
-    left: 33.333333%;
-    width: 33.333333%;
-    height: 5%;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    align-items: center;
-}
-.KDA3{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 40%;
-    left: 66.666666%;
-    width: 33.333333%;
+    top: 35%;
+    width: 100%;
     height: 5%;
     color: white;
     font-size: 40px;
@@ -194,75 +151,47 @@ body{
     align-items: center;
 }
 
+.Item{
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    height: 100%;
+}
 
-.Game1Item{
-    position: absolute;
-    width: 30%;
-    height: 52%;
-    top: 48%;
-}
-.Game2Item{
-    position: absolute;
-    width: 30%;
-    height: 52%;
-    top: 48%;
-    left: 35%;
-}
-.Game3Item{
-    position: absolute;
-    width: 30%;
-    height: 52%;
-    top: 48%;
-    left: 70%;
-}
 #Item0{
     position: absolute;
-    width: 49.5%;
-    height: auto;
     top: 0;
     left: 0;
 }
 #Item1{
     position: absolute;
-    width: 49.5%;
-    height: auto;
     top: 0;
-    left: 50.5%;
+    left: 55%;
 }
 #Item2{
     position: absolute;
-    width: 49.5%;
-    height: auto;
-    top: 15%;
+    top: 10%;
     left: 0;
 }
 #Item3{
     position: absolute;
-    width: 49.5%;
-    height: auto;
-    top: 15%;
-    left: 50.5%;
+    top: 10%;
+    left: 55%;
 }
 #Item4{
     position: absolute;
-    width: 49.5%;
-    height: auto;
-    top: 30%;
-    left: 0;
+    top: 20%;
+    left: 0%;
 }
 #Item5{
     position: absolute;
-    width: 49.5%;
-    height: auto;
-    top: 30%;
-    left: 50.5%;
+    top: 20%;
+    left: 55%;
 }
 #Item6{
     position: absolute;
-    width: 49.5%;
-    height: auto;
-    top: 45%;
-    left: 25.25%;
+    top: 30%;
+    left: 25%;
 }
 
 #Menu {

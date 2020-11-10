@@ -21,6 +21,7 @@ pycodestyle==2.6.0
 pydocstyle==5.0.2
 pyflakes==2.2.0
 pylint==2.5.3
+pynput==1.7.1
 python-jsonrpc-server==0.3.4
 python-language-server==0.33.3
 requests==2.24.0
@@ -35,3 +36,5 @@ wrapt==1.12.1
 yapf==0.30.0
 
 pandas~=1.0.5
+numpy~=1.19.0
+Pillow~=7.2.0

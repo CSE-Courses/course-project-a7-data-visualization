@@ -62,6 +62,7 @@ def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
         for row in participant:
             if(row["championId"] == last_five_match[key]):
                 participants_row = {}
+                participants_row['player'] = username
                 participants_row['championName'] = champ_dict[str(row['championId'])]
                 participants_row['spell1'] = spell_dict[str(row['spell1Id'])]
                 participants_row['spell2'] = spell_dict[str(row['spell2Id'])]

@@ -13,6 +13,9 @@
     box-sizing: border-box;
     border: none;
 }
+body{
+    background-color: rgba(28,33,62,1);
+}
 #leagueStats {
     position: absolute;
     background: #E5E5E5;
@@ -120,6 +123,7 @@
     font-size: 20px;
     text-align: center;
     vertical-align: top;
+    margin-bottom: 1%;
 }
 .Header{
     position: relative;
@@ -198,11 +202,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-
-body{
-    background-color: rgba(28,33,62,1);
 }
 
 #Menu {

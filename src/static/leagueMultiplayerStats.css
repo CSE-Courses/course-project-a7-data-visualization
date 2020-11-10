@@ -13,6 +13,9 @@
     box-sizing: border-box;
     border: none;
 }
+body{
+    background-color: rgba(28,33,62,1);
+}
 #leagueMultiplayerStats {
     position: absolute;
     background: #E5E5E5;
@@ -39,108 +42,231 @@
 
 }
 #League_background {
-    position: absolute;
+    position: fixed;
     width: 88.80208333%;
     height: auto;
     left: 11.19791667%;
     top: 0;
 }
 
-.Search {
-    height: 4.44444444%;
-    width: 48.38541667%;
-    opacity: 0.86;
+.Player1{
     position: absolute;
-    left: 33.75%;
-    top: 45.55555%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-}
-.Search input[type=text] {
-    padding: 5px;
-    padding-left: 50px;
-    font-size: 10em;
-    height: 100%;
-    width: 86.11410118%;
-    border: none;
-    outline: none;
+    width: 25%;
+    height: 96%;
+    top: 2%;
+    left: 28%;
     background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
     border-radius: 4px;
-}
-.Search button {
-    float: right;
-    font-size: 10em;
-    height: 100%;
-    width: 11.62540366%;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-}
-.Search button:hover {background-color: rgba(44,54,129,1);}
-
-.Dropdown {
-    height: 4.44444%;
-    width: 11.61458333%;
-    opacity: 0.86;
-    position: absolute;
-    left: 20.88541667%;
-    top: 45.55555%;
+    opacity: 0.95;
     overflow: visible;
-    white-space: nowrap;
+    color: white;
+    font-size: 20px;
     text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
+    vertical-align: top;
 }
-.Dropdown button{
-    font-size: 10em;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
+.Player2{
+    position: absolute;
+    width: 25%;
+    height: 96%;
+    top: 2%;
+    left: 58%;
     background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
     border-radius: 4px;
+    opacity: 0.95;
+    overflow: visible;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: top;
 }
 
-.Dropdown_Content {
-    display: none;
-    position: absolute;
+.Header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     width: 100%;
-    background-color: rgba(43,51,91,1);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    height: 5%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
 }
-.Dropdown_Content button{
-    display: block;
-    padding: 14px;
-}
-.Dropdown_Content button:hover {background-color: rgba(44,54,129,1);}
 
-.Dropdown:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
-.Dropdown:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
-.Dropdown:hover .Dropdown_Content {display: block;}
-
-.Icon_Magnifying_Glass {
+.Champion_1{
     position: absolute;
-    width: 1.04390625%;
-    height: 1.856296296%;
-    left: 34.61421875%;
-    top: 46.69333%;
-    transform: matrix(1,0,0,1,0,0);
+    top: 5%;
+    left: 2.5%;
+    width: 30%;
+    height: 11%;
+}
+.Champion_1 img{
+    width: 100%;
+}
+.Champion_2{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    width: 30%;
+    height: 11%;
+}
+.Champion_2 img{
+    width: 100%;
+}
+.Champion_3{
+    position: absolute;
+    top: 5%;
+    left: 67.5%;
+    width: 30%;
+    height: 11%;
+}
+.Champion_3 img{
+    width: 100%;
+}
+
+.Game1Spell{
+    position: absolute;
+    top: 22.5%;
+    left: 10%;
+    height: 11%;
+    width: 15%;
+}
+.Game1Spell img{
+    width: 100%;
+}
+.Game2Spell{
+    position: absolute;
+    top: 22.5%;
+    left: 42.5%;
+    height: 11%;
+    width: 15%;
+}
+.Game2Spell img{
+    width: 100%;
+}
+.Game3Spell{
+    position: absolute;
+    top: 22.5%;
+    left: 75%;
+    height: 11%;
+    width: 15%;
+}
+.Game3Spell img{
+    width: 100%;
+}
+
+.KDA{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    width: 33.333333%;
+    height: 5%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+}
+.KDA2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 33.333333%;
+    width: 33.333333%;
+    height: 5%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+}
+.KDA3{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 40%;
+    left: 66.666666%;
+    width: 33.333333%;
+    height: 5%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+
+.Game1Item{
+    position: absolute;
+    width: 30%;
+    height: 52%;
+    top: 48%;
+}
+.Game2Item{
+    position: absolute;
+    width: 30%;
+    height: 52%;
+    top: 48%;
+    left: 35%;
+}
+.Game3Item{
+    position: absolute;
+    width: 30%;
+    height: 52%;
+    top: 48%;
+    left: 70%;
+}
+#Item0{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+#Item1{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 0;
+    left: 50.5%;
+}
+#Item2{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 15%;
+    left: 0;
+}
+#Item3{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 15%;
+    left: 50.5%;
+}
+#Item4{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 30%;
+    left: 0;
+}
+#Item5{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 30%;
+    left: 50.5%;
+}
+#Item6{
+    position: absolute;
+    width: 49.5%;
+    height: auto;
+    top: 45%;
+    left: 25.25%;
 }
 
 #Menu {
-    position: absolute;
+    position: fixed;
     width: 11.197916667%;
     height: 100%;
     left: 0;
@@ -220,7 +346,7 @@
     top: 24.90740741%;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league1.html;
+    --web-action-target: league_home.html;
     cursor: pointer;
 }
 #Menu_Option_League_Text {
@@ -250,6 +376,6 @@
     height: auto;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: cod1.html;
+    --web-action-target: cod_home.html;
     cursor: pointer;
 }

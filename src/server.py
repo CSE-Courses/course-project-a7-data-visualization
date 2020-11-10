@@ -25,8 +25,8 @@ def leagueOne():
 def league():
     gamertag = request.form["Gamertag"]
     region = request.form["Region"]
-    df = loldata.getLolData(gamertag, region)
     try:
+        df = loldata.getLolData(gamertag, region)
         return render_template("leagueStats.html", name='League Of legends Player Data', data=df)
     except Exception as e:
         return render_template("error.html")
@@ -38,15 +38,16 @@ def league2():
     regionOne = request.form["Region"]
     gamertagTwo = request.form["Gamertag2"]
     regionTwo = request.form["Region2"]
-    dfOne,dfTwo = loldata.getDataTwo(gamertagOne,gamertagTwo, regionOne,regionTwo)
-    frames = [dfOne, dfTwo]
-    dfcom = pd.concat(frames)
-    dfcom.reset_index(drop=True, inplace=True)
-    finalJs = dfcom.to_json()
-    print(finalJs)
-    return render_template("landingMultiplayerLeague.html", name='League Of legends Player Data', data = finalJs)
-
-
+    try:
+        dfOne,dfTwo = loldata.getDataTwo(gamertagOne,gamertagTwo, regionOne,regionTwo)
+        frames = [dfOne, dfTwo]
+        dfcom = pd.concat(frames)
+        dfcom.reset_index(drop=True, inplace=True)
+        finalJs = dfcom.to_json()
+        print(finalJs)
+        return render_template("leagueMultiplayerStats.html", name='League Of legends Player Data', data = finalJs)
+    except Exception as e:
+        return render_template("error.html")
 
 @app.route("/cod1.html")
 def codOne():

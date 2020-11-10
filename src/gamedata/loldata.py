@@ -44,7 +44,7 @@ def getDataTwo(usernameOne,usernameTwo,regionOne,regionTwo):
     return dfOne,dfTwo
 
 def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
-    api_key = 'RGAPI-66d7b0dc-b9ae-4e00-be29-0341241c30db'
+    api_key = 'RGAPI-7fa12006-5d86-4631-852e-f26f1b677ce6'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -74,7 +74,7 @@ def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
                 participants_row['champLevel'] = row['stats']['champLevel']
                 participants_row['totalMinionsKilled'] = row['stats']['totalMinionsKilled']
                 try:
-                    participants_row['item0'] = item_dict[str(row['stats']['item1'])]
+                    participants_row['item0'] = item_dict[str(row['stats']['item0'])]
                 except Exception:
                     participants_row['item0'] = str("Null")
                 try:

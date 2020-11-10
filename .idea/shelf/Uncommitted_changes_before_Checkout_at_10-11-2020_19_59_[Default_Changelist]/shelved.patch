@@ -1,0 +1,509 @@
+Index: src/static/leagueMultiStats.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.mediaViewInfo {\r\n    --web-view-name: leagueStats;\r\n    --web-view-id: leagueStats;\r\n    --web-scale-on-resize: true;\r\n    --web-enable-deep-linking: true;\r\n}\r\n:root {\r\n    --web-view-ids: leagueStats;\r\n}\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    border: none;\r\n}\r\n#leagueStats {\r\n    position: absolute;\r\n    background: #E5E5E5;\r\n    width: 1920px;\r\n    height: 1080px;\r\n    background-color: rgba(28,33,62,1);\r\n    overflow: hidden;\r\n    --web-view-name: leagueStats;\r\n    --web-view-id: leagueStats;\r\n    --web-scale-on-resize: true;\r\n    --web-enable-deep-linking: true;\r\n}\r\n@keyframes fadein {\r\n\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n\r\n}\r\n#Background {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 1706px;\r\n    height: 1080px;\r\n    left: 215px;\r\n    top: 0px;\r\n}\r\n#Home {\r\n    position: absolute;\r\n    left: 73px;\r\n    top: 170px;\r\n    overflow: visible;\r\n    width: 39px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Merrant;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n#ID001_home {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 30.308px;\r\n    left: 18px;\r\n    top: 164px;\r\n    overflow: visible;\r\n}\r\n#Group_9_dw {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 13.567px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n#Group_8_dx {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 13.567px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n.Path_20_dy {\r\n    overflow: visible;\r\n    position: absolute;\r\n    width: 34.565px;\r\n    height: 14.157px;\r\n    left: 0px;\r\n    top: 0px;\r\n    transform: matrix(1,0,0,1,0,0);\r\n}\r\n#Group_11_dz {\r\n    position: absolute;\r\n    width: 26.503px;\r\n    height: 16.712px;\r\n    left: 3.749px;\r\n    top: 13.597px;\r\n    overflow: visible;\r\n}\r\n#Group_10_d {\r\n    position: absolute;\r\n    width: 26.503px;\r\n    height: 16.712px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n.Path_21_d {\r\n    overflow: visible;\r\n    position: absolute;\r\n    width: 27.003px;\r\n    height: 17.212px;\r\n    left: 0px;\r\n    top: 0px;\r\n    transform: matrix(1,0,0,1,0,0);\r\n}\r\n#VOLT_GG {\r\n    position: absolute;\r\n    left: 24px;\r\n    top: 53px;\r\n    overflow: visible;\r\n    width: 145px;\r\n    white-space: nowrap;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: index.html;\r\n    cursor: pointer;\r\n    text-align: center;\r\n    font-family: Thunder Titan;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 28px;\r\n    color: rgba(255,255,255,1);\r\n    letter-spacing: 0.1px;\r\n}\r\n#output_onlinepngtools {\r\n    position: absolute;\r\n    width: 37px;\r\n    height: 40px;\r\n    left: 18px;\r\n    top: 269px;\r\n    overflow: visible;\r\n}\r\n#output_onlinepngtools__2__ds {\r\n    position: absolute;\r\n    width: 119px;\r\n    height: 38px;\r\n    left: 37px;\r\n    top: 378px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: cod1.html;\r\n    cursor: pointer;\r\n}\r\n#Component_7___3 {\r\n    position: absolute;\r\n    width: 93px;\r\n    height: 30.308px;\r\n    left: 18px;\r\n    top: 164px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: index.html;\r\n    cursor: pointer;\r\n}\r\n#Component_8___3 {\r\n    position: absolute;\r\n    width: 168px;\r\n    height: 40px;\r\n    left: 18px;\r\n    top: 269px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: league1.html;\r\n    cursor: pointer;\r\n}\r\n#League_of_Legends__d {\r\n    position: absolute;\r\n    left: 48px;\r\n    top: 6px;\r\n    overflow: visible;\r\n    width: 121px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Merrant;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n\r\n.Player1{\r\n    position: absolute;\r\n    width: 427px;\r\n    height: 1360px;\r\n    top: 2px;\r\n    right: 1278px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    border-right :10px solid #000;\r\n    opacity: 0.50;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Player2{\r\n    position: absolute;\r\n    width: 426px;\r\n    height: 1360px;\r\n    top: 2px;\r\n    right: 852px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    border-right :10px solid #000;\r\n    opacity: 0.50;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Player3{\r\n    position: absolute;\r\n    width: 426px;\r\n    height: 1360px;\r\n    top: 2px;\r\n    right: 426px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    border-right :10px solid #000;\r\n    opacity: 0.50;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Player4{\r\n    position: absolute;\r\n    width: 426px;\r\n    height: 1360px;\r\n    top: 2px;\r\n    right: 0px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    border-right :10px solid #000;\r\n    opacity: 0.50;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Champion{\r\n    position: absolute;\r\n    top: 0px;\r\n    opacity: 1;\r\n}\r\n.ChampionGame1{\r\n    left: 5px;\r\n}\r\n.ChampionGame2{\r\n    left: 147px;\r\n}\r\n.ChampionGame3{\r\n    left: 289px;\r\n\r\n}\r\n\r\n.Game1Spell{\r\n    top: 500px;\r\n}\r\n.Game2Spell{\r\n    top: 600px;\r\n}\r\n.Game3Spell{\r\n    top: 700px;\r\n}\r\n.Spell1{\r\n    position: absolute;\r\n    left: 0px;\r\n}\r\n.Spell2{\r\n    position: absolute;\r\n    left: 200px;\r\n}\r\n.KDA{\r\n    position: absolute;\r\n    left: 200px;\r\n    top: 100px;\r\n    width: 340px;\r\n    height: 192px;\r\n    color: white;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    padding-top: 26px;\r\n}\r\n\r\n\r\n.Game1Item{\r\n    top: 800px;\r\n}\r\n.Game2Item{\r\n    top: 885px;\r\n}\r\n.Game3Item{\r\n    top: 970px;\r\n}\r\n.Item0{\r\n    position: absolute;\r\n    left: 0;\r\n    width : 59px;\r\n}\r\n.Item1{\r\n    position: absolute;\r\n    left: 59px;\r\n    width : 59px;\r\n}\r\n.Item2{\r\n    position: absolute;\r\n    left: 118px;\r\n    width : 59px;\r\n\r\n}\r\n.Item3{\r\n    position: absolute;\r\n    left: 177px;\r\n    width : 59px;\r\n}\r\n.Item4{\r\n    position: absolute;\r\n    left: 236px;\r\n    width : 59px;\r\n}\r\n.Item5{\r\n    position: absolute;\r\n    left: 295px;\r\n    width : 59px;\r\n}\r\n.Item6{\r\n    position: absolute;\r\n    left: 354px;\r\n    width : 59px;\r\n}\r\n\r\n\r\n#Graph_Rect {\r\n    fill: transparent;\r\n    stroke: rgba(112,112,112,1);\r\n    stroke-width: 1px;\r\n    stroke-linejoin: miter;\r\n    stroke-linecap: butt;\r\n    stroke-miterlimit: 4;\r\n    shape-rendering: auto;\r\n}\r\n.Graph_Rect {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 563px;\r\n    height: 324px;\r\n    left: 299px;\r\n    top: 707px;\r\n}\r\n#Insert_Graph_ {\r\n    left: 476px;\r\n    top: 725px;\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 211px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Helvetica Neue;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 36px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n#BigGraph_Rect {\r\n    fill: transparent;\r\n    stroke: rgba(112,112,112,1);\r\n    stroke-width: 1px;\r\n    stroke-linejoin: miter;\r\n    stroke-linecap: butt;\r\n    stroke-miterlimit: 4;\r\n    shape-rendering: auto;\r\n}\r\n.BigGraph_Rect {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 681px;\r\n    height: 336px;\r\n    left: 1020px;\r\n    top: 707px;\r\n}\r\n#Big_Graph_ {\r\n    left: 1274px;\r\n    top: 725px;\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 174px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Helvetica Neue;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 36px;\r\n    color: rgba(234,236,247,1);\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/static/leagueMultiStats.css	(revision 46e8c949d0845e2885d6b2de989be307af605812)
++++ src/static/leagueMultiStats.css	(date 1604867092181)
+@@ -151,7 +151,7 @@
+     overflow: visible;
+     --web-animation: fadein 0.3s ease-out;
+     --web-action-type: page;
+-    --web-action-target: cod1.html;
++    --web-action-target: cod_home.html;
+     cursor: pointer;
+ }
+ #Component_7___3 {
+@@ -175,7 +175,7 @@
+     overflow: visible;
+     --web-animation: fadein 0.3s ease-out;
+     --web-action-type: page;
+-    --web-action-target: league1.html;
++    --web-action-target: league_home.html;
+     cursor: pointer;
+ }
+ #League_of_Legends__d {
+@@ -195,14 +195,13 @@
+ 
+ .Player1{
+     position: absolute;
+-    width: 427px;
++    width: 417px;
+     height: 1360px;
+     top: 2px;
+     right: 1278px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    border-right :10px solid #000;
+-    opacity: 0.50;
++    border-right :10px transparent;
+     overflow: visible;
+     color: white;
+     font-size: 20px;
+@@ -212,14 +211,13 @@
+ }
+ .Player2{
+     position: absolute;
+-    width: 426px;
++    width: 417px;
+     height: 1360px;
+     top: 2px;
+     right: 852px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    border-right :10px solid #000;
+-    opacity: 0.50;
++    border-right :10px transparent;
+     overflow: visible;
+     color: white;
+     font-size: 20px;
+@@ -229,14 +227,13 @@
+ }
+ .Player3{
+     position: absolute;
+-    width: 426px;
++    width: 417px;
+     height: 1360px;
+     top: 2px;
+     right: 426px;
+-    background-color: rgba(43,51,91,1);
++    background-color: rgba(43, 51, 91,1);
+     border-radius: 4px;
+-    border-right :10px solid #000;
+-    opacity: 0.50;
++    border-right :10px transparent;
+     overflow: visible;
+     color: white;
+     font-size: 20px;
+@@ -246,14 +243,13 @@
+ }
+ .Player4{
+     position: absolute;
+-    width: 426px;
++    width: 417px;
+     height: 1360px;
+     top: 2px;
+     right: 0px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    border-right :10px solid #000;
+-    opacity: 0.50;
++    border-right :10px transparent;
+     overflow: visible;
+     color: white;
+     font-size: 20px;
+@@ -296,8 +292,8 @@
+ }
+ .KDA{
+     position: absolute;
+-    left: 200px;
+-    top: 100px;
++    top: 400px;
++    left: 50px;
+     width: 340px;
+     height: 192px;
+     color: white;
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21_[Default_Changelist]/shelved.patch
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21_[Default_Changelist]/shelved.patch	(revision 46e8c949d0845e2885d6b2de989be307af605812)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21_[Default_Changelist]/shelved.patch	(revision 46e8c949d0845e2885d6b2de989be307af605812)
+@@ -1,133 +0,0 @@
+-Index: src/server.py
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>from flask import Flask, render_template, request\r\nimport pandas as pd\r\nfrom src.gamedata import loldata\r\n\r\napp = Flask(__name__)\r\n\r\n\"\"\"\r\nUI Code\r\n\"\"\"\r\n\r\n\r\n@app.route(\"/\")\r\ndef home():\r\n    return render_template(\"index.html\")\r\n\r\n@app.route(\"/index.html\")\r\ndef returnhome():\r\n    return render_template(\"index.html\")\r\n\r\n@app.route(\"/league1.html\")\r\ndef leagueOne():\r\n    return render_template(\"league1.html\")\r\n\r\n@app.route(\"/league1.html\", methods=['POST'])\r\ndef league():\r\n    gamertag = request.form[\"Gamertag\"]\r\n    region = request.form[\"Region\"]\r\n    try:\r\n        df = loldata.getLolData(gamertag, region)\r\n        return render_template(\"league1.html.html\", name='League Of legends Player Data', data=df)\r\n    except Exception as e:\r\n        return render_template(\"error.html\")\r\n\r\n@app.route(\"/cod1.html\")\r\ndef codOne():\r\n    return render_template(\"cod1.html\")\r\n\r\n@app.route(\"/codStats.html\")\r\ndef codStats():\r\n    return render_template(\"codStats.html\")\r\n\r\n@app.route(\"/error.html\")\r\ndef error():\r\n    return render_template(\"error.html\")\r\n\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- src/server.py	(revision d2c4baf38ae05613eafc6aa091e86ac271944f29)
+-+++ src/server.py	(date 1604361163186)
+-@@ -27,7 +27,7 @@
+-     region = request.form["Region"]
+-     try:
+-         df = loldata.getLolData(gamertag, region)
+--        return render_template("league1.html.html", name='League Of legends Player Data', data=df)
+-+        return render_template("leagueStats.html", name='League Of legends Player Data', data=df)
+-     except Exception as e:
+-         return render_template("error.html")
+- 
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:#60_Multiplayer_landingpage_connected_with_frontend\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f\" name=\"Default Changelist\" comment=\"Added : the image url are called to display the visuals on the front html.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/gamedata/loldata.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/gamedata/loldata.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/server.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/server.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/static/leagueStats.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/static/leagueStats.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/templates/leagueStats.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/templates/leagueStats.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"#40_fornt_end_visual\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"JupyterTrust\" id=\"7d95cda2-1b41-4c1d-93ab-76cd29dbd92c\" />\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1iBtdaGfn87ylvr4ey4Dmf9rsK3\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/..\" />\r\n    <property name=\"project.structure.last.edited\" value=\"SDKs\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.33448276\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.server\">\r\n    <configuration name=\"landingMultiplayerLeague.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/course-project-a7-data-visualization/templates/landingMultiplayerLeague.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"course-project-a7-data-visualization\" type=\"PythonConfigurationType\" factoryName=\"Python\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"loldata\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/gamedata\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/gamedata/loldata.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"server\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.server\" />\r\n        <item itemvalue=\"Python.loldata\" />\r\n        <item itemvalue=\"JavaScript Debug.landingMultiplayerLeague.html\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1601392900718</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1601392900718</updated>\r\n      <workItem from=\"1601392905132\" duration=\"8646000\" />\r\n      <workItem from=\"1601416654281\" duration=\"70000\" />\r\n      <workItem from=\"1601416785626\" duration=\"88000\" />\r\n      <workItem from=\"1601416954090\" duration=\"2986000\" />\r\n      <workItem from=\"1601922370013\" duration=\"711000\" />\r\n      <workItem from=\"1602104567023\" duration=\"609000\" />\r\n      <workItem from=\"1602106391148\" duration=\"298000\" />\r\n      <workItem from=\"1603662247694\" duration=\"4235000\" />\r\n      <workItem from=\"1603746381329\" duration=\"4821000\" />\r\n      <workItem from=\"1604256827178\" duration=\"7538000\" />\r\n      <workItem from=\"1604316453495\" duration=\"22626000\" />\r\n      <workItem from=\"1604359339907\" duration=\"1155000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added specific Selenium tests for different branches of the site\">\r\n      <created>1601395106091</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1601395106091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added : the image url for the champion, item 2-4, item names, spell names.\">\r\n      <created>1603521578619</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603521578619</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Added : the image url are called to display the visuals on the front html.\">\r\n      <created>1603665898686</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603665898686</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"#60_Multiplayer_landingpage_connected_with_frontend\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added specific Selenium tests for different branches of the site\" />\r\n    <MESSAGE value=\"Added : the image url for the champion, item 2-4, item names, spell names.\" />\r\n    <MESSAGE value=\"Added : the image url are called to display the visuals on the front html.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added : the image url are called to display the visuals on the front html.\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"440\" y=\"94\" width=\"1310\" height=\"852\" key=\"#Project_Structure\" timestamp=\"1601416968707\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"440\" y=\"94\" width=\"1310\" height=\"852\" key=\"#Project_Structure/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416968707\" />\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages\" timestamp=\"1603517805885\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages/0.0.1536.824@0.0.1536.824\" timestamp=\"1603517805885\" />\r\n    <state x=\"669\" y=\"105\" key=\"#server\" timestamp=\"1601406541450\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"669\" y=\"105\" key=\"#server/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601406541450\" />\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2\" timestamp=\"1601395105587\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601395105587\" />\r\n    <state x=\"875\" y=\"274\" key=\"FileChooserDialogImpl\" timestamp=\"1601416808515\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"875\" y=\"274\" key=\"FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416808515\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1604360394002\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824\" timestamp=\"1604360394002\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.center\" timestamp=\"1604360394002\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824\" timestamp=\"1604360394002\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.left\" timestamp=\"1604360394002\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824\" timestamp=\"1604360394002\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.right\" timestamp=\"1604360394002\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824\" timestamp=\"1604360394002\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog\" timestamp=\"1601416377810\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416377810\" />\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog\" timestamp=\"1601418061567\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601418061567\" />\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor\" timestamp=\"1603747888449\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor/0.0.1536.824@0.0.1536.824\" timestamp=\"1603747888449\" />\r\n    <state x=\"461\" y=\"164\" key=\"SettingsEditor/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601407433807\" />\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1603665913534\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1603665913534\" />\r\n    <state x=\"552\" y=\"252\" key=\"Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416329322\" />\r\n    <state x=\"769\" y=\"433\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1601417940110\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"769\" y=\"433\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417940110\" />\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog\" timestamp=\"1601416713960\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416713960\" />\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog\" timestamp=\"1601922417669\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601922417669\" />\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog\" timestamp=\"1601417335262\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417335262\" />\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog\" timestamp=\"1601417711527\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417711527\" />\r\n    <state x=\"425\" y=\"187\" key=\"run.anything.popup\" timestamp=\"1604323555517\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"425\" y=\"187\" key=\"run.anything.popup/0.0.1536.824@0.0.1536.824\" timestamp=\"1604323555517\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$server.coverage\" NAME=\"server Coverage Results\" MODIFIED=\"1604359361640\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$loldata.coverage\" NAME=\"loldata Coverage Results\" MODIFIED=\"1604341728710\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src/gamedata\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage\" NAME=\"course-project-a7-data-visualization Coverage Results\" MODIFIED=\"1603518419672\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+---- .idea/workspace.xml	(revision d2c4baf38ae05613eafc6aa091e86ac271944f29)
+-+++ .idea/workspace.xml	(date 1604372822611)
+-@@ -25,12 +25,9 @@
+-     </select>
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="Added : the image url are called to display the visuals on the front html.">
+-+    <list default="true" id="5988a5d3-53ea-4f6b-8d30-daf8ef31ab6f" name="Default Changelist" comment="Added : spell images, mul league landing paged and connected it to the backend.">
+-       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
+-       <change beforePath="$PROJECT_DIR$/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/static/leagueStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/leagueStats.css" afterDir="false" />
+--      <change beforePath="$PROJECT_DIR$/src/templates/leagueStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/leagueStats.html" afterDir="false" />
+-     </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-@@ -179,7 +176,8 @@
+-       <workItem from="1603746381329" duration="4821000" />
+-       <workItem from="1604256827178" duration="7538000" />
+-       <workItem from="1604316453495" duration="22626000" />
+--      <workItem from="1604359339907" duration="1155000" />
+-+      <workItem from="1604359339907" duration="2459000" />
+-+      <workItem from="1604365875398" duration="1342000" />
+-     </task>
+-     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
+-       <created>1601395106091</created>
+-@@ -202,7 +200,14 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1603665898686</updated>
+-     </task>
+--    <option name="localTasksCounter" value="4" />
+-+    <task id="LOCAL-00004" summary="Added : spell images, mul league landing paged and connected it to the backend.">
+-+      <created>1604360837345</created>
+-+      <option name="number" value="00004" />
+-+      <option name="presentableId" value="LOCAL-00004" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1604360837345</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="5" />
+-     <servers />
+-   </component>
+-   <component name="TypeScriptGeneratedFilesManager">
+-@@ -236,7 +241,8 @@
+-     <MESSAGE value="Added specific Selenium tests for different branches of the site" />
+-     <MESSAGE value="Added : the image url for the champion, item 2-4, item names, spell names." />
+-     <MESSAGE value="Added : the image url are called to display the visuals on the front html." />
+--    <option name="LAST_COMMIT_MESSAGE" value="Added : the image url are called to display the visuals on the front html." />
+-+    <MESSAGE value="Added : spell images, mul league landing paged and connected it to the backend." />
+-+    <option name="LAST_COMMIT_MESSAGE" value="Added : spell images, mul league landing paged and connected it to the backend." />
+-   </component>
+-   <component name="WindowStateProjectService">
+-     <state x="440" y="94" width="1310" height="852" key="#Project_Structure" timestamp="1601416968707">
+-@@ -259,25 +265,25 @@
+-       <screen x="0" y="0" width="1920" height="1040" />
+-     </state>
+-     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
+--    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604360394002">
+-+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604365681045">
+-       <screen x="0" y="0" width="1536" height="824" />
+-     </state>
+--    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604360394002" />
+-+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604365681045" />
+-     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+--    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604360394002">
+-+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604365681045">
+-       <screen x="0" y="0" width="1536" height="824" />
+-     </state>
+--    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604360394002" />
+-+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604365681045" />
+-     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+--    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604360394002">
+-+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604365681045">
+-       <screen x="0" y="0" width="1536" height="824" />
+-     </state>
+--    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604360394002" />
+-+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604365681045" />
+-     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+--    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604360394002">
+-+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604365681045">
+-       <screen x="0" y="0" width="1536" height="824" />
+-     </state>
+--    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604360394002" />
+-+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604365681045" />
+-     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+-     <state x="848" y="387" width="934" height="265" key="MultipleFileMergeDialog" timestamp="1601416377810">
+-       <screen x="0" y="0" width="1920" height="1040" />
+-@@ -292,10 +298,10 @@
+-     </state>
+-     <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603747888449" />
+-     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601407433807" />
+--    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1603665913534">
+-+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604360848303">
+-       <screen x="0" y="0" width="1536" height="824" />
+-     </state>
+--    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603665913534" />
+-+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604360848303" />
+-     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601416329322" />
+-     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601417940110">
+-       <screen x="0" y="0" width="1920" height="1040" />
+-@@ -323,7 +329,7 @@
+-     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604323555517" />
+-   </component>
+-   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+--    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604359361640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+-+    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604361166034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+-     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1604341728710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+-     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage" NAME="course-project-a7-data-visualization Coverage Results" MODIFIED="1603518419672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+-   </component>
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21__Default_Changelist_.xml
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21__Default_Changelist_.xml	(revision 46e8c949d0845e2885d6b2de989be307af605812)
++++ .idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21__Default_Changelist_.xml	(revision 46e8c949d0845e2885d6b2de989be307af605812)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_03-11-2020_19_21_[Default_Changelist]" date="1604411511383" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03-11-2020_19_21_[Default_Changelist]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 03-11-2020 19:21 [Default Changelist]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:#65MultipleLOLCalls\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bc64b587-faa3-4b69-8fa1-d01f43dd1b29\" name=\"Default Changelist\" comment=\"changed xml file\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/gamedata/loldata.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/gamedata/loldata.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/static/leagueStats.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/static/leagueStats.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/templates/leagueStats.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/templates/leagueStats.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"#5_Double_Api\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"JupyterTrust\" id=\"7d95cda2-1b41-4c1d-93ab-76cd29dbd92c\" />\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1iBtdaGfn87ylvr4ey4Dmf9rsK3\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/gamedata/infofiles\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.33448276\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\rishi\\IdeaProjects\\course-project-a7-data-visualization\\src\\gamedata\\infofiles\" />\r\n      <recent name=\"C:\\Users\\rishi\\IdeaProjects\\course-project-a7-data-visualization\\src\\static\\Champions\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.server\">\r\n    <configuration default=\"true\" type=\"ArquillianTestNG\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"landingMultiplayerLeague.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/course-project-a7-data-visualization/templates/landingMultiplayerLeague.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"leagueMultiplayerStats.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/course-project-a7-data-visualization/templates/leagueMultiplayerStats.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"leagueStats.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/course-project-a7-data-visualization/templates/leagueStats.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"league_mult.html\" type=\"JavascriptDebugType\" temporary=\"true\" nameIsGenerated=\"true\" uri=\"http://localhost:63342/course-project-a7-data-visualization/templates/league_mult.html\" useBuiltInWebServerPort=\"true\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"loldata\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src/gamedata\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/gamedata/loldata.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"server\" type=\"PythonConfigurationType\" factoryName=\"Python\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"server\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"course-project-a7-data-visualization\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/src\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/src/server.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JavaScript Debug.leagueStats.html\" />\r\n        <item itemvalue=\"JavaScript Debug.league_mult.html\" />\r\n        <item itemvalue=\"JavaScript Debug.landingMultiplayerLeague.html\" />\r\n        <item itemvalue=\"JavaScript Debug.leagueMultiplayerStats.html\" />\r\n        <item itemvalue=\"Python.loldata\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bc64b587-faa3-4b69-8fa1-d01f43dd1b29\" name=\"Default Changelist\" comment=\"Merge branch '#60_Multiplayer_landingpage_connected_with_frontend' into #5_Double_Api&#10;Merging with 60&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n      <created>1601392900718</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1601392900718</updated>\r\n      <workItem from=\"1601392905132\" duration=\"8646000\" />\r\n      <workItem from=\"1601416654281\" duration=\"70000\" />\r\n      <workItem from=\"1601416785626\" duration=\"88000\" />\r\n      <workItem from=\"1601416954090\" duration=\"2986000\" />\r\n      <workItem from=\"1601922370013\" duration=\"711000\" />\r\n      <workItem from=\"1602104567023\" duration=\"609000\" />\r\n      <workItem from=\"1602106391148\" duration=\"298000\" />\r\n      <workItem from=\"1603662247694\" duration=\"3582000\" />\r\n      <workItem from=\"1603748047525\" duration=\"5303000\" />\r\n      <workItem from=\"1604780851106\" duration=\"10087000\" />\r\n      <workItem from=\"1604860948324\" duration=\"3772000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added specific Selenium tests for different branches of the site\">\r\n      <created>1601395106091</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1601395106091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added : the image url for the champion, item 2-4, item names, spell names.\">\r\n      <created>1603521578619</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603521578619</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"#47 -created menu options for searching for single player and 2 player&#10;    -updated buttons\">\r\n      <created>1603814964951</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603814964951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search\">\r\n      <created>1603815051797</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603815051797</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"#48 added second dropdown menu and search bar to the cod ui\">\r\n      <created>1604348046850</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1604348046850</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Added local images and api data for faster calls&#10;Made a function to have multiple api calls\">\r\n      <created>1604787229949</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1604787229949</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Added champions images\">\r\n      <created>1604787395997</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1604787395997</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"changed xml file\">\r\n      <created>1604787414938</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1604787414938</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"#65MultipleLOLCalls\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added specific Selenium tests for different branches of the site\" />\r\n    <MESSAGE value=\"Added : the image url for the champion, item 2-4, item names, spell names.\" />\r\n    <MESSAGE value=\"#47 -created menu options for searching for single player and 2 player&#10;    -updated buttons\" />\r\n    <MESSAGE value=\"#47 -created menu options for searching for single player and 2 player&#10;    -created home page for both games and second page for 2 player search\" />\r\n    <MESSAGE value=\"#48 added second dropdown menu and search bar to the cod ui\" />\r\n    <MESSAGE value=\"Added local images and api data for faster calls&#10;Made a function to have multiple api calls\" />\r\n    <MESSAGE value=\"Added champions images\" />\r\n    <MESSAGE value=\"changed xml file\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"changed xml file\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"352\" y=\"0\" width=\"1310\" height=\"852\" key=\"#Project_Structure\" timestamp=\"1604774513106\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"352\" y=\"0\" key=\"#Project_Structure/0.0.1536.824@0.0.1536.824\" timestamp=\"1604774513106\" />\r\n    <state x=\"440\" y=\"94\" width=\"1310\" height=\"852\" key=\"#Project_Structure/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416968707\" />\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages\" timestamp=\"1603517805885\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"312\" y=\"245\" key=\"#Template_Data_Languages/0.0.1536.824@0.0.1536.824\" timestamp=\"1603517805885\" />\r\n    <state x=\"1374\" y=\"355\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1603753429660\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"1374\" y=\"355\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603753429660\" />\r\n    <state x=\"669\" y=\"105\" key=\"#server\" timestamp=\"1601406541450\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"669\" y=\"105\" key=\"#server/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601406541450\" />\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2\" timestamp=\"1601395105587\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"442\" y=\"88\" key=\"CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601395105587\" />\r\n    <state x=\"602\" y=\"346\" width=\"1665\" height=\"724\" key=\"DiffContextDialog\" timestamp=\"1603815094043\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"602\" y=\"346\" width=\"1665\" height=\"724\" key=\"DiffContextDialog/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815094043\" />\r\n    <state x=\"700\" y=\"217\" key=\"FileChooserDialogImpl\" timestamp=\"1604780128462\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"700\" y=\"217\" key=\"FileChooserDialogImpl/0.0.1536.824@0.0.1536.824\" timestamp=\"1604780128462\" />\r\n    <state x=\"875\" y=\"274\" key=\"FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416808515\" />\r\n    <state x=\"1167\" y=\"369\" key=\"FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1604185326419\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1604865009615\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824\" timestamp=\"1604865009615\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.center\" timestamp=\"1604865009614\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824\" timestamp=\"1604865009614\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.left\" timestamp=\"1604865009614\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824\" timestamp=\"1604865009614\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.right\" timestamp=\"1604865009615\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"2\" key=\"GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824\" timestamp=\"1604865009615\" />\r\n    <state width=\"938\" height=\"282\" key=\"GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601487874961\" />\r\n    <state width=\"1827\" height=\"241\" key=\"GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603815384406\" />\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.bottom\" timestamp=\"1604781274804\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824\" timestamp=\"1604781274804\" />\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.center\" timestamp=\"1604781274804\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824\" timestamp=\"1604781274804\" />\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.left\" timestamp=\"1604781274804\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824\" timestamp=\"1604781274804\" />\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.right\" timestamp=\"1604781274804\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"261\" key=\"GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824\" timestamp=\"1604781274804\" />\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog\" timestamp=\"1601416377810\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"848\" y=\"387\" width=\"934\" height=\"265\" key=\"MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416377810\" />\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog\" timestamp=\"1601418061567\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"575\" y=\"222\" key=\"RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601418061567\" />\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor\" timestamp=\"1603515272841\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"369\" y=\"0\" key=\"SettingsEditor/0.0.1536.824@0.0.1536.824\" timestamp=\"1603515272841\" />\r\n    <state x=\"461\" y=\"164\" key=\"SettingsEditor/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601407433807\" />\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1604787433794\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1604787433794\" />\r\n    <state x=\"552\" y=\"252\" key=\"Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416329322\" />\r\n    <state x=\"737\" y=\"340\" key=\"Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1604348111934\" />\r\n    <state x=\"1025\" y=\"583\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1603814656315\">\r\n      <screen x=\"0\" y=\"0\" width=\"2560\" height=\"1400\" />\r\n    </state>\r\n    <state x=\"769\" y=\"433\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417940110\" />\r\n    <state x=\"1025\" y=\"583\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400\" timestamp=\"1603814656315\" />\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog\" timestamp=\"1601416713960\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"663\" y=\"308\" key=\"git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601416713960\" />\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog\" timestamp=\"1601922417669\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"618\" y=\"308\" key=\"git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601922417669\" />\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog\" timestamp=\"1601417335262\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"673\" y=\"418\" key=\"git4idea.ui.GitStashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417335262\" />\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog\" timestamp=\"1601417711527\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"670\" y=\"366\" key=\"git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1601417711527\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$loldataCSVCreator.coverage\" NAME=\"loldataCSVCreator Coverage Results\" MODIFIED=\"1604780085099\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src/gamedata/infoDownloader\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$server.coverage\" NAME=\"server Coverage Results\" MODIFIED=\"1604865009605\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$loldata_workbench.coverage\" NAME=\"loldataCSVCreator Coverage Results\" MODIFIED=\"1604714727079\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src/gamedata\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$loldata.coverage\" NAME=\"loldata Coverage Results\" MODIFIED=\"1604781231143\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src/gamedata\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$loldataImageDownloader.coverage\" NAME=\"loldataImageDownloader Coverage Results\" MODIFIED=\"1604779430375\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/src/gamedata/infoDownloader\" />\r\n    <SUITE FILE_PATH=\"coverage/course_project_a7_data_visualization$course_project_a7_data_visualization.coverage\" NAME=\"course-project-a7-data-visualization Coverage Results\" MODIFIED=\"1603518419672\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 46e8c949d0845e2885d6b2de989be307af605812)
++++ .idea/workspace.xml	(date 1605018508965)
+@@ -25,11 +25,10 @@
+     </select>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="changed xml file">
++    <list default="true" id="bc64b587-faa3-4b69-8fa1-d01f43dd1b29" name="Default Changelist" comment="fixed: &quot;leagueStats.css&quot;">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/gamedata/loldata.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamedata/loldata.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/static/leagueMultiStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/leagueMultiStats.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/static/leagueStats.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/leagueStats.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/templates/leagueStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/leagueStats.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -71,7 +70,7 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/gamedata/infofiles" />
++    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/projectTwo" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.path.for.package.eslint" value="project" />
+@@ -91,19 +90,6 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="Python.server">
+-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+-      <option name="arquillianRunConfiguration">
+-        <value>
+-          <option name="containerStateName" value="" />
+-        </value>
+-      </option>
+-      <option name="TEST_OBJECT" value="CLASS" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <configuration name="landingMultiplayerLeague.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/course-project-a7-data-visualization/templates/landingMultiplayerLeague.html" useBuiltInWebServerPort="true">
+       <method v="2" />
+     </configuration>
+@@ -213,7 +199,8 @@
+       <workItem from="1603662247694" duration="3582000" />
+       <workItem from="1603748047525" duration="5303000" />
+       <workItem from="1604780851106" duration="10087000" />
+-      <workItem from="1604860948324" duration="3772000" />
++      <workItem from="1604860948324" duration="6577000" />
++      <workItem from="1604877079175" duration="83000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added specific Selenium tests for different branches of the site">
+       <created>1601395106091</created>
+@@ -271,7 +258,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1604787414938</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="fixed: &quot;leagueStats.css&quot;">
++      <created>1604865213344</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1604865213344</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -310,7 +304,8 @@
+     <MESSAGE value="Added local images and api data for faster calls&#10;Made a function to have multiple api calls" />
+     <MESSAGE value="Added champions images" />
+     <MESSAGE value="changed xml file" />
+-    <option name="LAST_COMMIT_MESSAGE" value="changed xml file" />
++    <MESSAGE value="fixed: &quot;leagueStats.css&quot;" />
++    <option name="LAST_COMMIT_MESSAGE" value="fixed: &quot;leagueStats.css&quot;" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="352" y="0" width="1310" height="852" key="#Project_Structure" timestamp="1604774513106">
+@@ -338,34 +333,34 @@
+       <screen x="0" y="0" width="2560" height="1400" />
+     </state>
+     <state x="602" y="346" width="1665" height="724" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1603815094043" />
+-    <state x="700" y="217" key="FileChooserDialogImpl" timestamp="1604780128462">
++    <state x="700" y="217" key="FileChooserDialogImpl" timestamp="1604877160217">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state x="700" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604780128462" />
++    <state x="700" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604877160217" />
+     <state x="875" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601416808515" />
+     <state x="1167" y="369" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1604185326419" />
+-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604865009615">
++    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1604870596496">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604865009615" />
++    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604870596496" />
+     <state width="938" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604865009614">
++    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1604870596496">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604865009614" />
++    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604870596496" />
+     <state width="938" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604865009614">
++    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1604870596496">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604865009614" />
++    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604870596496" />
+     <state width="938" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604865009615">
++    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1604870596496">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604865009615" />
++    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604870596496" />
+     <state width="938" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601487874961" />
+     <state width="1827" height="241" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603815384406" />
+     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1604781274804">
+@@ -397,10 +392,10 @@
+     </state>
+     <state x="369" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603515272841" />
+     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601407433807" />
+-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604787433794">
++    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1604865223868">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604787433794" />
++    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604865223868" />
+     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601416329322" />
+     <state x="737" y="340" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1604348111934" />
+     <state x="1025" y="583" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603814656315">
+@@ -408,6 +403,14 @@
+     </state>
+     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601417940110" />
+     <state x="1025" y="583" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1603814656315" />
++    <state x="0" y="63" width="933" height="649" key="dock-window-1" timestamp="1604865586525">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="0" y="63" width="933" height="649" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1604865586525" />
++    <state x="525" y="114" width="686" height="649" key="dock-window-2" timestamp="1604865740614">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="525" y="114" width="686" height="649" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1604865740614" />
+     <state x="663" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1601416713960">
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+@@ -431,7 +434,7 @@
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataCSVCreator.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604780085099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
+-    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604865009605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
++    <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$server.coverage" NAME="server Coverage Results" MODIFIED="1604867124545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata_workbench.coverage" NAME="loldataCSVCreator Coverage Results" MODIFIED="1604714727079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldata.coverage" NAME="loldata Coverage Results" MODIFIED="1604781231143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata" />
+     <SUITE FILE_PATH="coverage/course_project_a7_data_visualization$loldataImageDownloader.coverage" NAME="loldataImageDownloader Coverage Results" MODIFIED="1604779430375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gamedata/infoDownloader" />
+Index: src/static/leagueStats.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.mediaViewInfo {\r\n    --web-view-name: leagueStats;\r\n    --web-view-id: leagueStats;\r\n    --web-scale-on-resize: true;\r\n    --web-enable-deep-linking: true;\r\n}\r\n:root {\r\n    --web-view-ids: leagueStats;\r\n}\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    border: none;\r\n}\r\n#leagueStats {\r\n    position: absolute;\r\n    background: #E5E5E5;\r\n    width: 1920px;\r\n    height: 1080px;\r\n    background-color: rgba(28,33,62,1);\r\n    overflow: hidden;\r\n    --web-view-name: leagueStats;\r\n    --web-view-id: leagueStats;\r\n    --web-scale-on-resize: true;\r\n    --web-enable-deep-linking: true;\r\n}\r\n@keyframes fadein {\r\n\r\n    0% {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n\r\n}\r\n#Background {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 1706px;\r\n    height: 1080px;\r\n    left: 215px;\r\n    top: 0px;\r\n}\r\n#Home {\r\n    position: absolute;\r\n    left: 73px;\r\n    top: 170px;\r\n    overflow: visible;\r\n    width: 39px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Merrant;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n#ID001_home {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 30.308px;\r\n    left: 18px;\r\n    top: 164px;\r\n    overflow: visible;\r\n}\r\n#Group_9_dw {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 13.567px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n#Group_8_dx {\r\n    position: absolute;\r\n    width: 34px;\r\n    height: 13.567px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n.Path_20_dy {\r\n    overflow: visible;\r\n    position: absolute;\r\n    width: 34.565px;\r\n    height: 14.157px;\r\n    left: 0px;\r\n    top: 0px;\r\n    transform: matrix(1,0,0,1,0,0);\r\n}\r\n#Group_11_dz {\r\n    position: absolute;\r\n    width: 26.503px;\r\n    height: 16.712px;\r\n    left: 3.749px;\r\n    top: 13.597px;\r\n    overflow: visible;\r\n}\r\n#Group_10_d {\r\n    position: absolute;\r\n    width: 26.503px;\r\n    height: 16.712px;\r\n    left: 0px;\r\n    top: 0px;\r\n    overflow: visible;\r\n}\r\n.Path_21_d {\r\n    overflow: visible;\r\n    position: absolute;\r\n    width: 27.003px;\r\n    height: 17.212px;\r\n    left: 0px;\r\n    top: 0px;\r\n    transform: matrix(1,0,0,1,0,0);\r\n}\r\n#VOLT_GG {\r\n    position: absolute;\r\n    left: 24px;\r\n    top: 53px;\r\n    overflow: visible;\r\n    width: 145px;\r\n    white-space: nowrap;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: index.html;\r\n    cursor: pointer;\r\n    text-align: center;\r\n    font-family: Thunder Titan;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 28px;\r\n    color: rgba(255,255,255,1);\r\n    letter-spacing: 0.1px;\r\n}\r\n#output_onlinepngtools {\r\n    position: absolute;\r\n    width: 37px;\r\n    height: 40px;\r\n    left: 18px;\r\n    top: 269px;\r\n    overflow: visible;\r\n}\r\n#output_onlinepngtools__2__ds {\r\n    position: absolute;\r\n    width: 119px;\r\n    height: 38px;\r\n    left: 37px;\r\n    top: 378px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: cod_home.html;\r\n    cursor: pointer;\r\n}\r\n#Component_7___3 {\r\n    position: absolute;\r\n    width: 93px;\r\n    height: 30.308px;\r\n    left: 18px;\r\n    top: 164px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: index.html;\r\n    cursor: pointer;\r\n}\r\n#Component_8___3 {\r\n    position: absolute;\r\n    width: 168px;\r\n    height: 40px;\r\n    left: 18px;\r\n    top: 269px;\r\n    overflow: visible;\r\n    --web-animation: fadein 0.3s ease-out;\r\n    --web-action-type: page;\r\n    --web-action-target: league_home.html;\r\n    cursor: pointer;\r\n}\r\n#League_of_Legends__d {\r\n    position: absolute;\r\n    left: 48px;\r\n    top: 6px;\r\n    overflow: visible;\r\n    width: 121px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Merrant;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 14px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n.Game1{\r\n    position: absolute;\r\n    width: 1360px;\r\n    height: 192px;\r\n    top: 20px;\r\n    left: 360px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    opacity: 0.95;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Game2{\r\n    position: absolute;\r\n    width: 1360px;\r\n    height: 192px;\r\n    top: 232px;\r\n    left: 360px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    opacity: 0.95;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Game3{\r\n    position: absolute;\r\n    width: 1360px;\r\n    height: 192px;\r\n    top: 444px;\r\n    left: 360px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    opacity: 0.95;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Game4{\r\n    position: absolute;\r\n    width: 1360px;\r\n    height: 192px;\r\n    top: 656px;\r\n    left: 360px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    opacity: 0.95;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Game5{\r\n    position: absolute;\r\n    width: 1360px;\r\n    height: 192px;\r\n    top: 868px;\r\n    left: 360px;\r\n    background-color: rgba(43,51,91,1);\r\n    border-radius: 4px;\r\n    opacity: 0.95;\r\n    overflow: visible;\r\n    color: white;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    vertical-align: top;\r\n    padding-top: 10px;\r\n}\r\n.Champion{\r\n    position: absolute;\r\n    top: 10px;\r\n    width: 340px;\r\n    height: 192px;\r\n    color: white;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    padding-top: 26px;\r\n}\r\n.Spell1{\r\n    position: absolute;\r\n    top: 20px;\r\n    left: 340px;\r\n    width: 340px;\r\n    height: 192px;\r\n    color: white;\r\n}\r\n.Spell2{\r\n    position: absolute;\r\n    top: 112px;\r\n    left: 340px;\r\n    width: 340px;\r\n    height: 96px;\r\n}\r\n.KDA{\r\n    position: absolute;\r\n    left: 680px;\r\n    width: 340px;\r\n    height: 192px;\r\n    color: white;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    padding-top: 26px;\r\n}\r\n.Item1{\r\n    position: absolute;\r\n    left: 1020px;\r\n    top: 20px;\r\n    width: 340px;\r\n    height: 96px;\r\n}\r\n.Item2{\r\n    position: absolute;\r\n    left: 1020px;\r\n    top: 112px;\r\n    width: 340px;\r\n    height: 96px;s\r\n}\r\n\r\n\r\n\r\n#Graph_Rect {\r\n    fill: transparent;\r\n    stroke: rgba(112,112,112,1);\r\n    stroke-width: 1px;\r\n    stroke-linejoin: miter;\r\n    stroke-linecap: butt;\r\n    stroke-miterlimit: 4;\r\n    shape-rendering: auto;\r\n}\r\n.Graph_Rect {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 563px;\r\n    height: 324px;\r\n    left: 299px;\r\n    top: 707px;\r\n}\r\n#Insert_Graph_ {\r\n    left: 476px;\r\n    top: 725px;\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 211px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Helvetica Neue;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 36px;\r\n    color: rgba(234,236,247,1);\r\n}\r\n#BigGraph_Rect {\r\n    fill: transparent;\r\n    stroke: rgba(112,112,112,1);\r\n    stroke-width: 1px;\r\n    stroke-linejoin: miter;\r\n    stroke-linecap: butt;\r\n    stroke-miterlimit: 4;\r\n    shape-rendering: auto;\r\n}\r\n.BigGraph_Rect {\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 681px;\r\n    height: 336px;\r\n    left: 1020px;\r\n    top: 707px;\r\n}\r\n#Big_Graph_ {\r\n    left: 1274px;\r\n    top: 725px;\r\n    position: absolute;\r\n    overflow: visible;\r\n    width: 174px;\r\n    white-space: nowrap;\r\n    text-align: left;\r\n    font-family: Helvetica Neue;\r\n    font-style: normal;\r\n    font-weight: normal;\r\n    font-size: 36px;\r\n    color: rgba(234,236,247,1);\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/static/leagueStats.css	(revision 46e8c949d0845e2885d6b2de989be307af605812)
++++ src/static/leagueStats.css	(date 1604865734342)
+@@ -200,13 +200,9 @@
+     left: 360px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    opacity: 0.95;
++    opacity: 0.5;
+     overflow: visible;
+     color: white;
+-    font-size: 20px;
+-    text-align: center;
+-    vertical-align: top;
+-    padding-top: 10px;
+ }
+ .Game2{
+     position: absolute;
+@@ -216,13 +212,8 @@
+     left: 360px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    opacity: 0.95;
++    opacity: 0.50;
+     overflow: visible;
+-    color: white;
+-    font-size: 20px;
+-    text-align: center;
+-    vertical-align: top;
+-    padding-top: 10px;
+ }
+ .Game3{
+     position: absolute;
+@@ -232,13 +223,8 @@
+     left: 360px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    opacity: 0.95;
++    opacity: 0.50;
+     overflow: visible;
+-    color: white;
+-    font-size: 20px;
+-    text-align: center;
+-    vertical-align: top;
+-    padding-top: 10px;
+ }
+ .Game4{
+     position: absolute;
+@@ -248,13 +234,8 @@
+     left: 360px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    opacity: 0.95;
++    opacity: 0.50;
+     overflow: visible;
+-    color: white;
+-    font-size: 20px;
+-    text-align: center;
+-    vertical-align: top;
+-    padding-top: 10px;
+ }
+ .Game5{
+     position: absolute;
+@@ -264,13 +245,8 @@
+     left: 360px;
+     background-color: rgba(43,51,91,1);
+     border-radius: 4px;
+-    opacity: 0.95;
++    opacity: 0.50;
+     overflow: visible;
+-    color: white;
+-    font-size: 20px;
+-    text-align: center;
+-    vertical-align: top;
+-    padding-top: 10px;
+ }
+ .Champion{
+     position: absolute;

@@ -5,6 +5,7 @@ function makeApiCallCod(){ //this method will be the only method needed to be ca
     console.log("Calling player 1...")
     const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
     const platform = sessionStorage.getItem('platform');
+    const gameMode = sessionStorage.getItem('mode'); // use this tag when the multiplayer element is created in the front end
     const mode = "br";
     let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
     routeStrInput += "warzone/";
@@ -307,8 +308,12 @@ function GetCodBrMatchStats(jsonStr) {
 
 function GetCodMultiplayerStats(jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr)
-    //parse jason file and go through dictionary to get values
-    //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    const topPlayer1 = codInfoDictionary['entries'][0]
+    const topPlayer2 = codInfoDictionary['entries'][1]
+    const topPlayer3 = codInfoDictionary['entries'][0]
+    const topPlayer4 = codInfoDictionary['entries'][0]
+    const topPlayer5 = codInfoDictionary['entries'][0]
+    //all top player stats
 }
 
 

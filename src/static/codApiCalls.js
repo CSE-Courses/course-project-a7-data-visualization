@@ -115,7 +115,7 @@ function GetCodBrStats(player, jsonStr){
     let gamesPlayed = "";
     let kdRatioFloat = parseFloat(codInfoDictionary["br"]["kdRatio"]);
 
-    mode += "Battle Royale";
+    mode += "Warzone";
     kills += codInfoDictionary["br"]["kills"];
     deaths += codInfoDictionary["br"]["deaths"];
     kd += kdRatioFloat.toFixed(3);

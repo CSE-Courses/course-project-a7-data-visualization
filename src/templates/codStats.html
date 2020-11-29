@@ -14,8 +14,13 @@
 <script>
     console.log(sessionStorage.getItem("gamertag"))
     console.log(sessionStorage.getItem('platform'))
-    makeApiCallCod();
-    makeMatchesApiCallCod();
+    if (sessionStorage.getItem("gamemode") == "br"){
+        makeApiCallCod();
+        makeMatchesApiCallCod();
+    }
+    else{
+        //do multiplayer gamemode calls
+    }
 </script>
 
 <div id="codStats">

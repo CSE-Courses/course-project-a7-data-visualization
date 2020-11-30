@@ -247,6 +247,7 @@ th, td {
 	text-align: center;
 	height: 5em;
 	color: white;
+	width: 25%;
 }
 tbody tr:nth-child(even) {
 	background: #191937;

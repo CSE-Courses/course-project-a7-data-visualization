@@ -26,30 +26,46 @@
 <div id="codStats">
     <img id="cod_background" src="../static/wp4517150.png">
     <div class="Mode">
-        <div class="Header">Mode</div>
+        <div class="Header" id="modeH">Mode</div>
         <div class="Data" id="mode"></div>
     </div>
     <div class="Top5">
-        <div class="Header">Top Fives</div>
+        <div class="Header" id="upMidH"></div>
         <div class="Data" id="top5"></div>
     </div>
     <div class="KD">
-        <div class="Header">K/D</div>
+        <div class="Header" id="upRH"></div>
         <div class="Data" id="kd"></div>
     </div>
     <div class="Kills">
-        <div class="Header">Kills</div>
+        <div class="Header" id="lowLH"></div>
         <div class="Data" id="kills"></div>
     </div>
     <div class="Deaths">
-        <div class="Header">Deaths</div>
+        <div class="Header" id="lowMidH"></div>
         <div class="Data" id="deaths"></div>
     </div>
     <div class="Downs">
-        <div class="Header">Downs</div>
+        <div class="Header" id="lowRH"></div>
         <div class="Data" id="downs"></div>
     </div>
 
+     <script>
+         if (sessionStorage.getItem("gamemode") == "br"){
+            document.getElementById('upMidH').innerHTML = "Top Fives";
+            document.getElementById('upRH').innerHTML = "K/D";
+            document.getElementById('lowLH').innerHTML = "Kills";
+            document.getElementById('lowMidH').innerHTML = "Deaths";
+            document.getElementById('lowRH').innerHTML = "Downs";
+        }
+        else{
+            document.getElementById('upMidH').innerHTML = "K/D";
+            document.getElementById('upRH').innerHTML = "W/L";
+            document.getElementById('lowLH').innerHTML = "Assists";
+            document.getElementById('lowMidH').innerHTML = "Highest kill Game";
+            document.getElementById('lowRH').innerHTML = "Highest Kill Streak";
+        }
+     </script>
     <div id="Menu">
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">
@@ -77,10 +93,24 @@
     <table id = "table">
         <thead>
         <tr>
-            <th scope="col">Kills</th>
-            <th scope="col">K/D Ratio</th>
-            <th scope="col">Damage Dealt</th>
-            <th scope="col">Team Placement</th>
+            <th scope="col" id="firstCol"></th>
+            <th scope="col" id="secCol"></th>
+            <th scope="col" id="thirdCol"></th>
+            <th scope="col" id="fourthCol"></th>
+            <script>
+             if (sessionStorage.getItem("gamemode") == "br"){
+                document.getElementById('firstCol').innerHTML = "Kills";
+                document.getElementById('secCol').innerHTML = "K/D Ratio";
+                document.getElementById('thirdCol').innerHTML = "Damage Dealt";
+                document.getElementById('fourthCol').innerHTML = "Team Placement";
+            }
+            else{
+                document.getElementById('firstCol').innerHTML = "Win Status";
+                document.getElementById('secCol').innerHTML = "Kills";
+                document.getElementById('thirdCol').innerHTML = "K/D";
+                document.getElementById('fourthCol').innerHTML = "Assists";
+            }
+            </script>
         </tr>
         </thead>
         <tbody>

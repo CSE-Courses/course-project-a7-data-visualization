@@ -89,5 +89,13 @@ def leagueMultiplayerStats():
 def displayVisuals():
     return render_template("charts.html")
 
+@app.route("/league_leaderboard.html")
+def league_leaderbaord():
+    return render_template("league_leaderboard.html")
+
+@app.route("/cod_leaderboard.html")
+def cod_leaderbaord():
+    return render_template("cod_leaderboard.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

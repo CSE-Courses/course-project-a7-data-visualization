@@ -1,11 +1,11 @@
 .mediaViewInfo {
-    --web-view-name: cod_home;
-    --web-view-id: cod_home;
+    --web-view-name: cod_charts;
+    --web-view-id: cod_charts;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
 :root {
-    --web-view-ids: cod_home;
+    --web-view-ids: cod_charts;
 }
 * {
     margin: 0;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border: none;
 }
-#cod_home {
+#cod_charts {
     position: absolute;
     background: #E5E5E5;
     width: 100%;
@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: cod_home;
-    --web-view-id: cod_home;
+    --web-view-name: cod_charts;
+    --web-view-id: cod_charts;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -38,111 +38,16 @@
     }
 
 }
+.container {
+    height:100%;
+    left: 11.2%;
+}
 #cod_background {
     position: absolute;
     width: 88.80208333%;
     height: auto;
     left: 11.19791667%;
     top: 0;
-}
-
-.multiplayer{
-    height: 4.5%;
-    width: 12%;
-    opacity: 0.86;
-    position: absolute;
-    left: 58.3%;
-    top: 45.6%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
-}
-.multiplayer button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: cod_mult.html;
-    cursor: pointer;
-}
-.multiplayer button:hover {
-    background-color: rgba(44,54,129,1);
-}
-
-.singleplayer {
-    height: 4.5%;
-    width: 12%;
-    opacity: 0.86;
-    position: absolute;
-    left: 40.9%;
-    top: 45.6%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
-}
-.singleplayer button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: cod1.html;
-    cursor: pointer;
-}
-.singleplayer button:hover {
-    background-color: rgba(44,54,129,1);
-}
-
-.leaderboard{
-    height: 4.5%;
-    width: 12%;
-    opacity: 0.86;
-    position: absolute;
-    left: 49.6%;
-    top: 51.5%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
-}
-.leaderboard button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: cod_leaderboard.html;
-    cursor: pointer;
-}
-.leaderboard button:hover {
-    background-color: rgba(44,54,129,1);
 }
 
 #Menu {

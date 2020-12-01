@@ -6,9 +6,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="../static/charts.js"></script>
+    <script type="text/javascript" src="../static/codApiCalls.js"></script>
     <script id="applicationScript" type="text/javascript" src="../static/cod_home.js"></script>
     <style>
-
         .mediaViewInfo {
     --web-view-name: cod_charts;
     --web-view-id: cod_charts;
@@ -180,8 +180,6 @@
     <canvas id="radarChart"></canvas>
     <canvas id="pieChart"></canvas>
 </div>
-<script>renderCharts()</script>
-
     <div id="Menu">
             <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
             <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">
@@ -204,5 +202,6 @@
             <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png">
         </div>
     </div>
+<script>renderCharts()</script>
 </body>
 </html>

@@ -25,13 +25,13 @@ function renderCharts(){
         renderBar();
         renderLine();
         renderRadar();
-        renderPie();
+        //renderPie();
     }
     else{
         renderBar();
         renderLine();
-        //renderPie();
         renderRadar();
+        //renderPie();
     }
 }
 
@@ -96,6 +96,7 @@ function renderBar(){
             data: {
                 labels: ["game 1", "game 2", "game 3", "game 4", "game 5"],
                 datasets: [{
+                    label: player1name,
                     barPercentage: 0.5,
                     categoryPercentage: 0.7,
                     data: [p1Game1kills, p1Game2kills, p1Game3kills, p1Game4kills, p1Game5kills],
@@ -113,6 +114,7 @@ function renderBar(){
                     hoverBorderColor: "#ffd500",
                     hoverBorderWidth: 3
                 }, {
+                    label: player2name,
                     barPercentage: 0.5,
                     categoryPercentage: 0.7,
                     data: [p2Game1kills, p2Game2kills, p2Game3kills, p2Game4kills, p2Game5kills],
@@ -132,6 +134,7 @@ function renderBar(){
                 }],
             },
             options: {
+                label: player2name,
                 title: { // floating title to be specific
                     display: true,
                     text: 'Kills per game',
@@ -184,6 +187,7 @@ function renderBar(){
             data: {
                 labels: ["game 1", "game 2", "game 3", "game 4", "game 5"],
                 datasets: [{
+                    label: player1name,
                     barPercentage: 0.5,
                     categoryPercentage: 0.7,
                     data: [p1Game1kills, p1Game2kills, p1Game3kills, p1Game4kills, p1Game5kills],
@@ -210,7 +214,7 @@ function renderBar(){
                 },
                 legend: {
                     position: "right",
-                    display: false
+                    display: true
                 },
                 layout: {
                     padding: {
@@ -472,80 +476,196 @@ function renderLine(){
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
 
-    let damage1 = player1MatchStats["matches"][0]["playerStats"]["damageDone"];
-    let damage2 = player1MatchStats["matches"][1]["playerStats"]["damageDone"];
-    let damage3 = player1MatchStats["matches"][2]["playerStats"]["damageDone"];
-    let damage4 = player1MatchStats["matches"][3]["playerStats"]["damageDone"];
-    let damage5 = player1MatchStats["matches"][4]["playerStats"]["damageDone"];
+    let player1Damage1 = player1MatchStats["matches"][0]["playerStats"]["damageDone"];
+    let player1Damage2 = player1MatchStats["matches"][1]["playerStats"]["damageDone"];
+    let player1Damage3 = player1MatchStats["matches"][2]["playerStats"]["damageDone"];
+    let player1Damage4 = player1MatchStats["matches"][3]["playerStats"]["damageDone"];
+    let player1Damage5 = player1MatchStats["matches"][4]["playerStats"]["damageDone"];
 
-    let kills1 = player1MatchStats["matches"][0]["playerStats"]["damageTaken"];
-    let kills2 = player1MatchStats["matches"][1]["playerStats"]["damageTaken"];
-    let kills3 = player1MatchStats["matches"][2]["playerStats"]["damageTaken"];
-    let kills4 = player1MatchStats["matches"][3]["playerStats"]["damageTaken"];
-    let kills5 = player1MatchStats["matches"][4]["playerStats"]["damageTaken"];
+    let player1Kills1 = player1MatchStats["matches"][0]["playerStats"]["damageTaken"];
+    let player1kills2 = player1MatchStats["matches"][1]["playerStats"]["damageTaken"];
+    let player1kills3 = player1MatchStats["matches"][2]["playerStats"]["damageTaken"];
+    let player1Kills4 = player1MatchStats["matches"][3]["playerStats"]["damageTaken"];
+    let player1Kills5 = player1MatchStats["matches"][4]["playerStats"]["damageTaken"];
 
-    let massPopChart = new Chart(myChart,{
-        type: 'line', //bar, horozontalbar, pie, line, doughnut
-        data:{
-            labels:["game 1", "game 2", "game 3", "game 4", "game 5"],
-            datasets:[{
-                label: 'damage done',
-                fill: false,
-                borderColor: "#ff5401",
-                //backgroundColor: "#e755ba",
-                pointBackgroundColor: "#030303",
-                pointBorderColor: "#000000",
-                //pointHoverBackgroundColor: "#55bae7",
-                //pointHoverBorderColor: "#55bae7",
-                data:[damage1,damage2,damage3,damage4,damage5],
-            },
-                {
-                    label: 'damage taken',
+    let player2Damage1
+    let player2Damage2
+    let player2Damage3
+    let player2Damage4
+    let player2Damage5
+
+    let player2Kills1
+    let player2kills2
+    let player2kills3
+    let player2Kills4
+    let player2Kills5
+
+    if(player2name != null){
+        player2Damage1 = player2MatchStats["matches"][0]["playerStats"]["damageDone"];
+        player2Damage2 = player2MatchStats["matches"][1]["playerStats"]["damageDone"];
+        player2Damage3 = player2MatchStats["matches"][2]["playerStats"]["damageDone"];
+        player2Damage4 = player2MatchStats["matches"][3]["playerStats"]["damageDone"];
+        player2Damage5 = player2MatchStats["matches"][4]["playerStats"]["damageDone"];
+
+        player2Kills1 = player2MatchStats["matches"][0]["playerStats"]["damageTaken"];
+        player2kills2 = player2MatchStats["matches"][1]["playerStats"]["damageTaken"];
+        player2kills3 = player2MatchStats["matches"][2]["playerStats"]["damageTaken"];
+        player2Kills4 = player2MatchStats["matches"][3]["playerStats"]["damageTaken"];
+        player2Kills5 = player2MatchStats["matches"][4]["playerStats"]["damageTaken"];
+    }
+
+    if(player2name != null){
+        let massPopChart = new Chart(myChart, {
+            type: 'line', //bar, horozontalbar, pie, line, doughnut
+            data: {
+                labels: ["game 1", "game 2", "game 3", "game 4", "game 5"],
+                datasets: [{
+                    label: (player1name + " damage done"),
                     fill: false,
-                    borderColor: "#ffc001",
+                    borderColor: "#ff5401",
                     //backgroundColor: "#e755ba",
                     pointBackgroundColor: "#030303",
-                    pointBorderColor: "#020700",
+                    pointBorderColor: "#000000",
                     //pointHoverBackgroundColor: "#55bae7",
                     //pointHoverBorderColor: "#55bae7",
-                    data:[kills1,kills2,kills3,kills4,kills5]
-                }
-            ],
-        },
-        options:{
-            elements: {
-                line: {
-                    tension: 0
-                }
-            },
-            title: { // floating title to be specific
-                display: true,
-                text: 'Damage Ratio',
-                titleFontSize: 8
-            },
-            legend:{
-                position: 'right'
-            },
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: "Damage"
+                    data: [player1Damage1, player1Damage2, player1Damage3, player1Damage4, player1Damage5],
+                },
+                    {
+                        label: (player1name + " damage taken"),
+                        fill: false,
+                        borderColor: "#ffc001",
+                        //backgroundColor: "#e755ba",
+                        pointBackgroundColor: "#030303",
+                        pointBorderColor: "#020700",
+                        //pointHoverBackgroundColor: "#55bae7",
+                        //pointHoverBorderColor: "#55bae7",
+                        data: [player1Kills1, player1kills2, player1kills3, player1Kills4, player1Kills5]
                     },
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        //labelString: "games"
+                    {
+                        label: (player2name + " damage done"),
+                        fill: false,
+                        borderColor: "#9e01ff",
+                        //backgroundColor: "#e755ba",
+                        pointBackgroundColor: "#030303",
+                        pointBorderColor: "#000000",
+                        //pointHoverBackgroundColor: "#55bae7",
+                        //pointHoverBorderColor: "#55bae7",
+                        data: [player2Damage1, player2Damage2, player2Damage3, player2Damage4, player2Damage5],
                     },
-                    ticks: {
-                        beginAtZero: true
+                    {
+                        label: (player2name + " damage taken"),
+                        fill: false,
+                        borderColor: "#018bb3",
+                        //backgroundColor: "#e755ba",
+                        pointBackgroundColor: "#030303",
+                        pointBorderColor: "#020700",
+                        //pointHoverBackgroundColor: "#55bae7",
+                        //pointHoverBorderColor: "#55bae7",
+                        data: [player2Kills1, player2kills2, player2kills3, player2Kills4, player2Kills5]
                     }
-                }]
+                ],
+            },
+            options: {
+                elements: {
+                    line: {
+                        tension: 0
+                    }
+                },
+                title: { // floating title to be specific
+                    display: true,
+                    text: 'Damage Ratio',
+                    titleFontSize: 8
+                },
+                legend: {
+                    position: 'right'
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Damage"
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            //labelString: "games"
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
             }
-        }
-    })
+        })
+    }
+    else{
+        let massPopChart = new Chart(myChart, {
+            type: 'line', //bar, horozontalbar, pie, line, doughnut
+            data: {
+                labels: ["game 1", "game 2", "game 3", "game 4", "game 5"],
+                datasets: [{
+                    label: (player1name + " damage done"),
+                    fill: false,
+                    borderColor: "#ff5401",
+                    //backgroundColor: "#e755ba",
+                    pointBackgroundColor: "#030303",
+                    pointBorderColor: "#000000",
+                    //pointHoverBackgroundColor: "#55bae7",
+                    //pointHoverBorderColor: "#55bae7",
+                    data: [player1Damage1, player1Damage2, player1Damage3, player1Damage4, player1Damage5],
+                },
+                    {
+                        label: (player1name + " damage taken"),
+                        fill: false,
+                        borderColor: "#ffc001",
+                        //backgroundColor: "#e755ba",
+                        pointBackgroundColor: "#030303",
+                        pointBorderColor: "#020700",
+                        //pointHoverBackgroundColor: "#55bae7",
+                        //pointHoverBorderColor: "#55bae7",
+                        data: [player1Kills1, player1kills2, player1kills3, player1Kills4, player1Kills5]
+                    }
+                ],
+            },
+            options: {
+                elements: {
+                    line: {
+                        tension: 0
+                    }
+                },
+                title: { // floating title to be specific
+                    display: true,
+                    text: 'Damage Ratio',
+                    titleFontSize: 8
+                },
+                legend: {
+                    position: 'right'
+                },
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Damage"
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            //labelString: "games"
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        })
+    }
 }

@@ -16,6 +16,9 @@
     console.log(sessionStorage.getItem('platform'))
     makeApiCallCod();
     makeMatchesApiCallCod();
+    if(sessionStorage.getItem("gamertag_2") != null){
+        sessionStorage.removeItem("gamertag_2");
+    }
 </script>
 
 <div id="codStats">

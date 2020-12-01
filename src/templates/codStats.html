@@ -14,12 +14,13 @@
 <script>
     console.log(sessionStorage.getItem("gamertag"))
     console.log(sessionStorage.getItem('platform'))
+    console.log(sessionStorage.getItem("gamemode"))
     if (sessionStorage.getItem("gamemode") == "br"){
         makeApiCallCod();
         makeMatchesApiCallCod();
     }
     else{
-        //do multiplayer gamemode calls
+        MakeMultiplayerStatsCalls();
     }
 </script>
 
@@ -60,9 +61,9 @@
         }
         else{
             document.getElementById('upMidH').innerHTML = "K/D";
-            document.getElementById('upRH').innerHTML = "W/L";
-            document.getElementById('lowLH').innerHTML = "Assists";
-            document.getElementById('lowMidH').innerHTML = "Highest kill Game";
+            document.getElementById('upRH').innerHTML = "Assists";
+            document.getElementById('lowLH').innerHTML = "W/L";
+            document.getElementById('lowMidH').innerHTML = "Highest Kill Game";
             document.getElementById('lowRH').innerHTML = "Highest Kill Streak";
         }
      </script>

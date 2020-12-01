@@ -98,6 +98,39 @@ function makeMatchesApiCallCod(){
 
     xhr.send(data);
 }
+function MakeMultiplayerStatsCalls() {
+    const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const platform = sessionStorage.getItem('platform');
+    let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput += "multiplayer/";
+    routeStrInput += userName.toLowerCase();
+    routeStrInput += "/"
+    routeStrInput += platform;
+    //const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+//const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            GetCodMultiplayerStats(this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "2d25fd40cdmsh437da74b4bee201p180745jsnd3e9a3336699");
+
+    xhr.send(data);
+
+
+}
+
 
 function GetCodBrStats(player, jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
@@ -306,9 +339,48 @@ function GetCodBrMatchStats(jsonStr) {
 }
 
 function GetCodMultiplayerStats(jsonStr){
-    const codInfoDictionary = JSON.parse(jsonStr)
+    console.log(jsonStr)
+
+    const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
+   /// console.log(codInfoDictionary); ///uncomment if you want to see dictionary content
+    if (codInfoDictionary.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+    sessionStorage.setItem("matchStats",jsonStr);
     //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    let mode = "";
+    let kdFloat = parseFloat(codInfoDictionary["lifetime"]["all"]["properties"]["kdRatio"]); // gets kd
+    let kdFixed = ""; // adjusts the float to a fixed 3 spots
+    let WLR = ""; /// win loss ratio
+    let assists = "";
+    let HKG = ""; /// highest kill game
+    let HKS = ""; /// highest kill steak
+
+    mode+= "Multiplayer";
+    kdFixed += kdFloat.toFixed(3); // adjusts the float to a fixed 3 spots
+    WLR += codInfoDictionary["lifetime"]["all"]["properties"]["winLossRatio"].toFixed(3);
+    assists += codInfoDictionary["lifetime"]["all"]["properties"]["assists"];
+    HKG += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillStreak"];
+    HKS += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
+    sessionStorage.setItem('mode', mode)
+    sessionStorage.setItem('deaths', kdFixed)
+    sessionStorage.setItem('kills', WLR)
+    sessionStorage.setItem('kd', assists)
+    sessionStorage.setItem('downs', HKG)
+    sessionStorage.setItem('topFives', HKS)
+    if (document.getElementById('mode') != null) {
+        console.log("Setting")
+        document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
+        document.getElementById("top5").innerHTML = (sessionStorage.getItem('topFives'))
+        document.getElementById("kd").innerHTML = (sessionStorage.getItem('kd'))
+        document.getElementById("kills").innerHTML = (sessionStorage.getItem('kills'))
+        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('deaths'))
+        document.getElementById("downs").innerHTML = (sessionStorage.getItem('downs'))
+        if (document.getElementById("gamesPlayed") != null) {
+            document.getElementById("gamesPlayed").innerHTML = (sessionStorage.getItem('gamesPlayed'))
+        }
+    }
 }
 
 

@@ -58,6 +58,7 @@ function renderBar(){
     }
 
     let maxValue = p1Game1kills;
+
     if(maxValue < p1Game2kills){
         maxValue = p1Game2kills;
     }
@@ -72,6 +73,9 @@ function renderBar(){
     }
 
     if(player2name != null){
+        if(maxValue < p2Game1kills){
+            maxValue = p2Game1kills;
+        }
         if(maxValue < p2Game2kills){
             maxValue = p2Game2kills;
         }
@@ -135,7 +139,7 @@ function renderBar(){
                 },
                 legend: {
                     position: "right",
-                    display: false
+                    display: true
                 },
                 layout: {
                     padding: {
@@ -305,70 +309,161 @@ function renderRadar(){
     Chart.defaults.global.defaultFontFamily = "lato";
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = "#020202";
-    let kills = player1BrStats["br"]["kills"];
-    let deaths = player1BrStats["br"]["deaths"];
-    let downs = player1BrStats["br"]["downs"];
+
+    let p1Kills = player1BrStats["br"]["kills"];
+    let p1Deaths = player1BrStats["br"]["deaths"];
+    let p1Downs = player1BrStats["br"]["downs"];
+
+    let p2Kills
+    let p2Deaths
+    let p2Downs
+
+    if(player2name != null){
+        p2Kills = player2BrStats["br"]["kills"];
+        p2Deaths = player2BrStats["br"]["deaths"];
+        p2Downs = player2BrStats["br"]["downs"];
+    }
     //let topFives = stats["br"]["topFive"];
-    let suggestedMax = kills;
-    if(suggestedMax < deaths){
-        suggestedMax = deaths;
+    let suggestedMax = p1Kills;
+
+    if(suggestedMax < p1Deaths){
+        suggestedMax = p1Deaths;
     }
-    if(suggestedMax < downs){
-        suggestedMax = downs
+    if(suggestedMax < p1Downs){
+        suggestedMax = p1Downs
     }
-    let massPopChart = new Chart(myChart,{
-        type: 'radar', //bar, horozontalbar, pie, line, doughnut
-        data:{
-            labels:["Kills","Deaths","Downs"],
-            datasets:[{
-                data:[kills,deaths,downs],
-                label: player1name,
-                fill: true,
-                borderColor:['rgb(231,3,30,0.70)'],
-                pointBackgroundColor: "#030303",
-                pointBorderColor: "#000000",
-                //pointHoverBackgroundColor: "#55bae7",
-                //pointHoverBorderColor: "#55bae7",
-                backgroundColor:[
-                    'rgba(229,7,7,0.2)'
+
+    if(suggestedMax < p2Deaths){
+        suggestedMax = p2Deaths;
+    }
+    if(suggestedMax < p2Downs){
+        suggestedMax = p2Downs
+    }
+    if(suggestedMax < p2Kills){
+        suggestedMax = p2Kills
+    }
+    if(player2name != null) {
+        let massPopChart = new Chart(myChart, {
+            type: 'radar', //bar, horozontalbar, pie, line, doughnut
+            data: {
+                labels: ["Kills", "Deaths", "Downs"],
+                datasets: [{
+                    data: [p1Kills, p1Deaths, p1Downs],
+                    label: player1name,
+                    fill: true,
+                    borderColor: ['rgb(231,3,30,0.70)'],
+                    pointBackgroundColor: "#030303",
+                    pointBorderColor: "#000000",
+                    //pointHoverBackgroundColor: "#55bae7",
+                    //pointHoverBorderColor: "#55bae7",
+                    backgroundColor: [
+                        'rgba(229,7,7,0.2)'
+                    ],
+                },
+                    {
+                        data: [p2Kills, p2Deaths, p2Downs],
+                        label: player2name,
+                        fill: true,
+                        borderColor: ['rgb(177,239,4,0.6)'],
+                        pointBackgroundColor: "#030303",
+                        pointBorderColor: "#000000",
+                        //pointHoverBackgroundColor: "#55bae7",
+                        //pointHoverBorderColor: "#55bae7",
+                        backgroundColor: [
+                            'rgb(29,248,5,0.4)'
+                        ],
+                    }
                 ],
             },
-            ],
-        },
-        options:{
-            title: { // floating title to be specific
-                display: true,
-                text: 'BR KDD',
-                titleFontSize: 18
-            },
-            legend:{
-                position: 'left'
-            },
-            layout: {
-                padding: {
-                    left: 50,
-                    right: 50,
-                    top: 50,
-                    bottom: 50
-                }
-            },
-            scale: {
-                ticks: {
-                    suggestedMin: 0,
-                    suggestedMax: suggestedMax + 100
+            options: {
+                title: { // floating title to be specific
+                    display: true,
+                    text: 'BR KDD',
+                    titleFontSize: 18
                 },
-                gridLines: {
-                    color: 'grey'
+                legend: {
+                    position: 'left'
                 },
-                angleLines: {
-                    color: 'blue'
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 50,
+                        top: 50,
+                        bottom: 50
+                    }
                 },
-                pointLabels: {
-                    fontSize: 18,
+                scale: {
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: suggestedMax + 100
+                    },
+                    gridLines: {
+                        color: 'grey'
+                    },
+                    angleLines: {
+                        color: 'blue'
+                    },
+                    pointLabels: {
+                        fontSize: 18,
+                    },
                 },
+            }
+        })
+    }
+    else{
+        let massPopChart = new Chart(myChart, {
+            type: 'radar', //bar, horozontalbar, pie, line, doughnut
+            data: {
+                labels: ["Kills", "Deaths", "Downs"],
+                datasets: [{
+                    data: [p1Kills, p1Deaths, p1Downs],
+                    label: player1name,
+                    fill: true,
+                    borderColor: ['rgb(231,3,30,0.70)'],
+                    pointBackgroundColor: "#030303",
+                    pointBorderColor: "#000000",
+                    //pointHoverBackgroundColor: "#55bae7",
+                    //pointHoverBorderColor: "#55bae7",
+                    backgroundColor: [
+                        'rgba(229,7,7,0.2)'
+                    ],
+                },],
             },
-        }
-    })
+            options: {
+                title: { // floating title to be specific
+                    display: true,
+                    text: 'BR KDD',
+                    titleFontSize: 18
+                },
+                legend: {
+                    position: 'left'
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 50,
+                        top: 50,
+                        bottom: 50
+                    }
+                },
+                scale: {
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: suggestedMax + 100
+                    },
+                    gridLines: {
+                        color: 'grey'
+                    },
+                    angleLines: {
+                        color: 'blue'
+                    },
+                    pointLabels: {
+                        fontSize: 18,
+                    },
+                },
+            }
+        })
+    }
 }
 function renderLine(){
     let myChart = document.getElementById('lineChart').getContext('2d');

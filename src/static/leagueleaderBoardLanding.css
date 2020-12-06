@@ -1,11 +1,11 @@
 .mediaViewInfo {
-    --web-view-name: league_home;
-    --web-view-id: league_home;
+    --web-view-name: league1;
+    --web-view-id: league1;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
 :root {
-    --web-view-ids: league_home;
+    --web-view-ids: league1;
 }
 * {
     margin: 0;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border: none;
 }
-#league_home {
+#league1 {
     position: absolute;
     background: #E5E5E5;
     width: 100%;
@@ -23,8 +23,8 @@
     background-color: rgba(28,33,62,1);
     font-size: 2px;
     overflow: hidden;
-    --web-view-name: league_home;
-    --web-view-id: league_home;
+    --web-view-name: league1;
+    --web-view-id: league1;
     --web-scale-on-resize: true;
     --web-enable-deep-linking: true;
 }
@@ -46,104 +46,139 @@
     top: 0;
 }
 
-.multiplayer{
-    height: 4.5%;
-    width: 12%;
+.Search {
+    height: 4.44444444%;
+    width: 48.38541667%;
     opacity: 0.86;
     position: absolute;
-    left: 58.3%;
-    top: 45.6%;
+    left: 33.75%;
+    top: 45.55555%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Search input[type=text] {
+    padding: 5px;
+    padding-left: 50px;
+    font-size: 10em;
+    height: 100%;
+    width: 86.11410118%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search button {
+    float: right;
+    font-size: 10em;
+    height: 100%;
+    width: 11.62540366%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+}
+.Search button:hover {background-color: rgba(44,54,129,1);}
+
+
+.Dropdown_player1 {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 13.02083333%;
+    top: 48.4%;
     overflow: visible;
     white-space: nowrap;
     text-align: center;
     font-family: Merrant;
     font-style: normal;
     font-weight: normal;
-    color: rgba(43,51,91,1);
 }
-.multiplayer button {
+.Dropdown_player2 {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 40.04166667%;
+    top: 48.4%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+.Dropdown_player1 button{
+    font-size: 20px;
     height: 100%;
     width: 100%;
-    font-size: 10em;
     border: none;
     outline: none;
     background-color: rgba(43,51,91,1);
     color: rgba(255,255,255,1);
     border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: league_mult.html;
     cursor: pointer;
 }
-.multiplayer button:hover {
-    background-color: rgba(44,54,129,1);
+.Dropdown_player2 button{
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Dropdown_player1-Content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(43,51,91,1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.Dropdown_player2-Content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(43,51,91,1);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.Dropdown_player1-Content button{
+    display: block;
+    padding: 14px;
+    cursor: pointer;
+}
+.Dropdown_player2-Content button{
+    display: block;
+    padding: 14px;
+    cursor: pointer;
 }
 
-.singleplayer {
-    height: 4.5%;
-    width: 12%;
-    opacity: 0.86;
-    position: absolute;
-    left: 40.9%;
-    top: 45.6%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
-}
-.singleplayer button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: league1.html;
-    cursor: pointer;
-}
-.singleplayer button:hover {
-    background-color: rgba(44,54,129,1);
-}
+.Dropdown_player1-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_player1:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown_player1:hover .Dropdown_player1-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player1:hover .Dropdown_player1-Content {display: block;}
 
-.leaderboard{
-    height: 4.5%;
-    width: 12%;
-    opacity: 0.86;
-    position: absolute;
-    left: 49.6%;
-    top: 51.5%;
-    overflow: visible;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Merrant;
-    font-style: normal;
-    font-weight: normal;
-    color: rgba(43,51,91,1);
-}
-.leaderboard button {
-    height: 100%;
-    width: 100%;
-    font-size: 10em;
-    border: none;
-    outline: none;
-    background-color: rgba(43,51,91,1);
-    color: rgba(255,255,255,1);
-    border-radius: 4px;
-    --web-animation: fadein 0.3s ease-out;
-    --web-action-type: page;
-    --web-action-target: league_leaderboardLanding.html;
-    cursor: pointer;
-}
-.leaderboard button:hover {
-    background-color: rgba(44,54,129,1);
-}
+.Dropdown_player2-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_player2:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown_player2:hover .Dropdown_player2-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player2:hover .Dropdown_player2-Content {display: block;}
+
+
+
 
 #Menu {
     position: absolute;

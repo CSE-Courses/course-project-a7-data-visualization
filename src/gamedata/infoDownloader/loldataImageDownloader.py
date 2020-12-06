@@ -13,6 +13,7 @@ import  numpy as np
 def url_to_image(name,ofType):
         toadd =  'http://ddragon.leagueoflegends.com/cdn/10.24.1/img/'
         url = (toadd + ofType + "/" + name)
+        print()
         resp = urllib.request.urlopen(url)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)
@@ -34,7 +35,9 @@ def imagegetter(input,ofType):
             name = str(d[key])
             name = name[17:]
        else:
-            name =  str(d[key][0])
+            raw_name =  str(d[key][0])
+            Spname = raw_name.split("/")
+            name = Spname[0]
 
        try:
            image = url_to_image(name,ofType)

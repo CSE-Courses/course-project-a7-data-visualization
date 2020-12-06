@@ -1,12 +1,17 @@
 # global variables
 import ast
 import json
+import urllib
+from urllib.request import Request
 
 import pandas as pd
+from pandas.core.algorithms import take
 from riotwatcher import LolWatcher
 from pathlib import Path
 from pantheon import pantheon
 import asyncio
+
+import time
 
 
 def getdic():
@@ -28,8 +33,29 @@ def getDataTwo(usernameOne,usernameTwo,regionOne,regionTwo):
     dfTwo = lolDataGrabber(usernameTwo,regionTwo,champ_dict,item_dict,spell_dict,lastN)
     return dfOne,dfTwo
 
+
+def getTopFive(server,typeOfRank):
+    start_time = time.time()
+    lastN = 3
+    champ_dict,item_dict,spell_dict = getdic()
+    getdata  = getLeaderBoard(server,typeOfRank)
+
+
+    usernameOne = getdata[0]['summonerName']
+    usernameTwo = getdata[1]['summonerName']
+    usernameThree = getdata[2]['summonerName']
+    usernameFour = getdata[3]['summonerName']
+    usernameFive = getdata[4]['summonerName']
+
+    dfOne = lolDataGrabber(usernameOne,server,champ_dict,item_dict,spell_dict,lastN)
+    dfTwo = lolDataGrabber(usernameTwo,server,champ_dict,item_dict,spell_dict,lastN)
+    dfThree = lolDataGrabber(usernameThree,server,champ_dict,item_dict,spell_dict,lastN)
+    dfFour = lolDataGrabber(usernameFour,server,champ_dict,item_dict,spell_dict,lastN)
+    dfFive = lolDataGrabber(usernameFive,server,champ_dict,item_dict,spell_dict,lastN)
+    return dfOne,dfTwo,dfThree,dfFour,dfFive
+
 def getApi(inputforlate):
-    api_key = 'RGAPI-07f1f84c-f98a-40d1-b3df-b7ec457bed77'
+    api_key = 'RGAPI-e2cd6909-220a-4d26-8855-ae98746f30be'
     return api_key
 
 def lolDataGrabber(username, my_region,champ_dict,item_dict,spell_dict,lastN):
@@ -101,23 +127,19 @@ def requestsLog(url, status, headers):
     print(status)
     print(headers)
 
-def getLeaderBoard(server):
+
+def getLeaderBoard(server,typeOfRank):
     api_key = getApi(server)
-    panth = pantheon.Pantheon(server, api_key, errorHandling=True)
-    panth_americas = pantheon.Pantheon("americas", api_key, errorHandling=True)
-    loop = asyncio.get_event_loop()
+    url = "https://" + server + ".api.riotgames.com/lol/league/v4/challengerleagues/by-queue/" + typeOfRank + "?api_key="  + api_key
+    print(url)
+    response = urllib.request.urlopen(url)
+    data = json.loads(response.read())
 
-    try:
-        data_flex = loop.run_until_complete(panth.getChallengerLeague("RANKED_FLEX_SR"))
-    except Exception as e:
-        print(e)
+    return data['entries']
 
-    return data_flex
 
 def main():
-   data_flex =  getLeaderBoard("na1")
-   for k in data_flex["entries"]:
-       print(k)
+   data_flex =  getTopFive("na1","RANKED_SOLO_5x5")
 
 
 if __name__ == "__main__":

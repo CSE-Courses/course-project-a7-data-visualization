@@ -4,26 +4,79 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>league</title>
-    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/league_home.css"/>
-    <script id="applicationScript" type="text/javascript" src="../static/league_home.js"></script>
+    <title>league1</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/leagueleaderBoardLanding.css"/>
+    <script id="applicationScript" type="text/javascript" src="../static/leagueleaderBoardLanding.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
-<div id="league_home">
+<div id="league1">
     <img id="League_background" src="../static/c_o_champion_thresh_spirit_blo.png">
+    <form method="POST">
+        <div class="Dropdown_player1">
+            <button class="dropbtn" type="Button" id="Server" name="Server">Player Region</button>
+            <div class="Dropdown_player1-Content">
+                <button type="Button" onclick="changeServer1NA()">North America</button>
+                <script>function changeServer1NA(){
+                    document.getElementById("Server").innerHTML = "North America"
+                    document.getElementById("Region").value = "na1"
+                }</script>
+                <button type="Button" onclick="changeServer1BR()">Brazil</button>
+                <script>function changeServerBR1(){
+                    document.getElementById("Server").innerHTML = "Brazil"
+                    document.getElementById("Region").value = "br1"
+                }</script>
+                <button type="Button" onclick="changeServer1RU()">Russia</button>
+                <script>function changeServer1RU(){
+                    document.getElementById("Server").innerHTML = "Russia"
+                    document.getElementById("Region").value = "ru1"
+                }</script>
+                <button type="Button" onclick="changeServer1EE()">Europe East</button>
+                <script>function changeServer1EE(){
+                    document.getElementById("Server").innerHTML = "Europe East"
+                    document.getElementById("Region").value = "eun1"
+                }</script>
+                <button type="Button" onclick="changeServer1EW()">Europe West</button>
+                <script>function changeServer1EW(){
+                    document.getElementById("Server").innerHTML = "Europe West"
+                    document.getElementById("Region").value = "euw1"
+                }</script>
+                <button type="Button" onclick="changeServer1JP()">Japan</button>
+                <script>function changeServer1JP(){
+                    document.getElementById("Server").innerHTML = "Japan"
+                    document.getElementById("Region").value = "jp1"
+                }</script>
+                <button type="Button" onclick="changeServer1KR()">Korea</button>
+                <script>function changeServer1KR(){
+                    document.getElementById("Server").innerHTML = "Korea"
+                    document.getElementById("Region").value = "kr"
+                }</script>
+            </div>
+        </div>
+        <div class="Dropdown_player2">
+            <button class="dropbtn" type="Button" id="Server_1" name="Server_1">Type of Rank</button>
+            <div class="Dropdown_player2-Content">
+                <button type="Button" onclick="changeTypeFlex()">RANKED SOLO</button>
+                <script>function changeTypeFlex(){
+                    document.getElementById("Server_1").innerHTML = "RANKED SOLO"
+                    document.getElementById("Rank").value = "RANKED_SOLO_5x5"
+                }</script>
+                <button type="Button" onclick="changeTypeSR()">RANKED FLEX</button>
+                <script>function changeTypeSR() {
+                    document.getElementById("Server_1").innerHTML = "RANKED FLEX"
+                    document.getElementById("Rank").value = "RANKED_FLEX_SR"
+                }</script>
+            </div>
+        </div>
 
-    <div class="singleplayer">
-		<button onclick="application.goToTargetView(event)">1 Player Search</button>
-    </div>
+        <div class="Search">
 
-	<div class="multiplayer">
-		<button onclick="application.goToTargetView(event)">2 Player Search</button>
-    </div>
+            <input type="hidden" id="Region" name="Region">
+            <input type="hidden" id="Rank" name="Rank">
+            <button type="submit">Search</button>
+        </div>
 
-    <div class="leaderboard">
-		<button onclick="application.goToTargetView(event)"> <br>Leaderboard</button>
-	</div>
+    </form>
     <div id="Menu">
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Volt">VOLT.GG</div>
         <div onclick="application.goToTargetView(event)" id="Menu_Option_Home" class="Menu_Option_Home">

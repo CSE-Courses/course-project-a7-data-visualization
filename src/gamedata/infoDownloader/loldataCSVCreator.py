@@ -7,7 +7,7 @@ from riotwatcher import LolWatcher
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-b1dd43c7-5138-4305-819b-ee7a9dd6c5b8'
+    api_key = 'RGAPI-e2cd6909-220a-4d26-8855-ae98746f30be'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -29,7 +29,7 @@ def getLolData(username, my_region):
         row = static_champ_list['data'][valueOne]
         key = row["key"]
         name = str(row["image"]["full"])
-        image = str("../static/" +  "champion/" + str(row["image"]["full"]))
+        image = str(row["image"]["full"])
         value = [name,image]
         champ_dict[key] = value
 

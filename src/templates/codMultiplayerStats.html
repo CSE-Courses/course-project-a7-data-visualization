@@ -16,8 +16,12 @@
     console.log(sessionStorage.getItem('platform'))
     console.log(sessionStorage.getItem("gamertag_2"))
     console.log(sessionStorage.getItem('platform_2'))
-    makeMultiplayerApiCallCod();
-
+    if (sessionStorage.getItem('gamemode') == "br"){
+        makeMultiplayerApiCallCod();
+    }
+    else{
+        //do 2 player search for multiplayer gamemode api calls
+    }
 </script>
 <div id="codMultiplayerStats">
     <img id="CoD_background" src="../static/wp4517150.png">

@@ -207,8 +207,9 @@
     position: absolute;
     width: 1.04390625%;
     height: 1.856296296%;
-    left: 39.92671875%;
+    left: 39.65%;
     top: 46.69333%;
+    opacity: .7;
     transform: matrix(1,0,0,1,0,0);
 }
 
@@ -216,8 +217,9 @@
     position: absolute;
     width: 1.04390625%;
     height: 1.856296296%;
-    left: 39.92671875%;
+    left: 39.65%;
     top: 52.43407074%;
+    opacity: .7;
     transform: matrix(1,0,0,1,0,0);
 }
 

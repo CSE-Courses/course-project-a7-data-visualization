@@ -85,7 +85,7 @@ def league_mult():
 def leagueMultiplayerStats():
     return render_template("leagueMultiplayerStats.html")
 
-@app.route("/charts")
+@app.route("/charts.html")
 def displayVisuals():
     return render_template("charts.html")
 

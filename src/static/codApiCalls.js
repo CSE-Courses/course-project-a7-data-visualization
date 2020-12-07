@@ -98,6 +98,41 @@ function makeMatchesApiCallCod(){
 
     xhr.send(data);
 }
+
+function makeMultiplayerMatchesApiCallCod(){
+
+    const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const platform = sessionStorage.getItem('platform');
+    let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput += "multiplayer-matches/";
+    routeStrInput += userName;
+    routeStrInput += "/"
+    routeStrInput += platform;
+
+
+    //const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            GetCodMultiplayerMatchStats(this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+
+    xhr.open("GET", routeStrInput);
+
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+
+    xhr.send(data);
+}
 function MakeMultiplayerStatsCalls() {
     const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
     const platform = sessionStorage.getItem('platform');
@@ -366,30 +401,171 @@ function GetCodMultiplayerStats(jsonStr){
     mode+= "Multiplayer";
     kdFixed += kdFloat.toFixed(3); // adjusts the float to a fixed 3 spots
     WLR += codInfoDictionary["lifetime"]["all"]["properties"]["winLossRatio"].toFixed(3);
-    assists += codInfoDictionary["lifetime"]["all"]["properties"]["assists"];
-    HKG += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillStreak"];
-    HKS += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
+    assists += codInfoDictionary["lifetime"]["all"]["properties"]["bestAssists"];
+    HKS += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillStreak"];
+    HKG += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
     sessionStorage.setItem('mode', mode)
-    sessionStorage.setItem('deaths', kdFixed)
-    sessionStorage.setItem('kills', WLR)
-    sessionStorage.setItem('kd', assists)
-    sessionStorage.setItem('downs', HKG)
-    sessionStorage.setItem('topFives', HKS)
+    sessionStorage.setItem('HKS', HKS)
+    sessionStorage.setItem('WLR', WLR)
+    sessionStorage.setItem('ASSISTS', assists)
+    sessionStorage.setItem('HKG', HKG)
+    sessionStorage.setItem('KD', kdFixed)
+
     if (document.getElementById('mode') != null) {
         console.log("Setting")
         document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
-        document.getElementById("top5").innerHTML = (sessionStorage.getItem('topFives'))
-        document.getElementById("kd").innerHTML = (sessionStorage.getItem('kd'))
-        document.getElementById("kills").innerHTML = (sessionStorage.getItem('kills'))
-        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('deaths'))
-        document.getElementById("downs").innerHTML = (sessionStorage.getItem('downs'))
-        if (document.getElementById("gamesPlayed") != null) {
-            document.getElementById("gamesPlayed").innerHTML = (sessionStorage.getItem('gamesPlayed'))
-        }
+        document.getElementById("top5").innerHTML = (sessionStorage.getItem('KD'))
+        document.getElementById("kd").innerHTML = (sessionStorage.getItem('ASSISTS'))
+        document.getElementById("kills").innerHTML = (sessionStorage.getItem('WLR'))
+        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('HKG'))
+        document.getElementById("downs").innerHTML = (sessionStorage.getItem('HKS'))
     }
 }
 
+function GetCodMultiplayerMatchStats(jsonStr) {
+    console.log('made it to function');
+    sessionStorage.setItem("multiplayerMatchStats",jsonStr);
+    const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
+    //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    if (codInfoDictionary.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+    let match1_result = "";
+    let match1_kills = "";
+    let match1_kdratio = "";
+    let match1_assist = "";
 
+    let match2_result = "";
+    let match2_kills = "";
+    let match2_kdratio = "";
+    let match2_assist = "";
+
+    let match3_result = "";
+    let match3_kills = "";
+    let match3_kdratio = "";
+    let match3_assist = "";
+
+    let match4_result = "";
+    let match4_kills = "";
+    let match4_kdratio = "";
+    let match4_assist = "";
+
+    let match5_result = "";
+    let match5_kills = "";
+    let match5_kdratio = "";
+    let match5_assist = "";
+
+    let match6_result = "";
+    let match6_kills = "";
+    let match6_kdratio = "";
+    let match6_assist = "";
+
+
+
+    match1_result += codInfoDictionary["matches"][0]["result"];
+    match1_kills += codInfoDictionary["matches"][0]["playerStats"]["kills"];
+    match1_kdratio += codInfoDictionary["matches"][0]["playerStats"]["kdRatio"];
+    match1_assist += codInfoDictionary["matches"][0]["playerStats"]["assists"];
+
+    match2_result += codInfoDictionary["matches"][1]["result"];
+    match2_kills += codInfoDictionary["matches"][1]["playerStats"]["kills"];
+    match2_kdratio += codInfoDictionary["matches"][1]["playerStats"]["kdRatio"];
+    match2_assist += codInfoDictionary["matches"][1]["playerStats"]["assists"];
+
+    match3_result += codInfoDictionary["matches"][2]["result"];
+    match3_kills += codInfoDictionary["matches"][2]["playerStats"]["kills"];
+    match3_kdratio += codInfoDictionary["matches"][2]["playerStats"]["kdRatio"];
+    match3_assist += codInfoDictionary["matches"][2]["playerStats"]["assists"];
+
+    match4_result += codInfoDictionary["matches"][3]["result"];
+    match4_kills += codInfoDictionary["matches"][3]["playerStats"]["kills"];
+    match4_kdratio += codInfoDictionary["matches"][3]["playerStats"]["kdRatio"];
+    match4_assist += codInfoDictionary["matches"][3]["playerStats"]["assists"];
+
+    match5_result += codInfoDictionary["matches"][4]["result"];
+    match5_kills += codInfoDictionary["matches"][4]["playerStats"]["kills"];
+    match5_kdratio += codInfoDictionary["matches"][4]["playerStats"]["kdRatio"];
+    match5_assist += codInfoDictionary["matches"][4]["playerStats"]["assists"];
+
+    match6_result += codInfoDictionary["matches"][5]["result"];
+    match6_kills += codInfoDictionary["matches"][5]["playerStats"]["kills"];
+    match6_kdratio += codInfoDictionary["matches"][5]["playerStats"]["kdRatio"];
+    match6_assist += codInfoDictionary["matches"][5]["playerStats"]["assists"];
+
+
+
+    sessionStorage.setItem('match1_result', match1_result);
+    sessionStorage.setItem('match1_kills', match1_kills);
+    sessionStorage.setItem('match1_kdratio', match1_kdratio);
+    sessionStorage.setItem('match1_assist', match1_assist);
+
+    sessionStorage.setItem('match2_result', match2_result);
+    sessionStorage.setItem('match2_kills', match2_kills);
+    sessionStorage.setItem('match2_kdratio', match2_kdratio);
+    sessionStorage.setItem('match2_assist', match2_assist);
+
+    sessionStorage.setItem('match3_result', match3_result);
+    sessionStorage.setItem('match3_kills', match3_kills);
+    sessionStorage.setItem('match3_kdratio', match3_kdratio);
+    sessionStorage.setItem('match3_assist', match3_assist);
+
+    sessionStorage.setItem('match4_result', match4_result);
+    sessionStorage.setItem('match4_kills', match4_kills);
+    sessionStorage.setItem('match4_kdratio', match4_kdratio);
+    sessionStorage.setItem('match4_assist', match4_assist);
+
+    sessionStorage.setItem('match5_result', match5_result);
+    sessionStorage.setItem('match5_kills', match5_kills);
+    sessionStorage.setItem('match5_kdratio', match5_kdratio);
+    sessionStorage.setItem('match5_assist', match5_assist);
+
+    sessionStorage.setItem('match6_result', match6_result);
+    sessionStorage.setItem('match6_kills', match6_kills);
+    sessionStorage.setItem('match6_kdratio', match6_kdratio);
+    sessionStorage.setItem('match6_assist', match6_assist);
+
+    if (document.getElementById('table_container') != null) {
+        console.log("Youve made it this far, dont give up");
+
+        var cells = document.getElementById("table").rows[1].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match1_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match1_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match1_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match1_assist'));
+
+        cells = document.getElementById("table").rows[2].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match2_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match2_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match2_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match2_assist'));
+
+        cells = document.getElementById("table").rows[3].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match3_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match3_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match3_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match3_assist'));
+
+        cells = document.getElementById("table").rows[4].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match4_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match4_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match4_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match4_assist'));
+
+        cells = document.getElementById("table").rows[5].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match5_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match5_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match5_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match5_assist'));
+
+        cells = document.getElementById("table").rows[6].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match6_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match6_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match6_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match6_assist'));
+
+    }
+
+}
 
 //THIS IS A TESTING METHOD DO NOT USE
 function makeApiCallCodTEST(userName, gamemode, platform){//THIS IS A TESTING METHOD DO NOT USE

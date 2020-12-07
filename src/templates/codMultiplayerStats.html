@@ -20,7 +20,7 @@
         makeMultiplayerApiCallCod();
     }
     else{
-        //do 2 player search for multiplayer gamemode api calls
+        makeTwoMultiplayerApiCallCod();
     }
 </script>
 <div id="codMultiplayerStats">
@@ -38,42 +38,60 @@
         <div class="Data" id="player_2"><script>document.getElementById("player_2").innerHTML = sessionStorage.getItem("gamertag_2")</script></div>
     </div>
     <div class="GamesPlayed">
-        <div class="Header">Games Played</div>
+        <div class="Header" id="upL"></div>
         <div class="Data_split_1" id="gamesPlayed">
         </div>
         <div class="Data_split_2" id="gamesPlayed_2"></div>
     </div>
     <div class="Top5">
-        <div class="Header">Top Fives</div>
+        <div class="Header" id="upMid"></div>
         <div class="Data_split_1" id="top5"></div>
         <div class="Data_split_2" id="top5_2"></div>
     </div>
     <div class="KD">
-        <div class="Header">K/D</div>
+        <div class="Header" id="upR"></div>
         <div class="Data_split_1" id="kd"></div>
         <div class="Data_split_2" id="kd_2"></div>
     </div>
     <div class="Kills">
-        <div class="Header">Kills</div>
+        <div class="Header" id="lowL"></div>
         <div class="Data_split_1" id="kills"></div>
         <div class="Data_split_2" id="kills_2"></div>
     </div>
     <div class="Deaths">
-        <div class="Header">Deaths</div>
+        <div class="Header" id="lowMid"></div>
         <div class="Data_split_1" id="deaths"></div>
         <div class="Data_split_2" id="deaths_2"></div>
     </div>
     <div class="Downs">
-        <div class="Header">Downs</div>
+        <div class="Header" id="lowR"></div>
         <div class="Data_split_1" id="downs"></div>
         <div class="Data_split_2" id="downs_2"></div>
     </div>
+    <script>
+         if (sessionStorage.getItem("gamemode") == "br"){
+            document.getElementById('upL').innerHTML = "Games Played";
+            document.getElementById('upMid').innerHTML = "Top Fives";
+            document.getElementById('upR').innerHTML = "K/D";
+            document.getElementById('lowL').innerHTML = "Kills";
+            document.getElementById('lowMid').innerHTML = "Deaths";
+            document.getElementById('lowR').innerHTML = "Downs";
+        }
+        else{
+            document.getElementById('upL').innerHTML = "Games Played";
+            document.getElementById('upMid').innerHTML = "K/D";
+            document.getElementById('upR').innerHTML = "Highest Assist Game";
+            document.getElementById('lowL').innerHTML = "W/L";
+            document.getElementById('lowMid').innerHTML = "Highest Kill Game";
+            document.getElementById('lowR').innerHTML = "Highest Kill Streak";
+        }
+     </script>
+
+
     <div id="delay_btn" style="visibility:hidden;">
         <div class="charts_btn">
-		<button onclick="application.goToTargetView(event)"> view graphs</button>
-	</div>
-
-
+		    <button onclick="application.goToTargetView(event)"> view graphs</button>
+	    </div>
     </div>
 
     <div id="Menu">
@@ -99,7 +117,10 @@
     </div>
 </div>
 <script>
-        setTimeout(function () {document.getElementById('delay_btn').style = "visibility:visible"},6500);
+    if (sessionStorage.getItem('gamemode') == "br"){
+       setTimeout(function () {document.getElementById('delay_btn').style = "visibility:visible"},3000);
+      }
+
     </script>
 </body>
 </html>

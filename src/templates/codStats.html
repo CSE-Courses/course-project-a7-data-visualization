@@ -160,9 +160,18 @@
         </tr>
         </tbody>
     </table>
-    <div class="charts_btn">
-		<button onclick="application.goToTargetView(event)"> view graphs</button>
-	</div>
+    <div id="chartsBTN" style="visibility:hidden;">
+        <div class="charts_btn">
+		    <button onclick="application.goToTargetView(event)"> view graphs</button>
+	    </div>
+    </div>
+    <script>
+        if (sessionStorage.getItem('gamemode') == "br"){
+           document.getElementById('chartsBTN').style = "visibility:visible";
+          }
+
+    </script>
+
 </div>
 
 

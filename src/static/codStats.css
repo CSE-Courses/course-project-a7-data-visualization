@@ -247,6 +247,7 @@ th, td {
 	text-align: center;
 	height: 5em;
 	color: white;
+	width: 25%;
 }
 tbody tr:nth-child(even) {
 	background: #191937;
@@ -260,6 +261,48 @@ tbody tr:hover {
 
 thead{
 	background-color: rgba(43,51,91,1);
+}
+
+
+
+
+.charts_btn{
+    height: auto;
+    width: auto;
+    opacity: 0.86;
+    position: absolute;
+    right: -2%;
+    margin: 2%;
+    padding-bottom: 2%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2px;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(43,51,91,1);
+}
+.charts_btn button {
+    height: 100%;
+    width: 100%;
+    font-size: 10em;
+    border: none;
+    outline: none;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: rgba(43,51,91,1);
+    color: rgba(255,255,255,1);
+    border-radius: 4px;
+    --web-animation: fadein 0.3s ease-out;
+    --web-action-type: page;
+    --web-action-target: charts.html;
+    cursor: pointer;
+}
+.charts_btn button:hover {
+    background-color: rgba(44,54,129,1);
 }
 
 #Menu {

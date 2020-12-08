@@ -99,13 +99,94 @@ function makeMatchesApiCallCod(){
     xhr.send(data);
 }
 
+function makeMultiplayerMatchesApiCallCod(){
+
+    const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const platform = sessionStorage.getItem('platform');
+    let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput += "multiplayer-matches/";
+    routeStrInput += userName;
+    routeStrInput += "/"
+    routeStrInput += platform;
+
+
+    //const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            GetCodMultiplayerMatchStats(this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+
+    xhr.open("GET", routeStrInput);
+
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+
+    xhr.send(data);
+}
+function MakeMultiplayerStatsCalls() {
+    const userName = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const platform = sessionStorage.getItem('platform');
+    let routeStrInput = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput += "multiplayer/";
+    routeStrInput += userName.toLowerCase();
+    routeStrInput += "/"
+    routeStrInput += platform;
+    //const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+//const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //comment out when running on server. When running locally uncomment
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            GetCodMultiplayerStats(this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "2d25fd40cdmsh437da74b4bee201p180745jsnd3e9a3336699");
+
+    xhr.send(data);
+
+
+}
+
+
 function GetCodBrStats(player, jsonStr){
     const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
     if (codInfoDictionary.hasOwnProperty('error')) {
         document.location.href = "./error.html"
     }
-    sessionStorage.setItem('brStats',jsonStr);                  /** hhhhhhh**/
+    if(player === 1){
+        sessionStorage.setItem('brStats1',jsonStr);
+        if (sessionStorage.getItem('amountOfPlayers')==1){
+            matchStatsForCharts1();
+        }
+        else
+        {
+            matchStatsForCharts();
+        }
+
+    }
+    if(player === 2){
+        sessionStorage.setItem('brStats2',jsonStr);
+    }
     let mode = "";
     let kills = "";
     let deaths = "";
@@ -115,7 +196,7 @@ function GetCodBrStats(player, jsonStr){
     let gamesPlayed = "";
     let kdRatioFloat = parseFloat(codInfoDictionary["br"]["kdRatio"]);
 
-    mode += "Battle Royale";
+    mode += "Warzone";
     kills += codInfoDictionary["br"]["kills"];
     deaths += codInfoDictionary["br"]["deaths"];
     kd += kdRatioFloat.toFixed(3);
@@ -306,12 +387,192 @@ function GetCodBrMatchStats(jsonStr) {
 }
 
 function GetCodMultiplayerStats(jsonStr){
-    const codInfoDictionary = JSON.parse(jsonStr)
+    console.log(jsonStr)
+
+    const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
+   /// console.log(codInfoDictionary); ///uncomment if you want to see dictionary content
+    if (codInfoDictionary.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+    sessionStorage.setItem("matchStats",jsonStr);
     //parse jason file and go through dictionary to get values
     //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    let mode = "";
+    let kdFloat = parseFloat(codInfoDictionary["lifetime"]["all"]["properties"]["kdRatio"]); // gets kd
+    let kdFixed = ""; // adjusts the float to a fixed 3 spots
+    let WLR = ""; /// win loss ratio
+    let assists = "";
+    let HKG = ""; /// highest kill game
+    let HKS = ""; /// highest kill steak
+
+    mode+= "Multiplayer";
+    kdFixed += kdFloat.toFixed(3); // adjusts the float to a fixed 3 spots
+    WLR += codInfoDictionary["lifetime"]["all"]["properties"]["winLossRatio"].toFixed(3);
+    assists += codInfoDictionary["lifetime"]["all"]["properties"]["bestAssists"];
+    HKS += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillStreak"];
+    HKG += codInfoDictionary["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
+    sessionStorage.setItem('mode', mode)
+    sessionStorage.setItem('HKS', HKS)
+    sessionStorage.setItem('WLR', WLR)
+    sessionStorage.setItem('ASSISTS', assists)
+    sessionStorage.setItem('HKG', HKG)
+    sessionStorage.setItem('KD', kdFixed)
+
+    if (document.getElementById('mode') != null) {
+        console.log("Setting")
+        document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
+        document.getElementById("top5").innerHTML = (sessionStorage.getItem('KD'))
+        document.getElementById("kd").innerHTML = (sessionStorage.getItem('ASSISTS'))
+        document.getElementById("kills").innerHTML = (sessionStorage.getItem('WLR'))
+        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('HKG'))
+        document.getElementById("downs").innerHTML = (sessionStorage.getItem('HKS'))
+    }
 }
 
+function GetCodMultiplayerMatchStats(jsonStr) {
+    console.log('made it to function');
+    sessionStorage.setItem("multiplayerMatchStats",jsonStr);
+    const codInfoDictionary = JSON.parse(jsonStr) //parse jason file and go through dictionary to get values
+    //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    if (codInfoDictionary.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+    let match1_result = "";
+    let match1_kills = "";
+    let match1_kdratio = "";
+    let match1_assist = "";
 
+    let match2_result = "";
+    let match2_kills = "";
+    let match2_kdratio = "";
+    let match2_assist = "";
+
+    let match3_result = "";
+    let match3_kills = "";
+    let match3_kdratio = "";
+    let match3_assist = "";
+
+    let match4_result = "";
+    let match4_kills = "";
+    let match4_kdratio = "";
+    let match4_assist = "";
+
+    let match5_result = "";
+    let match5_kills = "";
+    let match5_kdratio = "";
+    let match5_assist = "";
+
+    let match6_result = "";
+    let match6_kills = "";
+    let match6_kdratio = "";
+    let match6_assist = "";
+
+
+
+    match1_result += codInfoDictionary["matches"][0]["result"];
+    match1_kills += codInfoDictionary["matches"][0]["playerStats"]["kills"];
+    match1_kdratio += codInfoDictionary["matches"][0]["playerStats"]["kdRatio"];
+    match1_assist += codInfoDictionary["matches"][0]["playerStats"]["assists"];
+
+    match2_result += codInfoDictionary["matches"][1]["result"];
+    match2_kills += codInfoDictionary["matches"][1]["playerStats"]["kills"];
+    match2_kdratio += codInfoDictionary["matches"][1]["playerStats"]["kdRatio"];
+    match2_assist += codInfoDictionary["matches"][1]["playerStats"]["assists"];
+
+    match3_result += codInfoDictionary["matches"][2]["result"];
+    match3_kills += codInfoDictionary["matches"][2]["playerStats"]["kills"];
+    match3_kdratio += codInfoDictionary["matches"][2]["playerStats"]["kdRatio"];
+    match3_assist += codInfoDictionary["matches"][2]["playerStats"]["assists"];
+
+    match4_result += codInfoDictionary["matches"][3]["result"];
+    match4_kills += codInfoDictionary["matches"][3]["playerStats"]["kills"];
+    match4_kdratio += codInfoDictionary["matches"][3]["playerStats"]["kdRatio"];
+    match4_assist += codInfoDictionary["matches"][3]["playerStats"]["assists"];
+
+    match5_result += codInfoDictionary["matches"][4]["result"];
+    match5_kills += codInfoDictionary["matches"][4]["playerStats"]["kills"];
+    match5_kdratio += codInfoDictionary["matches"][4]["playerStats"]["kdRatio"];
+    match5_assist += codInfoDictionary["matches"][4]["playerStats"]["assists"];
+
+    match6_result += codInfoDictionary["matches"][5]["result"];
+    match6_kills += codInfoDictionary["matches"][5]["playerStats"]["kills"];
+    match6_kdratio += codInfoDictionary["matches"][5]["playerStats"]["kdRatio"];
+    match6_assist += codInfoDictionary["matches"][5]["playerStats"]["assists"];
+
+
+
+    sessionStorage.setItem('match1_result', match1_result);
+    sessionStorage.setItem('match1_kills', match1_kills);
+    sessionStorage.setItem('match1_kdratio', match1_kdratio);
+    sessionStorage.setItem('match1_assist', match1_assist);
+
+    sessionStorage.setItem('match2_result', match2_result);
+    sessionStorage.setItem('match2_kills', match2_kills);
+    sessionStorage.setItem('match2_kdratio', match2_kdratio);
+    sessionStorage.setItem('match2_assist', match2_assist);
+
+    sessionStorage.setItem('match3_result', match3_result);
+    sessionStorage.setItem('match3_kills', match3_kills);
+    sessionStorage.setItem('match3_kdratio', match3_kdratio);
+    sessionStorage.setItem('match3_assist', match3_assist);
+
+    sessionStorage.setItem('match4_result', match4_result);
+    sessionStorage.setItem('match4_kills', match4_kills);
+    sessionStorage.setItem('match4_kdratio', match4_kdratio);
+    sessionStorage.setItem('match4_assist', match4_assist);
+
+    sessionStorage.setItem('match5_result', match5_result);
+    sessionStorage.setItem('match5_kills', match5_kills);
+    sessionStorage.setItem('match5_kdratio', match5_kdratio);
+    sessionStorage.setItem('match5_assist', match5_assist);
+
+    sessionStorage.setItem('match6_result', match6_result);
+    sessionStorage.setItem('match6_kills', match6_kills);
+    sessionStorage.setItem('match6_kdratio', match6_kdratio);
+    sessionStorage.setItem('match6_assist', match6_assist);
+
+    if (document.getElementById('table_container') != null) {
+        console.log("Youve made it this far, dont give up");
+
+        var cells = document.getElementById("table").rows[1].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match1_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match1_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match1_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match1_assist'));
+
+        cells = document.getElementById("table").rows[2].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match2_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match2_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match2_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match2_assist'));
+
+        cells = document.getElementById("table").rows[3].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match3_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match3_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match3_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match3_assist'));
+
+        cells = document.getElementById("table").rows[4].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match4_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match4_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match4_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match4_assist'));
+
+        cells = document.getElementById("table").rows[5].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match5_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match5_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match5_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match5_assist'));
+
+        cells = document.getElementById("table").rows[6].cells;
+        (cells[0]).innerHTML = (sessionStorage.getItem('match6_result'));
+        (cells[1]).innerHTML = (sessionStorage.getItem('match6_kills'));
+        (cells[2]).innerHTML = (sessionStorage.getItem('match6_kdratio'));
+        (cells[3]).innerHTML = (sessionStorage.getItem('match6_assist'));
+
+    }
+
+}
 
 //THIS IS A TESTING METHOD DO NOT USE
 function makeApiCallCodTEST(userName, gamemode, platform){//THIS IS A TESTING METHOD DO NOT USE
@@ -342,4 +603,242 @@ function makeApiCallCodTEST(userName, gamemode, platform){//THIS IS A TESTING ME
     xhr.send(data);
     callMade = true;
     return callMade;
+}
+
+function matchStatsForCharts() {
+    const userName1 = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const userName2 = sessionStorage.getItem('gamertag_2'); // getElementById allows access to html variables
+
+    const platform = sessionStorage.getItem('platform');
+    const platform2 = sessionStorage.getItem('platform_2');
+
+    let routeStrInput1 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput1 += "warzone-matches/";
+    routeStrInput1 += userName1.toLowerCase();
+    routeStrInput1 += "/"
+    routeStrInput1 += platform;
+
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("matchStats",this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput1);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.send(data);
+    // =-------------------------------------------------------------------
+    if (userName2 != ''){
+        let routeStrInput2 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput2 += "warzone-matches/";
+    routeStrInput2 += userName2.toLowerCase();
+    routeStrInput2 += "/"
+    routeStrInput2 += platform2;
+
+    const data2 = null;
+
+    const xhr2 = new XMLHttpRequest();
+    xhr2.withCredentials = true;
+
+    xhr2.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("matchStats2", this.responseText);
+        } else if (this.status === 404) {
+            console.log("4040 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr2.open("GET", routeStrInput2);
+    xhr2.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr2.setRequestHeader("x-rapidapi-key", "5af6d47733mshdf8f111248c861dp1e3154jsn0cbe7dc99691");
+    xhr2.send(data2);
+    console.log("done...");
+    }
+
+}
+
+function matchStatsForCharts1() {
+    const userName1 = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const userName2 = sessionStorage.getItem('gamertag_2'); // getElementById allows access to html variables
+
+    const platform = sessionStorage.getItem('platform');
+    const platform2 = sessionStorage.getItem('platform_2');
+
+    let routeStrInput1 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput1 += "warzone-matches/";
+    routeStrInput1 += userName1.toLowerCase();
+    routeStrInput1 += "/"
+    routeStrInput1 += platform;
+
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("matchStats",this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput1);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.send(data);
+
+}
+
+function makeTwoMultiplayerApiCallCod() {
+    const userName1 = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const userName2 = sessionStorage.getItem('gamertag_2'); // getElementById allows access to html variables
+
+    const platform = sessionStorage.getItem('platform');
+    const platform2 = sessionStorage.getItem('platform_2');
+
+    let routeStrInput1 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput1 += "multiplayer/";
+    routeStrInput1 += userName1.toLowerCase();
+    routeStrInput1 += "/"
+    routeStrInput1 += platform;
+
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("multiplayerStats1",this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput1);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.send(data);
+    // =-------------------------------------------------------------------
+    let routeStrInput2 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput2 += "multiplayer/";
+    routeStrInput2 += userName2.toLowerCase();
+    routeStrInput2 += "/"
+    routeStrInput2 += platform2;
+
+    const data2 = null;
+
+    const xhr2 = new XMLHttpRequest();
+    xhr2.withCredentials = true;
+
+    xhr2.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("multiplayerStats2", this.responseText);
+        } else if (this.status === 404) {
+            console.log("4040 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr2.open("GET", routeStrInput2);
+    xhr2.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr2.setRequestHeader("x-rapidapi-key", "5af6d47733mshdf8f111248c861dp1e3154jsn0cbe7dc99691");
+    xhr2.send(data2);
+    console.log("done...");
+
+    setTimeout(getCodTwoMultiplayerStats, 2000);
+}
+
+function getCodTwoMultiplayerStats(){
+    const codInfoDictionary1 = JSON.parse(sessionStorage.getItem('multiplayerStats1')) //parse jason file and go through dictionary to get values
+    const codInfoDictionary2 = JSON.parse(sessionStorage.getItem('multiplayerStats2'))
+   /// console.log(codInfoDictionary); ///uncomment if you want to see dictionary content
+    if (codInfoDictionary1.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+    if (codInfoDictionary2.hasOwnProperty('error')) {
+        document.location.href = "./error.html"
+    }
+
+    //parse jason file and go through dictionary to get values
+    //console.log(codInfoDictionary); uncomment if you want to see dictionary content
+    let mode = "";
+
+    let gamesPlayed = "";
+    let kdFloat1 = parseFloat(codInfoDictionary1["lifetime"]["all"]["properties"]["kdRatio"]); // gets kd
+    let kdFixed1 = ""; // adjusts the float to a fixed 3 spots
+    let WLR1 = ""; /// win loss ratio
+    let assists1 = "";
+    let HKG1 = ""; /// highest kill game
+    let HKS1 = ""; /// highest kill steak
+
+    let gamesPlayed_2 = "";
+    let kdFloat2 = parseFloat(codInfoDictionary2["lifetime"]["all"]["properties"]["kdRatio"]); // gets kd
+    let kdFixed2 = ""; // adjusts the float to a fixed 3 spots
+    let WLR2 = ""; /// win loss ratio
+    let assists2 = "";
+    let HKG2 = ""; /// highest kill game
+    let HKS2 = ""; /// highest kill steak
+
+    mode+= "Multiplayer";
+    gamesPlayed += codInfoDictionary1["lifetime"]["all"]["properties"]["totalGamesPlayed"];
+    kdFixed1 += kdFloat1.toFixed(3); // adjusts the float to a fixed 3 spots
+    WLR1 += codInfoDictionary1["lifetime"]["all"]["properties"]["winLossRatio"].toFixed(3);
+    assists1 += codInfoDictionary1["lifetime"]["all"]["properties"]["bestAssists"];
+    HKS1 += codInfoDictionary1["lifetime"]["all"]["properties"]["recordKillStreak"];
+    HKG1 += codInfoDictionary1["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
+
+    sessionStorage.setItem('mode', mode)
+    sessionStorage.setItem('GP1', gamesPlayed)
+    sessionStorage.setItem('HKS1', HKS1)
+    sessionStorage.setItem('WLR1', WLR1)
+    sessionStorage.setItem('ASSISTS1', assists1)
+    sessionStorage.setItem('HKG1', HKG1)
+    sessionStorage.setItem('KD1', kdFixed1)
+
+    gamesPlayed_2 += codInfoDictionary2["lifetime"]["all"]["properties"]["totalGamesPlayed"];
+    kdFixed2 += kdFloat2.toFixed(3); // adjusts the float to a fixed 3 spots
+    WLR2 += codInfoDictionary2["lifetime"]["all"]["properties"]["winLossRatio"].toFixed(3);
+    assists2 += codInfoDictionary2["lifetime"]["all"]["properties"]["bestAssists"];
+    HKS2 += codInfoDictionary2["lifetime"]["all"]["properties"]["recordKillStreak"];
+    HKG2 += codInfoDictionary2["lifetime"]["all"]["properties"]["recordKillsInAMatch"];
+
+    sessionStorage.setItem('GP2', gamesPlayed_2)
+    sessionStorage.setItem('HKS2', HKS2)
+    sessionStorage.setItem('WLR2', WLR2)
+    sessionStorage.setItem('ASSISTS2', assists2)
+    sessionStorage.setItem('HKG2', HKG2)
+    sessionStorage.setItem('KD2', kdFixed2)
+
+    document.getElementById("mode").innerHTML = (sessionStorage.getItem('mode'))
+    if (document.getElementById('mode') != null) {
+        console.log("Setting")
+        document.getElementById("gamesPlayed").innerHTML = (sessionStorage.getItem('GP1'))
+        document.getElementById("top5").innerHTML = (sessionStorage.getItem('KD1'))
+        document.getElementById("kd").innerHTML = (sessionStorage.getItem('ASSISTS1'))
+        document.getElementById("kills").innerHTML = (sessionStorage.getItem('WLR1'))
+        document.getElementById("deaths").innerHTML = (sessionStorage.getItem('HKG1'))
+        document.getElementById("downs").innerHTML = (sessionStorage.getItem('HKS1'))
+
+
+        document.getElementById("gamesPlayed_2").innerHTML = (sessionStorage.getItem('GP2'))
+        document.getElementById("top5_2").innerHTML = (sessionStorage.getItem('KD2'))
+        document.getElementById("kd_2").innerHTML = (sessionStorage.getItem('ASSISTS2'))
+        document.getElementById("kills_2").innerHTML = (sessionStorage.getItem('WLR2'))
+        document.getElementById("deaths_2").innerHTML = (sessionStorage.getItem('HKG2'))
+        document.getElementById("downs_2").innerHTML = (sessionStorage.getItem('HKS2'))
+    }
 }

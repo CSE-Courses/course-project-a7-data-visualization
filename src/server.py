@@ -31,6 +31,24 @@ def league():
     except Exception as e:
         return render_template("error.html")
 
+@app.route("/league_leaderboardLanding.html")
+def league_leaderbaordone():
+    return render_template("league_leaderboardLanding.html")
+
+
+@app.route("/league_leaderboardLanding.html",methods=['POST'])
+def league_leaderbaord():
+    typeOfRank = "RANKED_SOLO_5x5"
+    region = request.form["Region"]
+    try:
+        dfcom = loldata.getTopFive(region,typeOfRank)
+        finalJs = dfcom.to_json()
+        return render_template("league_leaderboard.html", name='League Of legends Player Data', data=finalJs)
+    except Exception as e:
+        print(e)
+        return render_template("error.html")
+
+
 
 @app.route("/league_mult.html", methods=['POST'])
 def league2():
@@ -44,10 +62,14 @@ def league2():
         dfcom = pd.concat(frames)
         dfcom.reset_index(drop=True, inplace=True)
         finalJs = dfcom.to_json()
-        print(finalJs)
         return render_template("leagueMultiplayerStats.html", name='League Of legends Player Data', data = finalJs)
     except Exception as e:
         return render_template("error.html")
+
+
+
+
+
 
 @app.route("/cod1.html")
 def codOne():
@@ -85,9 +107,13 @@ def league_mult():
 def leagueMultiplayerStats():
     return render_template("leagueMultiplayerStats.html")
 
-@app.route("/charts")
+@app.route("/charts.html")
 def displayVisuals():
     return render_template("charts.html")
+
+@app.route("/cod_leaderboard.html")
+def cod_leaderbaord():
+    return render_template("cod_leaderboard.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

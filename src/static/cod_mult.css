@@ -48,10 +48,10 @@
 
 .Search {
     height: 10.18518519%;
-    width: 48.38541667%;
+    width: 46.51041666%;
     opacity: 0.86;
     position: absolute;
-    left: 39.0625%;
+    left: 52.08333333%;
     top: 45.55555%;
     overflow: visible;
     white-space: nowrap;
@@ -166,7 +166,7 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.Dropdown_player1-Content {
+.Dropdown_Content {
     display: none;
     position: absolute;
     width: 100%;
@@ -176,43 +176,61 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
-.Dropdown_player2-Content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(43,51,91,1);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-.Dropdown_player1-Content button{
-    display: block;
-    padding: 14px;
-    cursor: pointer;
-}
-.Dropdown_player2-Content button{
+
+.Dropdown_Content button{
     display: block;
     padding: 14px;
     cursor: pointer;
 }
 
-.Dropdown_player1-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_Content button:hover {background-color: rgba(44,54,129,1);}
 .Dropdown_player1:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
-.Dropdown_player1:hover .Dropdown_player1-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
-.Dropdown_player1:hover .Dropdown_player1-Content {display: block;}
+.Dropdown_player1:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player1:hover .Dropdown_Content {display: block;}
 
-.Dropdown_player2-Content button:hover {background-color: rgba(44,54,129,1);}
+.Dropdown_Content button:hover {background-color: rgba(44,54,129,1);}
 .Dropdown_player2:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
-.Dropdown_player2:hover .Dropdown_player2-Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
-.Dropdown_player2:hover .Dropdown_player2-Content {display: block;}
+.Dropdown_player2:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_player2:hover .Dropdown_Content {display: block;}
+
+
+.Dropdown_Gamemode {
+    height: 4.44444444%;
+    width: 11.61458333%;
+    opacity: 0.86;
+    position: absolute;
+    left: 39.0625%;
+    top: 48.4%;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.Dropdown_Gamemode button{
+	font-size: 10em;
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: rgba(43,51,91,1);
+	color: rgba(255,255,255,1);
+	border-radius: 4px;
+}
+
+.Dropdown_Gamemode:hover button {border-bottom-right-radius: 0; border-bottom-left-radius: 0;}
+.Dropdown_Gamemode:hover .Dropdown_Content button {border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.Dropdown_Gamemode:hover .Dropdown_Content {display: block;}
 
 .magnifying_glass_Mult1 {
     position: absolute;
     width: 1.04390625%;
     height: 1.856296296%;
-    left: 39.92671875%;
+    left: 52.65%;
     top: 46.69333%;
+    opacity: .7;
     transform: matrix(1,0,0,1,0,0);
 }
 
@@ -220,8 +238,9 @@
     position: absolute;
     width: 1.04390625%;
     height: 1.856296296%;
-    left: 39.92671875%;
+    left: 52.65%;
     top: 52.43407074%;
+    opacity: .7;
     transform: matrix(1,0,0,1,0,0);
 }
 

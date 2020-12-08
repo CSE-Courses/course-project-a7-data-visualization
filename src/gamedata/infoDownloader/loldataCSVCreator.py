@@ -7,7 +7,7 @@ from riotwatcher import LolWatcher
 
 
 def getLolData(username, my_region):
-    api_key = 'RGAPI-239197cf-11a3-41d1-9afb-03c6e4d972d5'
+    api_key = 'RGAPI-e2cd6909-220a-4d26-8855-ae98746f30be'
     watcher = LolWatcher(api_key)
     me = watcher.summoner.by_name(my_region, username)
     my_matches = watcher.match.matchlist_by_account(my_region, me['accountId'])
@@ -23,15 +23,13 @@ def getLolData(username, my_region):
     spell_dict = {}
 
 
-    url = 'http://ddragon.leagueoflegends.com/cdn/10.21.1/img/'
 
 
     for valueOne in static_champ_list['data']:
         row = static_champ_list['data'][valueOne]
         key = row["key"]
-        name = row["name"]
-        image = str("../static/" +  "champion/" + str(row["image"]["full"]))
-        print(image)
+        name = str(row["image"]["full"])
+        image = str(row["image"]["full"])
         value = [name,image]
         champ_dict[key] = value
 
@@ -42,7 +40,7 @@ def getLolData(username, my_region):
 
     for id in static_spell_list['data']:
         row = static_spell_list['data'][id]
-        image = str("../static/spells/" + "Summoner"+ str(row["name"]) + ".png")
+        image = str("../static/spells/" + str(row["image"]["full"]))
         spell_dict[row["key"]] = image
 
 

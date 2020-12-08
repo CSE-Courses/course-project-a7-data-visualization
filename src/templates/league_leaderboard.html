@@ -192,7 +192,7 @@
             <div id ="Spell0"> <img id='imgspellP3-1-1' src=""/></div>
             <div id = "Spell1"> <img id='imgspellP3-1-2' src=""/></div>
         </div>
-        <div class="KDA" id="kda2P1"></div>
+        <div class="KDA" id="kda2P3"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP3-item1-0' src=""/> </div>
             <div id="Item1"> <img id='imgP3-item1-1' src=""/> </div>
@@ -211,7 +211,7 @@
             <div id ="Spell0"><img id='imgspellP3-2-1' src=""/></div>
             <div id ="Spell1"><img id='imgspellP3-2-2' src=""/></div>
         </div>
-        <div class="KDA" id="kda3P1"></div>
+        <div class="KDA" id="kda3P3"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP3-item2-0' src=""/> </div>
             <div id="Item1"> <img id='imgP3-item2-1' src=""/> </div>
@@ -253,6 +253,7 @@
             <div id ="Spell0">  <img id='imgspellP4-1-1' src=""/> </div>
             <div id ="Spell1">  <img id='imgspellP4-1-2' src=""/> </div>
         </div>
+        <div class="KDA" id="kda2P4"></div>
 
         <div class="Item">
             <div id="Item0"> <img id='imgP4-item1-0' src=""/> </div>
@@ -274,6 +275,7 @@
             <div id ="Spell0">  <img id='imgspellP4-2-1' src=""/> </div>
             <div id ="Spell1"> <img id='imgspellP4-2-2' src=""/> </div>
         </div>
+        <div class="KDA" id="kda3P4"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP4-item2-0' src=""/> </div>
             <div id="Item1"> <img id='imgP4-item2-1' src=""/> </div>
@@ -296,7 +298,7 @@
             <div id ="Spell0"> <img id='imgspellP5-0-1' src=""/> </div>
             <div id = "Spell1"> <img id='imgspellP5-0-2' src=""/></div>
         </div>
-        <div class="KDA" id="kda5P1"></div>
+        <div class="KDA" id="kda1P5"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP5-item0-0' src=""/> </div>
             <div id="Item1"> <img id='imgP5-item0-1' src=""/> </div>
@@ -315,7 +317,7 @@
             <div id ="Spell0"> <img id='imgspellP5-1-1' src=""/></div>
             <div id = "Spell1"> <img id='imgspellP5-1-2' src=""/></div>
         </div>
-        <div class="KDA" id="kda2P1"></div>
+        <div class="KDA" id="kda2P5"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP5-item1-0' src=""/> </div>
             <div id="Item1"> <img id='imgP5-item1-1' src=""/> </div>
@@ -334,7 +336,7 @@
             <div id ="Spell0"><img id='imgspellP5-2-1' src=""/></div>
             <div id ="Spell1"><img id='imgspellP5-2-2' src=""/></div>
         </div>
-        <div class="KDA" id="kda1P5"></div>
+        <div class="KDA" id="kda3P5"></div>
         <div class="Item">
             <div id="Item0"> <img id='imgP5-item2-0' src=""/> </div>
             <div id="Item1"> <img id='imgP5-item2-1' src=""/> </div>
@@ -350,6 +352,7 @@
 <!-- Player 1 -->
 <script>
 
+    document.getElementById("player_1").innerHTML = leagueData.player[0]
 
     document.getElementById("chapP1_image0").src = leagueData.championName[0][1]
     document.getElementById("chapP1_image1").src = leagueData.championName[1][1]
@@ -365,6 +368,8 @@
     document.getElementById("imgspellP1-2-2").src = leagueData.spell2[2]
 
     document.getElementById("kda1P1").innerHTML = leagueData.kills[0] + "/" + leagueData.deaths[0] + "/" + leagueData.assists[0]
+    document.getElementById("kda2P1").innerHTML = leagueData.kills[1] + "/" + leagueData.deaths[1] + "/" + leagueData.assists[1]
+    document.getElementById("kda3P1").innerHTML = leagueData.kills[2] + "/" + leagueData.deaths[2] + "/" + leagueData.assists[3]
 
     var item0_0 = leagueData.item0[0]
     var item0_1 = leagueData.item1[0]
@@ -442,6 +447,8 @@
 <!--Player 2 -->
 <script>
     //Player two//
+    document.getElementById("player_2").innerHTML = leagueData.player[3]
+
     document.getElementById("chapP2_image0").src = leagueData.championName[3][1]
     document.getElementById("chapP2_image1").src = leagueData.championName[4][1]
     document.getElementById("chapP2_image2").src = leagueData.championName[5][1]
@@ -455,7 +462,9 @@
     document.getElementById("imgspellP2-2-1").src = leagueData.spell1[5]
     document.getElementById("imgspellP2-2-2").src = leagueData.spell2[5]
 
-    document.getElementById("kda1P2").innerHTML = leagueData.kills[1] + "/" + leagueData.deaths[1] + "/" + leagueData.assists[1]
+    document.getElementById("kda1P2").innerHTML = leagueData.kills[3] + "/" + leagueData.deaths[3] + "/" + leagueData.assists[3]
+    document.getElementById("kda2P2").innerHTML = leagueData.kills[4] + "/" + leagueData.deaths[4] + "/" + leagueData.assists[4]
+    document.getElementById("kda3P2").innerHTML = leagueData.kills[5] + "/" + leagueData.deaths[5] + "/" + leagueData.assists[5]
 
     item0_0 = leagueData.item0[3]
     item0_1 = leagueData.item1[3]
@@ -536,6 +545,8 @@
 
 <!--Player 3 -->
 <script>
+    document.getElementById("player_3").innerHTML = leagueData.player[6]
+
     document.getElementById("chapP3_image0").src = leagueData.championName[6][1]
     document.getElementById("chapP3_image1").src = leagueData.championName[7][1]
     document.getElementById("chapP3_image2").src = leagueData.championName[8][1]
@@ -549,7 +560,9 @@
     document.getElementById("imgspellP3-2-1").src = leagueData.spell1[8]
     document.getElementById("imgspellP3-2-2").src = leagueData.spell2[8]
 
-    document.getElementById("kda1P3").innerHTML = leagueData.kills[2] + "/" + leagueData.deaths[2] + "/" + leagueData.assists[2]
+    document.getElementById("kda1P3").innerHTML = leagueData.kills[6] + "/" + leagueData.deaths[6] + "/" + leagueData.assists[6]
+    document.getElementById("kda2P3").innerHTML = leagueData.kills[7] + "/" + leagueData.deaths[7] + "/" + leagueData.assists[7]
+    document.getElementById("kda3P3").innerHTML = leagueData.kills[8] + "/" + leagueData.deaths[8] + "/" + leagueData.assists[8]
 
     item0_0 = leagueData.item0[6]
     item0_1 = leagueData.item1[6]
@@ -630,6 +643,8 @@
 
 <!--Player 4 -->
 <script>
+    document.getElementById("player_4").innerHTML = leagueData.player[9]
+
     document.getElementById("chapP4_image0").src = leagueData.championName[9][1]
     document.getElementById("chapP4_image1").src = leagueData.championName[10][1]
     document.getElementById("chapP4_image2").src = leagueData.championName[11][1]
@@ -643,7 +658,9 @@
     document.getElementById("imgspellP4-2-1").src = leagueData.spell1[11]
     document.getElementById("imgspellP4-2-2").src = leagueData.spell2[11]
 
-    document.getElementById("kda1P4").innerHTML = leagueData.kills[3] + "/" + leagueData.deaths[3] + "/" + leagueData.assists[3]
+    document.getElementById("kda1P4").innerHTML = leagueData.kills[9] + "/" + leagueData.deaths[9] + "/" + leagueData.assists[9]
+    document.getElementById("kda2P4").innerHTML = leagueData.kills[10] + "/" + leagueData.deaths[10] + "/" + leagueData.assists[10]
+    document.getElementById("kda3P4").innerHTML = leagueData.kills[11] + "/" + leagueData.deaths[11] + "/" + leagueData.assists[11]
 
     item0_0 = leagueData.item0[9]
     item0_1 = leagueData.item1[9]
@@ -721,6 +738,7 @@
 
 <!--Player 5 -->
 <script>
+    document.getElementById("player_5").innerHTML = leagueData.player[12]
     document.getElementById("chapP5_image0").src = leagueData.championName[12][1]
     document.getElementById("chapP5_image1").src = leagueData.championName[13][1]
     document.getElementById("chapP5_image2").src = leagueData.championName[14][1]
@@ -734,7 +752,9 @@
     document.getElementById("imgspellP5-2-1").src = leagueData.spell1[14]
     document.getElementById("imgspellP5-2-2").src = leagueData.spell2[14]
 
-    document.getElementById("kda1P5").innerHTML = leagueData.kills[4] + "/" + leagueData.deaths[4] + "/" + leagueData.assists[4]
+    document.getElementById("kda1P5").innerHTML = leagueData.kills[12] + "/" + leagueData.deaths[12] + "/" + leagueData.assists[12]
+    document.getElementById("kda2P5").innerHTML = leagueData.kills[13] + "/" + leagueData.deaths[13] + "/" + leagueData.assists[13]
+    document.getElementById("kda3P5").innerHTML = leagueData.kills[14] + "/" + leagueData.deaths[14] + "/" + leagueData.assists[14]
 
     item0_0 = leagueData.item0[12]
     item0_1 = leagueData.item1[12]

@@ -22,14 +22,9 @@
                     document.getElementById("Region").value = "na1"
                 }</script>
                 <button type="Button" onclick="changeServer1BR()">Brazil</button>
-                <script>function changeServerBR1(){
+                <script>function changeServer1BR(){
                     document.getElementById("Server").innerHTML = "Brazil"
                     document.getElementById("Region").value = "br1"
-                }</script>
-                <button type="Button" onclick="changeServer1RU()">Russia</button>
-                <script>function changeServer1RU(){
-                    document.getElementById("Server").innerHTML = "Russia"
-                    document.getElementById("Region").value = "ru1"
                 }</script>
                 <button type="Button" onclick="changeServer1EE()">Europe East</button>
                 <script>function changeServer1EE(){
@@ -46,33 +41,16 @@
                     document.getElementById("Server").innerHTML = "Japan"
                     document.getElementById("Region").value = "jp1"
                 }</script>
-                <button type="Button" onclick="changeServer1KR()">Korea</button>
-                <script>function changeServer1KR(){
+                <button type="Button" onclick="changeServerKR()">Korea</button>
+                <script>function changeServerKR(){
                     document.getElementById("Server").innerHTML = "Korea"
                     document.getElementById("Region").value = "kr"
                 }</script>
             </div>
         </div>
-        <div class="Dropdown_player2">
-            <button class="dropbtn" type="Button" id="Server_1" name="Server_1">Type of Rank</button>
-            <div class="Dropdown_player2-Content">
-                <button type="Button" onclick="changeTypeFlex()">RANKED SOLO</button>
-                <script>function changeTypeFlex(){
-                    document.getElementById("Server_1").innerHTML = "RANKED SOLO"
-                    document.getElementById("Rank").value = "RANKED_SOLO_5x5"
-                }</script>
-                <button type="Button" onclick="changeTypeSR()">RANKED FLEX</button>
-                <script>function changeTypeSR() {
-                    document.getElementById("Server_1").innerHTML = "RANKED FLEX"
-                    document.getElementById("Rank").value = "RANKED_FLEX_SR"
-                }</script>
-            </div>
-        </div>
 
         <div class="Search">
-
             <input type="hidden" id="Region" name="Region">
-            <input type="hidden" id="Rank" name="Rank">
             <button type="submit">Search</button>
         </div>
 

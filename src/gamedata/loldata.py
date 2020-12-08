@@ -35,24 +35,36 @@ def getDataTwo(usernameOne,usernameTwo,regionOne,regionTwo):
 
 
 def getTopFive(server,typeOfRank):
-    start_time = time.time()
     lastN = 3
     champ_dict,item_dict,spell_dict = getdic()
     getdata  = getLeaderBoard(server,typeOfRank)
 
 
-    usernameOne = getdata[0]['summonerName']
-    usernameTwo = getdata[1]['summonerName']
-    usernameThree = getdata[2]['summonerName']
-    usernameFour = getdata[3]['summonerName']
-    usernameFive = getdata[4]['summonerName']
+    ll1 = getdata[0]['summonerName']
+    ll2 = getdata[1]['summonerName']
+    ll3 = getdata[2]['summonerName']
+    ll4 = getdata[3]['summonerName']
+    ll5 = getdata[4]['summonerName']
 
-    dfOne = lolDataGrabber(usernameOne,server,champ_dict,item_dict,spell_dict,lastN)
-    dfTwo = lolDataGrabber(usernameTwo,server,champ_dict,item_dict,spell_dict,lastN)
-    dfThree = lolDataGrabber(usernameThree,server,champ_dict,item_dict,spell_dict,lastN)
-    dfFour = lolDataGrabber(usernameFour,server,champ_dict,item_dict,spell_dict,lastN)
-    dfFive = lolDataGrabber(usernameFive,server,champ_dict,item_dict,spell_dict,lastN)
-    return dfOne,dfTwo,dfThree,dfFour,dfFive
+    flagAll = 0
+    flagUserName = 0
+    dfOne = pd.DataFrame(columns = ['player', 'championName', 'spell1','spell2','win','kills','deaths','assists','totalDamageDealt','goldEarned','champLevel','totalMinionsKilled','item0','item1','item2','item3','item4','item5','item6'])
+
+    while(flagAll <= 4):
+        try:
+            usernameOne = getdata[flagUserName]['summonerName']
+            dfTwo = lolDataGrabber(usernameOne,server,champ_dict,item_dict,spell_dict,lastN)
+        except:
+            flagUserName += 1
+
+        else:
+            flagUserName += 1
+            flagAll += 1
+            frames = [dfOne,dfTwo]
+            dfOne = pd.concat(frames)
+            dfOne.reset_index(drop=True, inplace=True)
+
+    return dfOne
 
 def getApi(inputforlate):
     api_key = 'RGAPI-e2cd6909-220a-4d26-8855-ae98746f30be'
@@ -139,8 +151,9 @@ def getLeaderBoard(server,typeOfRank):
 
 
 def main():
-   data_flex =  getTopFive("na1","RANKED_SOLO_5x5")
-
+    dfcom = getTopFive("jp1","RANKED_SOLO_5x5")
+    finalJs = dfcom.to_json()
+    print(finalJs)
 
 if __name__ == "__main__":
     main()

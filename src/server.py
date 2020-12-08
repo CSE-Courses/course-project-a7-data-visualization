@@ -38,17 +38,14 @@ def league_leaderbaordone():
 
 @app.route("/league_leaderboardLanding.html",methods=['POST'])
 def league_leaderbaord():
-    typeOfRank = request.form["Rank"]
+    typeOfRank = "RANKED_SOLO_5x5"
     region = request.form["Region"]
     try:
-        dfOne,dfTwo,dfThree,dfFour,dfFive = loldata.getTopFive(region,typeOfRank)
-        frames = [dfOne,dfTwo,dfThree,dfFour,dfFive]
-        dfcom = pd.concat(frames)
-        dfcom.reset_index(drop=True, inplace=True)
+        dfcom = loldata.getTopFive(region,typeOfRank)
         finalJs = dfcom.to_json()
-        print(finalJs)
         return render_template("league_leaderboard.html", name='League Of legends Player Data', data=finalJs)
     except Exception as e:
+        print(e)
         return render_template("error.html")
 
 

@@ -164,3 +164,10 @@
     --web-action-target: cod_home.html;
     cursor: pointer;
 }
+
+#Menu_Option_Download_Icon {
+    position: relative;
+    top: 65%;
+    left: 10.93023256%;
+    cursor: pointer;
+}

@@ -168,6 +168,31 @@
     --web-action-target: cod_home.html;
     cursor: pointer;
 }
+#Menu_Option_Download {
+    position: relative;
+    width: 78.13953488%;
+    height: 3.703703704%;
+    top: 45%;
+    left: 10.93023256%;
+    cursor: pointer;
+}
+#Menu_Option_Download_Text{
+    position: absolute;
+    left: 27.2171083804%;
+    top:10%;
+    white-space: nowrap;
+    font-family: Merrant;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7em;
+    color: rgba(234,236,247,1);
+}
+#Menu_Option_Download_Icon{
+    position: absolute;
+    width: auto;
+    height: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -200,8 +225,22 @@
                 <div id="Menu_Option_League_Text">League of Legends</div>
             </div>
             <img onclick="application.goToTargetView(event)" id="Menu_Option_CoD_Icon" src="../static/output_onlinepngtools__2_.png">
-        </div>
+            <div id="Menu_Option_Download" class="Menu_Option_Download" onclick="DownloadPage()">
+                <script>function DownloadPage(){
+
+                    document.getElementById("Menu").style.visibility = "hidden";
+
+                    window.print();
+
+                    document.getElementById("Menu").style.visibility = "visible";
+                }</script>
+                <img id="Menu_Option_Download_Icon" src="../static/download_icon.png">
+                <div id="Menu_Option_Download_Text">Download</div>
+            </div>
+
     </div>
+
+</div>
 <script>renderCharts()</script>
 </body>
 </html>

@@ -175,7 +175,14 @@ function GetCodBrStats(player, jsonStr){
     }
     if(player === 1){
         sessionStorage.setItem('brStats1',jsonStr);
-        matchStatsForCharts();
+        if (sessionStorage.getItem('amountOfPlayers')==1){
+            matchStatsForCharts1();
+        }
+        else
+        {
+            matchStatsForCharts();
+        }
+
     }
     if(player === 2){
         sessionStorage.setItem('brStats2',jsonStr);
@@ -630,7 +637,8 @@ function matchStatsForCharts() {
     xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
     xhr.send(data);
     // =-------------------------------------------------------------------
-    let routeStrInput2 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    if (userName2 != ''){
+        let routeStrInput2 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
     routeStrInput2 += "warzone-matches/";
     routeStrInput2 += userName2.toLowerCase();
     routeStrInput2 += "/"
@@ -655,6 +663,42 @@ function matchStatsForCharts() {
     xhr2.setRequestHeader("x-rapidapi-key", "5af6d47733mshdf8f111248c861dp1e3154jsn0cbe7dc99691");
     xhr2.send(data2);
     console.log("done...");
+    }
+
+}
+
+function matchStatsForCharts1() {
+    const userName1 = sessionStorage.getItem('gamertag'); // getElementById allows access to html variables
+    const userName2 = sessionStorage.getItem('gamertag_2'); // getElementById allows access to html variables
+
+    const platform = sessionStorage.getItem('platform');
+    const platform2 = sessionStorage.getItem('platform_2');
+
+    let routeStrInput1 = "https://call-of-duty-modern-warfare.p.rapidapi.com/"; //api call path
+    routeStrInput1 += "warzone-matches/";
+    routeStrInput1 += userName1.toLowerCase();
+    routeStrInput1 += "/"
+    routeStrInput1 += platform;
+
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            sessionStorage.setItem("matchStats",this.responseText);
+        } else if (this.status === 404) {
+            console.log("404 caught")
+            document.location.href = "./error.html"
+        }
+    });
+
+    xhr.open("GET", routeStrInput1);
+    xhr.setRequestHeader("x-rapidapi-host", "call-of-duty-modern-warfare.p.rapidapi.com");
+    xhr.setRequestHeader("x-rapidapi-key", "5da567f6e7mshc130869694d6457p12cb62jsn522eb53efc6c");
+    xhr.send(data);
+
 }
 
 function makeTwoMultiplayerApiCallCod() {

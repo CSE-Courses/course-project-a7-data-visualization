@@ -15,9 +15,13 @@
     console.log(sessionStorage.getItem("gamertag"))
     console.log(sessionStorage.getItem('platform'))
     console.log(sessionStorage.getItem("gamemode"))
+    sessionStorage.removeItem("amountOfPlayers")
     if(sessionStorage.getItem("gamertag_2") != null){
         sessionStorage.removeItem("gamertag_2");
         }
+
+    sessionStorage.setItem('amountOfPlayers', 1);
+
     if (sessionStorage.getItem("gamemode") == "br"){
         makeApiCallCod();
         makeMatchesApiCallCod();

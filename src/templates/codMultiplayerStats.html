@@ -16,6 +16,8 @@
     console.log(sessionStorage.getItem('platform'))
     console.log(sessionStorage.getItem("gamertag_2"))
     console.log(sessionStorage.getItem('platform_2'))
+    sessionStorage.removeItem("amountOfPlayers")
+    sessionStorage.setItem('amountOfPlayers', 2)
     if (sessionStorage.getItem('gamemode') == "br"){
         makeMultiplayerApiCallCod();
     }

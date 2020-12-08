@@ -1,17 +1,13 @@
 # global variables
-import ast
+
 import json
 import urllib
 from urllib.request import Request
 
 import pandas as pd
-from pandas.core.algorithms import take
-from riotwatcher import LolWatcher
-from pathlib import Path
-from pantheon import pantheon
-import asyncio
 
-import time
+from riotwatcher import LolWatcher
+
 
 
 def getdic():

@@ -11,6 +11,7 @@
 	<script>
 		sessionStorage.removeItem('platform')
 		sessionStorage.removeItem('gamertag')
+		sessionStorage.removeItem('gamemode')
 	</script>
 </head>
 <body>
@@ -38,6 +39,21 @@
             <script>function changePlatformBattle(){
                 document.getElementById("Platform").innerHTML = "Battle.net"
                 sessionStorage.setItem('platform','battle')
+            }</script>
+		</div>
+	</div>
+    <div class="Dropdown_Gamemode">
+        <button class="dropbtn" type="Button" id="Gamemode" name="gamemode">Choose Gamemode</button>
+        <div class="Dropdown_Content">
+            <button type="Button" onclick="changeGamemodeWarzone()">Warzone</button>
+            <script>function changeGamemodeWarzone(){
+                document.getElementById("Gamemode").innerHTML = "Warzone"
+                sessionStorage.setItem('gamemode','br')
+            }</script>
+            <button type="Button" onclick="changeGamemodeMultiplayer()">Multiplayer</button>
+            <script>function changeGamemodeMultiplayer(){
+                document.getElementById("Gamemode").innerHTML = "Multiplayer"
+                sessionStorage.setItem('gamemode','mp')
             }</script>
 		</div>
 	</div>

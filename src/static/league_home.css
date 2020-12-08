@@ -138,7 +138,7 @@
     border-radius: 4px;
     --web-animation: fadein 0.3s ease-out;
     --web-action-type: page;
-    --web-action-target: league_leaderboard.html;
+    --web-action-target: league_leaderboardLanding.html;
     cursor: pointer;
 }
 .leaderboard button:hover {
